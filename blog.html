@@ -70,97 +70,719 @@
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=53">
 <style>
-  .blog-page {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 8rem 2.5rem 4rem;
+  body {
+    background: #f6f7f9;
   }
-  .blog-page .section-label { margin-bottom: 1rem; }
-  .blog-page .section-title { margin-bottom: 2.5rem; }
-  .blog-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
+
+  .media-header {
+    min-height: 72px;
+    background: #fff;
+    border-bottom: 1px solid #e8eaf0;
   }
-  .blog-card {
-    border: 1px solid var(--gray-200);
-    border-radius: 10px;
-    overflow: hidden;
-    background: var(--white);
-    transition: box-shadow 0.25s, transform 0.25s;
+
+  .media-logo {
+    gap: 1.1rem;
+    font-size: 1.85rem;
+    letter-spacing: 0.02em;
+    line-height: 1;
   }
-  .blog-card:hover {
-    box-shadow: 0 12px 32px rgba(10,10,10,0.08);
-    transform: translateY(-3px);
-  }
-  .blog-card a {
-    text-decoration: none;
-    color: inherit;
+
+  .media-logo-copy {
     display: block;
+    max-width: 180px;
+    font-family: var(--font-jp);
+    font-size: 0.72rem;
+    font-weight: 600;
+    line-height: 1.65;
+    letter-spacing: 0;
+    color: #626773;
   }
-  .blog-thumb {
+
+  .media-search {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: flex;
+    width: min(360px, 28vw);
+    transform: translate(-50%, -50%);
+    border: 1px solid #dfe2ea;
+    border-radius: 999px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .media-search input {
     width: 100%;
-    aspect-ratio: 16/9;
-    background: var(--gray-100);
+    min-width: 0;
+    padding: 0.72rem 1rem 0.72rem 1.2rem;
+    border: 0;
+    background: transparent;
+    color: var(--black);
+    font-family: var(--font-jp);
+    font-size: 0.85rem;
+  }
+
+  .media-search input:focus {
+    outline: none;
+  }
+
+  .media-search button {
+    min-width: 58px;
+    padding: 0 1rem;
+    border: 0;
+    background: transparent;
+    color: #222;
+    font-family: var(--font-jp);
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .media-category-nav {
+    margin-top: 72px;
+    background: #fff;
+    border-bottom: 1px solid #e8eaf0;
+  }
+
+  .media-category-nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 2.5rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .media-category-nav-inner::-webkit-scrollbar {
+    display: none;
+  }
+
+  .media-category-nav a {
+    position: relative;
+    flex: 0 0 auto;
+    padding: 0.95rem 1rem;
+    color: #30333a;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    line-height: 1;
+    white-space: nowrap;
+  }
+
+  .media-category-nav a.is-active {
+    color: #6f4cf6;
+  }
+
+  .media-category-nav a.is-active::after {
+    content: "";
+    position: absolute;
+    left: 0.8rem;
+    right: 0.8rem;
+    bottom: 0;
+    height: 3px;
+    border-radius: 999px 999px 0 0;
+    background: #6f4cf6;
+  }
+
+  .blog-page {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 1.8rem 2.5rem 4rem;
+  }
+
+  .blog-page :where(section) {
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .media-shell {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .media-main,
+  .media-sidebar {
+    min-width: 0;
+  }
+
+  .featured-story {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 2rem;
+  }
+
+  .featured-image {
+    display: block;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #fff;
+    text-decoration: none;
+    box-shadow: 0 16px 38px rgba(36, 34, 56, 0.07);
+  }
+
+  .featured-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+  }
+
+  .feature-dots {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 0.75rem;
-    color: var(--gray-400);
-    overflow: hidden;
+    gap: 0.5rem;
+    margin-top: 0.85rem;
   }
+
+  .feature-dots span {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: #d2d5de;
+  }
+
+  .feature-dots span:first-child {
+    background: #6f4cf6;
+  }
+
+  .featured-copy {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 0.9rem;
+    color: #7a7f8b;
+    font-family: var(--font-en);
+    font-size: 0.78rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .post-label {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.65rem;
+    padding: 0.25rem 0.65rem;
+    border-radius: 4px;
+    background: #6f4cf6;
+    color: #fff;
+    font-family: var(--font-jp);
+    font-size: 0.72rem;
+    font-weight: 700;
+  }
+
+  .featured-title {
+    margin-bottom: 0.9rem;
+    font-size: clamp(1.45rem, 2.5vw, 2.25rem);
+    font-weight: 900;
+    line-height: 1.45;
+    letter-spacing: 0;
+  }
+
+  .featured-lead {
+    margin-bottom: 1.2rem;
+    color: #626773;
+    font-size: 0.95rem;
+    font-weight: 500;
+    line-height: 1.9;
+  }
+
+  .tag-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+  }
+
+  .blog-tag {
+    display: inline-flex;
+    align-items: center;
+    min-height: 1.7rem;
+    padding: 0.22rem 0.7rem;
+    border-radius: 999px;
+    background: #eef0f5;
+    color: #5b606b;
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+
+  .tag-area {
+    background: rgba(111, 76, 246, 0.09);
+    color: #6f4cf6;
+  }
+
+  .tag-needs {
+    background: rgba(30, 117, 214, 0.09);
+    color: #1e75d6;
+  }
+
+  .tag-basic {
+    background: rgba(10, 10, 10, 0.07);
+    color: #30333a;
+  }
+
+  .topic-strip {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding: 0.85rem 1rem;
+    border: 1px solid #e5e8f0;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .topic-strip h2 {
+    padding-right: 1rem;
+    border-right: 1px solid #e5e8f0;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .topic-list {
+    display: flex;
+    gap: 0.75rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .topic-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .topic-list a {
+    flex: 0 0 auto;
+    min-width: 142px;
+    padding: 0.55rem 0.9rem;
+    border: 1px solid #e5e8f0;
+    border-radius: 6px;
+    color: #313640;
+    text-align: center;
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 700;
+    line-height: 1.4;
+    background: #fff;
+  }
+
+  .content-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .media-section {
+    min-width: 0;
+  }
+
+  .section-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .section-head h2 {
+    font-size: 1.15rem;
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  .section-link {
+    color: #626773;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 1rem;
+  }
+
+  .blog-card {
+    overflow: hidden;
+    border: 1px solid #e5e8f0;
+    border-radius: 8px;
+    background: #fff;
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+
+  .blog-card:hover {
+    box-shadow: 0 14px 30px rgba(32, 35, 44, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .blog-card a {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .blog-thumb {
+    overflow: hidden;
+    background: #eef0f5;
+  }
+
   .blog-thumb img {
+    display: block;
     width: 100%;
-    height: 100%;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
   }
+
   .blog-card-body {
-    padding: 1.4rem 1.2rem;
+    padding: 0.85rem 0.85rem 1rem;
   }
-  .blog-tag {
-    display: inline-block;
-    font-size: 0.68rem;
-    font-weight: 500;
-    color: #7759f6;
-    background: rgba(119,89,246,0.08);
-    padding: 0.15rem 0.6rem;
-    border-radius: 3px;
-    margin-bottom: 0.6rem;
-  }
-  .blog-tag.tag-area {
-    color: #7759f6;
-    background: rgba(119,89,246,0.08);
-  }
-  .blog-tag.tag-needs {
-    color: #2f7ad9;
-    background: rgba(47,122,217,0.08);
-  }
-  .blog-tag.tag-basic {
-    color: #5a5f6a;
-    background: rgba(90,95,106,0.08);
-  }
+
   .blog-card-title {
-    font-size: 0.95rem;
-    font-weight: 700;
-    line-height: 1.6;
-    margin-bottom: 0.6rem;
+    margin: 0.45rem 0 0.45rem;
+    font-size: 0.9rem;
+    font-weight: 800;
+    line-height: 1.65;
+    letter-spacing: 0;
   }
+
+  .blog-excerpt {
+    color: #626773;
+    font-size: 0.78rem;
+    font-weight: 500;
+    line-height: 1.75;
+  }
+
   .blog-date {
+    color: #8b909b;
     font-family: var(--font-en);
     font-size: 0.72rem;
-    color: var(--gray-400);
-    font-weight: 400;
+    font-weight: 700;
+    line-height: 1.4;
   }
-  .blog-empty {
-    text-align: center;
-    padding: 4rem 0;
-    color: var(--gray-400);
-    font-size: 0.95rem;
-    font-weight: 300;
+
+  .pickup-card {
+    padding: 0.85rem;
+    border: 1px solid #e5e8f0;
+    border-radius: 8px;
+    background: #fff;
   }
+
+  .pickup-list {
+    display: grid;
+    gap: 0.85rem;
+  }
+
+  .pickup-item {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 0.75rem;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .pickup-item + .pickup-item {
+    padding-top: 0.85rem;
+    border-top: 1px solid #eef0f5;
+  }
+
+  .pickup-item img {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: 6px;
+    object-fit: cover;
+    background: #eef0f5;
+  }
+
+  .pickup-title {
+    margin-bottom: 0.25rem;
+    font-size: 0.84rem;
+    font-weight: 800;
+    line-height: 1.55;
+  }
+
+  .consult-banner {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.8rem;
+    padding: 1.15rem 1.4rem;
+    border-radius: 8px;
+    background: #eee9ff;
+  }
+
+  .consult-banner h2 {
+    margin-bottom: 0.2rem;
+    color: #6f4cf6;
+    font-size: 1rem;
+    font-weight: 900;
+    line-height: 1.5;
+  }
+
+  .consult-banner p {
+    color: #4f5665;
+    font-size: 0.82rem;
+    font-weight: 600;
+    line-height: 1.7;
+  }
+
+  .consult-banner a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.75rem 1.25rem;
+    border-radius: 6px;
+    background: #d6f539;
+    color: #101316;
+    text-decoration: none;
+    font-size: 0.84rem;
+    font-weight: 900;
+    white-space: nowrap;
+  }
+
+  .media-sidebar {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .side-card {
+    padding: 1.1rem;
+    border: 1px solid #e5e8f0;
+    border-radius: 8px;
+    background: #fff;
+  }
+
+  .side-card h2 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    font-weight: 900;
+    line-height: 1.4;
+  }
+
+  .ranking-list {
+    display: grid;
+    gap: 0.9rem;
+  }
+
+  .ranking-item {
+    display: grid;
+    grid-template-columns: 28px 86px 1fr;
+    gap: 0.7rem;
+    align-items: center;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .rank-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 999px;
+    background: #eef0f5;
+    color: #747b87;
+    font-family: var(--font-en);
+    font-size: 0.8rem;
+    font-weight: 800;
+  }
+
+  .ranking-item:nth-child(1) .rank-badge { background: #f5cf3d; color: #fff; }
+  .ranking-item:nth-child(2) .rank-badge { background: #c7ccd5; color: #fff; }
+  .ranking-item:nth-child(3) .rank-badge { background: #c48a45; color: #fff; }
+
+  .ranking-item img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 5px;
+    object-fit: cover;
+    background: #eef0f5;
+  }
+
+  .ranking-title {
+    margin-bottom: 0.15rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    line-height: 1.55;
+  }
+
+  .newsletter-card.media-newsletter {
+    padding: 1.4rem;
+    border: 0;
+    border-radius: 8px;
+    background: #6f4cf6;
+    color: #fff;
+  }
+
+  .media-newsletter .newsletter-title,
+  .media-newsletter .newsletter-text,
+  .media-newsletter .newsletter-note {
+    color: #fff;
+  }
+
+  .media-newsletter .newsletter-title {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .media-newsletter .newsletter-text {
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.82rem;
+    line-height: 1.8;
+  }
+
+  .media-newsletter .newsletter-form-row {
+    gap: 0;
+  }
+
+  .media-newsletter .newsletter-input {
+    border: 0;
+    border-radius: 5px 0 0 5px;
+    background: #fff;
+  }
+
+  .media-newsletter .newsletter-submit {
+    border-radius: 0 5px 5px 0;
+    background: #d6f539;
+    color: #111;
+    font-weight: 900;
+  }
+
+  .media-newsletter .newsletter-note {
+    color: rgba(255, 255, 255, 0.72);
+  }
+
+  .tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+
+  .tag-cloud a {
+    padding: 0.45rem 0.7rem;
+    border: 1px solid #e5e8f0;
+    border-radius: 6px;
+    background: #fff;
+    color: #5b606b;
+    text-decoration: none;
+    font-size: 0.78rem;
+    font-weight: 700;
+  }
+
+  @media (max-width: 1180px) {
+    .media-shell,
+    .content-split {
+      grid-template-columns: 1fr;
+    }
+
+    .media-sidebar {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .side-card:first-child {
+      grid-column: 1 / -1;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .media-search {
+      display: none;
+    }
+
+    .media-logo-copy {
+      display: none;
+    }
+
+    .featured-story,
+    .article-grid,
+    .media-sidebar {
+      grid-template-columns: 1fr;
+    }
+
+    .topic-strip {
+      grid-template-columns: 1fr;
+    }
+
+    .topic-strip h2 {
+      padding-right: 0;
+      border-right: 0;
+    }
+  }
+
   @media (max-width: 768px) {
-    .blog-grid { grid-template-columns: 1fr; gap: 1.2rem; }
-    .blog-page { padding: 7rem 1.5rem 3rem; }
+    .media-header {
+      min-height: 62px;
+    }
+
+    .media-category-nav {
+      margin-top: 62px;
+    }
+
+    .media-category-nav-inner {
+      padding: 0 1rem;
+    }
+
+    .media-category-nav a {
+      padding: 0.85rem 0.8rem;
+      font-size: 0.8rem;
+    }
+
+    .blog-page {
+      padding: 1.2rem 1rem 3rem;
+    }
+
+    .featured-story {
+      gap: 1.2rem;
+    }
+
+    .featured-title {
+      font-size: 1.35rem;
+    }
+
+    .content-split {
+      gap: 1.6rem;
+    }
+
+    .consult-banner {
+      grid-template-columns: 1fr;
+      padding: 1rem;
+    }
+
+    .consult-banner a {
+      width: 100%;
+    }
+
+    .media-newsletter .newsletter-form-row {
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .media-newsletter .newsletter-input,
+    .media-newsletter .newsletter-submit {
+      width: 100%;
+      border-radius: 5px;
+    }
   }
 </style>
 </head>
@@ -170,8 +792,13 @@
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
+<header class="media-header">
+  <a href="/" class="logo media-logo">AIMA<span class="media-logo-copy">LLMOの活用・導入で<br>ビジネスを加速するメディア</span></a>
+  <form class="media-search" action="blog.html" method="get" role="search">
+    <label class="sr-only" for="blog-search">記事を検索</label>
+    <input type="search" id="blog-search" name="q" placeholder="記事を検索">
+    <button type="submit">検索</button>
+  </form>
   <button class="hamburger" id="hamburger" aria-label="メニューを開く">
     <span></span><span></span><span></span>
   </button>
@@ -186,229 +813,230 @@
   <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
-<!-- BLOG LIST -->
-<div class="blog-page">
-  <div class="section-label">Blog</div>
-  <h1 class="section-title">ブログ</h1>
-
-  <div class="blog-grid">
-    <div class="blog-card">
-      <a href="blog-yamagata-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-yamagata-llmo-kaisha/eyecatch.webp" alt="山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.24</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-akita-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-akita-llmo-kaisha/eyecatch.webp" alt="秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.24</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-miyagi-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-miyagi-llmo-kaisha/eyecatch.webp" alt="宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.24</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-iwate-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-iwate-llmo-kaisha/eyecatch.webp" alt="岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.24</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-aomori-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-aomori-llmo-kaisha/eyecatch.webp" alt="青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.23</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-hokkaido-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-hokkaido-llmo-kaisha/eyecatch.webp" alt="北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.23</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-kanagawa-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-kanagawa-llmo-kaisha/eyecatch.webp" alt="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.20</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-aichi-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-aichi-llmo-kaisha/eyecatch.webp" alt="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.19</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-fukuoka-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-fukuoka-llmo-kaisha/eyecatch.webp" alt="福岡でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">福岡でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.15</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-tokyo-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.14</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-btob-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いおすすめのLLMO会社10選｜選び方・費用相場・依頼時の注意点を解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-needs">ニーズ別比較</span>
-          <h2 class="blog-card-title">BtoBに強いおすすめのLLMO会社10選｜選び方・費用相場・依頼時の注意点を解説</h2>
-          <div class="blog-date">2026.04.13</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-osaka-llmo-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-osaka-llmo-kaisha/eyecatch.webp" alt="大阪でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-area">エリア比較</span>
-          <h2 class="blog-card-title">大阪でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h2>
-          <div class="blog-date">2026.04.12</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-kakuyasu-llmo-taisaku-kaisha.html">
-        <div class="blog-thumb">
-          <img src="images/blog-kakuyasu-llmo-taisaku-kaisha/eyecatch.jpg" alt="LLMO対策会社おすすめ10選｜失敗しない選び方と比較ポイントを解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-needs">ニーズ別比較</span>
-          <h2 class="blog-card-title">LLMO対策会社おすすめ10選｜失敗しない選び方と比較ポイントを解説</h2>
-          <div class="blog-date"><time datetime="2026-04-09">公開 2026.04.09</time> / <time datetime="2026-04-19">更新 2026.04.19</time></div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-kakuyasu-llmo-daiko.html">
-        <div class="blog-thumb">
-          <img src="images/blog-kakuyasu-llmo-daiko/eyecatch.webp" alt="格安LLMO代行会社5選｜安く依頼する方法と比較ポイントのサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-needs">ニーズ別比較</span>
-          <h2 class="blog-card-title">格安LLMO代行会社5選｜安く依頼する方法と比較ポイント</h2>
-          <div class="blog-date">2026.04.02</div>
-        </div>
-      </a>
-    </div>
-
-    <div class="blog-card">
-      <a href="blog-llmo-taisaku.html">
-        <div class="blog-thumb">
-          <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とは？SEOとの違いと実践方法を徹底解説のサムネイル" loading="lazy" decoding="async">
-        </div>
-        <div class="blog-card-body">
-          <span class="blog-tag tag-basic">基礎知識</span>
-          <h2 class="blog-card-title">LLMO対策とは？SEOとの違いと実践方法を徹底解説</h2>
-          <div class="blog-date">2026.04.01</div>
-        </div>
-      </a>
-    </div>
-
+<nav class="media-category-nav" aria-label="ブログカテゴリ">
+  <div class="media-category-nav-inner">
+    <a href="blog.html" class="is-active">ホーム</a>
+    <a href="blog-llmo-taisaku.html">LLMOとは</a>
+    <a href="blog-kakuyasu-llmo-taisaku-kaisha.html">導入ガイド</a>
+    <a href="blog-btob-llmo-kaisha.html">活用事例</a>
+    <a href="blog-yamagata-llmo-kaisha.html">エリア別おすすめ</a>
+    <a href="blog-btob-llmo-kaisha.html">業界別活用</a>
+    <a href="blog-llmo-taisaku.html">ニュース・調査</a>
+    <a href="blog-llmo-taisaku.html">用語集</a>
   </div>
+</nav>
 
-  <section class="newsletter-section fade-in" aria-label="メルマガ登録">
-    <div class="newsletter-card newsletter-card-wide">
-      <div>
-        <div class="newsletter-eyebrow">Newsletter</div>
-        <div class="newsletter-title">LLMO内製化マガジン</div>
-        <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。毎朝5分で読める粒度に絞り、ブログ更新や実務メモを配信します。</p>
-      </div>
-      <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
-        <input type="hidden" name="formType" value="newsletter">
-        <input type="hidden" name="source" value="blog-list">
-        <div class="newsletter-form-row">
-          <label class="sr-only" for="newsletter-list-email">メールアドレス</label>
-          <input type="email" id="newsletter-list-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
-          <button type="submit" class="newsletter-submit">無料で登録する</button>
+<!-- BLOG MEDIA TOP -->
+<main class="blog-page">
+  <div class="media-shell">
+    <div class="media-main">
+      <section class="featured-story" aria-label="注目記事">
+        <div>
+          <a href="blog-akita-llmo-kaisha.html" class="featured-image">
+            <img src="images/blog-akita-llmo-kaisha/eyecatch.webp" alt="秋田県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+          </a>
+          <div class="feature-dots" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
         </div>
-        <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
-      </form>
+        <a href="blog-akita-llmo-kaisha.html" class="featured-copy">
+          <div class="post-meta">
+            <span class="post-label">注目記事</span>
+            <time datetime="2026-04-24">2026.04.24</time>
+            <span>8分で読める</span>
+          </div>
+          <h1 class="featured-title">秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h1>
+          <p class="featured-lead">秋田県でLLMO会社の導入を検討している方向けに、実績やサポート体制、費用感をもとに厳選した10社を紹介します。</p>
+          <div class="tag-row">
+            <span class="blog-tag tag-area">秋田県</span>
+            <span class="blog-tag tag-area">エリア比較</span>
+            <span class="blog-tag">LLMO導入</span>
+            <span class="blog-tag">費用相場</span>
+          </div>
+        </a>
+      </section>
+
+      <section class="topic-strip" aria-label="注目のトピック">
+        <h2>注目のトピック</h2>
+        <div class="topic-list">
+          <a href="blog-yamagata-llmo-kaisha.html">エリア別おすすめ</a>
+          <a href="blog-kakuyasu-llmo-taisaku-kaisha.html">費用相場・料金比較</a>
+          <a href="blog-kakuyasu-llmo-daiko.html">LLMO導入ステップ</a>
+          <a href="blog-btob-llmo-kaisha.html">成功事例インタビュー</a>
+          <a href="blog-llmo-taisaku.html">最新トレンド</a>
+        </div>
+      </section>
+
+      <div class="content-split">
+        <section class="media-section" aria-labelledby="latest-heading">
+          <div class="section-head">
+            <h2 id="latest-heading">新着記事</h2>
+            <a href="blog.html" class="section-link">もっと見る</a>
+          </div>
+          <div class="article-grid">
+            <article class="blog-card">
+              <a href="blog-yamagata-llmo-kaisha.html">
+                <div class="blog-thumb">
+                  <img src="images/blog-yamagata-llmo-kaisha/eyecatch.webp" alt="山形県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-tag tag-area">エリア比較</span>
+                  <h3 class="blog-card-title">山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h3>
+                  <div class="post-meta"><time datetime="2026-04-24">2026.04.24</time><span>6分で読める</span></div>
+                  <p class="blog-excerpt">山形県での導入を成功させるためのポイントをわかりやすく解説。</p>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog-miyagi-llmo-kaisha.html">
+                <div class="blog-thumb">
+                  <img src="images/blog-miyagi-llmo-kaisha/eyecatch.webp" alt="宮城県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-tag tag-area">エリア比較</span>
+                  <h3 class="blog-card-title">宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h3>
+                  <div class="post-meta"><time datetime="2026-04-24">2026.04.24</time><span>7分で読める</span></div>
+                  <p class="blog-excerpt">宮城県の市場動向や導入事例をもとに、最適な会社選びをサポート。</p>
+                </div>
+              </a>
+            </article>
+            <article class="blog-card">
+              <a href="blog-iwate-llmo-kaisha.html">
+                <div class="blog-thumb">
+                  <img src="images/blog-iwate-llmo-kaisha/eyecatch.webp" alt="岩手県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+                </div>
+                <div class="blog-card-body">
+                  <span class="blog-tag tag-area">エリア比較</span>
+                  <h3 class="blog-card-title">岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h3>
+                  <div class="post-meta"><time datetime="2026-04-24">2026.04.24</time><span>7分で読める</span></div>
+                  <p class="blog-excerpt">岩手県での導入メリットや選定基準を具体的に紹介します。</p>
+                </div>
+              </a>
+            </article>
+          </div>
+
+          <section class="consult-banner" aria-label="無料相談">
+            <div>
+              <h2>自社に最適なLLMO会社を見つけたい方へ</h2>
+              <p>地域・業種・予算に合わせて、最適なパートナーをご提案します。</p>
+            </div>
+            <a href="/#contact">無料で相談してみる</a>
+          </section>
+        </section>
+
+        <section class="media-section" aria-labelledby="pickup-heading">
+          <div class="section-head">
+            <h2 id="pickup-heading">特集・ピックアップ</h2>
+            <a href="blog.html" class="section-link">もっと見る</a>
+          </div>
+          <div class="pickup-card">
+            <div class="pickup-list">
+              <a href="blog-llmo-taisaku.html" class="pickup-item">
+                <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とはの記事サムネイル" decoding="async">
+                <div>
+                  <h3 class="pickup-title">はじめてのLLMO導入ガイド｜基礎から実践まで徹底解説</h3>
+                  <div class="blog-date">2026.04.20</div>
+                </div>
+              </a>
+              <a href="blog-btob-llmo-kaisha.html" class="pickup-item">
+                <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いLLMO会社の記事サムネイル" decoding="async">
+                <div>
+                  <h3 class="pickup-title">企業のLLMO導入事例インタビュー｜成功のポイントとは？</h3>
+                  <div class="blog-date">2026.04.18</div>
+                </div>
+              </a>
+              <a href="blog-kakuyasu-llmo-taisaku-kaisha.html" class="pickup-item">
+                <img src="images/blog-kakuyasu-llmo-taisaku-kaisha/eyecatch.jpg" alt="LLMO対策会社おすすめ10選の記事サムネイル" decoding="async">
+                <div>
+                  <h3 class="pickup-title">LLMOの費用相場を徹底解説｜料金体系と比較のポイント</h3>
+                  <div class="blog-date">2026.04.16</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
-  </section>
-</div>
+
+    <aside class="media-sidebar" aria-label="ブログサイドバー">
+      <section class="side-card" aria-labelledby="ranking-heading">
+        <div class="section-head">
+          <h2 id="ranking-heading">人気記事ランキング</h2>
+          <a href="blog.html" class="section-link">もっと見る</a>
+        </div>
+        <div class="ranking-list">
+          <a href="blog-akita-llmo-kaisha.html" class="ranking-item">
+            <span class="rank-badge">1</span>
+            <img src="images/blog-akita-llmo-kaisha/eyecatch.webp" alt="秋田県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+            <div>
+              <h3 class="ranking-title">秋田県でおすすめのLLMO会社10選｜費用相場と選び方も解説</h3>
+              <div class="blog-date">2026.04.24</div>
+            </div>
+          </a>
+          <a href="blog-miyagi-llmo-kaisha.html" class="ranking-item">
+            <span class="rank-badge">2</span>
+            <img src="images/blog-miyagi-llmo-kaisha/eyecatch.webp" alt="宮城県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+            <div>
+              <h3 class="ranking-title">宮城県でおすすめのLLMO会社10選｜費用相場と選び方も解説</h3>
+              <div class="blog-date">2026.04.24</div>
+            </div>
+          </a>
+          <a href="blog-yamagata-llmo-kaisha.html" class="ranking-item">
+            <span class="rank-badge">3</span>
+            <img src="images/blog-yamagata-llmo-kaisha/eyecatch.webp" alt="山形県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+            <div>
+              <h3 class="ranking-title">山形県でおすすめのLLMO会社10選｜費用相場と選び方も解説</h3>
+              <div class="blog-date">2026.04.24</div>
+            </div>
+          </a>
+          <a href="blog-iwate-llmo-kaisha.html" class="ranking-item">
+            <span class="rank-badge">4</span>
+            <img src="images/blog-iwate-llmo-kaisha/eyecatch.webp" alt="岩手県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+            <div>
+              <h3 class="ranking-title">岩手県でおすすめのLLMO会社10選｜費用相場と選び方も解説</h3>
+              <div class="blog-date">2026.04.24</div>
+            </div>
+          </a>
+          <a href="blog-aomori-llmo-kaisha.html" class="ranking-item">
+            <span class="rank-badge">5</span>
+            <img src="images/blog-aomori-llmo-kaisha/eyecatch.webp" alt="青森県でおすすめのLLMO会社10選のサムネイル" decoding="async">
+            <div>
+              <h3 class="ranking-title">青森県でおすすめのLLMO会社10選｜費用相場と選び方も解説</h3>
+              <div class="blog-date">2026.04.23</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="newsletter-card media-newsletter" aria-label="メルマガ登録">
+        <div class="newsletter-title">最新情報をメールで受け取る</div>
+        <p class="newsletter-text">LLMOの最新トレンドや導入事例、お役立ち資料をお届けします。</p>
+        <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+          <input type="hidden" name="formType" value="newsletter">
+          <input type="hidden" name="source" value="blog-media-top">
+          <div class="newsletter-form-row">
+            <label class="sr-only" for="newsletter-list-email">メールアドレス</label>
+            <input type="email" id="newsletter-list-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+            <button type="submit" class="newsletter-submit">登録する</button>
+          </div>
+          <p class="newsletter-note">いつでも配信停止できます。</p>
+        </form>
+      </section>
+
+      <section class="side-card" aria-labelledby="tag-heading">
+        <h2 id="tag-heading">人気タグ</h2>
+        <div class="tag-cloud">
+          <a href="blog-llmo-taisaku.html">LLMOとは</a>
+          <a href="blog-btob-llmo-kaisha.html">導入事例</a>
+          <a href="blog-yamagata-llmo-kaisha.html">エリア比較</a>
+          <a href="blog-kakuyasu-llmo-taisaku-kaisha.html">費用相場</a>
+          <a href="blog-llmo-taisaku.html">生成AI活用</a>
+          <a href="blog-btob-llmo-kaisha.html">業界別</a>
+          <a href="blog-kakuyasu-llmo-daiko.html">選び方</a>
+          <a href="blog-btob-llmo-kaisha.html">事例インタビュー</a>
+        </div>
+      </section>
+    </aside>
+  </div>
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
