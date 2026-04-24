@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AIMA リニューアル サンプル</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:-apple-system,"Hiragino Sans","Noto Sans JP",sans-serif;background:#0b0b0f;color:#fff;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:40px 20px}
+  .wrap{max-width:1100px;width:100%}
+  h1{font-size:2.4rem;font-weight:300;letter-spacing:.02em;margin-bottom:.4rem}
+  h1 b{font-weight:700}
+  .lead{color:#9aa;font-size:.95rem;margin-bottom:3rem}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:860px){.grid{grid-template-columns:1fr}}
+  .card{display:block;text-decoration:none;color:inherit;background:#16161d;border:1px solid #23232c;border-radius:18px;overflow:hidden;transition:transform .25s ease,border-color .25s ease;position:relative}
+  .card:hover{transform:translateY(-4px);border-color:#3a3a4a}
+  .preview{aspect-ratio:16/10;background:#fff;position:relative;overflow:hidden}
+  .preview iframe{width:200%;height:200%;border:0;transform:scale(.5);transform-origin:top left;pointer-events:none}
+  .meta{padding:20px 22px 22px}
+  .tag{display:inline-block;font-size:.7rem;letter-spacing:.16em;color:#88e;margin-bottom:.6rem}
+  .ttl{font-size:1.15rem;font-weight:700;margin-bottom:.4rem}
+  .desc{font-size:.85rem;color:#aab;line-height:1.7}
+  footer{margin-top:3rem;color:#667;font-size:.8rem;text-align:center}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>AIMA リニューアル <b>3案</b></h1>
+  <p class="lead">クリックすると単独表示。気に入った方向性を教えてください。</p>
+  <div class="grid">
+    <a class="card" href="a-minimal.html" target="_blank" rel="noopener">
+      <div class="preview"><iframe src="a-minimal.html" loading="lazy"></iframe></div>
+      <div class="meta">
+        <span class="tag" style="color:#222">A · MINIMAL</span>
+        <div class="ttl">ミニマル × タイポ強調</div>
+        <div class="desc">真っ白＋大きな黒タイポ。BtoBの信頼感と専門性。</div>
+      </div>
+    </a>
+    <a class="card" href="b-dark.html" target="_blank" rel="noopener">
+      <div class="preview"><iframe src="b-dark.html" loading="lazy"></iframe></div>
+      <div class="meta">
+        <span class="tag">B · DARK GLOW</span>
+        <div class="ttl">ダーク × グロー</div>
+        <div class="desc">黒×紫シアンのグラデ。AI企業らしさが最も出る。</div>
+      </div>
+    </a>
+    <a class="card" href="c-accent.html" target="_blank" rel="noopener">
+      <div class="preview"><iframe src="c-accent.html" loading="lazy"></iframe></div>
+      <div class="meta">
+        <span class="tag" style="color:#0a6">C · ACCENT</span>
+        <div class="ttl">和モダン × 朱アクセント</div>
+        <div class="desc">オフホワイト＋朱色1色。読みやすさ重視。</div>
+      </div>
+    </a>
+  </div>
+  <footer>サンプルはヒーロー＋強み3つに絞った試作です</footer>
+</div>
+</body>
+</html>

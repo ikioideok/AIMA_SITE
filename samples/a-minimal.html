@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>A · Minimal | AIMA</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;800&family=Noto+Serif+JP:wght@300;500;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--ink:#0a0a0a;--sub:#6b6b6b;--line:#e5e5e5;--bg:#fff}
+  html,body{background:var(--bg);color:var(--ink);font-family:"Inter","Noto Sans JP",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.7}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px}
+  header{display:flex;justify-content:space-between;align-items:center;padding:28px 40px;border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);z-index:10}
+  .logo{font-weight:800;letter-spacing:.18em;font-size:1.05rem}
+  nav a{color:var(--ink);text-decoration:none;font-size:.85rem;margin-left:32px;letter-spacing:.04em}
+  nav a.cta{border:1px solid var(--ink);padding:10px 20px;border-radius:999px}
+
+  .hero{padding:120px 0 140px;border-bottom:1px solid var(--line)}
+  .eyebrow{font-size:.72rem;letter-spacing:.32em;color:var(--sub);margin-bottom:32px;display:flex;align-items:center;gap:14px}
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--ink)}
+  h1{font-family:"Noto Serif JP",serif;font-weight:500;font-size:clamp(2.6rem,6.4vw,5.4rem);line-height:1.18;letter-spacing:-.01em;margin-bottom:48px}
+  h1 em{font-style:normal;font-family:"Inter",sans-serif;font-weight:300;display:block;font-size:.4em;letter-spacing:.04em;color:var(--sub);margin-top:18px}
+  .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:80px;align-items:end}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:48px}}
+  .hero-meta{border-left:1px solid var(--line);padding-left:32px}
+  .hero-meta dt{font-size:.7rem;letter-spacing:.24em;color:var(--sub);margin-bottom:6px;text-transform:uppercase}
+  .hero-meta dd{font-size:1.05rem;margin-bottom:24px;font-weight:500}
+  .price{font-family:"Inter",sans-serif;font-weight:300;font-size:3.6rem;letter-spacing:-.02em}
+  .price small{font-size:.9rem;color:var(--sub);font-weight:400;margin-left:8px}
+  .actions{display:flex;gap:14px;margin-top:48px}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:18px 32px;border-radius:999px;text-decoration:none;font-size:.9rem;font-weight:500;transition:all .2s}
+  .btn-primary{background:var(--ink);color:#fff}
+  .btn-primary:hover{background:#222}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink)}
+  .btn-ghost:hover{border-color:var(--ink)}
+  .arrow{transition:transform .2s}
+  .btn:hover .arrow{transform:translateX(4px)}
+
+  .why{padding:140px 0}
+  .why-head{display:grid;grid-template-columns:1fr 1.4fr;gap:80px;margin-bottom:80px}
+  @media(max-width:860px){.why-head{grid-template-columns:1fr;gap:32px}}
+  .why-head h2{font-family:"Noto Serif JP",serif;font-weight:500;font-size:2.4rem;line-height:1.4}
+  .why-head p{color:var(--sub);font-size:.98rem}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+  @media(max-width:860px){.why-grid{grid-template-columns:1fr}}
+  .why-item{padding:48px 32px 56px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .why-item:last-child{border-right:0}
+  .why-num{font-size:.7rem;letter-spacing:.24em;color:var(--sub);margin-bottom:24px}
+  .why-item h3{font-size:1.25rem;font-weight:700;margin-bottom:16px;line-height:1.5}
+  .why-item p{color:var(--sub);font-size:.92rem}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">AIMA</div>
+  <nav>
+    <a href="#">Service</a>
+    <a href="#">Case</a>
+    <a href="#">Pricing</a>
+    <a href="#" class="cta">Contact</a>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <div class="eyebrow">LLMO / GENERATIVE AI OPTIMIZATION · OSAKA</div>
+  <h1>AIに、<br>引用される会社へ。<em>Become the source AI cites.</em></h1>
+  <div class="hero-grid">
+    <div>
+      <p style="font-size:1.05rem;color:var(--sub);max-width:520px">大阪・梅田を拠点に、ChatGPTやGeminiなど生成AIに自社が引用されるための仕組みを設計します。質問設計・記事制作・引用チェックの3工程に絞り、月額5万円から。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#">無料診断を受ける <span class="arrow">→</span></a>
+        <a class="btn btn-ghost" href="#">サービス詳細</a>
+      </div>
+    </div>
+    <dl class="hero-meta">
+      <dt>Monthly</dt>
+      <dd class="price">¥50,000<small>/月（税別）</small></dd>
+      <dt>Focus</dt>
+      <dd>LLMO 専業</dd>
+      <dt>Location</dt>
+      <dd>大阪市北区 梅田</dd>
+    </dl>
+  </div>
+</section>
+
+<section class="why wrap">
+  <div class="why-head">
+    <h2>月5万円で<br>提供できる、<br>3つの理由。</h2>
+    <p>余計な工程を削ぎ落とし、AIに任せられる作業はAIに。LLMO専業だからこそ実現できる価格と質を、ここで説明します。</p>
+  </div>
+  <div class="why-grid">
+    <div class="why-item">
+      <div class="why-num">01 / FOCUS</div>
+      <h3>成果に直結する作業だけに集中</h3>
+      <p>レポートや定例MTGなど、引用獲得に関係しない業務は行いません。質問特定・記事制作・引用確認の3つだけに絞ります。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">02 / AI</div>
+      <h3>作業の大半をAIが担当</h3>
+      <p>記事制作とリサーチはAIが実行。人間は方向決めと最終確認のみ。外注を挟まないからスピードも価格も維持できます。</p>
+    </div>
+    <div class="why-item">
+      <div class="why-num">03 / SPECIALIST</div>
+      <h3>LLMO専業の会社</h3>
+      <p>SEOやWeb制作は手がけません。LLMOだけにノウハウとコストを集中するため、月5万円でも質を落としません。</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>無料LLMO診断｜AIに引用されているかチェック｜株式会社AIMA</title>
+<meta name="description" content="あなたのサイトはChatGPT・Gemini・Perplexityに引用されていますか？URLを入力するだけで、AI引用状況を無料で診断します。">
+<link rel="canonical" href="https://ai-and-marketing.jp/llmo-shindan.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<!-- OGP -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="無料LLMO診断｜AIに引用されているかチェック">
+<meta property="og:description" content="URLを入力するだけで、ChatGPT・Gemini・PerplexityなどのAIにあなたのサイトが引用されているかを無料診断。">
+<meta property="og:url" content="https://ai-and-marketing.jp/llmo-shindan.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/ogp.png">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="無料LLMO診断｜AIに引用されているかチェック">
+<meta name="twitter:description" content="URLを入力するだけで、AI引用状況を無料診断。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/ogp.png">
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "無料LLMO診断",
+  "url": "https://ai-and-marketing.jp/llmo-shindan.html",
+  "description": "AI引用状況を無料で診断するツール",
+  "applicationCategory": "SEO Tool",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "JPY"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp"
+  }
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=53">
+<link rel="stylesheet" href="css/shindan.css?v=1">
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header>
+  <a href="/" class="logo">AIMA</a>
+  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="header-nav" id="header-nav">
+    <a href="company.html">会社概要</a>
+    <a href="/service.html">サービス</a>
+    <a href="/#case">事例</a>
+    <a href="/#pricing">料金</a>
+    <a href="blog.html">ブログ</a>
+    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+  </nav>
+  <a href="/#contact" class="header-cta">お問い合わせ</a>
+</header>
+
+<!-- HERO -->
+<div class="shindan-hero">
+  <div class="shindan-hero-inner fade-in">
+    <div class="section-label">Free LLMO Diagnosis</div>
+    <h1 class="shindan-hero-title">あなたのサイト、<br>AIに引用されていますか？</h1>
+    <p class="shindan-hero-sub">URLを入力するだけ。ChatGPT・Gemini・Perplexityなど<br>主要AIでの引用状況を、無料チェックします。</p>
+
+    <!-- URL INPUT -->
+    <div class="shindan-input-wrap">
+      <div class="shindan-input-box">
+        <input type="url" id="shindan-url" class="shindan-url-input" placeholder="https://example.com" required>
+        <button type="button" id="shindan-submit" class="shindan-submit-btn">無料で診断する</button>
+      </div>
+      <p class="shindan-input-note">登録不要・完全無料</p>
+    </div>
+  </div>
+</div>
+
+<!-- 3 STEPS -->
+<section class="shindan-steps-section">
+  <div class="shindan-steps fade-in">
+    <div class="shindan-step">
+      <div class="shindan-step-num">01</div>
+      <div class="shindan-step-title">URLを入力</div>
+      <div class="shindan-step-desc">診断したいサイトのURLを<br>入力するだけ</div>
+    </div>
+    <div class="shindan-step-arrow">&rarr;</div>
+    <div class="shindan-step">
+      <div class="shindan-step-num">02</div>
+      <div class="shindan-step-title">AIが自動解析</div>
+      <div class="shindan-step-desc">主要AI 4モデルでの<br>引用状況をチェック</div>
+    </div>
+    <div class="shindan-step-arrow">&rarr;</div>
+    <div class="shindan-step">
+      <div class="shindan-step-num">03</div>
+      <div class="shindan-step-title">結果を確認</div>
+      <div class="shindan-step-desc">スコアと改善ポイントが<br>すぐにわかる</div>
+    </div>
+  </div>
+</section>
+
+<!-- ANALYSIS (hidden by default, shown during scan) -->
+<section class="shindan-analysis-section" id="shindan-analysis" style="display:none;">
+  <div class="shindan-analysis-inner">
+    <div class="shindan-progress-wrap">
+      <div class="shindan-progress-label" id="shindan-progress-label">サイト構造をクロール中...</div>
+      <div class="shindan-progress-bar">
+        <div class="shindan-progress-fill" id="shindan-progress-fill"></div>
+      </div>
+      <div class="shindan-progress-percent" id="shindan-progress-percent">0%</div>
+    </div>
+    <div class="shindan-scan-log" id="shindan-scan-log"></div>
+  </div>
+</section>
+
+<!-- RESULTS (hidden by default) -->
+<section class="shindan-results-section" id="shindan-results" style="display:none;">
+  <div class="shindan-results-inner fade-in">
+    <div class="section-label">Diagnosis Result</div>
+    <h2 class="section-title">診断結果</h2>
+    <p class="shindan-results-url" id="shindan-results-url"></p>
+
+    <!-- 2-COLUMN: LEFT=blurred results, RIGHT=email CTA -->
+    <div class="shindan-results-2col">
+      <div class="shindan-results-left">
+        <!-- TOTAL SCORE (blurred) -->
+        <div class="shindan-score-hero shindan-blurred-area">
+          <div class="shindan-score-rank shindan-blur" id="shindan-rank">C</div>
+          <div class="shindan-score-detail">
+            <div class="shindan-score-total-label">総合スコア</div>
+            <div class="shindan-score-total shindan-blur" id="shindan-total-score">42<span class="shindan-score-unit"> / 100</span></div>
+            <div class="shindan-score-comment" id="shindan-score-comment">診断が完了しました。詳細な結果はレポートでご確認ください。</div>
+          </div>
+        </div>
+
+            <!-- AI MODELS (blurred) -->
+        <div class="shindan-ai-grid">
+          <div class="shindan-ai-card" id="card-chatgpt">
+            <div class="shindan-ai-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#10a37f"/><text x="14" y="18" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="DM Sans">G</text></svg>
+            </div>
+            <div class="shindan-ai-name">ChatGPT</div>
+            <div class="shindan-ai-score shindan-blur" id="score-chatgpt">--</div>
+            <div class="shindan-ai-label">推定引用回数</div>
+          </div>
+          <div class="shindan-ai-card" id="card-gemini">
+            <div class="shindan-ai-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#4285f4"/><text x="14" y="18" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="DM Sans">G</text></svg>
+            </div>
+            <div class="shindan-ai-name">Gemini</div>
+            <div class="shindan-ai-score shindan-blur" id="score-gemini">--</div>
+            <div class="shindan-ai-label">推定引用回数</div>
+          </div>
+          <div class="shindan-ai-card" id="card-perplexity">
+            <div class="shindan-ai-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#1a1a2e"/><text x="14" y="18" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="DM Sans">P</text></svg>
+            </div>
+            <div class="shindan-ai-name">Perplexity</div>
+            <div class="shindan-ai-score shindan-blur" id="score-perplexity">--</div>
+            <div class="shindan-ai-label">推定引用回数</div>
+          </div>
+          <div class="shindan-ai-card" id="card-claude">
+            <div class="shindan-ai-icon">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><circle cx="14" cy="14" r="14" fill="#d97706"/><text x="14" y="18" text-anchor="middle" fill="#fff" font-size="12" font-weight="700" font-family="DM Sans">C</text></svg>
+            </div>
+            <div class="shindan-ai-name">Claude</div>
+            <div class="shindan-ai-score shindan-blur" id="score-claude">--</div>
+            <div class="shindan-ai-label">推定引用回数</div>
+          </div>
+        </div>
+
+        <!-- 5 CATEGORY SCORES (blurred) -->
+        <div class="shindan-categories">
+          <h3 class="shindan-categories-title">5カテゴリ診断</h3>
+          <div class="shindan-category-list">
+            <div class="shindan-category-item">
+              <div class="shindan-category-header">
+                <span class="shindan-category-name">Q&A整備率</span>
+                <span class="shindan-category-value shindan-blur" id="cat-qa">--</span>
+              </div>
+              <div class="shindan-category-bar"><div class="shindan-category-fill" id="bar-qa"></div></div>
+            </div>
+            <div class="shindan-category-item">
+              <div class="shindan-category-header">
+                <span class="shindan-category-name">構造化データ適合率</span>
+                <span class="shindan-category-value shindan-blur" id="cat-structure">--</span>
+              </div>
+              <div class="shindan-category-bar"><div class="shindan-category-fill" id="bar-structure"></div></div>
+            </div>
+            <div class="shindan-category-item">
+              <div class="shindan-category-header">
+                <span class="shindan-category-name">参照先信頼度</span>
+                <span class="shindan-category-value shindan-blur" id="cat-trust">--</span>
+              </div>
+              <div class="shindan-category-bar"><div class="shindan-category-fill" id="bar-trust"></div></div>
+            </div>
+            <div class="shindan-category-item">
+              <div class="shindan-category-header">
+                <span class="shindan-category-name">コンテンツ網羅性</span>
+                <span class="shindan-category-value shindan-blur" id="cat-coverage">--</span>
+              </div>
+              <div class="shindan-category-bar"><div class="shindan-category-fill" id="bar-coverage"></div></div>
+            </div>
+            <div class="shindan-category-item">
+              <div class="shindan-category-header">
+                <span class="shindan-category-name">引用可能性スコア</span>
+                <span class="shindan-category-value shindan-blur" id="cat-citation">--</span>
+              </div>
+              <div class="shindan-category-bar"><div class="shindan-category-fill" id="bar-citation"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PRIORITY IMPROVEMENTS (blurred) -->
+        <div class="shindan-improvements">
+          <h3 class="shindan-improvements-title">優先改善テーマ</h3>
+          <ul class="shindan-improvements-list shindan-blur" id="shindan-improvements-list">
+          </ul>
+        </div>
+      </div><!-- /.shindan-results-left -->
+
+      <!-- RIGHT: CTA -->
+      <div class="shindan-results-right">
+        <div class="shindan-result-cta">
+          <div class="shindan-result-cta-free">無料</div>
+          <p class="shindan-result-cta-text">詳しいレポートと改善プランはメールでお届けします。</p>
+          <div class="shindan-report-form" id="shindan-report-form">
+            <input type="email" id="shindan-email" class="shindan-email-input" placeholder="メールアドレスを入力">
+            <button type="button" id="shindan-report-btn" class="shindan-report-btn">無料でレポートを受け取る</button>
+          </div>
+          <p class="shindan-report-note">費用は一切かかりません。</p>
+        </div>
+      </div><!-- /.shindan-results-right -->
+    </div><!-- /.shindan-results-2col -->
+
+    <!-- SECONDARY CTA -->
+    <div class="shindan-consult-cta">
+      <p class="shindan-consult-text">月額5万円で、AIに引用される仕組みづくりを始めませんか？</p>
+      <a href="/#contact" class="shindan-consult-btn">LLMOについて相談する</a>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT WE CHECK -->
+<section class="shindan-what-section">
+  <div class="shindan-what-inner fade-in">
+    <div class="section-label">What We Check</div>
+    <h2 class="section-title">この診断でわかること</h2>
+    <div class="shindan-what-grid">
+      <div class="shindan-what-card">
+        <div class="shindan-what-num">01</div>
+        <h3 class="shindan-what-title">AI別の引用状況</h3>
+        <p class="shindan-what-desc">ChatGPT・Gemini・Perplexity・Claudeの4つのAIで、あなたのサイトがどれだけ引用されているかを推定します。</p>
+      </div>
+      <div class="shindan-what-card">
+        <div class="shindan-what-num">02</div>
+        <h3 class="shindan-what-title">5カテゴリ総合スコア</h3>
+        <p class="shindan-what-desc">Q&A整備率・構造化データ・信頼度・網羅性・引用可能性の5軸で、A~Fランクで総合評価します。</p>
+      </div>
+      <div class="shindan-what-card">
+        <div class="shindan-what-num">03</div>
+        <h3 class="shindan-what-title">構造化データ適合率</h3>
+        <p class="shindan-what-desc">AIがあなたのサイト情報を正しく読み取れる構造になっているか、JSON-LDやFAQスキーマの有無をチェックします。</p>
+      </div>
+      <div class="shindan-what-card">
+        <div class="shindan-what-num">04</div>
+        <h3 class="shindan-what-title">Q&A整備率</h3>
+        <p class="shindan-what-desc">AIが引用しやすい「質問と回答」形式のコンテンツがどの程度整備されているかを診断します。</p>
+      </div>
+      <div class="shindan-what-card">
+        <div class="shindan-what-num">05</div>
+        <h3 class="shindan-what-title">参照先信頼度</h3>
+        <p class="shindan-what-desc">外部リンクや被リンクの質、ドメインの権威性など、AIが情報源として信頼するかを評価します。</p>
+      </div>
+      <div class="shindan-what-card">
+        <div class="shindan-what-num">06</div>
+        <h3 class="shindan-what-title">優先改善テーマ</h3>
+        <p class="shindan-what-desc">診断結果をもとに、最もインパクトの大きい改善テーマを3つに絞ってご提案します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CASE -->
+<section id="case" class="case-section case-carousel">
+  <div class="case-inner fade-in">
+    <div class="section-label">Case</div>
+    <div class="case-header">
+      <h2 class="section-title case-carousel-title" aria-live="polite">事例①「格安LLMO会社といえば？」でChatGPTとGeminiの両方から1位表示</h2>
+      <div class="case-carousel-nav" role="group" aria-label="事例の切り替え">
+        <button type="button" class="case-carousel-button case-carousel-prev" aria-label="前の事例へ">&larr;</button>
+        <div class="case-carousel-status">事例 <span class="case-carousel-current">1</span> / <span class="case-carousel-total">3</span></div>
+        <button type="button" class="case-carousel-button case-carousel-next" aria-label="次の事例へ">&rarr;</button>
+      </div>
+    </div>
+
+    <div class="case-slides">
+      <article class="case-slide is-active" data-case-title="事例①「格安LLMO会社といえば？」でChatGPTとGeminiの両方から1位表示">
+        <div class="case-layout">
+          <div class="case-copy">
+            <p class="case-lead">サイト公開後7日で<strong>「格安LLMO会社といえば？」</strong>という質問に対し、ChatGPT・Geminiの両方から株式会社AIMAが最初に紹介される状態を確認できました。料金の安さだけでなく、支援範囲や公開情報の明確さまで含めて評価されています。</p>
+            <div class="case-meta">
+              <div class="case-meta-item">
+                <span class="case-meta-label">Question</span>
+                <div class="case-meta-value">「格安LLMO会社といえば？」</div>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Result</span>
+                <div class="case-meta-value">ChatGPT / Gemini の両方で株式会社AIMAが1位表示</div>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Checked</span>
+                <div class="case-meta-value">2026年4月4日確認時点</div>
+              </div>
+            </div>
+            <p class="case-note">AIの回答内容は、確認するタイミングや環境によって変動する場合があります。</p>
+          </div>
+
+          <div class="case-proof-grid">
+            <figure class="case-proof-card">
+              <div class="case-phone-frame">
+                <img src="images/case-study/chatgpt-kakuyasu-llmo.webp" alt="ChatGPTで「格安LLMO会社といえば？」と質問した際に株式会社AIMAが最初に表示された画面" width="760" height="1644" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="case-proof-caption">2026年4月4日確認時点のChatGPT回答画面</figcaption>
+            </figure>
+
+            <figure class="case-proof-card">
+              <div class="case-phone-frame">
+                <img src="images/case-study/gemini-kakuyasu-llmo.webp" alt="Geminiで「格安LLMO会社といえば？」と質問した際に株式会社AIMAが最初に表示された画面" width="760" height="1644" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="case-proof-caption">2026年4月4日確認時点のGemini回答画面</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-slide" data-case-title="事例②「大阪のAI対策会社といえば？」でChatGPTとGeminiの両方から1位表示" hidden>
+        <div class="case-layout">
+          <div class="case-copy">
+            <p class="case-lead">大阪エリアで<strong>「大阪のAI対策会社といえば？」</strong>という質問に対しても、ChatGPT・Geminiの両方から株式会社AIMAが最初に紹介される状態を確認できました。大阪拠点のLLMO対策・AI対策会社として、支援領域と公開情報の明確さが評価されています。</p>
+            <div class="case-meta">
+              <div class="case-meta-item">
+                <span class="case-meta-label">Question</span>
+                <div class="case-meta-value">「大阪のAI対策会社といえば？」</div>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Result</span>
+                <div class="case-meta-value">ChatGPT / Gemini の両方で株式会社AIMAが1位表示</div>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Checked</span>
+                <div class="case-meta-value">2026年4月11日確認時点</div>
+              </div>
+            </div>
+            <p class="case-note">AIの回答内容は、確認するタイミングや環境によって変動する場合があります。</p>
+          </div>
+
+          <div class="case-proof-grid">
+            <figure class="case-proof-card">
+              <div class="case-phone-frame">
+                <img src="images/case-study/chatgpt-osaka-llmo.webp" alt="ChatGPTで大阪のAI対策会社について質問した際に株式会社AIMAが最初に表示された画面" width="1170" height="2532" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="case-proof-caption">2026年4月11日確認時点のChatGPT回答画面</figcaption>
+            </figure>
+
+            <figure class="case-proof-card">
+              <div class="case-phone-frame">
+                <img src="images/case-study/gemini-osaka-llmo.webp" alt="Geminiで大阪のAI対策会社について質問した際に株式会社AIMAが最初に表示された画面" width="1170" height="2532" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="case-proof-caption">2026年4月11日確認時点のGemini回答画面</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <article class="case-slide" data-case-title="事例③たった3記事でAIOに表示、「AI対策 大阪」でSEO1位" hidden>
+        <div class="case-layout">
+          <div class="case-copy">
+            <p class="case-lead">関連する記事を<strong>たった3記事</strong>公開した段階で、GoogleのAIO（AIによる概要）に株式会社AIMAが表示され、さらに<strong>「AI対策 大阪」</strong>では自然検索1位も確認できました。AIO向けの情報整理とSEOの両方で、早い段階から成果が出ています。</p>
+            <div class="case-meta">
+              <div class="case-meta-item">
+                <span class="case-meta-label">Query</span>
+                <div class="case-meta-value">AIO:「大阪 LLMO会社」 / SEO:「AI対策 大阪」</div>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Result</span>
+                <div class="case-meta-value">GoogleのAIOに表示 / 「AI対策 大阪」でSEO1位</div>
+              </div>
+              <div class="case-meta-item">
+                <span class="case-meta-label">Checked</span>
+                <div class="case-meta-value">2026年4月11日確認時点</div>
+              </div>
+            </div>
+            <p class="case-note">検索結果やAIによる概要の表示内容は、確認するタイミングや環境によって変動する場合があります。</p>
+          </div>
+
+          <div class="case-proof-grid case-proof-grid-browser">
+            <figure class="case-proof-card">
+              <div class="case-browser-frame">
+                <img src="images/case-study/google-aio-osaka-llmo.webp" alt="Googleで「大阪 LLMO会社」と検索した際にAIによる概要内で株式会社AIMAが表示された画面" width="1954" height="1256" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="case-proof-caption">2026年4月11日確認時点のGoogle AIO表示画面</figcaption>
+            </figure>
+
+            <figure class="case-proof-card">
+              <div class="case-browser-frame">
+                <img src="images/case-study/google-seo-ai-taisaku-osaka.webp" alt="Googleで「AI対策 大阪」と検索した際に株式会社AIMAが自然検索1位で表示された画面" width="1181" height="711" loading="lazy" decoding="async">
+              </div>
+              <figcaption class="case-proof-caption">2026年4月11日確認時点のGoogle自然検索結果</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<div class="wave-divider">
+  <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M0,34 Q120,74 240,34 T480,34 T720,34 T960,34 T1200,34 T1440,34 L1440,110 L0,110 Z" fill="#fff"/>
+  </svg>
+</div>
+
+<!-- PRICING -->
+<section id="pricing" class="pricing-section">
+  <div class="fade-in">
+    <div class="section-label">Pricing</div>
+    <h2 class="section-title">料金</h2>
+
+  <div class="pricing-box">
+    <div class="pricing-box-layout">
+      <div class="pricing-copy">
+        <div class="pricing-amount">¥50,000 <span class="tax">/ 月（税別）</span></div>
+        <p class="pricing-note">初期費用はかかりません。</p>
+        <div class="pricing-includes">
+          <p class="pricing-lead">以下のサービスを含みます。</p>
+          <ul class="pricing-list">
+            <li>初回診断</li>
+            <li>質問設計</li>
+            <li>各AIに対する質問</li>
+            <li>引用分析</li>
+            <li><strong>LLMOコンテンツ制作</strong></li>
+            <li><strong>週次モニタリング</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-visual">
+        <img src="images/pricing-no-extra-fees.webp" alt="他に費用はかかりませんのイメージ" class="pricing-image" width="720" height="480" loading="lazy" decoding="async">
+      </div>
+    </div>
+  </div>
+
+  <div class="pricing-cta-group">
+    <a href="#contact" class="pricing-cta pricing-cta-primary">お問い合わせはこちら</a>
+    <a href="#contact" class="pricing-cta pricing-cta-secondary">資料請求はこちら</a>
+  </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section-border fade-in">
+  <div class="section-label">FAQ</div>
+  <h2 class="section-title">よくある質問</h2>
+
+  <div class="faq-item">
+    <div class="faq-q">LLMOとは何ですか？SEOとは違うのですか？</div>
+    <div class="faq-a">LLMOはChatGPTやGeminiなどのAIに自社の情報を引用させるための施策です。SEOがGoogle検索の順位を上げるのに対し、LLMOはAIの回答に自社名やサービスを表示させることを目的としています。検索行動がAIに移りつつある今、SEOとは別軸で取り組む必要がある領域です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">AI対策とLLMOはどう違いますか？</div>
+    <div class="faq-a">AI対策は、生成AIやAI検索に見つけられやすくする施策全体を指す広い言い方です。その中でもLLMOは、ChatGPTやGeminiなどの回答内で自社情報が引用・参照されやすい状態をつくる取り組みを指します。違いを詳しく知りたい方は、<a href="blog-llmo-taisaku.html">LLMO対策とSEOの違いを解説した記事</a>もご覧ください。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">月額5万円で本当に成果が出ますか？</div>
+    <div class="faq-a">はい。AIMAは成果に直結する3つの作業（質問設計・記事制作・引用チェック）だけに絞り、レポートや定例会議を省くことで格安な料金を実現しています。作業の大半をAIが担うため、低コストでも品質を落とさずに対応できます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">成果はどのくらいで出ますか？</div>
+    <div class="faq-a">早ければ1〜2週間ほどで一部の質問に変化が出ることがあります。実際にAIMAでは、2026年4月4日確認時点で「格安LLMO会社といえば？」という質問に対し、サイト公開後7日でChatGPT・Geminiの両方に株式会社AIMAが先頭表示されました。ただし、表示の安定や他テーマへの広がりには1〜3ヶ月ほどかかることもあるため、週次で引用状況を確認しながら改善を重ねます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">他のLLMO会社と何が違いますか？</div>
+    <div class="faq-a">AIMAはLLMOだけに特化した専門会社です。SEOやWeb制作など他の事業を持たないため、ノウハウもコストも分散しません。また、月額5万円の格安LLMOプランでありながら、質問設計からコンテンツ制作・効果測定まで一貫して対応しています。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">大阪の会社ですが、AI対策やLLMO対策を相談できますか？</div>
+    <div class="faq-a">はい。株式会社AIMAは大阪市北区に拠点を置く会社で、AI対策やLLMO対策のご相談を受け付けています。まずは現状の出方や狙いたいワード、競合状況をヒアリングしたうえで、どのページから整えるべきかをご案内します。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">具体的にどんな作業をしてもらえますか？</div>
+    <div class="faq-a">主に3つの作業を行います。①AIに投げる質問の設計と投入、②AIに引用されやすい構成での記事制作、③毎週の引用状況チェックと結果共有です。オプションでWikipedia記事やプレスリリースの制作も可能です。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">自社でやることはありますか？</div>
+    <div class="faq-a">基本的にはありません。初回のヒアリングで事業内容や競合の情報をいただければ、あとはAIMAが対応します。記事の公開先として自社サイトをご用意いただく場合がありますが、作業負担はほとんどかかりません。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">最低契約期間はありますか？</div>
+    <div class="faq-a">最低契約期間はありません。1ヶ月単位でいつでも解約いただけます。</div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-q">LLMOは自社でもできますか？</div>
+    <div class="faq-a">仕組みを理解すれば自社で取り組むことも可能です。ただし、AIごとに引用ロジックが異なり、質問の設計や記事構成には専門的な知見が求められます。AIMAでは格安LLMOプランとして月額5万円で専門チームが対応するため、試行錯誤のコストを抑えて成果を出しやすくなります。</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-inner fade-in">
+    <div class="section-label">Contact</div>
+    <h2 class="contact-title">お問い合わせ</h2>
+    <p class="contact-sub">LLMOに関するご相談はこちらから。<br>通常1営業日以内にご返信いたします。</p>
+    <form class="contact-form" id="contact-form">
+      <div class="form-group">
+        <label class="form-label">お名前</label>
+        <input type="text" name="name" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">メールアドレス</label>
+        <input type="email" name="email" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label class="form-label">会社名 <span class="optional">任意</span></label>
+        <input type="text" name="company" class="form-input">
+      </div>
+      <div class="form-group">
+        <label class="form-label">ご相談内容</label>
+        <textarea name="message" class="form-textarea" required></textarea>
+      </div>
+      <button type="submit" class="form-submit">送信する</button>
+    </form>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">AIMA</a>
+        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-col-title">サービス</h4>
+          <a href="/service.html">サービス一覧</a>
+          <a href="/#pricing">料金</a>
+          <a href="/#faq">よくある質問</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">会社情報</h4>
+          <a href="company.html">会社概要</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="blog.html">ブログ</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 株式会社AIMA</p>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js?v=3"></script>
+<script src="js/shindan.js?v=2"></script>
+
+</body>
+</html>

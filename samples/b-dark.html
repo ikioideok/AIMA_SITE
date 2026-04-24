@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>B · Dark Glow | AIMA</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--bg:#07070c;--panel:#10101a;--ink:#e8e8f0;--sub:#8a8aa0;--line:#1f1f2c;--glow1:#7c5cff;--glow2:#22d3ee}
+  html,body{background:var(--bg);color:var(--ink);font-family:"Space Grotesk","Noto Sans JP",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  body::before{content:"";position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 20% 0%,rgba(124,92,255,.25),transparent 60%),radial-gradient(ellipse 60% 40% at 90% 10%,rgba(34,211,238,.18),transparent 60%);pointer-events:none;z-index:0}
+  body::after{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:60px 60px;pointer-events:none;z-index:0;mask-image:radial-gradient(ellipse at center,black 30%,transparent 80%)}
+  .wrap{max-width:1240px;margin:0 auto;padding:0 40px;position:relative;z-index:1}
+
+  header{display:flex;justify-content:space-between;align-items:center;padding:24px 40px;position:sticky;top:0;background:rgba(7,7,12,.7);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);z-index:10}
+  .logo{font-weight:700;letter-spacing:.2em;font-size:1.05rem;background:linear-gradient(135deg,#fff,#a8a8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+  nav a{color:var(--sub);text-decoration:none;font-size:.85rem;margin-left:32px;transition:color .2s}
+  nav a:hover{color:var(--ink)}
+  nav a.cta{color:var(--ink);background:linear-gradient(135deg,var(--glow1),var(--glow2));padding:10px 22px;border-radius:999px;font-weight:500}
+
+  .hero{padding:120px 0 140px;position:relative}
+  .badge{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border:1px solid var(--line);background:rgba(255,255,255,.02);border-radius:999px;font-size:.78rem;color:var(--sub);margin-bottom:36px}
+  .badge .dot{width:6px;height:6px;border-radius:50%;background:var(--glow2);box-shadow:0 0 12px var(--glow2);animation:pulse 2s infinite}
+  @keyframes pulse{50%{opacity:.4}}
+  h1{font-size:clamp(2.8rem,6.8vw,5.8rem);font-weight:600;line-height:1.1;letter-spacing:-.02em;margin-bottom:32px}
+  h1 .grad{background:linear-gradient(135deg,#fff 30%,var(--glow1) 60%,var(--glow2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lead{font-size:1.1rem;color:var(--sub);max-width:620px;margin-bottom:48px}
+  .actions{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 28px;border-radius:12px;text-decoration:none;font-size:.95rem;font-weight:500;transition:all .25s;font-family:inherit}
+  .btn-primary{background:linear-gradient(135deg,var(--glow1),#5b8cff);color:#fff;box-shadow:0 8px 32px rgba(124,92,255,.4)}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 12px 40px rgba(124,92,255,.55)}
+  .btn-ghost{border:1px solid var(--line);color:var(--ink);background:rgba(255,255,255,.02)}
+  .btn-ghost:hover{border-color:var(--glow1);background:rgba(124,92,255,.08)}
+
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-top:80px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.015);overflow:hidden}
+  @media(max-width:680px){.stats{grid-template-columns:1fr}}
+  .stat{padding:28px 32px;border-right:1px solid var(--line)}
+  .stat:last-child{border-right:0}
+  @media(max-width:680px){.stat{border-right:0;border-bottom:1px solid var(--line)}}
+  .stat-num{font-size:2.2rem;font-weight:600;background:linear-gradient(135deg,#fff,var(--glow2));-webkit-background-clip:text;background-clip:text;color:transparent;letter-spacing:-.02em}
+  .stat-label{font-size:.78rem;color:var(--sub);margin-top:4px;letter-spacing:.08em}
+
+  .why{padding:140px 0}
+  .section-tag{display:inline-block;font-size:.72rem;letter-spacing:.32em;color:var(--glow2);margin-bottom:20px}
+  .why h2{font-size:2.6rem;font-weight:600;letter-spacing:-.01em;margin-bottom:64px;max-width:720px;line-height:1.3}
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:860px){.why-grid{grid-template-columns:1fr}}
+  .why-card{position:relative;padding:40px 32px;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,0));overflow:hidden;transition:all .3s}
+  .why-card::before{content:"";position:absolute;inset:-1px;background:linear-gradient(135deg,var(--glow1),transparent 50%);border-radius:20px;opacity:0;transition:opacity .3s;z-index:-1;padding:1px}
+  .why-card:hover{transform:translateY(-4px);border-color:rgba(124,92,255,.5)}
+  .why-num{font-family:"Space Grotesk";font-size:.8rem;color:var(--glow1);letter-spacing:.16em;margin-bottom:24px}
+  .why-card h3{font-size:1.2rem;font-weight:600;margin-bottom:14px}
+  .why-card p{color:var(--sub);font-size:.92rem}
+  .why-icon{width:42px;height:42px;border-radius:12px;background:linear-gradient(135deg,rgba(124,92,255,.2),rgba(34,211,238,.1));display:flex;align-items:center;justify-content:center;margin-bottom:24px;border:1px solid var(--line)}
+  .why-icon svg{width:20px;height:20px;stroke:var(--glow2);fill:none;stroke-width:1.6}
+</style>
+</head>
+<body>
+<header>
+  <div class="logo">A I M A</div>
+  <nav>
+    <a href="#">Service</a>
+    <a href="#">Case</a>
+    <a href="#">Pricing</a>
+    <a href="#" class="cta">Contact</a>
+  </nav>
+</header>
+
+<section class="hero wrap">
+  <span class="badge"><span class="dot"></span>LLMO Specialist · Osaka, Japan</span>
+  <h1>AIに引用される、<br><span class="grad">未来の検索資産を。</span></h1>
+  <p class="lead">ChatGPT・Gemini・Perplexityなど生成AI上で、自社が"答え"として呼ばれるための仕組みを設計します。質問設計・記事制作・引用チェックの3工程に専業特化。月額¥50,000から。</p>
+  <div class="actions">
+    <a class="btn btn-primary" href="#">無料診断をはじめる →</a>
+    <a class="btn btn-ghost" href="#">サービスを見る</a>
+  </div>
+
+  <div class="stats">
+    <div class="stat"><div class="stat-num">¥50,000</div><div class="stat-label">MONTHLY · TAX EXCLUDED</div></div>
+    <div class="stat"><div class="stat-num">3 STEPS</div><div class="stat-label">QUESTION · CONTENT · CHECK</div></div>
+    <div class="stat"><div class="stat-num">100%</div><div class="stat-label">FOCUSED ON LLMO</div></div>
+  </div>
+</section>
+
+<section class="why wrap">
+  <div class="section-tag">— WHY AIMA</div>
+  <h2>月5万円で提供できる、<br>3つの理由。</h2>
+  <div class="why-grid">
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="9"/></svg></div>
+      <div class="why-num">01 / FOCUS</div>
+      <h3>成果に直結する作業だけに集中</h3>
+      <p>レポートや定例MTGなど、引用獲得に関係しない業務は行いません。質問特定・記事制作・引用確認の3つに絞ります。</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v16H4z"/><path d="M4 12h16M12 4v16"/></svg></div>
+      <div class="why-num">02 / AI-NATIVE</div>
+      <h3>作業の大半をAIが担当</h3>
+      <p>記事制作とリサーチはAIが実行。人間は方向決めと最終確認のみ。外注を挟まないからスピードも価格も維持できます。</p>
+    </div>
+    <div class="why-card">
+      <div class="why-icon"><svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg></div>
+      <div class="why-num">03 / SPECIALIST</div>
+      <h3>LLMO専業の会社</h3>
+      <p>SEOやWeb制作は手がけません。LLMOだけにノウハウとコストを集中するため、月5万円でも質を落としません。</p>
+    </div>
+  </div>
+</section>
+</body>
+</html>
