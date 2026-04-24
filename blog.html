@@ -98,47 +98,6 @@
     color: #626773;
   }
 
-  .media-search {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    display: flex;
-    width: min(360px, 28vw);
-    transform: translate(-50%, -50%);
-    border: 1px solid #dfe2ea;
-    border-radius: 999px;
-    background: #fff;
-    overflow: hidden;
-  }
-
-  .media-search input {
-    width: 100%;
-    min-width: 0;
-    padding: 0.72rem 1rem 0.72rem 1.2rem;
-    border: 0;
-    background: transparent;
-    color: var(--black);
-    font-family: var(--font-jp);
-    font-size: 0.85rem;
-  }
-
-  .media-search input:focus {
-    outline: none;
-  }
-
-  .media-search button {
-    min-width: 58px;
-    padding: 0 1rem;
-    border: 0;
-    background: transparent;
-    color: #222;
-    font-family: var(--font-jp);
-    font-size: 0.78rem;
-    font-weight: 700;
-    cursor: pointer;
-    white-space: nowrap;
-  }
-
   .media-category-nav {
     margin-top: 72px;
     background: #fff;
@@ -382,10 +341,7 @@
   }
 
   .content-split {
-    display: grid;
-    grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.95fr);
-    gap: 2rem;
-    align-items: start;
+    display: block;
   }
 
   .media-section {
@@ -579,6 +535,42 @@
     line-height: 1.4;
   }
 
+  .sidebar-search {
+    display: flex;
+    border: 1px solid #dfe2ea;
+    border-radius: 999px;
+    background: #fff;
+    overflow: hidden;
+  }
+
+  .sidebar-search input {
+    width: 100%;
+    min-width: 0;
+    padding: 0.78rem 0.95rem 0.78rem 1.05rem;
+    border: 0;
+    background: transparent;
+    color: var(--black);
+    font-family: var(--font-jp);
+    font-size: 0.85rem;
+  }
+
+  .sidebar-search input:focus {
+    outline: none;
+  }
+
+  .sidebar-search button {
+    min-width: 58px;
+    padding: 0 1rem;
+    border: 0;
+    background: #111;
+    color: #fff;
+    font-family: var(--font-jp);
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
   .ranking-list {
     display: grid;
     gap: 0.9rem;
@@ -706,10 +698,6 @@
   }
 
   @media (max-width: 900px) {
-    .media-search {
-      display: none;
-    }
-
     .media-logo-copy {
       display: none;
     }
@@ -760,10 +748,6 @@
       font-size: 1.35rem;
     }
 
-    .content-split {
-      gap: 1.6rem;
-    }
-
     .consult-banner {
       grid-template-columns: 1fr;
       padding: 1rem;
@@ -794,11 +778,6 @@
 <!-- HEADER -->
 <header class="media-header">
   <a href="/" class="logo media-logo">AIMA<span class="media-logo-copy">LLMOの活用・導入で<br>ビジネスを加速するメディア</span></a>
-  <form class="media-search" action="blog.html" method="get" role="search">
-    <label class="sr-only" for="blog-search">記事を検索</label>
-    <input type="search" id="blog-search" name="q" placeholder="記事を検索">
-    <button type="submit">検索</button>
-  </form>
   <button class="hamburger" id="hamburger" aria-label="メニューを開く">
     <span></span><span></span><span></span>
   </button>
@@ -921,42 +900,49 @@
             <a href="/#contact">無料で相談してみる</a>
           </section>
         </section>
-
-        <section class="media-section" aria-labelledby="pickup-heading">
-          <div class="section-head">
-            <h2 id="pickup-heading">特集・ピックアップ</h2>
-            <a href="blog.html" class="section-link">もっと見る</a>
-          </div>
-          <div class="pickup-card">
-            <div class="pickup-list">
-              <a href="blog-llmo-taisaku.html" class="pickup-item">
-                <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とはの記事サムネイル" decoding="async">
-                <div>
-                  <h3 class="pickup-title">はじめてのLLMO導入ガイド｜基礎から実践まで徹底解説</h3>
-                  <div class="blog-date">2026.04.20</div>
-                </div>
-              </a>
-              <a href="blog-btob-llmo-kaisha.html" class="pickup-item">
-                <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いLLMO会社の記事サムネイル" decoding="async">
-                <div>
-                  <h3 class="pickup-title">企業のLLMO導入事例インタビュー｜成功のポイントとは？</h3>
-                  <div class="blog-date">2026.04.18</div>
-                </div>
-              </a>
-              <a href="blog-kakuyasu-llmo-taisaku-kaisha.html" class="pickup-item">
-                <img src="images/blog-kakuyasu-llmo-taisaku-kaisha/eyecatch.jpg" alt="LLMO対策会社おすすめ10選の記事サムネイル" decoding="async">
-                <div>
-                  <h3 class="pickup-title">LLMOの費用相場を徹底解説｜料金体系と比較のポイント</h3>
-                  <div class="blog-date">2026.04.16</div>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
       </div>
     </div>
 
     <aside class="media-sidebar" aria-label="ブログサイドバー">
+      <section class="side-card" aria-labelledby="sidebar-search-heading">
+        <h2 id="sidebar-search-heading">記事を検索</h2>
+        <form class="sidebar-search" action="blog.html" method="get" role="search">
+          <label class="sr-only" for="blog-search">記事を検索</label>
+          <input type="search" id="blog-search" name="q" placeholder="キーワードを入力">
+          <button type="submit">検索</button>
+        </form>
+      </section>
+
+      <section class="side-card" aria-labelledby="pickup-heading">
+        <div class="section-head">
+          <h2 id="pickup-heading">特集・ピックアップ</h2>
+          <a href="blog.html" class="section-link">もっと見る</a>
+        </div>
+        <div class="pickup-list">
+          <a href="blog-llmo-taisaku.html" class="pickup-item">
+            <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とはの記事サムネイル" decoding="async">
+            <div>
+              <h3 class="pickup-title">はじめてのLLMO導入ガイド｜基礎から実践まで徹底解説</h3>
+              <div class="blog-date">2026.04.20</div>
+            </div>
+          </a>
+          <a href="blog-btob-llmo-kaisha.html" class="pickup-item">
+            <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いLLMO会社の記事サムネイル" decoding="async">
+            <div>
+              <h3 class="pickup-title">企業のLLMO導入事例インタビュー｜成功のポイントとは？</h3>
+              <div class="blog-date">2026.04.18</div>
+            </div>
+          </a>
+          <a href="blog-kakuyasu-llmo-taisaku-kaisha.html" class="pickup-item">
+            <img src="images/blog-kakuyasu-llmo-taisaku-kaisha/eyecatch.jpg" alt="LLMO対策会社おすすめ10選の記事サムネイル" decoding="async">
+            <div>
+              <h3 class="pickup-title">LLMOの費用相場を徹底解説｜料金体系と比較のポイント</h3>
+              <div class="blog-date">2026.04.16</div>
+            </div>
+          </a>
+        </div>
+      </section>
+
       <section class="side-card" aria-labelledby="ranking-heading">
         <div class="section-head">
           <h2 id="ranking-heading">人気記事ランキング</h2>
