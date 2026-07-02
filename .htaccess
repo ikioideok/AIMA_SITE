@@ -1,0 +1,39 @@
+# 301 redirect: stale root copy -> homepage
+Redirect 301 /aima-site-latest.html /
+
+# 301 redirect: old small-business AIO/LLMO service URL -> current URL
+Redirect 301 /chusho-kigyo-llmo-aio.html /chusho-kigyo-aio-llmo.html
+
+# 301 redirect: kakuyasu-llmo-daiko → kakuyasu-llmo-taisaku-kaisha (consolidated 2026-05-02)
+Redirect 301 /blog-kakuyasu-llmo-daiko.html /blog-kakuyasu-llmo-taisaku-kaisha.html
+
+# 301 redirect: cannibalized blog articles -> stronger destination articles (consolidated 2026-07-02)
+Redirect 301 /blog-llmo-consulting-cost.html /blog-llmo-cost.html
+Redirect 301 /blog-geo-company-selection.html /blog-geo-taisaku-kaisha.html
+Redirect 301 /blog-chusho-geo-company.html /blog-geo-taisaku-kaisha.html
+Redirect 301 /blog-ai-search-company.html /blog-aio-taisaku-kaisha.html
+Redirect 301 /blog-osaka-ai-search-company.html /blog-osaka-llmo-kaisha.html
+
+# Search Console cleanup: old media and jinzai URLs exported through 2026-05-18.
+# These pages are no longer public files, so send Google and users to the closest current page.
+RewriteEngine On
+RewriteRule ^media/?$ /blog.html [R=301,L]
+RewriteRule ^media/(latest|ads|special|featured|terms|resources|categories)/?$ /blog.html [R=301,L]
+RewriteRule ^media/privacy/?$ /privacy.html [R=301,L]
+RewriteRule ^media/llmo-llmstxt-checklist\.html$ /blog-llms-txt.html [R=301,L]
+RewriteRule ^media/(Keyword_Selection_AI_Tools_Free)/?$ /blog-ai-search-taisaku.html [R=301,L]
+RewriteRule ^media/(ai_marketing)/?$ /blog-generative-ai-marketing-cases.html [R=301,L]
+RewriteRule ^media/(LLMO_Case_Study_in_B2B_Manufacturing)/?$ /blog-btob-llmo-kaisha.html [R=301,L]
+RewriteRule ^media/page/2/?$ /blog.html [R=301,L]
+RewriteRule ^media/category//?$ /blog.html [R=301,L]
+RewriteRule ^media/category/(analytics|tools|cases|strategy|seo|content|content-marketing)/?$ /blog.html [R=301,L]
+RewriteRule ^media/category/content-marketing/blog-llmo-taisaku\.html$ /blog-llmo-taisaku.html [R=301,L]
+RewriteRule ^media/Increase_Named_Searches/?$ /blog-llmo-taisaku.html [R=301,L]
+RewriteRule ^media/articles/(what-is-llmo-seo|llmo-poc|seoairoi|seo-syukyaku-kouka-roadmap|seo-measures-how-to|seo-search-intent-analysis|seo-keyword-selection-strategy-guide|how-to-create-seo-content|seo-writing-examples|seo-article-structure-template-aima|seo-checklist-best-practices|2025seo|seo-for-beginners|seo-latest-trends-2024|seo-service-comparison|seo-automation-tools-guide|seo-success-stories|seo-algorithm-change-measures)/?$ /blog-llmo-taisaku.html [R=301,L]
+RewriteRule ^media/articles/seo-cost-pricing/?$ /blog-llmo-cost.html [R=301,L]
+RewriteRule ^media/articles/(content-marketing-free-tools|content-marketing-playbook|content-marketing-workflow|content-marketing-kpi|content-marketing-video-strategy-aima|content-marketing-success-stories|content-marketing-sns-integration-guide|content-marketing-roi|content-marketing-for-beginners|content-creation-outsourcing-guide|btoc-content-marketing-strategy-aima|btob-content-marketing-guide|b2b-content-marketing-guide|content-marketing-books-recommendation|content-marketing-demerits|content-seo-marketing-difference|content-marketing-case-studies|content-marketing-benefits|content-marketing-strategy)/?$ /blog-btob-llmo-kaisha.html [R=301,L]
+RewriteRule ^media/articles/(local-seo-guide|seo-tool-recommendation|first-dummy-article|google-ads-performance-measurement|instagram-ads-cost|seo-off-page-link-building-guide|facebook-ads-success-stories|llmopsmlopsai|listing-ads-operation-method|seo-penalty-measures|analytics-roi-measurement|advertising-operation-automation-guide|advertising-operation-for-beginners)/?$ /blog.html [R=301,L]
+
+RedirectMatch 301 ^/jinzai/?$ /
+RedirectMatch 301 ^/jinzai/(hiring|retention|quality|efficiency)/?$ /
+RedirectMatch 301 ^/soku_siryo/?$ /
