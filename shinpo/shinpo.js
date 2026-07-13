@@ -43,69 +43,8 @@
     }
   }
 
-  const footer = document.querySelector(".sh-footer");
-  if (footer) {
-    footer.innerHTML = `
-      <div class="sh-footer-main">
-        <div class="sh-footer-brand">
-          <a href="index.html" class="sh-footer-logo">AI深報</a>
-          <p>どこよりも早く、AIの重要ニュースを。</p>
-          <span>POWERED BY AIMA</span>
-        </div>
-        <div class="sh-footer-links">
-          <div>
-            <strong>AI深報</strong>
-            <a href="index.html">トップ</a>
-            <a href="index.html?category=企業動向">企業動向</a>
-            <a href="index.html?category=プロダクト">プロダクト</a>
-            <a href="index.html?category=生成AI">生成AI</a>
-          </div>
-          <div>
-            <strong>カテゴリー</strong>
-            <a href="index.html?category=セキュリティ">セキュリティ</a>
-            <a href="index.html?category=お知らせ">お知らせ</a>
-          </div>
-          <div>
-            <strong>株式会社AIMA</strong>
-            <a href="../index.html">公式サイト</a>
-            <a href="../service.html">サービス</a>
-            <a href="../company.html">会社概要</a>
-            <a href="../privacy.html">プライバシーポリシー</a>
-          </div>
-        </div>
-      </div>
-      <div class="sh-footer-bottom">
-        <small>© 株式会社AIMA</small>
-        <span>AI SHINPO — FASTEST AI NEWS</span>
-      </div>`;
-  }
-
   const menuButton = document.querySelector(".sh-menu-toggle");
   const primaryNav = document.querySelector(".sh-nav");
-
-  // Every page gets the same menu. Keep this list in step with the categories
-  // that are actually attached to news cards on the top page.
-  const globalMenu = [
-    ["all", "トップ"],
-    ["企業動向", "企業動向"],
-    ["プロダクト", "プロダクト"],
-    ["生成AI", "生成AI"],
-    ["セキュリティ", "セキュリティ"],
-    ["お知らせ", "お知らせ"],
-  ];
-  const navInner = primaryNav?.querySelector(".sh-nav-inner");
-  if (navInner) {
-    const links = globalMenu.map(([category, label]) => {
-      const link = document.createElement("a");
-      link.href = category === "all"
-        ? "index.html"
-        : `index.html?category=${encodeURIComponent(category)}`;
-      link.dataset.categoryLink = category;
-      link.textContent = label;
-      return link;
-    });
-    navInner.replaceChildren(...links);
-  }
 
   if (menuButton && primaryNav) {
     menuButton.addEventListener("click", () => {

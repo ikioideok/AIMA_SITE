@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-13-hitachi-openai-codex-modernization.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-13T14:03:00+09:00</news:publication_date><news:title>日立とOpenAI、Codexで基幹システム刷新を支援へ—金融から展開</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-13-scene-3d-docs-ai-beta.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-13T10:30:00+09:00</news:publication_date><news:title>Scene、3D CADから組立工程・手順書を作るAI機能をβ提供</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-13-adaptive-recall-mcp-memory.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-13T10:03:00+09:00</news:publication_date><news:title>AIアシスタントに継続記憶を追加する「Adaptive Recall」公開</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-13-terence-tao-ai-coding-agents.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-13T08:00:00+09:00</news:publication_date><news:title>Terence Tao氏、AIで約24本の旧数学アプリを数時間で復活</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-12-mindwalk-coding-agent-replay.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-12T20:02:00+09:00</news:publication_date><news:title>AIコーディング作業を3Dで再生、Mindwalk初版が公開</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-12-tesla-grok-japan.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-12T18:03:00+09:00</news:publication_date><news:title>Tesla車内でGrok、日本でも提供開始──音声でナビ検索に対応</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-12-mesh-llm-distributed-ai.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-12T12:01:00+09:00</news:publication_date><news:title>複数PCのGPUを束ねる「Mesh LLM」公開──OpenAI互換APIで分散推論</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-12-mixfont-ghost-font.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-12T10:05:00+09:00</news:publication_date><news:title>人には読めてAIには読みにくい「Ghost Font」公開──動画の動きで文字を表現</news:title>
+  </news:news></url>
+  <url><loc>https://ai-and-marketing.jp/shinpo/2026-07-12-openai-gpt-live-voice.html</loc><news:news>
+    <news:publication><news:name>AI深報</news:name><news:language>ja</news:language></news:publication>
+    <news:publication_date>2026-07-12T08:02:00+09:00</news:publication_date><news:title>OpenAI、ChatGPT音声にGPT-Live導入──同時に聞いて話せる会話へ</news:title>
+  </news:news></url>
+</urlset>

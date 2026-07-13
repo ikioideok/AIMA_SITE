@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel>
+  <title>AI深報</title><link>https://ai-and-marketing.jp/shinpo/</link><description>どこよりも早く、AIの重要ニュースを。</description>
+  <language>ja</language><lastBuildDate>Mon, 13 Jul 2026 15:20:03 +0900</lastBuildDate>
+  <atom:link href="https://ai-and-marketing.jp/shinpo/feed.xml" rel="self" type="application/rss+xml"/>
+  <item>
+    <title>日立とOpenAI、Codexで基幹システム刷新を支援へ—金融から展開</title><link>https://ai-and-marketing.jp/shinpo/2026-07-13-hitachi-openai-codex-modernization.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-13-hitachi-openai-codex-modernization.html</guid><pubDate>Mon, 13 Jul 2026 14:03:00 +0900</pubDate>
+    <category>企業動向</category><description>日立とOpenAIが、AIエージェントCodexを使ったレガシーシステム刷新支援の方法を共同開発します。金融機関から幅広い業界への展開をめざします。</description>
+  </item>
+  <item>
+    <title>Scene、3D CADから組立工程・手順書を作るAI機能をβ提供</title><link>https://ai-and-marketing.jp/shinpo/2026-07-13-scene-3d-docs-ai-beta.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-13-scene-3d-docs-ai-beta.html</guid><pubDate>Mon, 13 Jul 2026 10:30:00 +0900</pubDate>
+    <category>プロダクト</category><description>Sceneが、3D CADデータから組立工程と組立手順書の下書きを作る「3D Docs AI」をβ機能として提供しました。デンソー工機部との共同開発です。</description>
+  </item>
+  <item>
+    <title>AIアシスタントに継続記憶を追加する「Adaptive Recall」公開</title><link>https://ai-and-marketing.jp/shinpo/2026-07-13-adaptive-recall-mcp-memory.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-13-adaptive-recall-mcp-memory.html</guid><pubDate>Mon, 13 Jul 2026 10:03:00 +0900</pubDate>
+    <category>プロダクト</category><description>MCPとREST APIを通じて、Claude CodeやCodexなどのAIツールにセッションをまたぐ記憶を追加するサービス「Adaptive Recall」が公開されました。</description>
+  </item>
+  <item>
+    <title>Terence Tao氏、AIで約24本の旧数学アプリを数時間で復活</title><link>https://ai-and-marketing.jp/shinpo/2026-07-13-terence-tao-ai-coding-agents.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-13-terence-tao-ai-coding-agents.html</guid><pubDate>Mon, 13 Jul 2026 08:00:00 +0900</pubDate>
+    <category>生成AI</category><description>数学者Terence Tao氏が、AIコーディングエージェントを使い、約24本の旧Javaアプリを数時間でJavaScriptへ移植した実例を紹介しました。</description>
+  </item>
+  <item>
+    <title>AIコーディング作業を3Dで再生、Mindwalk初版が公開</title><link>https://ai-and-marketing.jp/shinpo/2026-07-12-mindwalk-coding-agent-replay.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-12-mindwalk-coding-agent-replay.html</guid><pubDate>Sun, 12 Jul 2026 20:02:00 +0900</pubDate>
+    <category>プロダクト</category><description>Claude CodeとCodexの作業履歴を、コード構成の3D地図上で再生できるオープンソースツール「Mindwalk」の初版が公開された。</description>
+  </item>
+  <item>
+    <title>Tesla車内でGrok、日本でも提供開始──音声でナビ検索に対応</title><link>https://ai-and-marketing.jp/shinpo/2026-07-12-tesla-grok-japan.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-12-tesla-grok-japan.html</guid><pubDate>Sun, 12 Jul 2026 18:03:00 +0900</pubDate>
+    <category>プロダクト</category><description>Teslaが日本の車両で対話AI「Grok」の提供を開始。音声でナビ関連の検索や会話ができ、プレミアムコネクティビティまたはWi-Fi接続が必要。</description>
+  </item>
+  <item>
+    <title>複数PCのGPUを束ねる「Mesh LLM」公開──OpenAI互換APIで分散推論</title><link>https://ai-and-marketing.jp/shinpo/2026-07-12-mesh-llm-distributed-ai.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-12-mesh-llm-distributed-ai.html</guid><pubDate>Sun, 12 Jul 2026 12:01:00 +0900</pubDate>
+    <category>生成AI</category><description>複数のパソコンやサーバーにあるGPUとメモリを束ね、OpenAI互換APIからAIモデルを動かせるMesh LLMが公開された。仕組みと企業利用の注意点を解説する。</description>
+  </item>
+  <item>
+    <title>人には読めてAIには読みにくい「Ghost Font」公開──動画の動きで文字を表現</title><link>https://ai-and-marketing.jp/shinpo/2026-07-12-mixfont-ghost-font.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-12-mixfont-ghost-font.html</guid><pubDate>Sun, 12 Jul 2026 10:05:00 +0900</pubDate>
+    <category>プロダクト</category><description>Mixfontが、人には読めてもAIには簡単に解読されにくい動画型の文字表現「Ghost Font」を公開。仕組みと限界を解説する。</description>
+  </item>
+  <item>
+    <title>OpenAI、ChatGPT音声にGPT-Live導入──同時に聞いて話せる会話へ</title><link>https://ai-and-marketing.jp/shinpo/2026-07-12-openai-gpt-live-voice.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-12-openai-gpt-live-voice.html</guid><pubDate>Sun, 12 Jul 2026 08:02:00 +0900</pubDate>
+    <category>生成AI</category><description>OpenAIがChatGPT VoiceにGPT-Live-1とGPT-Live-1 miniを導入。人の話を聞きながら応答でき、検索や推論も会話中に処理する。</description>
+  </item>
+  <item>
+    <title>Google、Geminiの管理AIを拡張──長時間処理と社内連携を強化</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-google-gemini-managed-agents.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-google-gemini-managed-agents.html</guid><pubDate>Sat, 11 Jul 2026 14:58:00 +0900</pubDate>
+    <category>企業動向</category><description>GoogleがGemini APIのManaged Agentsに、バックグラウンド実行、リモートMCP連携、カスタム関数、認証情報更新などを追加した。</description>
+  </item>
+  <item>
+    <title>Project Genieに地図連携──実在の場所からAI世界を生成</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-google-project-genie-street-view.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-google-project-genie-street-view.html</guid><pubDate>Sat, 11 Jul 2026 14:03:00 +0900</pubDate>
+    <category>企業動向</category><description>GoogleがProject GenieにStreet View grounding機能を追加。米国内の場所を起点に、実在の風景とAI生成を組み合わせたインタラクティブな世界を作れるようにした。</description>
+  </item>
+  <item>
+    <title>Microsoft Copilot、GPT-5.6を優先モデルに採用</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-microsoft-365-copilot-gpt-5-6.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-microsoft-365-copilot-gpt-5-6.html</guid><pubDate>Sat, 11 Jul 2026 12:03:00 +0900</pubDate>
+    <category>プロダクト</category><description>Microsoft 365 CopilotでOpenAIのGPT-5.6が優先モデルになる。Word、Excel、PowerPoint、Chat、Coworkに展開され、仕事の下書き・分析・資料作成への影響が大きい。</description>
+  </item>
+  <item>
+    <title>Meta、Muse Spark 1.1と開発者向けAPIを発表</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-meta-muse-spark-1-1.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-meta-muse-spark-1-1.html</guid><pubDate>Sat, 11 Jul 2026 10:30:00 +0900</pubDate>
+    <category>生成AI</category><description>Metaがマルチモーダル推論モデル「Muse Spark 1.1」を発表。100万トークンのコンテキスト管理、エージェントタスク対応。開発者向け「Meta Model API」もパブリックプレビューを開始した。</description>
+  </item>
+  <item>
+    <title>OpenAI、生物安全性の懸賞制度を継続化──報酬最大5万ドル</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-openai-bio-bounty-program.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-openai-bio-bounty-program.html</guid><pubDate>Sat, 11 Jul 2026 10:04:00 +0900</pubDate>
+    <category>セキュリティ</category><description>OpenAIが生物リスク対策のBio Bug Bountyを、継続型のOpenAI Bio Bounty Programへ移行。GPT-5.6以降を対象に、最大報酬を5万ドルへ引き上げた。</description>
+  </item>
+  <item>
+    <title>AI深報、創刊──重要な生成AIニュースをどこよりも早く届ける</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-launch.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-launch.html</guid><pubDate>Sat, 11 Jul 2026 09:00:00 +0900</pubDate>
+    <category>お知らせ</category><description>AIの重要ニュースだけを最速で記事化する日本語メディア「AI深報」を創刊しました。運営は大阪のLLMO対策・AI対策会社、株式会社AIMA。</description>
+  </item>
+  <item>
+    <title>OpenAI、ChatGPT Work発表──仕事用AIを強化</title><link>https://ai-and-marketing.jp/shinpo/2026-07-11-openai-chatgpt-work-gpt-5-6.html</link>
+    <guid isPermaLink="true">https://ai-and-marketing.jp/shinpo/2026-07-11-openai-chatgpt-work-gpt-5-6.html</guid><pubDate>Sat, 11 Jul 2026 08:05:00 +0900</pubDate>
+    <category>プロダクト</category><description>OpenAIがChatGPT WorkとGPT-5.6ファミリーを発表。仕事の文書、資料、分析、アプリ作成などを進めるAIエージェントとして、企業利用への影響が大きい。</description>
+  </item>
+</channel></rss>

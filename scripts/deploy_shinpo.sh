@@ -20,11 +20,16 @@ required_files=(
   "shinpo/index.html"
   "shinpo/shinpo.css"
   "shinpo/shinpo.js"
-  "shinpo/images/ai-shinpo-logo.png"
+  "shinpo/feed.xml"
+  "shinpo/editorial-policy.html"
+  "shinpo/images/ai-shinpo-logo.webp"
   "sitemap.xml"
+  "news-sitemap.xml"
+  "llms.txt"
   "images/favicon.svg"
+  "images/apple-touch-icon.png"
   "images/member-photo.webp"
-  "images/shinpo/managed-agents-hero.png"
+  "images/shinpo/managed-agents-hero.webp"
   "images/shinpo/ogp.png"
 )
 
@@ -61,8 +66,11 @@ rsync "${rsync_options[@]}" \
   --include='/shinpo.css' \
   --include='/shinpo.js' \
   --include='/20??-??-??-*.html' \
+  --include='/category-*.html' \
+  --include='/feed.xml' \
+  --include='/editorial-policy.html' \
   --include='/images/' \
-  --include='/images/ai-shinpo-logo.png' \
+  --include='/images/ai-shinpo-logo.webp' \
   --exclude='*' \
   shinpo/ \
   "$REMOTE_HOST:$REMOTE_ROOT/shinpo/"
@@ -70,16 +78,18 @@ rsync "${rsync_options[@]}" \
 # AI深報が参照する、サイト共通側の画像だけを個別転送する。
 rsync "${rsync_options[@]}" \
   images/favicon.svg \
+  images/apple-touch-icon.png \
   images/member-photo.webp \
   "$REMOTE_HOST:$REMOTE_ROOT/images/"
 
 rsync "${rsync_options[@]}" \
-  images/shinpo/managed-agents-hero.png \
+  images/shinpo/managed-agents-hero.webp \
   images/shinpo/ogp.png \
+  images/shinpo/articles \
   "$REMOTE_HOST:$REMOTE_ROOT/images/shinpo/"
 
 rsync "${rsync_options[@]}" \
-  sitemap.xml \
+  .htaccess robots.txt sitemap.xml news-sitemap.xml llms.txt \
   "$REMOTE_HOST:$REMOTE_ROOT/"
 
 if [[ "$MODE" == "dry-run" ]]; then
@@ -92,10 +102,12 @@ check_urls=(
   "$base_url/"
   "$base_url/shinpo.css"
   "$base_url/shinpo.js"
-  "$base_url/images/ai-shinpo-logo.png"
-  "https://ai-and-marketing.jp/images/shinpo/managed-agents-hero.png"
+  "$base_url/images/ai-shinpo-logo.webp"
+  "https://ai-and-marketing.jp/images/shinpo/managed-agents-hero.webp"
   "https://ai-and-marketing.jp/images/shinpo/ogp.png"
   "https://ai-and-marketing.jp/sitemap.xml"
+  "https://ai-and-marketing.jp/news-sitemap.xml"
+  "$base_url/feed.xml"
 )
 
 for article in shinpo/20??-??-??-*.html; do

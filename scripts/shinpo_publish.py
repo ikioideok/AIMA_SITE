@@ -34,6 +34,7 @@ from pathlib import Path
 from urllib.parse import urlparse
 
 from shinpo_queue import mark_by_url
+from rebuild_shinpo_seo import rebuild as rebuild_seo
 
 ROOT = Path(__file__).resolve().parent.parent
 SHINPO = ROOT / "shinpo"
@@ -153,13 +154,20 @@ def main():
     dt = datetime.fromisoformat(art["datetime"])
     date_iso = dt.strftime("%Y-%m-%dT%H:%M")
     date_iso_with_zone = f"{date_iso}:00+09:00"
+    modified_source = art.get("date_modified", art["datetime"])
+    modified_dt = datetime.fromisoformat(modified_source)
+    modified_iso_with_zone = f"{modified_dt.strftime('%Y-%m-%dT%H:%M')}:00+09:00"
     date_display = dt.strftime("%Y.%m.%d %H:%M")
     filename = f"{dt.strftime('%Y-%m-%d')}-{art['slug']}.html"
     canonical_url = f"https://ai-and-marketing.jp/shinpo/{filename}"
+    image_url = f"https://ai-and-marketing.jp/images/shinpo/articles/{Path(filename).stem}.webp"
+    image_path = ROOT / "images" / "shinpo" / "articles" / f"{Path(filename).stem}.webp"
     out_path = SHINPO / filename
     if check_only:
         print(f"OK: {draft_path}")
         return
+    if not image_path.exists():
+        die(f"記事固有画像がありません: {image_path}")
     if out_path.exists() and not refresh_only:
         die(f"{filename} は既に存在します（上書きする場合は先に削除）")
 
@@ -182,6 +190,9 @@ def main():
         "{{DESCRIPTION}}": html.escape(art["description"]),
         "{{CANONICAL_URL}}": html.escape(canonical_url),
         "{{DATE_ISO_WITH_ZONE}}": date_iso_with_zone,
+        "{{MODIFIED_ISO_WITH_ZONE}}": modified_iso_with_zone,
+        "{{IMAGE_URL}}": image_url,
+        "{{IMAGE_PATH}}": f"../images/shinpo/articles/{Path(filename).stem}.webp",
         "{{TITLE_JSON}}": json.dumps(art["title"], ensure_ascii=False),
         "{{DESCRIPTION_JSON}}": json.dumps(art["description"], ensure_ascii=False),
         "{{CATEGORY_JSON}}": json.dumps(category_display, ensure_ascii=False),
@@ -192,6 +203,10 @@ def main():
         "{{LEAD_ITEMS}}": lead_items,
         "{{BODY}}": art["body_html"],
         "{{SOURCES}}": sources,
+        "{{BREADCRUMB_JSON}}": json.dumps({"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"AI深報","item":"https://ai-and-marketing.jp/shinpo/"},{"@type":"ListItem","position":2,"name":category_display,"item":f"https://ai-and-marketing.jp/shinpo/category-{dict(zip(PUBLIC_CATEGORIES, ('company','product','generative-ai','security','notice')))[category_display]}.html"},{"@type":"ListItem","position":3,"name":art["title"],"item":canonical_url}]}, ensure_ascii=False),
+        "{{BREADCRUMB_HTML}}": f'<nav class="sh-breadcrumb" aria-label="パンくず"><a href="./">AI深報</a><span>›</span><span>{category}</span><span>›</span><span aria-current="page">この記事</span></nav>',
+        "{{RELATED_HTML}}": "<!-- SHINPO:RELATED:START --><!-- SHINPO:RELATED:END -->",
+        "{{LATEST_HTML}}": "",
     }.items():
         page = page.replace(key, value)
     if "{{" in page:
@@ -199,6 +214,7 @@ def main():
 
     if refresh_only:
         out_path.write_text(page)
+        rebuild_seo()
         print(f"更新: shinpo/{filename}")
         return
 
@@ -233,6 +249,7 @@ def main():
     print(f"生成: shinpo/{filename}")
     print("更新: shinpo/index.html（カード挿入）")
     print("更新: sitemap.xml（記事URL追加）")
+    rebuild_seo()
 
 
 if __name__ == "__main__":
