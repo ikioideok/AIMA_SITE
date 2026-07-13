@@ -11,7 +11,7 @@
   h1{font-size:2.4rem;font-weight:300;letter-spacing:.02em;margin-bottom:.4rem}
   h1 b{font-weight:700}
   .lead{color:#9aa;font-size:.95rem;margin-bottom:3rem}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:24px}
   @media(max-width:860px){.grid{grid-template-columns:1fr}}
   .card{display:block;text-decoration:none;color:inherit;background:#16161d;border:1px solid #23232c;border-radius:18px;overflow:hidden;transition:transform .25s ease,border-color .25s ease;position:relative}
   .card:hover{transform:translateY(-4px);border-color:#3a3a4a}
@@ -26,7 +26,7 @@
 </head>
 <body>
 <div class="wrap">
-  <h1>AIMA リニューアル <b>3案</b></h1>
+  <h1>AIMA リニューアル <b>4案</b></h1>
   <p class="lead">クリックすると単独表示。気に入った方向性を教えてください。</p>
   <div class="grid">
     <a class="card" href="a-minimal.html" target="_blank" rel="noopener">
@@ -51,6 +51,14 @@
         <span class="tag" style="color:#0a6">C · ACCENT</span>
         <div class="ttl">和モダン × 朱アクセント</div>
         <div class="desc">オフホワイト＋朱色1色。読みやすさ重視。</div>
+      </div>
+    </a>
+    <a class="card" href="aima-logo-hero.html" target="_blank" rel="noopener">
+      <div class="preview"><iframe src="aima-logo-hero.html" loading="lazy"></iframe></div>
+      <div class="meta">
+        <span class="tag" style="color:#7759f6">D · AIMA LOGO</span>
+        <div class="ttl">ロゴ × AIダッシュボード</div>
+        <div class="desc">AIMAロゴに合わせた、白黒＋紫アクセントのヒーロー。</div>
       </div>
     </a>
   </div>

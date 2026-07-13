@@ -172,7 +172,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -920,26 +922,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -986,7 +1009,7 @@
         <section class="post-supervisor" aria-label="監修者情報">
           <div class="post-supervisor-label">監修者情報</div>
           <div class="post-supervisor-card">
-            <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
             <div>
               <div class="post-supervisor-name">水間 雄紀</div>
               <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1016,7 +1039,7 @@
         <div class="aima-feature" aria-label="株式会社AIMAのご案内">
           <div class="aima-feature-kicker">運営会社のご案内</div>
           <div class="aima-feature-title">株式会社AIMA</div>
-          <p>株式会社AIMAは秋田本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。秋田市、県北、県南、沿岸部のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
+          <p>株式会社AIMAは秋田本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。秋田市、県北、県南、沿岸部のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
           <div class="aima-feature-actions">
             <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
             <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1078,7 +1101,7 @@
           <figcaption>コクア・デザイン・オフィスのトップページ<span class="figure-source"><a href="https://www.kokua-d.com/" target="_blank" rel="nofollow noopener">出典：コクア・デザイン・オフィス</a></span></figcaption>
         </figure>
         <p>コクア・デザイン・オフィスは、秋田市下浜長浜のホームページ制作サービスです。公式サイトでは、ホームページ制作前に、目的、ターゲット、掲載内容、機能、方向性を打ち合わせ、企画から運用、検証まで対応すると案内しています。制作実績には、医療、保育園、住宅、農業、EC、JA大潟村など秋田県内の地域事業者が並んでいます。費用ページでは、企画構成費、トップページ制作、各ページ制作、LP制作、基本SEO施策などの料金例も公開しています。</p>
-        <p>LLMOでは、派手なデザインよりも、誰に何を伝えるかを整理することが先です。コクア・デザイン・オフィスは、<mark><strong>小規模事業、医療、農業、EC、地域サービスで、目的整理から丁寧にサイトを育てたい会社</strong></mark>に向いています。</p>
+        <p>LLMOでは、派手なデザインよりも、誰に何を伝えるかを整理することが先です。コクア・デザイン・オフィスは、<strong>小規模事業、医療、農業、EC、地域サービスで、目的整理から丁寧にサイトを育てたい会社</strong>に向いています。</p>
         <p class="post-ref"><a href="https://www.kokua-d.com/service/" target="_blank" rel="nofollow noopener">参考：コクア・デザイン・オフィス｜サービス内容</a></p>
         <p class="post-ref"><a href="https://www.kokua-d.com/works/" target="_blank" rel="nofollow noopener">参考：コクア・デザイン・オフィス｜制作実績</a></p>
 
@@ -1088,7 +1111,7 @@
           <figcaption>合同会社ゴーゴーウェブマーケットのトップページ<span class="figure-source"><a href="https://www.55w.jp/" target="_blank" rel="nofollow noopener">出典：合同会社ゴーゴーウェブマーケット</a></span></figcaption>
         </figure>
         <p>合同会社ゴーゴーウェブマーケットは、能代市のホームページ制作会社です。公式サイトでは、WordPressサイト制作、アプリ開発、ネット広告管理、ソフトウェア導入、SNS運用代行などを事業として案内しています。WordPressサイト制作ページでは、管理画面からページ追加や修正ができる点、EC、予約、会員制、多言語、顧客管理など多様なニーズに対応できる点を説明し、制作費用例も公開しています。</p>
-        <p>秋田県北では、能代、山本地域、大館、鹿角など、広域の生活圏や商圏をカバーする事業者が多くあります。ゴーゴーウェブマーケットは、<mark><strong>県北の中小企業、建設、医療、地域店舗、観光、買い物支援など、更新しながら育てるサイト</strong></mark>に向いています。</p>
+        <p>秋田県北では、能代、山本地域、大館、鹿角など、広域の生活圏や商圏をカバーする事業者が多くあります。ゴーゴーウェブマーケットは、<strong>県北の中小企業、建設、医療、地域店舗、観光、買い物支援など、更新しながら育てるサイト</strong>に向いています。</p>
         <p class="post-ref"><a href="https://www.55w.jp/company/" target="_blank" rel="nofollow noopener">参考：合同会社ゴーゴーウェブマーケット｜会社情報</a></p>
         <p class="post-ref"><a href="https://www.55w.jp/service/wordpress/" target="_blank" rel="nofollow noopener">参考：合同会社ゴーゴーウェブマーケット｜WordPressサイト制作</a></p>
 
@@ -1098,7 +1121,7 @@
           <figcaption>株式会社ワンオーエスのトップページ<span class="figure-source"><a href="https://web.1os.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ワンオーエス</a></span></figcaption>
         </figure>
         <p>株式会社ワンオーエスは、秋田県南秋田郡井川町の会社で、クオリティWebデザインを運営しています。公式サイトでは、月額無料・格安ホームページ制作、レスポンシブ対応、SEO対策、SNS連携、アクセス解析、Googleマップ、メールフォーム、公開後サポートなどを訴求しています。秋田県内だけでなく全国の導入実績があり、公開後も更新できるホームページ制作を重視しています。</p>
-        <p>予算が限られる小規模事業者では、最初から高額なLLMOコンサルティングを入れるより、基本情報、サービス、FAQ、実績、問い合わせ導線を先に整えるほうが現実的です。ワンオーエスは、<mark><strong>低予算でホームページを整え、更新しながら地域検索とAI検索の土台を作りたい会社</strong></mark>に向いています。</p>
+        <p>予算が限られる小規模事業者では、最初から高額なLLMOコンサルティングを入れるより、基本情報、サービス、FAQ、実績、問い合わせ導線を先に整えるほうが現実的です。ワンオーエスは、<strong>低予算でホームページを整え、更新しながら地域検索とAI検索の土台を作りたい会社</strong>に向いています。</p>
         <p class="post-ref"><a href="https://web.1os.co.jp/" target="_blank" rel="nofollow noopener">参考：クオリティWebデザイン｜トップページ</a></p>
 
         <h3>9. 株式会社LiKG</h3>
@@ -1107,7 +1130,7 @@
           <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
         </figure>
         <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作を案内し、AI OverviewやChatGPTにおける露出状況の調査、20項目診断、改善レポート、構造化データ改善指示、記事構成作成などを説明しています。料金も、LLMO診断10万円から、LLMO×SEOコンサルティング30万円からと公開されています。</p>
-        <p>秋田県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。<mark><strong>観光、農産品、食品、医療、採用など、一次情報を持っているのにAI検索で拾われていない会社</strong></mark>は、診断から始める価値があります。</p>
+        <p>秋田県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。<strong>観光、農産品、食品、医療、採用など、一次情報を持っているのにAI検索で拾われていない会社</strong>は、診断から始める価値があります。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
 
         <h3>10. 株式会社ジオコード</h3>
@@ -1116,7 +1139,7 @@
           <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
         </figure>
         <p>株式会社ジオコードは、SEO対策、コンテンツマーケティング、オウンドメディア運用、サイト修正・実装、AIO・LLMOなどAI最適化まで案内している全国対応会社です。サービスページでは通常プラン15万円からと公開されており、SEO対策コンサルティング、サイト修正、UI/UX改善、AI最適化、コンテンツマーケティングを組み合わせられる構成です。</p>
-        <p>秋田県内でも、県外商圏を持つBtoB企業、EC企業、採用強化中の企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、<mark><strong>SEOとLLMOを分けず、分析から実装まで任せたい企業</strong></mark>に向いています。</p>
+        <p>秋田県内でも、県外商圏を持つBtoB企業、EC企業、採用強化中の企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、<strong>SEOとLLMOを分けず、分析から実装まで任せたい企業</strong>に向いています。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
 
         <p>東北の他県と比較したい方は、<a href="blog-miyagi-llmo-kaisha.html">宮城県のLLMO会社比較</a>、<a href="blog-iwate-llmo-kaisha.html">岩手県のLLMO会社比較</a>も見ると、秋田県では「人口減少下の地域情報」と「観光・農業・再エネの一次情報」をどう整えるかが重要だと分かりやすくなります。</p>
@@ -1130,35 +1153,35 @@
 
         <h3>秋田市中心と県北・県南・沿岸で検索意図を分けられるか</h3>
         <p>秋田県では、秋田市の検索意図と、県北・県南・沿岸部の検索意図を分ける必要があります。秋田市では店舗、医療、士業、教育、採用、行政関連の検索が多くなります。能代・男鹿は港湾、風力、観光、海産物、大館・鹿角は観光、比内地鶏、県北の生活圏、横手・湯沢・大仙は農業、食品、雪、生活サービス、仙北は角館・田沢湖・温泉を中心に考えます。</p>
-        <p>LLMO会社を比較するときは、単に「秋田対応」と書いてあるかではなく、<mark><strong>どの地域の、どんな質問に答えるページを作るのか</strong></mark>を言語化できるかを見ましょう。地域名を増やすだけでは弱く、対応範囲、交通、冬季対応、来店・出張可否、配送条件まで整理できる会社が向いています。</p>
+        <p>LLMO会社を比較するときは、単に「秋田対応」と書いてあるかではなく、<strong>どの地域の、どんな質問に答えるページを作るのか</strong>を言語化できるかを見ましょう。地域名を増やすだけでは弱く、対応範囲、交通、冬季対応、来店・出張可否、配送条件まで整理できる会社が向いています。</p>
 
         <h3>観光・宿泊は男鹿、角館、田沢湖、乳頭温泉郷、横手を分けられるか</h3>
         <p>令和6年秋田県観光統計では、観光地点等入込客数は約3,055万人、うち観光地点が約2,390万人、行祭事・イベントが約665万人でした。月別では8月が多く、竿燈まつり、花火、夏休み、帰省需要などの影響が出やすい県です。男鹿のなまはげ、角館の武家屋敷、田沢湖、乳頭温泉郷、横手のかまくら、秋田市中心部では、検索意図が大きく異なります。</p>
-        <p>観光・宿泊・飲食のLLMOでは、観光地点名だけでなく、アクセス、季節、所要時間、雪道、駐車場、周遊、子連れ可否、予約方法、外国人対応まで整理する必要があります。<mark><strong>観光地ごとのFAQと季節導線を作れる会社</strong></mark>を選ぶと、AIの回答に入りやすくなります。</p>
+        <p>観光・宿泊・飲食のLLMOでは、観光地点名だけでなく、アクセス、季節、所要時間、雪道、駐車場、周遊、子連れ可否、予約方法、外国人対応まで整理する必要があります。<strong>観光地ごとのFAQと季節導線を作れる会社</strong>を選ぶと、AIの回答に入りやすくなります。</p>
         <p class="post-ref"><a href="https://www.pref.akita.lg.jp/pages/archive/88558" target="_blank" rel="noopener">参考：秋田県｜令和6年秋田県観光統計第4四半期速報</a></p>
 
         <h3>米・枝豆・比内地鶏・日本酒・ECの一次情報を構造化できるか</h3>
         <p>秋田県は、農産品と食品の説明力が重要な県です。農林水産省の資料では、令和5年の農業産出額1,779億円のうち米が938億円、52.7％を占めます。水稲の収穫量は全国3位、りんどうの出荷量は全国2位、令和5年のえだまめ収穫量は全国6位、比内地鶏は県を代表する特産品として整理されています。</p>
-        <p>LLMOでは、商品ページに「おいしい」「こだわり」だけを書いても弱いです。品種、産地、規格、保存方法、出荷時期、精米・加工体制、配送条件、法人取引、ギフト対応、調理方法などを整理すると、AIが比較回答に使いやすくなります。<mark><strong>農産品・食品・日本酒・ECを扱う会社は、商品情報整理まで支援できる会社</strong></mark>を選びましょう。</p>
+        <p>LLMOでは、商品ページに「おいしい」「こだわり」だけを書いても弱いです。品種、産地、規格、保存方法、出荷時期、精米・加工体制、配送条件、法人取引、ギフト対応、調理方法などを整理すると、AIが比較回答に使いやすくなります。<strong>農産品・食品・日本酒・ECを扱う会社は、商品情報整理まで支援できる会社</strong>を選びましょう。</p>
         <p class="post-ref"><a href="https://www.maff.go.jp/j/kanbo/tiho/15sonota/todouhuken_gaiyou2025-05.pdf" target="_blank" rel="noopener">参考：農林水産省｜令和7年版 秋田県の農林水産業の概要</a></p>
 
         <h3>秋田港・能代港・洋上風力を含む産業文脈を説明できるか</h3>
         <p>秋田県は、日本海側の港湾と再生可能エネルギーの文脈も重要です。秋田市の秋田港概要では、秋田港は県内物流の拠点であり、国際コンテナターミナルや年間処理能力10万TEUへの拡張、洋上風力発電の拠点港湾指定が説明されています。能代港も、国土交通省東北地方整備局の資料で、県北地域の物流・産業活動を支える基盤であり、洋上風力発電の設備建設・維持管理の拠点として注目されているとされています。</p>
-        <p>BtoB、建設、製造、物流、再エネ関連では、設備、対応範囲、工事・保守、港湾との距離、納入実績、資格、協力体制を明示することがAI検索で効きます。<mark><strong>地域産業の強みを、商談前の判断材料としてページ化できる会社</strong></mark>を比較しましょう。</p>
+        <p>BtoB、建設、製造、物流、再エネ関連では、設備、対応範囲、工事・保守、港湾との距離、納入実績、資格、協力体制を明示することがAI検索で効きます。<strong>地域産業の強みを、商談前の判断材料としてページ化できる会社</strong>を比較しましょう。</p>
         <p class="post-ref"><a href="https://www.city.akita.lg.jp/jigyosha/boeki-support/1036284.html" target="_blank" rel="noopener">参考：秋田市｜秋田港の概要</a></p>
         <p class="post-ref"><a href="https://www.pa.thr.mlit.go.jp/akita/020/040/index.html" target="_blank" rel="noopener">参考：国土交通省 東北地方整備局｜能代港の概要</a></p>
 
         <h3>医療・福祉・採用で安心材料を整えられるか</h3>
         <p>秋田県では人口減少と高齢化を前提に、医療、介護、福祉、生活サービス、採用の情報設計が重要です。AI検索では「家族に合う施設か」「遠方から相談できるか」「働く場所として安心か」のように、生活者目線の質問が増えています。</p>
-        <p>この領域では、専門性だけでなく、対象者、料金、利用の流れ、対応地域、アクセス、予約、相談方法、職種別仕事内容、研修、福利厚生、Uターン・Iターン情報まで整理する必要があります。LLMO会社には、<mark><strong>住民や応募者の不安を先回りして、サイト内で回答できるページを作る力</strong></mark>が必要です。</p>
+        <p>この領域では、専門性だけでなく、対象者、料金、利用の流れ、対応地域、アクセス、予約、相談方法、職種別仕事内容、研修、福利厚生、Uターン・Iターン情報まで整理する必要があります。LLMO会社には、<strong>住民や応募者の不安を先回りして、サイト内で回答できるページを作る力</strong>が必要です。</p>
 
         <h3>雪・広域移動・更新体制まで見積もりに入れられるか</h3>
         <p>秋田県では、冬季の移動、除雪、営業時間、配送遅延、イベント中止、季節営業など、サイトに載せるべき情報が季節で変わります。観光や医療、建設、食品配送では、この情報が古いままだと、AIにもユーザーにも誤解されます。</p>
-        <p>比較時には、制作費だけでなく、<mark><strong>誰が、いつ、どの情報を更新するのか</strong></mark>を確認しましょう。CMS、更新代行、写真差し替え、FAQ追加、Googleビジネスプロフィール、SNSまで含めた運用設計ができる会社のほうが、秋田県の実務には合いやすいです。</p>
+        <p>比較時には、制作費だけでなく、<strong>誰が、いつ、どの情報を更新するのか</strong>を確認しましょう。CMS、更新代行、写真差し替え、FAQ追加、Googleビジネスプロフィール、SNSまで含めた運用設計ができる会社のほうが、秋田県の実務には合いやすいです。</p>
 
         <h2>秋田県のLLMO会社に依頼する費用相場</h2>
         <p>秋田県でLLMOを外注する場合、費用は「何を任せるか」で大きく変わります。診断だけなら10万円前後から検討できますが、秋田市内の店舗サイトを少し直すのか、県北・県南まで地域別ページを作るのか、農産品ECや観光ページ、採用サイトまで整えるのかで必要な予算は違います。</p>
-        <p>大事なのは、単に安い会社を探すことではありません。<mark><strong>秋田市単点の集客なのか、県北・県南・沿岸まで含む広域設計なのか、ECや採用や観光の一次情報まで含むのか</strong></mark>を先に分けて見積もることです。</p>
+        <p>大事なのは、単に安い会社を探すことではありません。<strong>秋田市単点の集客なのか、県北・県南・沿岸まで含む広域設計なのか、ECや採用や観光の一次情報まで含むのか</strong>を先に分けて見積もることです。</p>
 
         <table>
           <tr><th>支援タイプ</th><th>目安</th><th>主な内容</th></tr>
@@ -1170,7 +1193,7 @@
 
         <h3>まずは診断だけなら10万円前後から始めやすい</h3>
         <p>公開価格で分かりやすい入口は診断プランです。LiKGはLLMO診断プランを10万円から公開しています。まずAI検索で自社がどう扱われているか、競合と比べて何が足りないかを知りたい企業には使いやすい価格帯です。</p>
-        <p>秋田県では、人口が少ない地域ほど、情報不足によってAIに誤解されるリスクがあります。いきなり記事を量産するより、<mark><strong>どの質問で出たいのか、どの地域と商品を優先するのかを先に決める</strong></mark>ほうが無駄が少ないです。</p>
+        <p>秋田県では、人口が少ない地域ほど、情報不足によってAIに誤解されるリスクがあります。いきなり記事を量産するより、<strong>どの質問で出たいのか、どの地域と商品を優先するのかを先に決める</strong>ほうが無駄が少ないです。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>小さく始めるなら月額5万円〜15万円帯が入口になる</h3>
@@ -1180,19 +1203,19 @@
 
         <h3>伴走支援の中心帯は月額15万円〜30万円前後</h3>
         <p>毎月改善を進めるなら、月額15万円〜30万円前後が一つの中心帯です。ジオコードは通常プラン15万円から、LiKGはLLMO×SEOコンサルティングを30万円から公開しています。この帯になると、戦略設計、競合調査、記事構成、ページ改善指示、構造化データ、レポート、定例打ち合わせまで含まれやすくなります。</p>
-        <p>秋田県では、都市型サービス、観光、農産品、食品、医療福祉、採用で必要なページが違います。<mark><strong>一度作って終わりではなく、AI検索の出方を見ながら直す支援</strong></mark>が必要な会社は、この価格帯で比較すると現実的です。</p>
+        <p>秋田県では、都市型サービス、観光、農産品、食品、医療福祉、採用で必要なページが違います。<strong>一度作って終わりではなく、AI検索の出方を見ながら直す支援</strong>が必要な会社は、この価格帯で比較すると現実的です。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>制作・EC・採用まで含めると総額30万円台〜150万円超まで広がる</h3>
         <p>既存サイトが古い、スマホで見づらい、CMSがない、採用ページが弱い、EC導線がない場合は、LLMOだけでなく制作費が必要です。秋田県では、食品、農産品、酒、工芸、観光体験、医療福祉、建設など、写真や商品説明が成果に直結する案件が多くあります。</p>
-        <p>コクア・デザイン・オフィスやゴーゴーウェブマーケット、ワンオーエスのように制作費の考え方を公開している会社もあります。価格を見るときは、<mark><strong>AI検索以前に、ユーザーとAIが読める情報をサイト内に用意する費用</strong></mark>が含まれているかを確認してください。</p>
+        <p>コクア・デザイン・オフィスやゴーゴーウェブマーケット、ワンオーエスのように制作費の考え方を公開している会社もあります。価格を見るときは、<strong>AI検索以前に、ユーザーとAIが読める情報をサイト内に用意する費用</strong>が含まれているかを確認してください。</p>
         <p class="post-ref"><a href="https://www.kokua-d.com/cost/" target="_blank" rel="nofollow noopener">参考：コクア・デザイン・オフィス｜ホームページ制作費用</a></p>
         <p class="post-ref"><a href="https://www.55w.jp/service/wordpress/" target="_blank" rel="nofollow noopener">参考：合同会社ゴーゴーウェブマーケット｜WordPressサイト制作</a></p>
 
         <h3>秋田県では取材・撮影・商品情報整理で費用が上がりやすい</h3>
         <p>秋田県の案件では、現地取材や写真撮影が効きやすいです。観光では部屋、料理、雪道、アクセス、農産品・食品では加工場や商品、医療福祉では施設やスタッフ、採用では職場や働く人の雰囲気が判断材料になります。</p>
-        <p>AI検索でも、会社名、住所、サービス名、商品名、価格、実績、FAQが整理されているほうが理解されやすくなります。<mark><strong>取材・撮影・原稿作成・更新作業が見積もりに含まれているか</strong></mark>を必ず確認しましょう。</p>
+        <p>AI検索でも、会社名、住所、サービス名、商品名、価格、実績、FAQが整理されているほうが理解されやすくなります。<strong>取材・撮影・原稿作成・更新作業が見積もりに含まれているか</strong>を必ず確認しましょう。</p>
 
         <h3>秋田市単点か、秋田県内広域かで予算を分ける</h3>
         <p>費用で大きく変わるのは、秋田市内だけを狙うのか、県北・県南・沿岸まで広げるのかです。秋田市内の1店舗なら、主要ページとFAQだけでも始めやすいです。一方、能代、大館、鹿角、横手、湯沢、大仙、仙北、男鹿まで含めると、地域別ページ、観光導線、商品ページ、事例、配送条件、採用情報が増えます。</p>
@@ -1202,7 +1225,7 @@
         <p>ここでは、秋田県の企業や店舗がLLMO会社を検討するときに出やすい疑問を整理します。比較ポイントや費用相場とは役割を分け、依頼前に確認すべきことだけを短くまとめます。</p>
 
         <h3>秋田県のLLMO会社に依頼する意味はありますか？</h3>
-        <p>あります。秋田県は秋田市、県北、県南、沿岸部で商圏や検索意図が変わります。観光、医療福祉、農産品、食品、再エネ、採用などの情報を<mark><strong>AIに正しく理解される形で整える価値</strong></mark>があります。</p>
+        <p>あります。秋田県は秋田市、県北、県南、沿岸部で商圏や検索意図が変わります。観光、医療福祉、農産品、食品、再エネ、採用などの情報を<strong>AIに正しく理解される形で整える価値</strong>があります。</p>
 
         <h3>秋田県内の会社でないと意味はありませんか？</h3>
         <p>必ずしも県内本社である必要はありません。重要なのは、秋田市、能代、大館、横手、湯沢、男鹿、仙北などの違いや、米、比内地鶏、観光、洋上風力、医療福祉の文脈を理解して設計できるかです。</p>
@@ -1226,7 +1249,7 @@
         <p>一般的には3〜6か月が目安です。既存サイトの状態、競合、記事やFAQの量、構造化データの整備状況によって変わります。短期で断定せず、観測しながら直す進め方が現実的です。</p>
 
         <h2>秋田県でLLMO会社を選ぶなら、人口減少下の地域情報と一次情報から逆算しましょう</h2>
-        <p>秋田県のLLMO会社選びでは、<mark><strong>秋田市中心の集客と、県北・県南・沿岸の産業文脈を分けて考えること</strong></mark>が重要です。秋田市の店舗や医療なら生活者の不安を解消するFAQ、観光なら季節性と移動導線、農産品・食品なら商品情報と配送条件、再エネや製造なら設備・実績・港湾との接続、採用なら働く地域と生活情報まで整理する必要があります。</p>
+        <p>秋田県のLLMO会社選びでは、<strong>秋田市中心の集客と、県北・県南・沿岸の産業文脈を分けて考えること</strong>が重要です。秋田市の店舗や医療なら生活者の不安を解消するFAQ、観光なら季節性と移動導線、農産品・食品なら商品情報と配送条件、再エネや製造なら設備・実績・港湾との接続、採用なら働く地域と生活情報まで整理する必要があります。</p>
         <p>まずは、自社が「秋田市内の見込み客」を狙うのか、「秋田県内の複数地域」を狙うのか、「東北・全国の商談」を狙うのかを決めてください。そのうえで、戦略だけでなく、ページ改修、記事制作、構造化データ、写真、FAQ、更新運用まで実行できる会社を選ぶと前に進めやすいです。迷う場合は、<a href="blog-llmo-taisaku.html">LLMO対策の基礎</a>を確認し、必要なら<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問で選ばれるべきかを整理していきましょう。</p>
       </div>
 
@@ -1254,14 +1277,14 @@
         </div>
       </section>
 
-      <div class="post-nav">
+                  <div class="post-nav">
         <a href="blog-miyagi-llmo-kaisha.html">
           <span class="post-nav-label">&larr; 前の記事</span>
-          宮城県でおすすめのLLMO会社10選を見る
+          宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
-        <a href="blog.html">
+        <a href="blog-yamagata-llmo-kaisha.html" style="text-align: right;">
           <span class="post-nav-label">次の記事 &rarr;</span>
-          ブログ一覧を見る
+          山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
       </div>
 
@@ -1301,11 +1324,11 @@
           <article class="post-related-card">
             <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
                 <p class="post-related-card-text">BtoBや本社集積地での比較軸を、秋田県の地域密着市場と対比したい方向けです。</p>
                 <div class="post-related-date">2026.04.14</div>
               </div>
@@ -1344,33 +1367,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1492,7 +1515,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

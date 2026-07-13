@@ -43,6 +43,10 @@ python3 scripts/check_prefecture_articles.py --strict
 - Use current web sources for company facts, services, and local statistics because these can change.
 - Review existing prefecture articles first and keep the same high-level article pattern unless a local reason justifies a change.
 - When the article lists company sections under `h3`, use the screenshot workflow from [$blog-company-homepage-screenshots](/Users/mizumayuuki/.codex/skills/blog-company-homepage-screenshots/SKILL.md).
+- Add `FAQPage` JSON-LD that matches the visible FAQ section. The question count in schema must match the visible FAQ question count.
+- Use `rel="nofollow noopener"` for external company, agency, vendor, tool, and competitor links. Keep government, municipality, public institution, and official documentation links follow by default.
+- Keep `<mark><strong>` highlights to 10 or fewer per article unless the user explicitly asks for a heavier highlight style.
+- Add natural internal links to related cluster articles when they are already published, especially nearby prefectures, major city articles, and general LLMO comparison articles.
 - Write the article one `h2` block at a time instead of generating the whole body in one pass.
 - Before drafting, decide the final `h2` outline and assign a unique purpose to each block.
 - After drafting each `h2` block, keep a short covered-points note so later blocks do not repeat the same explanation.

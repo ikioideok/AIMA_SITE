@@ -1,4 +1,43 @@
-  const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzN9ViDkdRJ6Uj-KCjqbB1YxLL0AKg9LjrYyp5AtoL7qsTiUdm-un6vrYRntvG71Rt0mw/exec';
+const SHARED_FOOTER_HTML = `
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="footer-logo">AIMA</a>
+        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4 class="footer-col-title">サービス</h4>
+          <a href="/#flow">サービス一覧</a>
+          <a href="chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+          <a href="ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+          <a href="saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+          <a href="btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+          <a href="/#pricing">料金</a>
+          <a href="/#faq">よくある質問</a>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-col-title">会社情報</h4>
+          <a href="company.html">会社概要</a>
+          <a href="/#contact">お問い合わせ</a>
+          <a href="blog.html">ブログ</a>
+          <a href="privacy.html">プライバシーポリシー</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 株式会社AIMA</p>
+    </div>
+  </div>
+</footer>
+`;
+
+document.querySelectorAll('[data-shared-footer]').forEach(function(footerMount) {
+  footerMount.outerHTML = SHARED_FOOTER_HTML;
+});
+
+const GAS_WEB_APP_URL = 'https://script.google.com/macros/s/AKfycbzN9ViDkdRJ6Uj-KCjqbB1YxLL0AKg9LjrYyp5AtoL7qsTiUdm-un6vrYRntvG71Rt0mw/exec';
 
   // Fade-in on scroll
   const observer = new IntersectionObserver((entries) => {
@@ -87,6 +126,41 @@
     });
   });
 
+  // Simple modal dialog
+  document.querySelectorAll('[data-modal-target]').forEach(function(trigger) {
+    var modal = document.getElementById(trigger.dataset.modalTarget);
+    if (!modal) return;
+
+    trigger.addEventListener('click', function() {
+      if (typeof modal.showModal === 'function') {
+        modal.showModal();
+      } else {
+        modal.setAttribute('open', '');
+      }
+    });
+  });
+
+  document.querySelectorAll('.aio-modal').forEach(function(modal) {
+    modal.querySelectorAll('[data-modal-close]').forEach(function(closeButton) {
+      closeButton.addEventListener('click', function() {
+        if (typeof modal.close === 'function') {
+          modal.close();
+        } else {
+          modal.removeAttribute('open');
+        }
+      });
+    });
+
+    modal.addEventListener('click', function(event) {
+      if (event.target !== modal) return;
+      if (typeof modal.close === 'function') {
+        modal.close();
+      } else {
+        modal.removeAttribute('open');
+      }
+    });
+  });
+
   function parseGasResponse(response) {
     return response.text().then(function(text) {
       if (!text) return { result: response.ok ? 'success' : 'error' };
@@ -131,11 +205,7 @@
           throw new Error(options.errorMessage);
         }
 
-        renderFormMessage(
-          form,
-          options.successClass,
-          (payload && payload.message) || options.successMessage
-        );
+        renderFormMessage(form, options.successClass, options.successMessage);
       })
       .catch(function() {
         submitButton.textContent = initialLabel;

@@ -172,7 +172,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -920,26 +922,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -986,7 +1009,7 @@
         <section class="post-supervisor" aria-label="監修者情報">
           <div class="post-supervisor-label">監修者情報</div>
           <div class="post-supervisor-card">
-            <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
             <div>
               <div class="post-supervisor-name">水間 雄紀</div>
               <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1016,7 +1039,7 @@
         <div class="aima-feature" aria-label="株式会社AIMAのご案内">
           <div class="aima-feature-kicker">運営会社のご案内</div>
           <div class="aima-feature-title">株式会社AIMA</div>
-          <p>株式会社AIMAは宮城本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。仙台都市圏だけでなく、県南・県北・沿岸まで含めた情報整理も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で確認できます。</p>
+          <p>株式会社AIMAは宮城本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。仙台都市圏だけでなく、県南・県北・沿岸まで含めた情報整理も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で確認できます。</p>
           <div class="aima-feature-actions">
             <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
             <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1079,7 +1102,7 @@
           <figcaption>株式会社スマートメディアのトップページ<span class="figure-source"><a href="https://smart-media.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社スマートメディア</a></span></figcaption>
         </figure>
         <p>株式会社スマートメディアは、仙台市若林区のホームページ制作・ECサイト制作会社です。公式サイトでは、Webサイト制作、ECサイト制作、保守運用、Webマーケティング、Web広告運用、システム開発・導入をサービスとして掲げています。ホームページ制作ページでは、課題解決や成果につながるサイト制作、戦略が落とし込まれた実用的なサイト制作を案内しています。</p>
-        <p>宮城県では、食品、農水産物、工芸品、観光体験、BtoB商材など、ECや問い合わせ導線と相性のよい事業が多くあります。スマートメディアは、<mark><strong>Web制作だけでなく、EC、広告、保守運用まで一緒に見たい東北の中小企業</strong></mark>に向いています。</p>
+        <p>宮城県では、食品、農水産物、工芸品、観光体験、BtoB商材など、ECや問い合わせ導線と相性のよい事業が多くあります。スマートメディアは、<strong>Web制作だけでなく、EC、広告、保守運用まで一緒に見たい東北の中小企業</strong>に向いています。</p>
         <p class="post-ref"><a href="https://smart-media.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社スマートメディア｜トップページ</a></p>
         <p class="post-ref"><a href="https://smart-media.co.jp/service/homepage/" target="_blank" rel="nofollow noopener">参考：株式会社スマートメディア｜ホームページ制作</a></p>
 
@@ -1089,7 +1112,7 @@
           <figcaption>株式会社ワイヤードビーンズのトップページ<span class="figure-source"><a href="https://www.wiredbeans.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ワイヤードビーンズ</a></span></figcaption>
         </figure>
         <p>株式会社ワイヤードビーンズは、仙台市青葉区五橋に拠点を置く会社です。公式サイトでは、デジタルソリューションとしてEC構築・CRM構築をはじめとするDX支援を行い、Salesforce Commerce Cloud導入で国内トップクラスの実績があると案内しています。また、自社でも職人とつくるものづくりブランドを運営しており、2026年には「AI時代のクラフトマンシップ」を掲げたフィロソフィーも公開しています。</p>
-        <p>LLMOでは、商品、ブランド、FAQ、レビュー、配送、CRM、購入後体験まで情報がつながっているほど強くなります。ワイヤードビーンズは、<mark><strong>宮城県や東北のEC、地域ブランド、食品・工芸品、D2Cを本格的に育てたい会社</strong></mark>に向いています。小さなコーポレートサイト制作より、ECやCRMを含む大きめのプロジェクトで比較したい会社です。</p>
+        <p>LLMOでは、商品、ブランド、FAQ、レビュー、配送、CRM、購入後体験まで情報がつながっているほど強くなります。ワイヤードビーンズは、<strong>宮城県や東北のEC、地域ブランド、食品・工芸品、D2Cを本格的に育てたい会社</strong>に向いています。小さなコーポレートサイト制作より、ECやCRMを含む大きめのプロジェクトで比較したい会社です。</p>
         <p class="post-ref"><a href="https://www.wiredbeans.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社ワイヤードビーンズ｜トップページ</a></p>
 
         <h3>8. AozoraWorks.</h3>
@@ -1098,7 +1121,7 @@
           <figcaption>AozoraWorks.のトップページ<span class="figure-source"><a href="https://creative.aozora-miyagi.biz/" target="_blank" rel="nofollow noopener">出典：AozoraWorks.</a></span></figcaption>
         </figure>
         <p>AozoraWorks.は、コンテンツSEOとオウンドメディア制作をサポートする仙台のサービスです。公式サイトでは、集客・売上アップから逆算したSEO・SEM戦略、費用対効果を重視したコンテンツ制作、キーワード戦略、構成作成、執筆、編集・校正、リライトをワンストップでディレクションできると説明しています。自社メディアや自社サービス運営の知見を活かす点も特徴です。</p>
-        <p>LLMOでは、単発記事を量産するより、ユーザーがAIに聞く質問を先に洗い出し、答えとなるページ群を作ることが大切です。AozoraWorks.は、<mark><strong>仙台・宮城の地域LP、オウンドメディア、FAQ記事、事例記事を整えたい企業</strong></mark>に向いています。</p>
+        <p>LLMOでは、単発記事を量産するより、ユーザーがAIに聞く質問を先に洗い出し、答えとなるページ群を作ることが大切です。AozoraWorks.は、<strong>仙台・宮城の地域LP、オウンドメディア、FAQ記事、事例記事を整えたい企業</strong>に向いています。</p>
         <p class="post-ref"><a href="https://creative.aozora-miyagi.biz/" target="_blank" rel="nofollow noopener">参考：AozoraWorks.｜トップページ</a></p>
 
         <h3>9. 株式会社LiKG</h3>
@@ -1107,7 +1130,7 @@
           <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
         </figure>
         <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作を案内し、AI OverviewやChatGPTにおける露出状況の調査、20項目診断、改善レポート、構造化データ改善指示、記事構成作成などを説明しています。料金も、LLMO診断10万円から、LLMO×SEOコンサルティング30万円からと公開されています。</p>
-        <p>宮城県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。<mark><strong>観光、食品、製造、医療、採用など、一次情報を持っているのにAI検索で拾われていない会社</strong></mark>は、診断から始める価値があります。</p>
+        <p>宮城県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。<strong>観光、食品、製造、医療、採用など、一次情報を持っているのにAI検索で拾われていない会社</strong>は、診断から始める価値があります。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
 
         <h3>10. 株式会社ジオコード</h3>
@@ -1116,7 +1139,7 @@
           <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
         </figure>
         <p>株式会社ジオコードは、SEO対策、コンテンツマーケティング、オウンドメディア運用、サイト修正・実装、AIO・LLMOなどAI最適化まで案内している全国対応会社です。サービスページでは通常プラン15万円からと公開されており、SEO対策コンサルティング、サイト修正、UI/UX改善、AI最適化、コンテンツマーケティングを組み合わせられる構成です。</p>
-        <p>宮城県内でも、仙台から東北全域や全国へ売るBtoB企業、EC企業、採用強化中の企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、<mark><strong>SEOとLLMOを分けず、分析から実装まで任せたい企業</strong></mark>に向いています。</p>
+        <p>宮城県内でも、仙台から東北全域や全国へ売るBtoB企業、EC企業、採用強化中の企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、<strong>SEOとLLMOを分けず、分析から実装まで任せたい企業</strong>に向いています。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
 
         <p>東北の他県と比較したい方は、<a href="blog-iwate-llmo-kaisha.html">岩手県のLLMO会社比較</a>、<a href="blog-aomori-llmo-kaisha.html">青森県のLLMO会社比較</a>も見ると、宮城県が「仙台中心の都市型市場」と「沿岸・県北・県南の広域市場」を両方持つ県だと分かりやすくなります。</p>
@@ -1131,36 +1154,36 @@
 
         <h3>仙台都市圏と県南・県北・沿岸で検索意図を分けられるか</h3>
         <p>宮城県では、仙台市の検索意図と、それ以外の地域の検索意図を分ける必要があります。仙台では「近くのクリニック」「法人向けサービス」「採用」「学校」「士業」「飲食」のような都市型検索が多くなります。名取、多賀城、富谷、利府は仙台通勤圏や商業圏として考え、白石・蔵王・大河原は県南観光や生活圏、大崎・栗原・登米は県北の農業・製造・広域サービス、石巻・気仙沼は水産・観光・港湾の文脈で考えます。</p>
-        <p>LLMO会社を比較するときは、単に「宮城対応」と書いてあるかではなく、<mark><strong>どの地域の、どんな質問に答えるページを作るのか</strong></mark>を言語化できるかを見ましょう。地域名を増やすだけでは弱く、対応範囲、交通、来店・出張可否、商談方法、配送条件まで整理できる会社が向いています。</p>
+        <p>LLMO会社を比較するときは、単に「宮城対応」と書いてあるかではなく、<strong>どの地域の、どんな質問に答えるページを作るのか</strong>を言語化できるかを見ましょう。地域名を増やすだけでは弱く、対応範囲、交通、来店・出張可否、商談方法、配送条件まで整理できる会社が向いています。</p>
 
         <h3>観光・宿泊は仙台、松島、蔵王、鳴子、石巻・気仙沼を分けられるか</h3>
         <p>令和6年の宮城県の観光客入込数は7,051万人で、仙台圏域だけで4,073万人でした。松島海岸、仙台城跡・瑞鳳殿、あ・ら・伊達な道の駅、道の駅東松島なども入込増に寄与しています。観光・宿泊・飲食では、観光地点名だけでなく、アクセス、季節、所要時間、駐車場、周遊、子連れ可否、外国人対応、予約方法まで整理する必要があります。</p>
-        <p>AI検索では「仙台から日帰りで行ける温泉」「松島で子連れに向く宿」「気仙沼で海鮮を食べるなら」のように、かなり具体的な聞かれ方をします。<mark><strong>観光地ごとのFAQと周遊導線を作れる会社</strong></mark>を選ぶと、AIの回答に入りやすくなります。</p>
+        <p>AI検索では「仙台から日帰りで行ける温泉」「松島で子連れに向く宿」「気仙沼で海鮮を食べるなら」のように、かなり具体的な聞かれ方をします。<strong>観光地ごとのFAQと周遊導線を作れる会社</strong>を選ぶと、AIの回答に入りやすくなります。</p>
         <p class="post-ref"><a href="https://www.pref.miyagi.jp/documents/12827/toukei_r6.pdf" target="_blank" rel="noopener">参考：宮城県｜令和6年観光統計概要（速報値）</a></p>
 
         <h3>半導体・自動車・高度電子機械の専門情報を扱えるか</h3>
         <p>宮城県は、半導体関連産業の誘致・集積を進めています。県の半導体産業振興ビジョンでは、国内における半導体生産の重要拠点を目指す考え方が示されています。また、ものづくり特区では、自動車関連産業、高度電子機械産業、食品関連産業、医療・健康関連産業などが集積対象です。</p>
-        <p>この領域のLLMOでは、「技術力があります」だけでは足りません。設備、加工範囲、認証、品質管理、量産可否、試作対応、納入実績、共同開発、技術資料、対応地域を整理し、<mark><strong>AIが専門性と対応範囲を誤読しない構造</strong></mark>にする必要があります。製造業の実績を扱えるか、技術者への取材ができるか、図表やFAQを作れるかを確認しましょう。</p>
+        <p>この領域のLLMOでは、「技術力があります」だけでは足りません。設備、加工範囲、認証、品質管理、量産可否、試作対応、納入実績、共同開発、技術資料、対応地域を整理し、<strong>AIが専門性と対応範囲を誤読しない構造</strong>にする必要があります。製造業の実績を扱えるか、技術者への取材ができるか、図表やFAQを作れるかを確認しましょう。</p>
         <p class="post-ref"><a href="https://www.pref.miyagi.jp/soshiki/semicon/vision_fin.html" target="_blank" rel="noopener">参考：宮城県｜みやぎ半導体産業振興ビジョン</a></p>
         <p class="post-ref"><a href="https://www.pref.miyagi.jp/site/ritchi-guide/hukkotokku.html" target="_blank" rel="noopener">参考：宮城県｜民間投資促進特区（ものづくり産業版）</a></p>
 
         <h3>水産・食品・農業・ECの一次情報を構造化できるか</h3>
         <p>宮城県は水産と食品の説明力が重要な県です。農林水産省の都道府県別資料では、宮城県の海面漁業・養殖業産出額は888億円で全国4位とされています。宮城の食材や加工品は、店舗販売、ふるさと納税、法人仕入れ、EC、観光土産まで導線が分かれます。</p>
-        <p>LLMOでは、商品ページに「おいしい」「こだわり」だけを書いても弱いです。産地、魚種、加工方法、保存方法、規格、発送日、賞味期限、法人取引、アレルギー、調理方法、ギフト対応などを整理すると、AIが比較回答に使いやすくなります。<mark><strong>食品・水産・農産物を扱う会社は、EC制作や商品情報整理まで支援できる会社</strong></mark>を選びましょう。</p>
+        <p>LLMOでは、商品ページに「おいしい」「こだわり」だけを書いても弱いです。産地、魚種、加工方法、保存方法、規格、発送日、賞味期限、法人取引、アレルギー、調理方法、ギフト対応などを整理すると、AIが比較回答に使いやすくなります。<strong>食品・水産・農産物を扱う会社は、EC制作や商品情報整理まで支援できる会社</strong>を選びましょう。</p>
         <p class="post-ref"><a href="https://www.maff.go.jp/j/kanbo/tiho/15sonota/todouhuken_gaiyou2025-04.pdf" target="_blank" rel="noopener">参考：農林水産省｜令和7年版 宮城県の農林水産業の概要</a></p>
 
         <h3>仙台塩釜港・仙台空港・東北広域商圏まで説明できるか</h3>
         <p>宮城県の強みは、仙台市内だけで完結しないことです。仙台塩釜港は、仙台港区、塩釜港区、石巻港区、松島港区を持ち、仙台港区では国際物流ターミナルやコンテナ専用岸壁の延伸整備が進められてきました。仙台空港、東北自動車道、三陸沿岸道路、東北新幹線も含めると、宮城県の企業は東北全域や首都圏に商圏を持ちやすいです。</p>
-        <p>BtoB、食品加工、物流、観光では、配送範囲、納期、温度帯、港湾・空港との距離、営業エリア、拠点間連携を明示することがAI検索で効きます。<mark><strong>「仙台にあります」だけでなく、東北広域の商流まで説明できる会社</strong></mark>を比較しましょう。</p>
+        <p>BtoB、食品加工、物流、観光では、配送範囲、納期、温度帯、港湾・空港との距離、営業エリア、拠点間連携を明示することがAI検索で効きます。<strong>「仙台にあります」だけでなく、東北広域の商流まで説明できる会社</strong>を比較しましょう。</p>
         <p class="post-ref"><a href="https://www.pa.thr.mlit.go.jp/shiogama/020/030/index.html" target="_blank" rel="noopener">参考：国土交通省 東北地方整備局｜仙台塩釜港（仙台港区）</a></p>
 
         <h3>採用・医療・教育・生活サービスの安心材料を整えられるか</h3>
         <p>仙台都市圏では、医療、教育、士業、美容、住宅、介護、採用など、生活者が比較するサービスが多くあります。この領域では、専門性だけでなく、対象者、料金、利用の流れ、担当者、アクセス、予約、キャンセル、口コミ、FAQが重要です。</p>
-        <p>AI検索は「初めてでも行きやすいか」「子ども連れでも大丈夫か」「転職先として安心か」のような質問に近づいています。LLMO会社には、<mark><strong>生活者の不安を先回りして、サイト内で回答できるページを作る力</strong></mark>が必要です。採用では、職種別の仕事内容、勤務地、研修、福利厚生、Uターン・Iターン情報まで整理できるかを見てください。</p>
+        <p>AI検索は「初めてでも行きやすいか」「子ども連れでも大丈夫か」「転職先として安心か」のような質問に近づいています。LLMO会社には、<strong>生活者の不安を先回りして、サイト内で回答できるページを作る力</strong>が必要です。採用では、職種別の仕事内容、勤務地、研修、福利厚生、Uターン・Iターン情報まで整理できるかを見てください。</p>
 
         <h2>宮城県のLLMO会社に依頼する費用相場</h2>
         <p>宮城県でLLMOを外注する場合、費用は「何を任せるか」で大きく変わります。診断だけなら10万円前後から検討できますが、仙台市内の店舗サイトを少し直すのか、観光地別ページを作るのか、食品ECやBtoBの専門ページまで作るのかで必要な予算は違います。</p>
-        <p>大事なのは、単に安い会社を探すことではありません。<mark><strong>仙台単点の集客なのか、県南・県北・沿岸まで含む広域設計なのか、ECや採用や製造業の専門情報まで含むのか</strong></mark>を先に分けて見積もることです。</p>
+        <p>大事なのは、単に安い会社を探すことではありません。<strong>仙台単点の集客なのか、県南・県北・沿岸まで含む広域設計なのか、ECや採用や製造業の専門情報まで含むのか</strong>を先に分けて見積もることです。</p>
 
         <table>
           <tr><th>支援タイプ</th><th>目安</th><th>主な内容</th></tr>
@@ -1172,7 +1195,7 @@
 
         <h3>まずは診断だけなら10万円前後から始めやすい</h3>
         <p>公開価格で分かりやすい入口は診断プランです。LiKGはLLMO診断プランを10万円から公開しています。まずAI検索で自社がどう扱われているか、競合と比べて何が足りないかを知りたい企業には使いやすい価格帯です。</p>
-        <p>宮城県では、仙台の競合が多い業種と、県北・沿岸の情報不足が大きい業種で、改善優先度が変わります。いきなり記事を量産するより、<mark><strong>どの質問で出たいのか、どのページを直すべきかを先に決める</strong></mark>ほうが無駄が少ないです。</p>
+        <p>宮城県では、仙台の競合が多い業種と、県北・沿岸の情報不足が大きい業種で、改善優先度が変わります。いきなり記事を量産するより、<strong>どの質問で出たいのか、どのページを直すべきかを先に決める</strong>ほうが無駄が少ないです。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>小さく始めるなら月額5万円〜15万円帯が入口になる</h3>
@@ -1182,17 +1205,17 @@
 
         <h3>伴走支援の中心帯は月額15万円〜30万円前後</h3>
         <p>毎月改善を進めるなら、月額15万円〜30万円前後が一つの中心帯です。ジオコードは通常プラン15万円から、LiKGはLLMO×SEOコンサルティングを30万円から公開しています。この帯になると、戦略設計、競合調査、記事構成、ページ改善指示、構造化データ、レポート、定例打ち合わせまで含まれやすくなります。</p>
-        <p>宮城県では、都市型サービス、観光、製造、食品、水産、ECで必要なページが違います。<mark><strong>一度作って終わりではなく、AI検索の出方を見ながら直す支援</strong></mark>が必要な会社は、この価格帯で比較すると現実的です。</p>
+        <p>宮城県では、都市型サービス、観光、製造、食品、水産、ECで必要なページが違います。<strong>一度作って終わりではなく、AI検索の出方を見ながら直す支援</strong>が必要な会社は、この価格帯で比較すると現実的です。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>制作・EC・採用まで含めると総額50万円台〜150万円超まで広がる</h3>
         <p>既存サイトが古い、スマホで見づらい、CMSがない、採用ページが弱い、EC導線がない場合は、LLMOだけでなく制作費が必要です。宮城県では、食品・水産・工芸・観光体験・BtoB商材など、商品説明や事例、写真が成果に直結する案件が多くあります。</p>
-        <p>ECや採用まで含めると、商品登録、撮影、取材、原稿、送料設定、レビュー、FAQ、特商法表示、CMS設計などが必要です。<mark><strong>AI検索以前に、ユーザーとAIが読める情報をサイト内に用意する費用</strong></mark>が発生すると考えてください。</p>
+        <p>ECや採用まで含めると、商品登録、撮影、取材、原稿、送料設定、レビュー、FAQ、特商法表示、CMS設計などが必要です。<strong>AI検索以前に、ユーザーとAIが読める情報をサイト内に用意する費用</strong>が発生すると考えてください。</p>
 
         <h3>宮城県では取材・撮影・商品情報整理で費用が上がりやすい</h3>
         <p>宮城県の案件では、現地取材や写真撮影が効きやすいです。観光では部屋、料理、アクセス、季節、水産・食品では加工場や商品、製造業では設備や工程、採用では職場や社員の雰囲気が判断材料になります。</p>
-        <p>AI検索でも、会社名、住所、サービス名、商品名、価格、実績、FAQが整理されているほうが理解されやすくなります。<mark><strong>取材・撮影・原稿作成・更新作業が見積もりに含まれているか</strong></mark>を必ず確認しましょう。</p>
+        <p>AI検索でも、会社名、住所、サービス名、商品名、価格、実績、FAQが整理されているほうが理解されやすくなります。<strong>取材・撮影・原稿作成・更新作業が見積もりに含まれているか</strong>を必ず確認しましょう。</p>
 
         <h3>仙台単点か、宮城県内広域かで予算を分ける</h3>
         <p>費用で大きく変わるのは、仙台市内だけを狙うのか、県南・県北・沿岸まで広げるのかです。仙台市内の1店舗なら、主要ページとFAQだけでも始めやすいです。一方、松島、蔵王、鳴子、石巻、気仙沼、大崎、登米、栗原まで含めると、地域別ページ、観光導線、商品ページ、事例、配送条件、採用情報が増えます。</p>
@@ -1202,7 +1225,7 @@
         <p>ここでは、宮城県の企業や店舗がLLMO会社を検討するときに出やすい疑問を整理します。比較ポイントや費用相場とは役割を分け、依頼前に確認すべきことだけを短くまとめます。</p>
 
         <h3>宮城県のLLMO会社に依頼する意味はありますか？</h3>
-        <p>あります。宮城県は仙台都市圏、県南、県北、石巻・気仙沼などで商圏や検索意図が変わります。観光、医療、教育、製造、食品、水産、ECなどの情報を<mark><strong>AIに正しく理解される形で整える価値</strong></mark>があります。</p>
+        <p>あります。宮城県は仙台都市圏、県南、県北、石巻・気仙沼などで商圏や検索意図が変わります。観光、医療、教育、製造、食品、水産、ECなどの情報を<strong>AIに正しく理解される形で整える価値</strong>があります。</p>
 
         <h3>宮城県内の会社でないと意味はありませんか？</h3>
         <p>必ずしも県内本社である必要はありません。重要なのは、仙台、松島、石巻、気仙沼、大崎、白石、名取などの違いや、観光・ものづくり・水産・食品の文脈を理解して設計できるかです。</p>
@@ -1226,7 +1249,7 @@
         <p>一般的には3〜6か月が目安です。既存サイトの状態、競合、記事やFAQの量、構造化データの整備状況によって変わります。短期で断定せず、観測しながら直す進め方が現実的です。</p>
 
         <h2>宮城県でLLMO会社を選ぶなら、仙台中心と東北広域の両方から逆算しましょう</h2>
-        <p>宮城県のLLMO会社選びでは、<mark><strong>仙台都市圏の集客力と、県南・県北・沿岸の産業文脈を分けて考えること</strong></mark>が重要です。仙台の店舗や医療なら生活者の不安を解消するFAQ、観光なら周遊と季節性、水産・食品なら商品情報と配送条件、製造業なら設備・認証・実績、ECなら商品ページとCRMまで整理する必要があります。</p>
+        <p>宮城県のLLMO会社選びでは、<strong>仙台都市圏の集客力と、県南・県北・沿岸の産業文脈を分けて考えること</strong>が重要です。仙台の店舗や医療なら生活者の不安を解消するFAQ、観光なら周遊と季節性、水産・食品なら商品情報と配送条件、製造業なら設備・認証・実績、ECなら商品ページとCRMまで整理する必要があります。</p>
         <p>まずは、自社が「仙台市内の見込み客」を狙うのか、「宮城県内の複数地域」を狙うのか、「東北・全国の商談」を狙うのかを決めてください。そのうえで、戦略だけでなく、ページ改修、記事制作、構造化データ、写真、FAQ、更新運用まで実行できる会社を選ぶと前に進めやすいです。迷う場合は、<a href="blog-llmo-taisaku.html">LLMO対策の基礎</a>を確認し、必要なら<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問で選ばれるべきかを整理していきましょう。</p>
       </div>
 
@@ -1254,14 +1277,14 @@
         </div>
       </section>
 
-      <div class="post-nav">
+                  <div class="post-nav">
         <a href="blog-iwate-llmo-kaisha.html">
           <span class="post-nav-label">&larr; 前の記事</span>
-          岩手県でおすすめのLLMO会社10選を見る
+          岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
-        <a href="blog.html">
+        <a href="blog-akita-llmo-kaisha.html" style="text-align: right;">
           <span class="post-nav-label">次の記事 &rarr;</span>
-          ブログ一覧を見る
+          秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
       </div>
 
@@ -1301,11 +1324,11 @@
           <article class="post-related-card">
             <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
                 <p class="post-related-card-text">BtoBや本社集積地での比較軸を、宮城県の仙台都市圏・ものづくり市場と対比したい方向けです。</p>
                 <div class="post-related-date">2026.04.14</div>
               </div>
@@ -1344,33 +1367,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1492,7 +1515,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

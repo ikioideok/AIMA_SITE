@@ -1,0 +1,34 @@
+{
+  "slug": "openai-gpt-live-voice",
+  "title": "OpenAI、ChatGPT音声にGPT-Live導入──同時に聞いて話せる会話へ",
+  "category": "生成AI",
+  "breaking": true,
+  "datetime": "2026-07-12T08:02",
+  "description": "OpenAIがChatGPT VoiceにGPT-Live-1とGPT-Live-1 miniを導入。人の話を聞きながら応答でき、検索や推論も会話中に処理する。",
+  "summary": "ChatGPT VoiceがGPT-Liveに刷新。聞く・話すを同時に行い、自然な割り込みや間を扱える。",
+  "lead3": [
+    "OpenAIがChatGPT VoiceにGPT-Live-1とGPT-Live-1 miniを導入した",
+    "人の話を聞きながら話せる仕組みで、割り込みや会話の間を自然に扱う",
+    "個人向けプランで展開中だが、開始時点では法人向けプランや映像共有に未対応"
+  ],
+  "body_html": "<h2>何が発表されたか</h2>\n<p>OpenAIは2026年7月8日、ChatGPTの音声会話を新しい<span class=\"em\">GPT-Live</span>で動かすと発表しました。有料のGo、Plus、ProではGPT-Live-1、Freeでは小型版のGPT-Live-1 miniが標準の音声モデルになります。iOS、Android、ChatGPT.comの個人向けプランで展開中です。</p>\n<p>これまでの音声AIは、利用者が話し終わってからAIが返す形が中心でした。GPT-Liveは、聞く処理と話す処理を同時に続ける「フルデュプレックス」という仕組みです。利用者が途中で質問したり、考えるために少し黙ったりしても、その場に合わせて話す、待つ、聞き続けるといった判断ができます。</p>\n<h2>詳細</h2>\n<p>GPT-Liveは、音声のやり取りと、深い検索・推論の処理を分けています。会話を担当するGPT-Liveが話の流れを保ちながら、難しい質問は別の最新モデルへ渡します。公式発表では、開始時点でGPT-5.5を裏側の処理に使うと説明されています。</p>\n<p>ChatGPT Voiceでは、Web検索やメモリを使えるほか、天気、株価、スポーツなどを画面上のカードで見せられます。音声と同時に文字も表示され、テキストや画像を含む同じチャットの中で使えます。OpenAIによると、音声機能と音声入力は週1億5,000万人以上が利用しています。</p>\n<p>一方、提供範囲には制限があります。公式リリースノートでは、開始時点でChatGPT Business、Enterprise、Eduのワークスペースには対応していません。また、GPT-Liveでは音声会話中のビデオと画面共有を使えません。必要な利用者は、対象プランで従来のAdvanced Voice Modeを選べます。APIへの提供は今後の予定であり、現時点で提供済みとは発表されていません。</p>\n<h2>安全性</h2>\n<p>OpenAIはGPT-Live向けの安全性資料も公開しました。会話中の入力と出力を確認し、危険な内容を検知した場合は、応答の方向を変える、安全案内を出す、必要に応じて会話を終了する仕組みを説明しています。また、GPT-Liveは実在人物の声をまねるための機能ではなく、用意された音声だけを使います。</p>\n<p>ただし、OpenAI自身の評価では、GPT-Live-1の「AIへの感情的な依存」に関する一部評価と、miniの性的内容に関する一部評価で、従来モデルよりわずかに低い数値が出ました。同社は統計的に有意な差ではないとしていますが、長期的な監視を続ける方針です。</p>\n<h2>なぜ重要か</h2>\n<p>会社にとって大きいのは、音声AIが「質問を一つずつ受ける道具」から、会話を続けながら別の作業も進める道具に近づいたことです。接客、社内問い合わせ、研修、会議中の調査などで、利用者がAIの返答を待つ時間を減らせる可能性があります。</p>\n<p>ただし、今回のGPT-Liveはまず個人向けChatGPTへの導入です。法人向けワークスペースとAPIは開始時点で未提供のため、会社がすぐ顧客対応システムへ組み込めるという発表ではありません。業務利用を考える会社は、法人向け提供、API、データ管理の条件が正式に出てから判断する必要があります。</p>",
+  "sources": [
+    {
+      "label": "OpenAI公式発表",
+      "url": "https://openai.com/index/introducing-gpt-live/"
+    },
+    {
+      "label": "OpenAI公式リリースノート",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+      "label": "OpenAI GPT-Live System Card",
+      "url": "https://deploymentsafety.openai.com/gpt-live"
+    },
+    {
+      "label": "OpenAI公式X投稿",
+      "url": "https://x.com/OpenAI/status/2075019750569378007"
+    }
+  ],
+  "candidate_url": "https://x.com/OpenAI/status/2075019750569378007"
+}

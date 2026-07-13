@@ -17,6 +17,13 @@ Redirect 301 /blog-osaka-ai-search-company.html /blog-osaka-llmo-kaisha.html
 # Search Console cleanup: old media and jinzai URLs exported through 2026-05-18.
 # These pages are no longer public files, so send Google and users to the closest current page.
 RewriteEngine On
+# Canonical service URL: redirect only direct requests for old filenames.
+# The THE_REQUEST check prevents the internal /service/ mapping below from looping.
+RewriteCond %{THE_REQUEST} \s/+service(?:-redesign-v5)?\.html(?:[?\s]) [NC]
+RewriteRule ^service(?:-redesign-v5)?\.html$ /service/ [R=301,L]
+RewriteCond %{THE_REQUEST} \s/+service(?:[?\s]) [NC]
+RewriteRule ^service$ /service/ [R=301,L]
+RewriteRule ^service/$ /service-redesign-v5.html [L]
 RewriteRule ^media/?$ /blog.html [R=301,L]
 RewriteRule ^media/(latest|ads|special|featured|terms|resources|categories)/?$ /blog.html [R=301,L]
 RewriteRule ^media/privacy/?$ /privacy.html [R=301,L]

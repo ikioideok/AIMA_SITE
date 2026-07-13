@@ -164,7 +164,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -912,26 +914,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -949,13 +972,14 @@
       <div class="post-header">
         <div class="post-meta">
           <span class="post-tag">LLMO</span>
-          <time class="post-date" datetime="2026-04-19">2026.04.19</time>
+          <time class="post-date" datetime="2026-04-19">公開日 2026.04.19</time>
+          <time class="post-date post-updated" datetime="2026-04-19">更新日 2026.04.19</time>
         </div>
 
         <h1 class="post-title">愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h1>
 
         <div class="post-thumb">
-          <img src="images/blog-aichi-llmo-kaisha/eyecatch.webp" alt="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のアイキャッチ画像" width="1672" height="941" loading="eager" decoding="async">
+          <img src="images/blog-aichi-llmo-kaisha/eyecatch.webp" alt="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
         </div>
       </div>
 
@@ -975,7 +999,7 @@
     <section class="post-supervisor" aria-label="監修者情報">
       <div class="post-supervisor-label">監修者情報</div>
       <div class="post-supervisor-card">
-        <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+        <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
         <div>
           <div class="post-supervisor-name">水間 雄紀</div>
           <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1049,7 +1073,7 @@
     <div class="aima-feature" aria-label="株式会社AIMAのご案内">
       <div class="aima-feature-kicker">運営会社のご案内</div>
       <div class="aima-feature-title">株式会社AIMA</div>
-      <p>株式会社AIMAは愛知本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円の格安LLMOプラン</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。まず現状だけ確認したい場合は<a href="llmo-shindan.html">無料LLMO診断</a>から入るのもおすすめです。</p>
+      <p>株式会社AIMAは愛知本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円の格安LLMOプラン</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。まず現状だけ確認したい場合は<a href="llmo-shindan.html">無料LLMO診断</a>から入るのもおすすめです。</p>
       <div class="aima-feature-actions">
         <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
         <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1059,108 +1083,108 @@
     <h3>1. 株式会社フリースタイルエンターテイメント</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/freestyle-entertainment.webp" alt="株式会社フリースタイルエンターテイメントのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社フリースタイルエンターテイメントのトップページ<span class="figure-source"><a href="https://www.freestyle-entertainment.co.jp/" target="_blank" rel="noopener">出典：株式会社フリースタイルエンターテイメント</a></span></figcaption>
+      <figcaption>株式会社フリースタイルエンターテイメントのトップページ<span class="figure-source"><a href="https://www.freestyle-entertainment.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社フリースタイルエンターテイメント</a></span></figcaption>
     </figure>
     <p>フリースタイルエンターテイメントは、名古屋市中区に本社を置く会社です。Web制作、SEO対策、広告運用、オウンドメディア運用に加えて、LLMOコンサルティングを正式サービスとして持っているため、サイト改善とAI検索対策を分けずに進めやすいのが強みです。</p>
     <p>特に相性がよいのは、コーポレートサイト、採用サイト、オウンドメディアを横断して整えたい会社です。<mark><strong>制作会社かコンサル会社かで迷う企業でも、両方をまとめて相談しやすい</strong></mark>候補といえます。</p>
-    <p class="post-ref"><a href="https://www.freestyle-entertainment.co.jp/service/llmo/" target="_blank" rel="noopener">参考：株式会社フリースタイルエンターテイメント｜LLMOコンサルティング</a></p>
-    <p class="post-ref"><a href="https://www.freestyle-entertainment.co.jp/company/profile/" target="_blank" rel="noopener">参考：株式会社フリースタイルエンターテイメント｜会社概要</a></p>
+    <p class="post-ref"><a href="https://www.freestyle-entertainment.co.jp/service/llmo/" target="_blank" rel="nofollow noopener">参考：株式会社フリースタイルエンターテイメント｜LLMOコンサルティング</a></p>
+    <p class="post-ref"><a href="https://www.freestyle-entertainment.co.jp/company/profile/" target="_blank" rel="nofollow noopener">参考：株式会社フリースタイルエンターテイメント｜会社概要</a></p>
 
     <h3>2. 株式会社TROBZ</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/trobz.webp" alt="株式会社TROBZのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社TROBZのトップページ<span class="figure-source"><a href="https://trobz.co.jp/" target="_blank" rel="noopener">出典：株式会社TROBZ</a></span></figcaption>
+      <figcaption>株式会社TROBZのトップページ<span class="figure-source"><a href="https://trobz.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社TROBZ</a></span></figcaption>
     </figure>
     <p>TROBZは、北名古屋市を拠点にAI検索時代の集客をかなり前面に出している会社です。愛知向け、名古屋向けのLLMO記事を継続的に公開しており、AIOやLLMOを「地域ビジネスでどう使うか」という切り口で組み立てています。</p>
     <p>愛知県の会社で、地域名と業種を掛け合わせた認知獲得を狙うなら検討しやすいタイプです。<mark><strong>愛知の製造業やサービス業の認知拡大を、地域文脈つきでAIに伝えたい会社</strong></mark>と相性があります。</p>
-    <p class="post-ref"><a href="https://trobz.co.jp/knowledge/llmoaichi/" target="_blank" rel="noopener">参考：株式会社TROBZ｜愛知の製造業・サービス業がLLMOで認知度を上げる秘訣</a></p>
-    <p class="post-ref"><a href="https://trobz.co.jp/knowledge/nagoyaninnchi/" target="_blank" rel="noopener">参考：株式会社TROBZ｜名古屋での認知度を最大化するLLMO対策の具体的手順</a></p>
+    <p class="post-ref"><a href="https://trobz.co.jp/knowledge/llmoaichi/" target="_blank" rel="nofollow noopener">参考：株式会社TROBZ｜愛知の製造業・サービス業がLLMOで認知度を上げる秘訣</a></p>
+    <p class="post-ref"><a href="https://trobz.co.jp/knowledge/nagoyaninnchi/" target="_blank" rel="nofollow noopener">参考：株式会社TROBZ｜名古屋での認知度を最大化するLLMO対策の具体的手順</a></p>
 
     <h3>3. 株式会社ナレッジホールディングス</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/knowledge-hd.webp" alt="株式会社ナレッジホールディングスのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社ナレッジホールディングスのトップページ<span class="figure-source"><a href="https://knowledge-hd.co.jp/" target="_blank" rel="noopener">出典：株式会社ナレッジホールディングス</a></span></figcaption>
+      <figcaption>株式会社ナレッジホールディングスのトップページ<span class="figure-source"><a href="https://knowledge-hd.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ナレッジホールディングス</a></span></figcaption>
     </figure>
     <p>ナレッジホールディングスは東京本店の会社ですが、公式の企業情報では名古屋市中区栄にLLMO対策本部を置いています。AI検索、MEO、SEO、SNSをまとめて扱う設計なので、AI検索対策だけを単独で考えるのではなく、店舗情報や発信面まで含めて整えたい企業に向いています。</p>
     <p>愛知でこの会社を検討する意味があるのは、問い合わせ導線がWebサイトだけで完結しない業種です。<mark><strong>AI検索・マップ・SNSが分断されると弱い店舗型や地域密着型</strong></mark>では、まとめて見られる支援会社は比較候補に入れやすいです。</p>
-    <p class="post-ref"><a href="https://knowledge-hd.co.jp/company/" target="_blank" rel="noopener">参考：株式会社ナレッジホールディングス｜企業情報</a></p>
-    <p class="post-ref"><a href="https://knowledge-hd.co.jp/llmo/" target="_blank" rel="noopener">参考：株式会社ナレッジホールディングス｜LLMOコンサルティング</a></p>
+    <p class="post-ref"><a href="https://knowledge-hd.co.jp/company/" target="_blank" rel="nofollow noopener">参考：株式会社ナレッジホールディングス｜企業情報</a></p>
+    <p class="post-ref"><a href="https://knowledge-hd.co.jp/llmo/" target="_blank" rel="nofollow noopener">参考：株式会社ナレッジホールディングス｜LLMOコンサルティング</a></p>
 
     <h3>4. 株式会社オンカ</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/onca.webp" alt="株式会社オンカのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社オンカのトップページ<span class="figure-source"><a href="https://onca.co.jp/" target="_blank" rel="noopener">出典：株式会社オンカ</a></span></figcaption>
+      <figcaption>株式会社オンカのトップページ<span class="figure-source"><a href="https://onca.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社オンカ</a></span></figcaption>
     </figure>
     <p>オンカは、名古屋で制作を行いながら、SEOやWeb広告を通じて集客改善を支援する会社です。LLMOを単独の流行語として扱うのではなく、SEOの延長線上にある実務として捉えているので、土台の弱いサイトを無理にAI最適化だけで押し切るようなズレが起きにくいのが特徴です。</p>
     <p>愛知でこの会社が向いているのは、すでにホームページはあるが、集客の設計が曖昧な会社です。<mark><strong>地域キーワード、サービスページ、問い合わせ導線まで含めて整えたい会社</strong></mark>に合います。</p>
-    <p class="post-ref"><a href="https://onca.co.jp/company/" target="_blank" rel="noopener">参考：株式会社オンカ｜オフィス紹介・会社概要</a></p>
-    <p class="post-ref"><a href="https://onca.co.jp/column/column/p17463/" target="_blank" rel="noopener">参考：株式会社オンカ｜ホームページのLLMO・AIO・GEOの本質と対策方法</a></p>
+    <p class="post-ref"><a href="https://onca.co.jp/company/" target="_blank" rel="nofollow noopener">参考：株式会社オンカ｜オフィス紹介・会社概要</a></p>
+    <p class="post-ref"><a href="https://onca.co.jp/column/column/p17463/" target="_blank" rel="nofollow noopener">参考：株式会社オンカ｜ホームページのLLMO・AIO・GEOの本質と対策方法</a></p>
 
     <h3>5. クーミル株式会社</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/coomil.webp" alt="クーミル株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>クーミル株式会社のトップページ<span class="figure-source"><a href="https://coomil.co.jp/" target="_blank" rel="noopener">出典：クーミル株式会社</a></span></figcaption>
+      <figcaption>クーミル株式会社のトップページ<span class="figure-source"><a href="https://coomil.co.jp/" target="_blank" rel="nofollow noopener">出典：クーミル株式会社</a></span></figcaption>
     </figure>
     <p>クーミルは東京本社ですが、公式の企業情報で名古屋支社を公開しており、SEOやWeb制作に加えてAIO/LLMOコンサルティングまで扱っています。記事制作やサービスページ制作を、SEOとAI流入の両方に関わる施策として見やすいのが特徴です。</p>
     <p>特に、愛知でオウンドメディアや比較記事、サービスページを増やしていきたい会社には使いやすい候補です。<mark><strong>コンテンツを軸にLLMOへつなげたい中間ニーズ</strong></mark>を拾いやすい会社といえます。</p>
-    <p class="post-ref"><a href="https://coomil.co.jp/service/llmo/" target="_blank" rel="noopener">参考：クーミル株式会社｜AIO/LLMO対策・AI Overviewsコンサルティング</a></p>
-    <p class="post-ref"><a href="https://coomil.co.jp/company" target="_blank" rel="noopener">参考：クーミル株式会社｜企業情報</a></p>
+    <p class="post-ref"><a href="https://coomil.co.jp/service/llmo/" target="_blank" rel="nofollow noopener">参考：クーミル株式会社｜AIO/LLMO対策・AI Overviewsコンサルティング</a></p>
+    <p class="post-ref"><a href="https://coomil.co.jp/company" target="_blank" rel="nofollow noopener">参考：クーミル株式会社｜企業情報</a></p>
 
     <h3>6. NYマーケティング株式会社</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/ny-marketing.webp" alt="NYマーケティング株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>NYマーケティング株式会社のトップページ<span class="figure-source"><a href="https://ny-marketing.co.jp/" target="_blank" rel="noopener">出典：NYマーケティング株式会社</a></span></figcaption>
+      <figcaption>NYマーケティング株式会社のトップページ<span class="figure-source"><a href="https://ny-marketing.co.jp/" target="_blank" rel="nofollow noopener">出典：NYマーケティング株式会社</a></span></figcaption>
     </figure>
     <p>NYマーケティングは、名古屋駅前のJPタワー名古屋に本社を置く会社です。SEOコンサルティング、オウンドメディア運用、記事制作、BtoBコンテンツマーケティング支援まで持っており、特にSEOを中核にした改善に強い構成になっています。</p>
     <p>愛知でこの会社を選びやすいのは、LLMO単体よりも、まず検索流入と問い合わせ導線を強くしたい場合です。<mark><strong>BtoB企業、ポータル型サイト、コンテンツ量が多いサイトの改善</strong></mark>と相性がよく、そこからAI検索対策へ広げやすいです。</p>
-    <p class="post-ref"><a href="https://ny-marketing.co.jp/company/" target="_blank" rel="noopener">参考：NYマーケティング株式会社｜会社情報</a></p>
-    <p class="post-ref"><a href="https://ny-marketing.co.jp/service/seo-consulting/" target="_blank" rel="noopener">参考：NYマーケティング株式会社｜SEOコンサルティング・SEO対策代行</a></p>
-    <p class="post-ref"><a href="https://ny-marketing.co.jp/service/btob-contents-marketing/" target="_blank" rel="noopener">参考：NYマーケティング株式会社｜BtoB専門コンテンツマーケティング支援</a></p>
+    <p class="post-ref"><a href="https://ny-marketing.co.jp/company/" target="_blank" rel="nofollow noopener">参考：NYマーケティング株式会社｜会社情報</a></p>
+    <p class="post-ref"><a href="https://ny-marketing.co.jp/service/seo-consulting/" target="_blank" rel="nofollow noopener">参考：NYマーケティング株式会社｜SEOコンサルティング・SEO対策代行</a></p>
+    <p class="post-ref"><a href="https://ny-marketing.co.jp/service/btob-contents-marketing/" target="_blank" rel="nofollow noopener">参考：NYマーケティング株式会社｜BtoB専門コンテンツマーケティング支援</a></p>
 
     <h3>7. 株式会社エッコ</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/ecco.webp" alt="株式会社エッコのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社エッコのトップページ<span class="figure-source"><a href="https://ecco.co.jp/" target="_blank" rel="noopener">出典：株式会社エッコ</a></span></figcaption>
+      <figcaption>株式会社エッコのトップページ<span class="figure-source"><a href="https://ecco.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社エッコ</a></span></figcaption>
     </figure>
     <p>エッコは、名古屋を拠点にSEO、広告運用、アクセス解析、ホームページ制作まで対応しているWebマーケティング会社です。検索に強いサイトの土台づくりを長く続けてきた実績があり、LLMOという新しい言葉だけに振り切らず、まず検索評価を積み上げる考え方を取りやすい会社です。</p>
-    <p>AI検索に引用される前提として、ページ品質、導線、コンテンツ整理が必要になります。その意味で、<mark><strong>LLMOの前工程を堅く作れる会社</strong></mark>として比較候補に入れやすいです。</p>
-    <p class="post-ref"><a href="https://ecco.co.jp/service/seo/" target="_blank" rel="noopener">参考：株式会社エッコ｜SEO対策サービス</a></p>
-    <p class="post-ref"><a href="https://ecco.co.jp/" target="_blank" rel="noopener">参考：株式会社エッコ｜名古屋でホームページ制作、Web制作なら株式会社エッコ</a></p>
+    <p>AI検索に引用される前提として、ページ品質、導線、コンテンツ整理が必要になります。その意味で、<strong>LLMOの前工程を堅く作れる会社</strong>として比較候補に入れやすいです。</p>
+    <p class="post-ref"><a href="https://ecco.co.jp/service/seo/" target="_blank" rel="nofollow noopener">参考：株式会社エッコ｜SEO対策サービス</a></p>
+    <p class="post-ref"><a href="https://ecco.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社エッコ｜名古屋でホームページ制作、Web制作なら株式会社エッコ</a></p>
 
     <h3>8. Catwork株式会社</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/catwork.webp" alt="Catwork株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>Catwork株式会社のトップページ<span class="figure-source"><a href="https://catwork.co.jp/" target="_blank" rel="noopener">出典：Catwork株式会社</a></span></figcaption>
+      <figcaption>Catwork株式会社のトップページ<span class="figure-source"><a href="https://catwork.co.jp/" target="_blank" rel="nofollow noopener">出典：Catwork株式会社</a></span></figcaption>
     </figure>
     <p>Catworkは、名古屋のWeb制作会社として、ホームページ制作、Webマーケティング、SEO対策を通じて中小企業の集客を支援しています。自社サイトでも「名古屋 ホームページ制作」「名古屋 SEO」などの地域キーワード実績を打ち出しており、地元商圏での勝ち筋を意識した支援が期待しやすい立ち位置です。</p>
-    <p>この会社が愛知向きなのは、広域の大企業向けというより、<mark><strong>地元商圏で結果を出したい中小企業</strong></mark>との相性がよいからです。地域検索の文脈で相談しやすい候補です。</p>
-    <p class="post-ref"><a href="https://catwork.co.jp/" target="_blank" rel="noopener">参考：Catwork株式会社｜トップページ・企業情報</a></p>
+    <p>この会社が愛知向きなのは、広域の大企業向けというより、<strong>地元商圏で結果を出したい中小企業</strong>との相性がよいからです。地域検索の文脈で相談しやすい候補です。</p>
+    <p class="post-ref"><a href="https://catwork.co.jp/" target="_blank" rel="nofollow noopener">参考：Catwork株式会社｜トップページ・企業情報</a></p>
 
     <h3>9. 株式会社MEcreate</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/mecreate.webp" alt="株式会社MEcreateのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社MEcreateのトップページ<span class="figure-source"><a href="https://mecreate.co.jp/" target="_blank" rel="noopener">出典：株式会社MEcreate</a></span></figcaption>
+      <figcaption>株式会社MEcreateのトップページ<span class="figure-source"><a href="https://mecreate.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社MEcreate</a></span></figcaption>
     </figure>
     <p>MEcreateは、名古屋市中村区名駅を拠点に、ホームページ制作、SEO対策、MEO対策、広告運用代行まで扱う会社です。地域企業の集客支援に寄った構成で、価格ページも公開しているため、最初の検討段階でも費用感をつかみやすいです。</p>
-    <p>愛知で検討しやすいのは、店舗型ビジネスや地域密着の中小企業です。<mark><strong>MEOやSEOの組み合わせで地域集客を固め、その先でAI検索にも広げたい会社</strong></mark>に合います。</p>
-    <p class="post-ref"><a href="https://mecreate.co.jp/" target="_blank" rel="noopener">参考：株式会社MEcreate｜愛知・名古屋でホームページ制作なら株式会社MEcreate</a></p>
-    <p class="post-ref"><a href="https://mecreate.co.jp/price/" target="_blank" rel="noopener">参考：株式会社MEcreate｜料金プラン</a></p>
+    <p>愛知で検討しやすいのは、店舗型ビジネスや地域密着の中小企業です。<strong>MEOやSEOの組み合わせで地域集客を固め、その先でAI検索にも広げたい会社</strong>に合います。</p>
+    <p class="post-ref"><a href="https://mecreate.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社MEcreate｜愛知・名古屋でホームページ制作なら株式会社MEcreate</a></p>
+    <p class="post-ref"><a href="https://mecreate.co.jp/price/" target="_blank" rel="nofollow noopener">参考：株式会社MEcreate｜料金プラン</a></p>
 
     <h3>10. 株式会社ラクー</h3>
     <figure>
       <img src="images/blog-aichi-llmo-kaisha/racoo.webp" alt="株式会社ラクーのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社ラクーのトップページ<span class="figure-source"><a href="https://hp.racoo.co.jp/" target="_blank" rel="noopener">出典：株式会社ラクー</a></span></figcaption>
+      <figcaption>株式会社ラクーのトップページ<span class="figure-source"><a href="https://hp.racoo.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ラクー</a></span></figcaption>
     </figure>
     <p>ラクーは、名古屋市中村区名駅に本社を置く会社で、ホームページ制作、SEO対策、ECサイト構築、Webシステム開発まで対応しています。LLMO専業というより、まずWeb集客の基盤を整えたい会社に向いたタイプです。</p>
-    <p>サービスサイト、コーポレートサイト、EC、ポータルまで広く触れられるため、<mark><strong>AI検索対策の前にサイト自体を強くしたい会社</strong></mark>には現実的な選択肢になります。</p>
-    <p class="post-ref"><a href="https://hp.racoo.co.jp/company" target="_blank" rel="noopener">参考：株式会社ラクー｜会社情報</a></p>
-    <p class="post-ref"><a href="https://hp.racoo.co.jp/service/seo" target="_blank" rel="noopener">参考：株式会社ラクー｜SEO対策</a></p>
+    <p>サービスサイト、コーポレートサイト、EC、ポータルまで広く触れられるため、<strong>AI検索対策の前にサイト自体を強くしたい会社</strong>には現実的な選択肢になります。</p>
+    <p class="post-ref"><a href="https://hp.racoo.co.jp/company" target="_blank" rel="nofollow noopener">参考：株式会社ラクー｜会社情報</a></p>
+    <p class="post-ref"><a href="https://hp.racoo.co.jp/service/seo" target="_blank" rel="nofollow noopener">参考：株式会社ラクー｜SEO対策</a></p>
 
     <p>地域比較も含めて見たい方は<a href="blog-tokyo-llmo-kaisha.html">東京でおすすめのLLMO会社10選</a>や<a href="blog-osaka-llmo-kaisha.html">大阪でおすすめのLLMO会社10選</a>もあわせて確認すると、愛知ならではの違いが見えやすくなります。</p>
 
     <h2>愛知県のLLMO会社を比較する際のポイント</h2>
     <p>愛知県でLLMO対策を外注するときは、愛知の商圏や業種の特徴を理解したうえで、情報を整理できる会社かどうかを見ることが大切です。診断や提案だけで終わるのではなく、地域の市場に合わせてページ制作や改善まで進められる会社のほうが、成果につながりやすくなります。</p>
-    <p>特に愛知は、名古屋の都市型商圏と西三河の製造業商圏が同居しているため、<mark><strong>ひとつのテンプレートを全社に当てるだけでは弱い</strong></mark>地域です。</p>
+    <p>特に愛知は、名古屋の都市型商圏と西三河の製造業商圏が同居しているため、<strong>ひとつのテンプレートを全社に当てるだけでは弱い</strong>地域です。</p>
 
     <h3>名古屋市内型の集客に強いか</h3>
     <p>愛知県内で、まず見るべきなのが名古屋市内の集客です。名古屋市は230万人超の人口を抱える大都市で、愛知県内でも事業所数が最も多く、競合の密度が高い市場です。ここでは、ただ情報を載せるだけでは埋もれやすく、サービスページの見せ方や比較されやすい切り口まで考えて設計できる会社のほうが向いています。</p>
@@ -1168,33 +1192,33 @@
       <img src="images/blog-aichi-llmo-kaisha/aichi-market-map.webp" alt="愛知県でまず見るべき名古屋市の集客特性を整理した図" width="1200" height="896" loading="lazy" decoding="async">
       <figcaption>愛知県でまず見るべき名古屋市の集客特性</figcaption>
     </figure>
-    <p>特に名古屋市内では、地域名だけでなく、「業種名×悩み」「比較ワード」「法人向け・個人向け」など、検索され方の違いまで考える必要があります。<mark><strong>名古屋をひとくくりにせず、中区や中村区の競争まで踏まえて設計できるか</strong></mark>を見たほうが安心です。</p>
+    <p>特に名古屋市内では、地域名だけでなく、「業種名×悩み」「比較ワード」「法人向け・個人向け」など、検索され方の違いまで考える必要があります。<strong>名古屋をひとくくりにせず、中区や中村区の競争まで踏まえて設計できるか</strong>を見たほうが安心です。</p>
     <p class="post-ref"><a href="https://www.city.nagoya.jp/shisei/category/67-5-5-0-0-0-0-0-0-0.html" target="_blank" rel="noopener">参考：名古屋市｜名古屋市の人口について</a></p>
     <p class="post-ref"><a href="https://www.pref.aichi.jp/soshiki/toukei/jigyosho.html" target="_blank" rel="noopener">参考：愛知県｜質問9 愛知県内の事業所数</a></p>
 
     <h3>豊田・岡崎・刈谷・安城など製造業商圏を理解しているか</h3>
     <p>愛知県で名古屋と同じくらい重要なのが、豊田・岡崎・刈谷・安城などを含む製造業の商圏です。愛知県は製造品出荷額等が全国トップクラスのモノづくり県で、BtoB向けの情報をどう見せるかが成果を左右しやすい地域です。店舗集客と同じ感覚でページを作ると合わないことがあるため、技術力や対応範囲、実績を整理できる会社が向いています。</p>
-    <p>製造業向けのLLMOでは、目立つ言い回しよりも、専門的な内容をわかりやすく伝えることが重要です。<mark><strong>調達担当者、現場責任者、経営層など立場ごとに必要な情報を切り分けられるか</strong></mark>を見たいところです。</p>
+    <p>製造業向けのLLMOでは、目立つ言い回しよりも、専門的な内容をわかりやすく伝えることが重要です。<strong>調達担当者、現場責任者、経営層など立場ごとに必要な情報を切り分けられるか</strong>を見たいところです。</p>
     <p class="post-ref"><a href="https://www.pref.aichi.jp/soshiki/koho/0000007891.html" target="_blank" rel="noopener">参考：愛知県｜あいちのあらまし（産業）</a></p>
     <p class="post-ref"><a href="https://www.pref.aichi.jp/soshiki/ricchitsusho/miryoku-kouzou.html" target="_blank" rel="noopener">参考：愛知県｜あいちの魅力（産業構造・事業環境）</a></p>
 
     <h3>医療・介護・教育など地域密着業種に対応できるか</h3>
     <p>愛知県では、製造業だけでなく、医療、介護、教育のように地域とのつながりが強い業種も大きな市場です。高齢者福祉保健医療計画や福祉保健医療ビジョンのように、県としても継続的な需要を見据えている領域では、地域で信頼される情報発信の重要性が高まります。</p>
-    <p>このような業種では、軽すぎる表現や煽りの強い見せ方は逆効果になりやすいです。そのため、<mark><strong>業界を理解していて、丁寧に情報を設計できるか</strong></mark>を確認しましょう。</p>
+    <p>このような業種では、軽すぎる表現や煽りの強い見せ方は逆効果になりやすいです。そのため、<strong>業界を理解していて、丁寧に情報を設計できるか</strong>を確認しましょう。</p>
     <p class="post-ref"><a href="https://www.pref.aichi.jp/press-release/9korei-keikaku.html" target="_blank" rel="noopener">参考：愛知県｜第9期愛知県高齢者福祉保健医療計画を策定しました</a></p>
     <p class="post-ref"><a href="https://www.pref.aichi.jp/soshiki/fukushi-somu/vision2026.html" target="_blank" rel="noopener">参考：愛知県｜あいち福祉保健医療ビジョン2026</a></p>
 
     <h3>愛知の中小企業でも続けやすい支援体制か</h3>
     <p>愛知県内の会社すべてが、最初から大きな予算をかけられるわけではありません。名古屋でも三河でも、まずは小さく始めて反応を見ながら進めたい会社は多いはずです。だからこそ、診断だけ、記事制作だけ、改善提案付き、伴走型など、支援の形に幅がある会社のほうが使いやすいです。</p>
-    <p>続けやすい会社は、最初から大きな施策を押しつけるのではなく、今のサイト規模や社内体制に合わせて現実的な進め方を考えてくれます。<mark><strong>提案の立派さより、本当に無理なく続けられるか</strong></mark>を見ることが大切です。</p>
+    <p>続けやすい会社は、最初から大きな施策を押しつけるのではなく、今のサイト規模や社内体制に合わせて現実的な進め方を考えてくれます。<strong>提案の立派さより、本当に無理なく続けられるか</strong>を見ることが大切です。</p>
 
     <h3>愛知の現場感に合わせて制作まで落とせるか</h3>
     <p>最後に重要なのは、提案だけで終わらず、制作まで落とせるかです。愛知県は名古屋の都市型商圏、製造業が強い西三河、地域密着の色が濃い知多や東三河が並ぶ県なので、同じテンプレートを全社に当てはめても勝ちにくいです。実際の商圏や業種に合わせて、サービスページ、比較記事、FAQ、導線改善まで具体化できる会社のほうが成果に近づきます。</p>
-    <p>LLMOは、診断資料を作って終わる施策ではありません。<mark><strong>AIに拾われやすい構造を意識しつつ、読者が比較しやすいページを作り、問い合わせまでつなぐ</strong></mark>ところまで見られる会社を選ぶと失敗しにくいです。支援範囲の考え方は<a href="blog-kakuyasu-llmo-taisaku-kaisha.html">LLMO対策会社の比較記事</a>も参考になります。</p>
+    <p>LLMOは、診断資料を作って終わる施策ではありません。<strong>AIに拾われやすい構造を意識しつつ、読者が比較しやすいページを作り、問い合わせまでつなぐ</strong>ところまで見られる会社を選ぶと失敗しにくいです。支援範囲の考え方は<a href="blog-kakuyasu-llmo-taisaku-kaisha.html">LLMO対策会社の比較記事</a>も参考になります。</p>
 
     <h2>愛知県のLLMO会社に依頼する費用相場</h2>
     <p>LLMOの費用は、どの会社に頼んでも同じではありません。アドバイスだけを受けるのか、記事制作まで任せるのか、サイト全体の改善まで伴走してもらうのかで、金額は大きく変わります。</p>
-    <p>そのため、安いか高いかだけで判断するのではなく、<mark><strong>どこまで対応してもらえるのか</strong></mark>を見ながら考えることが大切です。</p>
+    <p>そのため、安いか高いかだけで判断するのではなく、<strong>どこまで対応してもらえるのか</strong>を見ながら考えることが大切です。</p>
 
     <table>
       <tr>
@@ -1226,34 +1250,34 @@
 
     <h3>愛知では「無料相談〜簡易診断」を入口にしやすい</h3>
     <p>愛知で最初に相談先を探すなら、いきなり高額な契約を結ばなくても始められます。たとえば、NYマーケティングはSEOの初回相談を無料で受け付けており、MEcreateも料金ページで相談導線を明示しています。まず課題を整理したい会社には使いやすい入口です。</p>
-    <p>ただし、本格的な分析や改善提案まで求めるなら、無料だけで完結するとは考えないほうがよいです。<mark><strong>無料相談は入口、本格的な支援は有料</strong></mark>と捉えるのが自然です。</p>
-    <p class="post-ref"><a href="https://ny-marketing.co.jp/service/" target="_blank" rel="noopener">参考：NYマーケティング株式会社｜サービス</a></p>
-    <p class="post-ref"><a href="https://mecreate.co.jp/price/" target="_blank" rel="noopener">参考：株式会社MEcreate｜料金プラン</a></p>
+    <p>ただし、本格的な分析や改善提案まで求めるなら、無料だけで完結するとは考えないほうがよいです。<strong>無料相談は入口、本格的な支援は有料</strong>と捉えるのが自然です。</p>
+    <p class="post-ref"><a href="https://ny-marketing.co.jp/service/" target="_blank" rel="nofollow noopener">参考：NYマーケティング株式会社｜サービス</a></p>
+    <p class="post-ref"><a href="https://mecreate.co.jp/price/" target="_blank" rel="nofollow noopener">参考：株式会社MEcreate｜料金プラン</a></p>
 
     <h3>月額5万〜7万円台はライトな継続支援の入口になりやすい</h3>
     <p>愛知でまず小さく始めたいなら、月額5万〜7万円台は見やすい価格帯です。MEcreateの価格公開ではSEOコンサルを月額66,000円で案内しており、地域の中小企業にとって継続支援の入口としてわかりやすい水準です。</p>
-    <p>この価格帯は、サービスページの整理、少ない本数の記事制作、月1回ほどの打ち合わせをしながら改善していく使い方に向いています。<mark><strong>まだ大きく投資する前の会社が試しやすいライン</strong></mark>です。</p>
-    <p class="post-ref"><a href="https://mecreate.co.jp/price/" target="_blank" rel="noopener">参考：株式会社MEcreate｜料金プラン</a></p>
-    <p class="post-ref"><a href="https://digitalidentity.co.jp/blog/seo/seo-cost.html" target="_blank" rel="noopener">参考：株式会社デジタルアイデンティティ｜SEO対策の費用相場はいくら？</a></p>
+    <p>この価格帯は、サービスページの整理、少ない本数の記事制作、月1回ほどの打ち合わせをしながら改善していく使い方に向いています。<strong>まだ大きく投資する前の会社が試しやすいライン</strong>です。</p>
+    <p class="post-ref"><a href="https://mecreate.co.jp/price/" target="_blank" rel="nofollow noopener">参考：株式会社MEcreate｜料金プラン</a></p>
+    <p class="post-ref"><a href="https://digitalidentity.co.jp/blog/seo/seo-cost.html" target="_blank" rel="nofollow noopener">参考：株式会社デジタルアイデンティティ｜SEO対策の費用相場はいくら？</a></p>
 
     <h3>月額10万〜20万円台は伴走型の現実的な価格帯</h3>
     <p>継続的にしっかり支援を受けたいなら、月額10万〜20万円台はかなり現実的な価格帯です。相場系の記事でも、総合的なSEOコンサルや継続改善はこのレンジから案内されることが多く、分析、改善提案、記事設計、定例ミーティングまで含まれやすくなります。</p>
-    <p>AI検索対策は、1ページだけ直して終わるよりも、比較記事、FAQ、サービスページ、指名検索につながる導線まで整えたほうが成果につながりやすいです。<mark><strong>名古屋の競争が激しい市場や、西三河のBtoB領域を見据えるなら、この価格帯がひとつの基準</strong></mark>になります。</p>
-    <p class="post-ref"><a href="https://web-kanji.com/posts/seo-aichi" target="_blank" rel="noopener">参考：Web幹事｜愛知県・名古屋市のおすすめSEO対策会社9社を厳選</a></p>
-    <p class="post-ref"><a href="https://digitalidentity.co.jp/blog/seo/seo-cost.html" target="_blank" rel="noopener">参考：株式会社デジタルアイデンティティ｜SEO対策の費用相場はいくら？</a></p>
+    <p>AI検索対策は、1ページだけ直して終わるよりも、比較記事、FAQ、サービスページ、指名検索につながる導線まで整えたほうが成果につながりやすいです。<strong>名古屋の競争が激しい市場や、西三河のBtoB領域を見据えるなら、この価格帯がひとつの基準</strong>になります。</p>
+    <p class="post-ref"><a href="https://web-kanji.com/posts/seo-aichi" target="_blank" rel="nofollow noopener">参考：Web幹事｜愛知県・名古屋市のおすすめSEO対策会社9社を厳選</a></p>
+    <p class="post-ref"><a href="https://digitalidentity.co.jp/blog/seo/seo-cost.html" target="_blank" rel="nofollow noopener">参考：株式会社デジタルアイデンティティ｜SEO対策の費用相場はいくら？</a></p>
 
     <h3>戦略設計や大規模支援まで入ると月額30万円〜50万円以上になる</h3>
     <p>大規模サイトや競争が激しい業種、複数の部署をまたぐプロジェクトになると、費用はさらに上がります。大規模なSEO/集客支援の相場感でも、30万円以上から本格レンジに入るケースは珍しくありません。</p>
-    <p>愛知でこの価格帯が必要になるのは、記事制作だけではなく、事業全体の検索導線を作っていくケースです。複数のサービスを持つ会社、全国向けと地域向けの両方を狙う会社、ポータル型や大規模なコーポレートサイトを運営している会社では、<mark><strong>制作・実装・運用の3つにコストがかかる</strong></mark>と考えたほうが実態に近いです。予算感を広く見たい方は<a href="blog-kakuyasu-llmo-daiko.html">格安LLMO代行の比較記事</a>も参考になります。</p>
-    <p class="post-ref"><a href="https://digitalidentity.co.jp/blog/seo/seo-cost.html" target="_blank" rel="noopener">参考：株式会社デジタルアイデンティティ｜SEO対策の費用相場はいくら？</a></p>
-    <p class="post-ref"><a href="https://web-kanji.com/posts/seo-aichi" target="_blank" rel="noopener">参考：Web幹事｜愛知県・名古屋市のおすすめSEO対策会社9社を厳選</a></p>
+    <p>愛知でこの価格帯が必要になるのは、記事制作だけではなく、事業全体の検索導線を作っていくケースです。複数のサービスを持つ会社、全国向けと地域向けの両方を狙う会社、ポータル型や大規模なコーポレートサイトを運営している会社では、<strong>制作・実装・運用の3つにコストがかかる</strong>と考えたほうが実態に近いです。予算感を広く見たい方は<a href="blog-kakuyasu-llmo-taisaku-kaisha.html">LLMO対策会社の比較記事</a>も参考になります。</p>
+    <p class="post-ref"><a href="https://digitalidentity.co.jp/blog/seo/seo-cost.html" target="_blank" rel="nofollow noopener">参考：株式会社デジタルアイデンティティ｜SEO対策の費用相場はいくら？</a></p>
+    <p class="post-ref"><a href="https://web-kanji.com/posts/seo-aichi" target="_blank" rel="nofollow noopener">参考：Web幹事｜愛知県・名古屋市のおすすめSEO対策会社9社を厳選</a></p>
 
     <h2>愛知県のLLMO会社に関するよくある質問</h2>
     <p>愛知県でLLMO会社を探していると、「地元の会社に頼む意味はあるのか」「SEO会社とは何が違うのか」「どれくらいで成果が出るのか」など、細かい疑問が出てきやすいです。ここでは、よくある質問をまとめました。</p>
 
     <h3>愛知県のLLMO会社に依頼する意味はありますか？</h3>
     <p>はい、あります。愛知の地域性を理解している会社なら、名古屋の比較検討文脈や西三河の製造業文脈に合わせて、AIに見つけられやすい情報の出し方を考えやすいからです。</p>
-    <p>また、対面やオンラインで細かな相談をしながら進めたい会社にとっては、<mark><strong>地域理解のある相手と進められること自体が強み</strong></mark>になります。</p>
+    <p>また、対面やオンラインで細かな相談をしながら進めたい会社にとっては、<strong>地域理解のある相手と進められること自体が強み</strong>になります。</p>
 
     <h3>愛知本社のLLMO会社でないと意味はありませんか？</h3>
     <p>必ずしも愛知本社である必要はありません。大事なのは所在地ではなく、LLMOに関する知見があり、自社の情報をAIに正しく伝わる形で整えられるかどうかです。</p>
@@ -1261,7 +1285,7 @@
 
     <h3>愛知の中小企業でもLLMOに取り組む意味はありますか？</h3>
     <p>あります。今は、取引先を探す企業担当者や、サービスを比較する一般ユーザーが、ChatGPTなどのAIを使って情報収集する場面が増えています。</p>
-    <p>まだ多くの中小企業が本格的に取り組んでいない段階だからこそ、<mark><strong>先に情報を整えた会社がAI上の候補入りを取りやすい</strong></mark>です。</p>
+    <p>まだ多くの中小企業が本格的に取り組んでいない段階だからこそ、<strong>先に情報を整えた会社がAI上の候補入りを取りやすい</strong>です。</p>
 
     <h3>愛知の製造業や店舗型ビジネスでもLLMOは効果がありますか？</h3>
     <p>はい、効果は期待できます。製造業では、技術力や対応できる内容をAIにわかりやすく伝えられれば、情報収集している担当者に見つけてもらいやすくなります。</p>
@@ -1269,19 +1293,19 @@
 
     <h3>SEO会社とLLMO会社は何が違いますか？</h3>
     <p>違いは、主に狙う相手と情報の整え方です。SEO会社は、Googleなどの検索結果で上位表示を目指す支援を行います。</p>
-    <p>一方、LLMO会社は、ChatGPTやGeminiのようなAIに情報を理解してもらい、回答の中で取り上げられやすくするための支援を行います。<mark><strong>検索順位を上げるというより、AIに選ばれやすい情報設計まで進める</strong></mark>点が大きな違いです。</p>
+    <p>一方、LLMO会社は、ChatGPTやGeminiのようなAIに情報を理解してもらい、回答の中で取り上げられやすくするための支援を行います。<strong>検索順位を上げるというより、AIに選ばれやすい情報設計まで進める</strong>点が大きな違いです。</p>
 
     <h3>愛知のLLMO会社に依頼したら、どれくらいで成果が出ますか？</h3>
     <p>どれくらいで変化が出るかは、対象となるAIや、今のWeb上の情報量によって変わります。</p>
-    <p>比較的早ければ数週間から1か月ほどで変化が見えることもありますが、安定してAIに取り上げられる状態を作るには、<mark><strong>3〜6か月ほどを目安</strong></mark>に考えるのが現実的です。</p>
+    <p>比較的早ければ数週間から1か月ほどで変化が見えることもありますが、安定してAIに取り上げられる状態を作るには、<strong>3〜6か月ほどを目安</strong>に考えるのが現実的です。</p>
 
     <h3>愛知県のLLMO会社を選ぶときは何を確認すればよいですか？</h3>
     <p>まず確認したいのは、その会社が本当にLLMOを理解しているかどうかです。名前だけLLMOに変えていて、実際には従来のSEO提案とほとんど変わらないケースもあります。</p>
-    <p>そのため、自社が今AIにどう見られているかを診断できるか、AI向けの具体的な施策を持っているか、そして<mark><strong>自社の商圏や予算に合う料金体系か</strong></mark>を確認しておくことが大切です。</p>
+    <p>そのため、自社が今AIにどう見られているかを診断できるか、AI向けの具体的な施策を持っているか、そして<strong>自社の商圏や予算に合う料金体系か</strong>を確認しておくことが大切です。</p>
 
-    <h2>まとめ</h2>
+    <h2>愛知県でLLMO会社を選ぶなら、名古屋市内と西三河の製造業商圏を分けて考えましょう</h2>
     <p>愛知県でLLMO対策を進めるときに大切なのは、自社の情報がAIにどう伝わり、どう取り上げられるかを考えて設計することです。名古屋のように比較されやすい市場や、三河のように専門性が求められる製造業の商圏では、AIに見つけてもらえることが大きな強みになります。</p>
-    <p>今回紹介した10社も、それぞれ得意な領域や対応できる範囲が違います。だからこそ、言葉だけでLLMOをうたう会社ではなく、<mark><strong>現状の診断からページ改善、制作、運用まで実際に進められる会社</strong></mark>を選ぶことが重要です。</p>
+    <p>今回紹介した10社も、それぞれ得意な領域や対応できる範囲が違います。だからこそ、言葉だけでLLMOをうたう会社ではなく、<strong>現状の診断からページ改善、制作、運用まで実際に進められる会社</strong>を選ぶことが重要です。</p>
     <p>まずは、自社や自社サービスがChatGPTやPerplexityなどの生成AIで今どのように扱われているかを確認してみましょう。そのうえで、本記事の比較ポイントや費用相場を参考にしながら、自社に合ったLLMO会社を選んでいくのがおすすめです。初手の確認だけでよければ<a href="llmo-shindan.html">無料LLMO診断</a>、すぐに相談したい場合は<a href="/#contact">お問い合わせ</a>から進められます。</p>
   </div>
 
@@ -1311,16 +1335,16 @@
   </section>
 
   <!-- 前後の記事リンク -->
-  <div class="post-nav">
-    <a href="blog-fukuoka-llmo-kaisha.html">
-      <span class="post-nav-label">&larr; 前の記事</span>
-      福岡でおすすめのLLMO会社10選を見る
-    </a>
-    <a href="llmo-shindan.html" style="text-align: right;">
-      <span class="post-nav-label">関連ページ &rarr;</span>
-      無料LLMO診断で現状を確認する
-    </a>
-  </div>
+              <div class="post-nav">
+        <a href="blog-fukuoka-llmo-kaisha.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          福岡のLLMO対策会社10選｜費用相場と失敗しない選び方を比較を見る
+        </a>
+        <a href="blog-kanagawa-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+      </div>
 
   <section class="post-related" aria-labelledby="post-related-title">
     <div class="post-related-header">
@@ -1332,11 +1356,11 @@
       <article class="post-related-card">
         <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
           <div class="post-related-thumb">
-            <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+            <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
           </div>
           <div class="post-related-body">
             <div class="post-related-tag">LLMO</div>
-            <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+            <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
             <p class="post-related-card-text">本社集積エリアの比較導線と見比べたい方に向いています。</p>
             <div class="post-related-date">2026.04.14</div>
           </div>
@@ -1345,11 +1369,11 @@
       <article class="post-related-card">
         <a href="blog-osaka-llmo-kaisha.html" class="post-related-card-link">
           <div class="post-related-thumb">
-            <img src="images/blog-osaka-llmo-kaisha/eyecatch.webp" alt="大阪でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+            <img src="images/blog-osaka-llmo-kaisha/eyecatch.webp" alt="大阪のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
           </div>
           <div class="post-related-body">
             <div class="post-related-tag">LLMO</div>
-            <div class="post-related-card-title">大阪でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+            <div class="post-related-card-title">大阪のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶ</div>
             <p class="post-related-card-text">地域商圏と製造業・店舗型の違いを並べて確認できます。</p>
             <div class="post-related-date">2026.04.12</div>
           </div>
@@ -1358,7 +1382,7 @@
       <article class="post-related-card">
         <a href="blog-btob-llmo-kaisha.html" class="post-related-card-link">
           <div class="post-related-thumb">
-            <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いおすすめのLLMO会社10選｜選び方・費用相場・依頼時の注意点を解説のサムネイル" width="1672" height="941" loading="lazy" decoding="async">
+            <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いおすすめのLLMO会社10選｜選び方・費用相場・依頼時の注意点を解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
           </div>
           <div class="post-related-body">
             <div class="post-related-tag">LLMO</div>
@@ -1401,33 +1425,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1549,7 +1573,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

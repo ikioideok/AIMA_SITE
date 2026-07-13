@@ -1,0 +1,280 @@
+.corporate-header,
+.corporate-footer {
+  --shell-bg: #fbfbf7;
+  --shell-ink: #102033;
+  --shell-line: #e2e7ff;
+  --shell-blue: #1b3dff;
+  --shell-yellow: #ffff00;
+  --shell-shadow: #cbd4ff;
+  box-sizing: border-box;
+  color: var(--shell-ink);
+  font-family: "Noto Sans JP", sans-serif;
+}
+
+.corporate-header *,
+.corporate-footer * {
+  box-sizing: border-box;
+}
+
+.corporate-header {
+  position: sticky;
+  top: 0;
+  z-index: 2100;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  background: rgba(251, 251, 247, 0.97);
+  border: 0;
+  box-shadow: 0 1px 0 var(--shell-line);
+  backdrop-filter: blur(12px);
+}
+
+.corporate-header-inner {
+  width: min(100%, 1280px);
+  height: 76px;
+  margin: 0 auto;
+  padding: 0 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+}
+
+.corporate-logo,
+.corporate-footer-logo {
+  display: flex;
+  width: fit-content;
+  flex: none;
+  color: inherit;
+  text-decoration: none;
+}
+
+.corporate-logo img {
+  display: block;
+  width: auto;
+  height: 34px;
+}
+
+.corporate-nav {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.corporate-nav a {
+  position: relative;
+  color: var(--shell-ink);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.5;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.corporate-nav a:not(.corporate-btn) {
+  padding: 8px 0;
+}
+
+.corporate-nav a:not(.corporate-btn)::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+  left: 0;
+  border-bottom: 2px solid var(--shell-ink);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.25s;
+}
+
+.corporate-nav a:hover::after,
+.corporate-nav a[aria-current="page"]::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.corporate-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 22px;
+  border: 2px solid transparent;
+  border-radius: 100px;
+}
+
+.corporate-btn-diagnosis { background: var(--shell-yellow); }
+.corporate-btn-contact { background: var(--shell-blue); color: #fff !important; }
+
+.corporate-menu-toggle {
+  display: none;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border: 2px solid var(--shell-ink);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 3px 3px 0 var(--shell-shadow);
+  cursor: pointer;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.corporate-menu-toggle span {
+  display: block;
+  width: 16px;
+  height: 2px;
+  background: var(--shell-ink);
+  border-radius: 2px;
+  transition: transform 0.3s, opacity 0.3s;
+}
+
+.corporate-menu-toggle.is-open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.corporate-menu-toggle.is-open span:nth-child(2) { opacity: 0; }
+.corporate-menu-toggle.is-open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+.corporate-footer {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-top: 70px;
+  overflow: hidden;
+  border-top: 2px solid var(--shell-ink);
+  background: var(--shell-bg);
+}
+
+.corporate-footer-signature {
+  position: absolute;
+  right: -180px;
+  bottom: -120px;
+  width: min(780px, 60vw);
+  height: auto;
+  opacity: 0.06;
+  pointer-events: none;
+}
+
+.corporate-footer-inner {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1180px);
+  margin: 0 auto;
+  padding: 70px 24px 54px;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+}
+
+.corporate-footer-logo img {
+  display: block;
+  width: auto;
+  height: 34px;
+}
+
+.corporate-footer-address {
+  margin: 22px 0 0;
+  color: #5e6478;
+  font-size: 0.82rem;
+  line-height: 1.9;
+}
+
+.corporate-footer-columns {
+  display: flex;
+  gap: 72px;
+}
+
+.corporate-footer-column {
+  display: flex;
+  min-width: 180px;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.corporate-footer-title {
+  margin-bottom: 5px;
+  color: #6b7287;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.corporate-footer-column a {
+  color: var(--shell-ink);
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.corporate-footer-column a:hover { color: var(--shell-blue); }
+
+.corporate-footer-bottom {
+  position: relative;
+  z-index: 1;
+  padding: 18px 24px;
+  border-top: 1px solid var(--shell-line);
+  color: #6b7287;
+  font-family: "DM Sans", sans-serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+@media (max-width: 1120px) {
+  .corporate-header-inner { padding: 0 24px; }
+  .corporate-nav { gap: 16px; }
+  .corporate-btn { padding: 9px 16px; }
+}
+
+@media (max-width: 900px) {
+  .corporate-header-inner { height: 68px; padding: 0 18px; }
+  .corporate-logo img { height: 29px; }
+  .corporate-menu-toggle { display: inline-flex; }
+  .corporate-nav {
+    position: fixed;
+    top: 68px;
+    right: 0;
+    left: 0;
+    display: none;
+    max-height: calc(100dvh - 68px);
+    padding: 10px 24px 22px;
+    overflow-y: auto;
+    border-bottom: 2px solid var(--shell-ink);
+    background: var(--shell-bg);
+    box-shadow: 0 24px 40px rgba(16, 32, 51, 0.12);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+  .corporate-nav.is-open { display: flex; }
+  .corporate-nav a:not(.corporate-btn) {
+    padding: 14px 2px;
+    border-bottom: 2px solid var(--shell-line);
+    font-size: 0.98rem;
+  }
+  .corporate-nav a:not(.corporate-btn)::after { display: none; }
+  .corporate-btn { margin-top: 16px; }
+}
+
+@media (max-width: 720px) {
+  .corporate-footer-inner,
+  .corporate-footer-columns {
+    flex-direction: column;
+  }
+  .corporate-footer-inner { padding: 54px 20px 42px; gap: 42px; }
+  .corporate-footer-columns { gap: 30px; }
+  .corporate-footer-column { min-width: 0; }
+  .corporate-footer-signature { width: 760px; max-width: none; opacity: 0.045; }
+}

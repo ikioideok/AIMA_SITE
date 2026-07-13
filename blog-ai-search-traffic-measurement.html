@@ -1,0 +1,1229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本｜AIMA ブログ</title>
+<meta name="description" content="AI検索からの流入をGA4、GSC、LLMOモニタリングで見る方法を初心者向けに解説。参照元、指名検索、引用URL、問い合わせ内容までまとめます。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="水間 雄紀">
+<link rel="canonical" href="https://ai-and-marketing.jp/blog-ai-search-traffic-measurement.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本">
+<meta property="og:description" content="AI検索からの流入をGA4、GSC、LLMOモニタリングで見る方法を初心者向けに解説。参照元、指名検索、引用URL、問い合わせ内容までまとめます。">
+<meta property="og:url" content="https://ai-and-marketing.jp/blog-ai-search-traffic-measurement.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/blog-ai-search-traffic-measurement/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-06-28">
+<meta property="article:modified_time" content="2026-06-28">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本">
+<meta name="twitter:description" content="AI検索からの流入をGA4、GSC、LLMOモニタリングで見る方法を初心者向けに解説。参照元、指名検索、引用URL、問い合わせ内容までまとめます。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/blog-ai-search-traffic-measurement/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本",
+  "description": "AI検索からの流入をGA4、GSC、LLMOモニタリングで見る方法を初心者向けに解説。参照元、指名検索、引用URL、問い合わせ内容までまとめます。",
+  "image": [
+    "https://ai-and-marketing.jp/images/blog-ai-search-traffic-measurement/og.jpg"
+  ],
+  "datePublished": "2026-06-28",
+  "dateModified": "2026-06-28",
+  "author": {
+    "@type": "Person",
+    "name": "水間 雄紀"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-marketing.jp/images/ogp.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-marketing.jp/blog-ai-search-traffic-measurement.html"
+  },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://ai-and-marketing.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ブログ",
+      "item": "https://ai-and-marketing.jp/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本",
+      "item": "https://ai-and-marketing.jp/blog-ai-search-traffic-measurement.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "AI検索からの流入はGA4だけで完全に測れますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "完全には測れません。GA4ではAIツールからの参照流入を確認できますが、AI回答を見たあとに指名検索や直接流入で来る人もいます。GSC、AI回答の手動記録、問い合わせ内容も一緒に見ます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "GSCでChatGPTやGeminiからの流入は見えますか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "GSCでは、ChatGPTなどの参照元別流入は基本的に見ません。GSCでは検索結果での表示回数、クリック数、検索語句、指名検索の変化を見て、AI検索対策の周辺変化を確認します。"
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
+<style>
+  .post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8rem 2.5rem 4rem;
+  }
+  .post-header {
+    max-width: none;
+    margin: 0;
+  }
+  .post-content-layout {
+    display: block;
+  }
+  .post-main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .post-breadcrumbs {
+    margin: 0 0 1.3rem;
+  }
+  .post-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-breadcrumbs-item + .post-breadcrumbs-item::before {
+    content: '/';
+    margin: 0 0.45rem;
+    color: var(--gray-400);
+  }
+  .post-breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-breadcrumbs-link:hover {
+    color: var(--black);
+  }
+  .post-breadcrumbs-current {
+    color: var(--gray-600);
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #7759f6;
+    background: rgba(119,89,246,0.08);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+  .post-date {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .post-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  .post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-toc {
+    margin: 2rem 0 2.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .post-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+  .post-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-toc-summary-icon {
+    width: 0.68rem;
+    height: 0.68rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+    flex: none;
+  }
+  .post-toc[open] .post-toc-summary-icon {
+    transform: rotate(225deg) translateY(-1px);
+  }
+  .post-toc-nav {
+    padding: 0 1.15rem 1.05rem;
+    border-top: 1px solid var(--gray-200);
+    max-height: 24rem;
+    overflow: auto;
+  }
+  .post-toc-list,
+  .post-toc-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-toc-list {
+    padding-top: 0.9rem;
+  }
+  .post-toc-item + .post-toc-item {
+    margin-top: 0.55rem;
+  }
+  .post-toc-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .post-toc-link:hover {
+    color: var(--black);
+  }
+  .post-toc-sublist {
+    margin-top: 0.45rem;
+    margin-left: 0.25rem;
+    padding-left: 0.95rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  .post-toc-sublist .post-toc-item + .post-toc-item {
+    margin-top: 0.35rem;
+  }
+  .post-toc-sublist .post-toc-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+  }
+  .post-supervisor {
+    margin: 0 0 2.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-supervisor-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7759f6;
+    background: rgba(119, 89, 246, 0.08);
+    border-radius: 999px;
+  }
+  .post-supervisor-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .post-supervisor-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+  }
+  .post-supervisor-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+  .post-supervisor-role {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .post-supervisor-text {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  .post-sidebar {
+    display: none;
+    align-self: start;
+    position: sticky;
+    top: 6.8rem;
+    height: max-content;
+  }
+  .post-sidebar-stack > * + * {
+    margin-top: 1rem;
+  }
+  .post-sidebar-inner,
+  .post-sidebar-module {
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-sidebar-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .post-sidebar.is-visible .post-sidebar-inner {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .post-sidebar-label,
+  .post-sidebar-module-label {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+  }
+  .post-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-sidebar-item + .post-sidebar-item {
+    margin-top: 0.8rem;
+  }
+  .post-sidebar-link {
+    position: relative;
+    display: block;
+    padding-left: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .post-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 999px;
+    background: var(--gray-200);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .post-sidebar-link:hover {
+    color: var(--black);
+  }
+  .post-sidebar-link.is-active {
+    color: var(--black);
+    font-weight: 700;
+  }
+  .post-sidebar-link.is-active::before {
+    background: #7759f6;
+    transform: scale(1.15);
+  }
+  .post-body p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+  .post-body ul, .post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-body li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid #7759f6;
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 400;
+  }
+  .post-body blockquote .quote-source {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-body blockquote .quote-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-body blockquote .quote-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .post-body mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, rgba(255, 227, 130, 0.9) 58%);
+    padding: 0 0.08em;
+  }
+  .post-body a {
+    color: #7759f6;
+    text-decoration: underline;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+  .post-body figure {
+    margin: 1.8rem 0 2rem;
+  }
+  .post-body figure img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid var(--gray-200);
+  }
+  .post-body figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .post-body figcaption .figure-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-body figcaption .figure-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  }
+  .post-body figcaption .figure-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--gray-200);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .post-body th {
+    background: var(--gray-50);
+    font-weight: 500;
+    color: var(--black);
+  }
+  .post-body td {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+  .post-body .post-ref {
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  .post-cta {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .post-cta-text {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .post-cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: opacity 0.2s;
+  }
+  .post-cta-btn:hover { opacity: 0.8; }
+  .post-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-related-header {
+    margin-bottom: 1.25rem;
+  }
+  .post-related-label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .post-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+  }
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .post-related-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .post-related-card:hover {
+    box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
+    transform: translateY(-2px);
+  }
+  .post-related-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-related-thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--gray-100);
+    overflow: hidden;
+  }
+  .post-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-related-body {
+    padding: 1.1rem;
+  }
+  .post-related-tag {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .post-related-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-card-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 0.9rem;
+  }
+  .post-related-date {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-related-more {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .post-related-more a {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-related-more a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-nav a {
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-nav a:hover { color: var(--black); }
+  .post-nav-label {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 640px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .post-content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 3.2rem;
+      align-items: start;
+    }
+    .post-main {
+      max-width: none;
+      margin: 0;
+    }
+    .post-sidebar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .post-page { padding: 7rem 1.5rem 3rem; }
+    .post-title { font-size: 1.4rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-toc summary {
+      padding: 0.95rem 1rem;
+      font-size: 0.9rem;
+    }
+    .post-toc-nav {
+      padding: 0 1rem 0.95rem;
+    }
+    .post-supervisor {
+      padding: 1rem;
+    }
+    .post-supervisor-card {
+      grid-template-columns: 72px 1fr;
+      gap: 0.85rem;
+    }
+    .post-supervisor-photo {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
+</head>
+<body class="media-article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-page">
+
+  <div class="post-content-layout">
+    <div class="post-main">
+      <nav class="post-breadcrumbs" aria-label="パンくずリスト">
+        <ol class="post-breadcrumbs-list">
+          <li class="post-breadcrumbs-item"><a href="/" class="post-breadcrumbs-link">トップ</a></li>
+          <li class="post-breadcrumbs-item"><a href="blog.html" class="post-breadcrumbs-link">ブログ</a></li>
+          <li class="post-breadcrumbs-item"><span class="post-breadcrumbs-current" aria-current="page">AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本</span></li>
+        </ol>
+      </nav>
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-tag">計測ガイド</span>
+          <time class="post-date" datetime="2026-06-28">公開日 2026.06.28</time>
+          <time class="post-date post-updated" datetime="2026-06-28">更新日 2026.06.28</time>
+        </div>
+
+        <h1 class="post-title">AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本</h1>
+
+        <div class="post-thumb">
+          <img src="images/blog-ai-search-traffic-measurement/eyecatch.jpg" alt="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
+        </div>
+      </div>
+
+      <div class="post-body">
+        <p>AI検索からの流入を見たいとき、まず迷いやすいのが「どの画面を見ればいいのか」です。ChatGPT、Gemini、Perplexity、Google AI Overviewsなどを経由した接点は、従来のSEO流入ほどきれいに分かれて見えるとは限りません。</p>
+        <p>この記事では、シート候補の「GA4で見える/見えない範囲を整理」という切り口に沿って、GA4、GSC、LLMOモニタリングをどう分けて見るかを説明します。成果の全体像を先に知りたい方は、<a href="blog-ai-search-roi.html">AI検索のROI</a>もあわせて確認してください。</p>
+        <p>専門ツールを入れる前でも、月1回の表で十分に始められます。大切なのは、流入数だけで判断せず、AI回答での社名表示、引用URL、指名検索、問い合わせ内容まで同じ流れで見ることです。</p>
+
+        <details class="post-toc">
+          <summary>
+            <span>目次</span>
+            <span class="post-toc-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <nav class="post-toc-nav" aria-label="記事の目次"></nav>
+        </details>
+
+        <section class="post-supervisor" aria-label="監修者情報">
+          <div class="post-supervisor-label">監修者情報</div>
+          <div class="post-supervisor-card">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
+            <div>
+              <div class="post-supervisor-name">水間 雄紀</div>
+              <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
+              <div class="post-supervisor-text">1986年和歌山県生まれ、近畿大学卒。金融機関、経営コンサルティング会社を経て、2018年にコンテンツ制作の専門会社である株式会社circlizeを創業。2024年、ラグザス株式会社に事業譲渡。現在は株式会社AIMAにてAI×マーケティング事業に従事し、株式会社フォーティーファイヴでコンテンツの品質管理責任者を務める。</div>
+            </div>
+          </div>
+        </section>
+
+        <h2>AI検索流入計測の全体像</h2>
+        <p>AI検索の計測は、1つの画面だけで完結させようとすると分かりにくくなります。GA4はサイトに来た後の訪問、GSCはGoogle検索上の見え方、LLMOモニタリングはAI回答の中での見え方を確認するために使います。</p>
+
+        <h3>GA4・GSC・AI回答記録を分けて考える</h3>
+        <p>まず、GA4ではChatGPTやPerplexityなどからサイトに来た人を見ます。GSCでは「AI検索」という参照元を見るのではなく、Google検索での表示回数、クリック数、検索語句、指名検索の変化を確認します。AI回答の中で自社名やURLが出たかは、別の記録表で見るのが現実的です。</p>
+        <p>この3つを混ぜると、数字が合わずに混乱します。最初は、GA4は<mark><strong>来た人を見る表</strong></mark>、GSCは検索での変化を見る表、AI回答記録はAIに出たかを見る表、と役割を分けてください。AIMAの<a href="blog-llmo-monitoring.html">LLMOモニタリング</a>でも、表出率や引用率はアクセス解析とは別に記録します。</p>
+
+        <figure>
+          <img src="images/blog-ai-search-traffic-measurement/infographic-measurement-flow.jpg" alt="AI検索流入をGA4、GSC、AI回答確認、問い合わせの4段階で見る図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>AI検索流入は、GA4、GSC、AI回答確認、問い合わせ内容を分けると見やすくなります。</figcaption>
+        </figure>
+
+        <h3>流入数だけでなく問い合わせまで見る</h3>
+        <p>AI検索では、ユーザーがAI回答内で比較を終えてから、あとで社名検索や直接流入でサイトに来ることがあります。そのため、GA4に出るAI経由セッションだけを成果と見ると、実際より小さく見える場合があります。AI検索の計測では、入口だけでなく、その後の行動まで見る必要があります。</p>
+        <p>特にBtoBでは、問い合わせ数、相談内容、商談化したかが大切です。AI回答で自社を知った人は、問い合わせ時点で課題を整理していることもあります。流入数より、<mark><strong>相談の質の変化</strong></mark>を見ると判断しやすくなります。PVが増えていなくても、具体的な相談が増えていれば前進です。</p>
+
+        <h2>GA4でAI検索からの流入を見る手順</h2>
+        <p>GA4で最初に見るのは、集客レポートの参照元です。AIツール名が参照元として残っていれば、AI経由でサイトへ来た人を確認できます。ただし、すべてのAI接点が必ず参照元として残るわけではありません。</p>
+
+        <h3>参照元/メディアでAIツール名を探す</h3>
+        <p>GA4では、レポートの「集客」から「トラフィック獲得」を開き、ディメンションを「セッションの参照元 / メディア」にします。そこで、chatgpt.com / referral、perplexity.ai / referral、copilot.microsoft.com / referral のような行がないかを確認します。まずは<mark><strong>AIツール名を探す</strong></mark>だけで十分です。</p>
+        <p>Google Analyticsの公式ヘルプでは、参照元について次のように説明されています。つまり、GA4で見ているのは「ユーザーがどこから来たか」です。AI回答の中に出た回数そのものではないため、GA4だけでAI検索の全体を判断しないようにしましょう。</p>
+        <blockquote>
+          <p>“Source: Where your traffic originates”</p>
+          <p class="quote-source">出典：<a href="https://support.google.com/analytics/answer/11242870?hl=en" target="_blank" rel="noopener">Google Analytics Help「Traffic-source dimensions, manual tagging, and auto-tagging」</a></p>
+        </blockquote>
+
+        <figure>
+          <img src="images/blog-ai-search-traffic-measurement/infographic-ga4-referrals.jpg" alt="GA4のトラフィック獲得でAIツールからの参照元を確認する図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>GA4では、セッションの参照元 / メディアにAIツール名が出ているかを確認します。</figcaption>
+        </figure>
+
+        <h3>CVや問い合わせ内容と並べる</h3>
+        <p>AIツールからの流入が見つかったら、ユーザー数やセッション数だけで止めないでください。お問い合わせ、資料請求、無料診断、予約などのCVがあるかを同じ表で見ます。可能であれば、フォームの自由記述や営業メモも確認し、どんな悩みを持って来た人なのかを見ます。</p>
+        <p>AI検索はまだ完全に測り切れる経路ではありません。だからこそ、少ない数字でも<mark><strong>CVに近い動き</strong></mark>を優先して見ます。たとえば月5件のAI経由流入でも、そのうち1件が具体的な相談なら価値があります。逆に100件来ても問い合わせが薄いなら、記事や導線を見直す必要があります。</p>
+
+        <table>
+          <tr>
+            <th>見る場所</th>
+            <th>見る数字</th>
+            <th>注意点</th>
+          </tr>
+          <tr>
+            <td>GA4</td>
+            <td>AIツールからの参照流入、CV</td>
+            <td>AI回答に出た回数は分からない</td>
+          </tr>
+          <tr>
+            <td>GSC</td>
+            <td>表示回数、クリック数、指名検索</td>
+            <td>ChatGPTなどの参照元別流入は見ない</td>
+          </tr>
+          <tr>
+            <td>手動記録</td>
+            <td>社名表示、引用URL、競合名</td>
+            <td>毎月同じ質問で見る</td>
+          </tr>
+        </table>
+
+        <h2>GSCとLLMOモニタリングをつなぐ</h2>
+        <p>GSCは、AIツールからの流入元を確認する場所ではありません。Google検索上で、自社ページがどんな検索語句で表示され、クリックされているかを見る場所です。AI検索対策では、GSCの数字を「周辺の変化」として使います。</p>
+
+        <h3>指名検索と比較キーワードの変化を見る</h3>
+        <p>GSCでは、会社名、サービス名、代表者名などの指名検索が増えているかを見ます。AI回答で自社を知った人が、その場でクリックせず、あとから社名で検索することがあるからです。あわせて「LLMO 会社」「AI検索 対策」「料金」「比較」など、問い合わせに近い検索語句も確認します。</p>
+        <p>Search Consoleの公式ヘルプでは、Performance reportについて次のように説明されています。GSCは、Google検索での見え方を追う道具です。AI検索経由の全流入を直接見る道具ではありませんが、<mark><strong>検索需要の変化</strong></mark>を見るには役立ちます。</p>
+        <blockquote>
+          <p>“The Performance report shows important metrics”</p>
+          <p class="quote-source">出典：<a href="https://support.google.com/webmasters/answer/7576553?hl=en" target="_blank" rel="noopener">Search Console Help「Performance report (Search results)」</a></p>
+        </blockquote>
+
+        <h3>質問別に社名・引用URL・競合名を記録する</h3>
+        <p>LLMOモニタリングでは、見込み客がAIに聞きそうな質問を10個ほど決めます。たとえば「中小企業向けのLLMO会社は？」「AI検索対策を月額で頼むなら？」「ChatGPTに会社名を出すには？」のような質問です。毎月同じ質問で、自社名、引用URL、競合名を記録します。</p>
+        <p>Google Search Centralは、生成AI検索でもGoogle検索の土台が重要だと説明しています。つまり、AI検索だけを別物として追うのではなく、検索で読まれるページを整えながら、AI回答でどう扱われるかを見る必要があります。ここで見るべきなのは<mark><strong>AI回答内の扱われ方</strong></mark>です。</p>
+        <blockquote>
+          <p>“Google Search finds and processes your pages”</p>
+          <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">Google Search Central「Optimizing your website for generative AI features on Google Search」</a></p>
+        </blockquote>
+
+        <h2>月次レポートとAIMAでできること</h2>
+        <p>AI検索の計測は、最初から高度なダッシュボードを作らなくても始められます。むしろ、初期はシンプルな表のほうが続きます。毎月同じ数字を見て、次に直すページを決めることが大切です。</p>
+
+        <h3>月1回の表で十分に始められる</h3>
+        <p>月次レポートには、AIツールからの参照流入、指名検索、AI回答での社名表示、引用URL、問い合わせ内容、次に直すページを入れます。数字を細かく増やしすぎると運用が止まるので、最初は1枚の表で十分です。毎月同じ項目にすることで、変化が見えます。</p>
+        <p>次に直すページは、記事、FAQ、料金、事例、会社概要のどれかに分けます。AI回答に出ないなら根拠ページを増やす、出ているのに問い合わせが弱いなら導線を直す、誤情報が出るなら公式情報を厚くする、という形です。計測は<mark><strong>次の改善を決めるため</strong></mark>に行います。</p>
+
+        <figure>
+          <img src="images/blog-ai-search-traffic-measurement/infographic-monthly-report.jpg" alt="AI検索流入の月次レポートで見る最小項目と次に直すページの図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>月次レポートは、AI経由流入、指名検索、社名表示、引用URL、問い合わせ内容を1枚で見ます。</figcaption>
+        </figure>
+
+        <h3>AIMAなら月5万円で計測と改善まで回せる</h3>
+        <p>AIMAは、LLMOに特化した支援を月額5万円で提供しています。相談回数の上限なし、記事作成・記事修正込み、最低契約期間なしなので、計測だけで終わらせず、見えた課題を記事、FAQ、料金ページ、事例ページへすぐ反映できます。社内に専門担当者がいなくても、<mark><strong>改善作業まで任せられる</strong></mark>のが特徴です。</p>
+        <p>たとえば、GA4でAI経由流入が少ない、GSCで指名検索が増えない、AI回答で競合だけが出る、問い合わせが増えない、といった状態を一緒に確認します。そのうえで、<a href="blog-llmo-kpi.html">LLMOのKPI</a>、FAQ、構造化データ、内部リンク、既存記事修正を組み合わせて、月ごとに小さく改善します。</p>
+
+        <p class="post-ref"><a href="https://www.conmark.jp/service/llmo-geo-aiseo" target="_blank" rel="nofollow noopener">参考：COUNTER株式会社 LLMO/GEO/AISEO対策サービス</a></p>
+        <p class="post-ref"><a href="https://www.lany.co.jp/service/digitalmarketing/llmo" target="_blank" rel="nofollow noopener">参考：LANY LLMOコンサルティング</a></p>
+        <p class="post-ref"><a href="https://www.sedesign.co.jp/service/llmo/" target="_blank" rel="nofollow noopener">参考：SEデザイン LLMO診断・伴走支援サービス</a></p>
+
+        <h2>AI検索流入計測に関するよくある質問</h2>
+
+        <h3>AI検索からの流入はGA4だけで完全に測れますか？</h3>
+        <p><mark><strong>完全には測れません</strong></mark>。GA4では、AIツールからサイトに来た参照流入を確認できます。ただし、AI回答を見たあとに指名検索、直接流入、広告、SNSなど別の経路で来る人もいます。GA4、GSC、AI回答の手動記録、問い合わせ内容を一緒に見て判断しましょう。</p>
+
+        <h3>GSCでChatGPTやGeminiからの流入は見えますか？</h3>
+        <p><mark><strong>GSCでは参照元別流入は見ません</strong></mark>。GSCで見るのは、Google検索での表示回数、クリック数、検索語句、平均掲載順位です。ChatGPTやGeminiから来た訪問は、残っていればGA4の参照元で確認します。GSCは、指名検索や比較キーワードの変化を見るために使います。</p>
+
+        <h2>まとめ</h2>
+        <p>AI検索からの流入計測は、GA4だけでは足りません。GA4ではAIツールからの参照流入、GSCでは検索需要と指名検索、LLMOモニタリングではAI回答内の社名表示や引用URLを見ます。</p>
+        <p>最初は、月1回の表で十分です。AI経由流入、指名検索、AI回答での社名表示、引用URL、問い合わせ内容、次に直すページを並べれば、どこから改善すべきかが分かります。</p>
+        <p>AIMAは、LLMO特化、月額5万円、相談無制限、記事作成・修正込みで、計測と改善をまとめて支援します。まずは<a href="llmo-shindan.html">無料LLMO診断</a>または<a href="/#contact">お問い合わせ</a>からご相談ください。</p>
+      </div>
+
+      <!-- 記事下CTA -->
+      <div class="post-cta">
+        <div class="post-cta-title">AI検索の流入と問い合わせを一緒に見直しませんか</div>
+        <div class="post-cta-text">月額5万円で、計測、記事作成、既存ページ修正までまとめて進めます。</div>
+        <a href="/#contact" class="post-cta-btn">まずは相談する</a>
+      </div>
+
+      <section class="newsletter-inline" aria-label="メルマガ登録導線">
+        <div class="newsletter-card">
+          <div class="newsletter-eyebrow">Newsletter</div>
+          <div class="newsletter-title">LLMO内製化マガジン</div>
+          <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。ブログ更新だけでなく、現場で詰まりやすい論点もまとめます。</p>
+          <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-inline">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-inline-email">メールアドレス</label>
+              <input type="email" id="newsletter-inline-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+              <button type="submit" class="newsletter-submit">無料で登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 前後の記事リンク -->
+      <div class="post-nav">
+        <a href="blog-llmo-knowledge-base.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          ナレッジベースの作り方を見る
+        </a>
+        <a href="blog-llmo-monitoring.html" style="text-align: right;">
+          <span class="post-nav-label">関連記事 &rarr;</span>
+          LLMOモニタリングの基本を見る
+        </a>
+      </div>
+
+      <section class="post-related" aria-labelledby="post-related-title">
+        <div class="post-related-header">
+          <div class="post-related-label">Related Articles</div>
+          <h2 class="post-related-title" id="post-related-title">関連記事</h2>
+          <p class="post-related-text">AI検索の成果測定、モニタリング、ROIもあわせて確認できます。</p>
+        </div>
+        <div class="post-related-grid">
+          <article class="post-related-card">
+            <a href="blog-ai-search-roi.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-ai-search-roi/eyecatch.jpg" alt="AI検索のROIとは？投資対効果を測る指標と改善方法を解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">ROI</div>
+                <div class="post-related-card-title">AI検索のROIとは？投資対効果を測る指標と改善方法を解説</div>
+                <p class="post-related-card-text">流入だけでなく売上に近い指標まで見る考え方が分かります。</p>
+                <div class="post-related-date">2026.05.27</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-llmo-monitoring.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-monitoring/eyecatch.jpg" alt="LLMOモニタリングとは？表出率・引用率・推奨率の見方と運用方法のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">計測</div>
+                <div class="post-related-card-title">LLMOモニタリングとは？表出率・引用率・推奨率の見方と運用方法</div>
+                <p class="post-related-card-text">AI回答内での社名表示や引用率を毎月見る方法を確認できます。</p>
+                <div class="post-related-date">2026.06.24</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-llmo-kpi.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-kpi/eyecatch.jpg" alt="LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">KPI</div>
+                <div class="post-related-card-title">LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法</div>
+                <p class="post-related-card-text">毎月見るべき指標をさらに詳しく整理できます。</p>
+                <div class="post-related-date">2026.05.28</div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
+      </section>
+    </div>
+
+    <aside class="post-sidebar" aria-label="記事サイドバー">
+      <div class="post-sidebar-stack">
+        <div class="post-sidebar-inner">
+          <div class="post-sidebar-label">CONTENTS</div>
+          <nav class="post-sidebar-toc" aria-label="サイドバー目次"></nav>
+        </div>
+
+        <section class="post-sidebar-module newsletter-sidebar-card" aria-label="メルマガ登録">
+          <div class="post-sidebar-module-label">NEWSLETTER</div>
+          <div class="newsletter-sidebar-title">LLMO内製化マガジン</div>
+          <p class="newsletter-sidebar-text">まずは自分たちで進めたい方向けに、設計・運用・改善のヒントを短く配信します。</p>
+          <form class="newsletter-form" aria-label="サイドバーのメルマガ登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-sidebar">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-sidebar-email">メールアドレス</label>
+              <input type="email" id="newsletter-sidebar-email" name="email" class="newsletter-input" placeholder="メールアドレス" required>
+              <button type="submit" class="newsletter-submit">登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。</p>
+          </form>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+
+<script>
+  (function () {
+    const postBody = document.querySelector('.post-body');
+    const tocNav = document.querySelector('.post-toc-nav');
+    const tocDetails = document.querySelector('.post-toc');
+    const sidebarNav = document.querySelector('.post-sidebar-toc');
+    const sidebar = document.querySelector('.post-sidebar');
+    if (!postBody) return;
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3'));
+    if (!headings.length) {
+      if (tocDetails) tocDetails.hidden = true;
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = 'section-' + String(index + 1).padStart(2, '0');
+      }
+    });
+
+    if (tocNav && tocDetails) {
+      const rootList = document.createElement('ol');
+      rootList.className = 'post-toc-list';
+      let currentGroup = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        item.className = 'post-toc-item';
+
+        const link = document.createElement('a');
+        link.className = 'post-toc-link';
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        item.appendChild(link);
+
+        if (heading.tagName === 'H2') {
+          const sublist = document.createElement('ol');
+          sublist.className = 'post-toc-sublist';
+          item.appendChild(sublist);
+          rootList.appendChild(item);
+          currentGroup = sublist;
+          return;
+        }
+
+        if (currentGroup) {
+          currentGroup.appendChild(item);
+        } else {
+          rootList.appendChild(item);
+        }
+      });
+
+      rootList.querySelectorAll('.post-toc-sublist').forEach((sublist) => {
+        if (!sublist.children.length) {
+          sublist.remove();
+        }
+      });
+
+      tocNav.appendChild(rootList);
+    }
+
+    const sidebarHeadings = headings.filter((heading) => heading.tagName === 'H2');
+    if (!sidebarNav || !sidebar || !sidebarHeadings.length) {
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    const sidebarList = document.createElement('ol');
+    sidebarList.className = 'post-sidebar-list';
+
+    sidebarHeadings.forEach((heading) => {
+      const item = document.createElement('li');
+      item.className = 'post-sidebar-item';
+
+      const link = document.createElement('a');
+      link.className = 'post-sidebar-link';
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      sidebarList.appendChild(item);
+    });
+
+    sidebarNav.appendChild(sidebarList);
+
+    const sidebarLinks = Array.from(sidebarNav.querySelectorAll('.post-sidebar-link'));
+    const setActiveLink = (id) => {
+      sidebarLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const updateSidebarActive = () => {
+      const revealOffset = 160;
+      const shouldShowSidebar = window.scrollY + revealOffset >= sidebarHeadings[0].offsetTop;
+      sidebar.classList.toggle('is-visible', shouldShowSidebar);
+
+      const scrollPoint = window.scrollY + 180;
+      let current = sidebarHeadings[0];
+      sidebarHeadings.forEach((heading) => {
+        if (heading.offsetTop <= scrollPoint) {
+          current = heading;
+        }
+      });
+      setActiveLink(current.id);
+    };
+
+    window.addEventListener('scroll', updateSidebarActive, { passive: true });
+    window.addEventListener('resize', updateSidebarActive);
+    updateSidebarActive();
+
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        setActiveLink(id);
+      });
+    });
+  }());
+</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
+
+</body>
+</html>

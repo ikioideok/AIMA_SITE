@@ -21,11 +21,13 @@ From the project root:
 This starts a local server at `http://localhost:3000`.
 
 ## Basic Deploy Flow
-1. Confirm the changed local files.
-2. Create any missing remote directories.
-3. `rsync` changed HTML/XML/TXT files to `~/www/`.
-4. `rsync` changed asset directories to the matching path under `~/www/images/`.
-5. Verify the live page with `curl`.
+1. Run `python3 scripts/sync_site_shell.py --check` and confirm that the shared corporate header/footer has no differences.
+2. Run `python3 scripts/sync_blog_layout.py --check` and confirm that the shared blog header/footer has no differences.
+3. Confirm the changed local files.
+4. Create any missing remote directories.
+5. `rsync` changed HTML/XML/TXT files to `~/www/`.
+6. `rsync` changed asset directories to the matching path under `~/www/images/`.
+7. Verify the live page with `curl`.
 
 ## Example: Article Deploy
 For `blog-kakuyasu-llmo-daiko.html` and its assets:

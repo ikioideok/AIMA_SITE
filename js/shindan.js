@@ -30,7 +30,6 @@
 
     var chatgpt = randBetween(h + 1, 0, 12);
     var gemini = randBetween(h + 2, 0, 10);
-    var perplexity = randBetween(h + 3, 0, 8);
     var claude = randBetween(h + 4, 0, 6);
 
     var qa = randBetween(h + 10, 15, 85);
@@ -82,7 +81,6 @@
     return {
       chatgpt: chatgpt,
       gemini: gemini,
-      perplexity: perplexity,
       claude: claude,
       qa: qa,
       structure: structure,
@@ -121,8 +119,7 @@
       { pct: 45, label: 'メタデータを確認中...', log: '> Scanning structured data...' },
       { pct: 52, label: 'ChatGPTでの引用を確認中...', log: '> Querying ChatGPT model...' },
       { pct: 60, label: 'Geminiでの引用を確認中...', log: '> Querying Gemini model...' },
-      { pct: 68, label: 'Perplexityでの引用を確認中...', log: '> Querying Perplexity model...' },
-      { pct: 75, label: 'Claudeでの引用を確認中...', log: '> Querying Claude model...' },
+      { pct: 70, label: 'Claudeでの引用を確認中...', log: '> Querying Claude model...' },
       { pct: 82, label: 'コンテンツ分析中...', log: '> Analyzing Q&A coverage...' },
       { pct: 88, label: 'スコアを算出中...', log: '> Calculating trust score...' },
       { pct: 94, label: 'レポートを生成中...', log: '> Generating improvement plan...' },
@@ -174,7 +171,6 @@
     // AI scores - animate count up
     animateCount('score-chatgpt', results.chatgpt);
     animateCount('score-gemini', results.gemini);
-    animateCount('score-perplexity', results.perplexity);
     animateCount('score-claude', results.claude);
 
     // Category scores

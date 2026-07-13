@@ -172,7 +172,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -920,26 +922,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -957,7 +980,7 @@
       <div class="post-header">
         <div class="post-meta">
           <span class="post-tag">LLMO</span>
-          <time class="post-date" datetime="2026-04-23">公開 2026.04.23</time>
+          <time class="post-date" datetime="2026-04-23">公開日 2026.04.23</time>
           <time class="post-date post-updated" datetime="2026-04-24">更新日 2026.04.24</time>
         </div>
 
@@ -986,7 +1009,7 @@
         <section class="post-supervisor" aria-label="監修者情報">
           <div class="post-supervisor-label">監修者情報</div>
           <div class="post-supervisor-card">
-            <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
             <div>
               <div class="post-supervisor-name">水間 雄紀</div>
               <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1071,7 +1094,7 @@
         <div class="aima-feature" aria-label="株式会社AIMAのご案内">
           <div class="aima-feature-kicker">運営会社のご案内</div>
           <div class="aima-feature-title">株式会社AIMA</div>
-          <p>株式会社AIMAは北海道本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。札幌だけでなく道央・道南・道東・道北まで広域に情報を整理したい場合も、まずは<a href="llmo-shindan.html">無料LLMO診断</a>から確認できます。</p>
+          <p>株式会社AIMAは北海道本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。札幌だけでなく道央・道南・道東・道北まで広域に情報を整理したい場合も、まずは<a href="llmo-shindan.html">無料LLMO診断</a>から確認できます。</p>
           <div class="aima-feature-actions">
             <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
             <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1134,7 +1157,7 @@
           <figcaption>AtoZ Designのトップページ<span class="figure-source"><a href="https://atoz-design.jp/" target="_blank" rel="nofollow noopener">出典：AtoZ Design</a></span></figcaption>
         </figure>
         <p>AtoZ Designは、LLMO・AIO対策に強いホームページ制作を打ち出している全国対応の制作会社です。サービスページでは、SEO・MEO・AIO/LLMO対応のホームページ制作を案内しており、会社紹介では全国対応で北は北海道までサポートすると明記しています。</p>
-        <p>飲食店、美容室、クリニックなど、来訪前に比較されやすい業種と親和性が高く、北海道でも観光客向けの店舗や地域密着サービスの整理に向いています。<mark><strong>小規模事業者でも相談しやすい温度感で、AI検索に強いページを作りたい会社</strong></mark>に合います。</p>
+        <p>飲食店、美容室、クリニックなど、来訪前に比較されやすい業種と親和性が高く、北海道でも観光客向けの店舗や地域密着サービスの整理に向いています。<strong>小規模事業者でも相談しやすい温度感で、AI検索に強いページを作りたい会社</strong>に合います。</p>
         <p class="post-ref"><a href="https://atoz-design.jp/about/" target="_blank" rel="nofollow noopener">参考：AtoZ Design｜私たちについて</a></p>
         <p class="post-ref"><a href="https://atoz-design.jp/service/web/" target="_blank" rel="nofollow noopener">参考：AtoZ Design｜SEO・MEO・AIO/LLMO対応ホームページ制作</a></p>
 
@@ -1144,7 +1167,7 @@
           <figcaption>株式会社Pifteeのトップページ<span class="figure-source"><a href="https://piftee.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社Piftee</a></span></figcaption>
         </figure>
         <p>株式会社Pifteeは、SEO+AIOコンサルティングを提供する会社で、公式にAIO・LLMO・GEO・AEOまで含めたAI対策を案内しています。10年以上のSEO経験と自社メディア運用の知見を基盤に、戦略立案から施策運用、モニタリングまで伴走する点が強みです。</p>
-        <p>北海道で、すでに一定のコンテンツ資産があり、AI検索対策をSEOの延長線上で強化したい会社に向いています。SaaS、BtoB、EC、比較サイトなど、<mark><strong>情報量が多く運用改善の余地が大きいサイト</strong></mark>と相性がよいです。</p>
+        <p>北海道で、すでに一定のコンテンツ資産があり、AI検索対策をSEOの延長線上で強化したい会社に向いています。SaaS、BtoB、EC、比較サイトなど、<strong>情報量が多く運用改善の余地が大きいサイト</strong>と相性がよいです。</p>
         <p class="post-ref"><a href="https://piftee.co.jp/company/" target="_blank" rel="nofollow noopener">参考：株式会社Piftee｜会社情報</a></p>
         <p class="post-ref"><a href="https://piftee.co.jp/service/seo-aio/" target="_blank" rel="nofollow noopener">参考：株式会社Piftee｜SEO+AIOコンサルティング</a></p>
 
@@ -1154,7 +1177,7 @@
           <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
         </figure>
         <p>株式会社LiKGは、LLMOコンサルティングを単独サービスとして公開している会社です。サービスページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作まで明示しており、専任コンサルタントが必要な人材を組成して支援する体制を案内しています。</p>
-        <p>北海道の企業でも、一次情報を増やしながらAI検索での引用を狙いたい会社、オウンドメディアや記事制作を絡めて進めたい会社に向いています。<mark><strong>調査、診断、記事制作を一連で回したい企業</strong></mark>は比較候補に入れやすいです。</p>
+        <p>北海道の企業でも、一次情報を増やしながらAI検索での引用を狙いたい会社、オウンドメディアや記事制作を絡めて進めたい会社に向いています。<strong>調査、診断、記事制作を一連で回したい企業</strong>は比較候補に入れやすいです。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
 
         <h3>9. 株式会社SORAMICHI</h3>
@@ -1163,7 +1186,7 @@
           <figcaption>株式会社SORAMICHIのトップページ<span class="figure-source"><a href="https://www.sora-michi.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社SORAMICHI</a></span></figcaption>
         </figure>
         <p>株式会社SORAMICHIは、LLMO/AIOコンサルティングサービスを提供するDXコンサルティング会社です。サービスページでは、SEO支援とマーケティングDXの実績を活かし、生成AI時代の検索最適化をトータルで支援すると案内しています。</p>
-        <p>北海道で、単なる集客記事の改善だけではなく、ブランド施策、DX、全社的な情報整理まで含めて考えたい会社に向いています。<mark><strong>複数部門が関わる案件や、成長フェーズの企業</strong></mark>で比較しやすい会社です。</p>
+        <p>北海道で、単なる集客記事の改善だけではなく、ブランド施策、DX、全社的な情報整理まで含めて考えたい会社に向いています。<strong>複数部門が関わる案件や、成長フェーズの企業</strong>で比較しやすい会社です。</p>
         <p class="post-ref"><a href="https://www.sora-michi.co.jp/dxsolution/llmo_aio/" target="_blank" rel="nofollow noopener">参考：株式会社SORAMICHI｜LLMO/AIOコンサルティングサービス</a></p>
         <p class="post-ref"><a href="https://www.sora-michi.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社SORAMICHI｜トップページ</a></p>
 
@@ -1173,7 +1196,7 @@
           <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
         </figure>
         <p>株式会社ジオコードは、SEO対策、コンテンツマーケティング、UI/UX改善とあわせてAIO・LLMOなどのAI最適化を支援している上場企業です。サービスページでは、通常プラン15万円からの料金例や、実装を含めた組み合わせプランを公開しています。</p>
-        <p>北海道の企業で、SEOの土台からコンテンツ、実装、デザイン改善まで一気通貫で任せたい場合に検討しやすい会社です。<mark><strong>社内リソースが限られ、施策の実行まで外部に寄せたい会社</strong></mark>と相性がよいです。</p>
+        <p>北海道の企業で、SEOの土台からコンテンツ、実装、デザイン改善まで一気通貫で任せたい場合に検討しやすい会社です。<strong>社内リソースが限られ、施策の実行まで外部に寄せたい会社</strong>と相性がよいです。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
 
         <p>他地域との違いまで見たい方は、<a href="blog-osaka-llmo-kaisha.html">大阪の比較記事</a>や<a href="blog-fukuoka-llmo-kaisha.html">福岡の比較記事</a>もあわせて確認すると、北海道で何を優先すべきかが見えやすくなります。</p>
@@ -1187,41 +1210,41 @@
 
         <h3>札幌基点でも全道商圏まで設計できるか</h3>
         <p>北海道では、札幌だけを見ていると施策が浅くなりやすいです。人口は札幌や千歳など一部自治体に集まる一方で、全道では167市町村が減少しており、エリアごとに検索され方が違います。札幌市内向けの「近場で比較する検索」と、地方都市や郡部からの「対応エリアで選ぶ検索」は同じではありません。</p>
-        <p>そのため、北海道のLLMO会社を選ぶなら、単に札幌の会社かどうかではなく、<mark><strong>札幌起点のページ設計に加えて、対応地域、出張範囲、オンライン対応、複数拠点の導線まで整理できるか</strong></mark>を見たほうがよいです。道内で広域に仕事を取る会社ほど、この設計力が重要になります。</p>
+        <p>そのため、北海道のLLMO会社を選ぶなら、単に札幌の会社かどうかではなく、<strong>札幌起点のページ設計に加えて、対応地域、出張範囲、オンライン対応、複数拠点の導線まで整理できるか</strong>を見たほうがよいです。道内で広域に仕事を取る会社ほど、この設計力が重要になります。</p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223726.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_人口・生活</a></p>
 
         <h3>観光・宿泊・飲食の季節変動とインバウンドを理解しているか</h3>
         <p>北海道観光の現況2025では、2024年度の北海道観光入込客数（実人数）は4,964万人で前年比3.9％増となっています。さらに交通分野では、2024年度の新千歳空港国際線利用者数が約389万人、2023年度の新千歳空港国内線乗客数が2,003万人とされており、北海道の観光導線は空港起点の動きと強く結びついています。</p>
-        <p>観光・宿泊・飲食のLLMOでは、札幌、ニセコ、富良野、函館、阿寒・知床のようにエリアごとに検索意図がまるで違います。季節、アクセス、多言語、周遊、価格帯、予約動線まで含めて整理し、<mark><strong>「北海道旅行のどのシーンで比較されるか」を具体化できる会社</strong></mark>のほうが成果につながりやすいです。</p>
+        <p>観光・宿泊・飲食のLLMOでは、札幌、ニセコ、富良野、函館、阿寒・知床のようにエリアごとに検索意図がまるで違います。季節、アクセス、多言語、周遊、価格帯、予約動線まで含めて整理し、<strong>「北海道旅行のどのシーンで比較されるか」を具体化できる会社</strong>のほうが成果につながりやすいです。</p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/kz/kkd/genkyou.html" target="_blank" rel="noopener">参考：北海道｜北海道観光の現況2025</a></p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223738.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_交通</a></p>
 
         <h3>食品製造・水産・物流の一次情報を強みに変えられるか</h3>
         <p>北海道データブック2025_工業・企業立地では、工業出荷額は6兆6,413億円で、そのうち食料品製造業が2兆3,854億円、全体の35.9%を占めるとされています。また、水産業では2023年の海面漁業・養殖業の生産が119万トン、2,916億円で全国1位です。北海道のBtoB領域では、食品、水産、物流、加工、卸の比重が高く、一般的なサービス業の見せ方だけでは弱くなります。</p>
-        <p>この領域で重要なのは、サービス紹介を増やすことではなく、取扱品目、加工体制、配送条件、納期、認証、導入実績、供給可能エリアなどの一次情報を整理することです。<mark><strong>AIが「この会社は何をどこまでできるのか」を誤読しにくい構造にできるか</strong></mark>が、北海道のBtoBでは特に重要です。</p>
+        <p>この領域で重要なのは、サービス紹介を増やすことではなく、取扱品目、加工体制、配送条件、納期、認証、導入実績、供給可能エリアなどの一次情報を整理することです。<strong>AIが「この会社は何をどこまでできるのか」を誤読しにくい構造にできるか</strong>が、北海道のBtoBでは特に重要です。</p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223734.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_工業・企業立地</a></p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223733.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_水産業</a></p>
 
         <h3>医療・介護・生活密着サービスの広域性を理解しているか</h3>
         <p>北海道の65歳以上人口割合は32.2%で、地域医療構想でも2025年に向けて病院完結型から地域完結型の医療へ転換する必要性が示されています。つまり、北海道では医療・介護・生活サービスの検索が、都市部の短距離比較だけでなく、圏域単位の広域比較になりやすいです。</p>
-        <p>こうした領域では、「診療科目一覧」や「サービス一覧」だけでは足りません。対象地域、訪問可否、紹介状の有無、利用の流れ、予約方法、よくある質問を丁寧に整理し、<mark><strong>道内の広い移動距離や地域差を前提に説明できるか</strong></mark>を見る必要があります。YMYL領域でも情報設計に慎重な会社を選ぶべきです。</p>
+        <p>こうした領域では、「診療科目一覧」や「サービス一覧」だけでは足りません。対象地域、訪問可否、紹介状の有無、利用の流れ、予約方法、よくある質問を丁寧に整理し、<strong>道内の広い移動距離や地域差を前提に説明できるか</strong>を見る必要があります。YMYL領域でも情報設計に慎重な会社を選ぶべきです。</p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223726.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_人口・生活</a></p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/hf/cis/iryokeikaku/chiikiiryokousou.html" target="_blank" rel="noopener">参考：北海道｜北海道地域医療構想</a></p>
 
         <h3>札幌・千歳のDX/GX・スタートアップ文脈まで扱えるか</h3>
         <p>北海道の経済ページでは、札幌市・千歳市と連携した半導体の製造、研究、人材育成の複合拠点や、北海道デジタルパーク、GX・DX関連産業の集積が重点施策として挙げられています。また、札幌市と北海道はスタートアップ・エコシステム拠点形成の推進拠点都市としての取組も進めています。</p>
-        <p>この文脈にいる企業は、一般的な地域集客だけでなく、採用、投資家向け情報、技術広報、BtoBの専門情報整理まで必要になることが多いです。<mark><strong>成長産業やスタートアップの情報発信に必要な専門性の見せ方を理解しているか</strong></mark>も、北海道の比較ポイントになります。</p>
+        <p>この文脈にいる企業は、一般的な地域集客だけでなく、採用、投資家向け情報、技術広報、BtoBの専門情報整理まで必要になることが多いです。<strong>成長産業やスタートアップの情報発信に必要な専門性の見せ方を理解しているか</strong>も、北海道の比較ポイントになります。</p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223729.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_経済</a></p>
         <p class="post-ref"><a href="https://www.city.sapporo.jp/keizai/it/startup/documents/dainiki_keikakugaiyo-2.pdf" target="_blank" rel="nofollow noopener">参考：札幌市｜第2期スタートアップ・エコシステム拠点形成計画</a></p>
 
         <h3>多言語・更新運用まで実装できるか</h3>
         <p>北海道は観光比重が高く、空港や港湾を起点に国内外から流入があります。そのため、英語ページ、店舗別ページ、エリア別ページ、繁閑期に合わせた更新など、戦略よりも実装と更新のほうがボトルネックになりやすいです。</p>
-        <p>LLMO会社を比較するときは、診断や提案で終わらず、<mark><strong>実際にページを直す、FAQを追加する、多言語導線を整える、地域別ページを増やすところまで動けるか</strong></mark>を確認しましょう。北海道では、この実行力が成果差になりやすいです。</p>
+        <p>LLMO会社を比較するときは、診断や提案で終わらず、<strong>実際にページを直す、FAQを追加する、多言語導線を整える、地域別ページを増やすところまで動けるか</strong>を確認しましょう。北海道では、この実行力が成果差になりやすいです。</p>
         <p class="post-ref"><a href="https://www.pref.hokkaido.lg.jp/ss/tkk/databook/223738.html" target="_blank" rel="noopener">参考：北海道｜北海道データブック2025_交通</a></p>
 
         <h2>北海道のLLMO会社に依頼する費用相場</h2>
         <p>北海道でLLMOを外注する場合、費用はかなり幅があります。公開価格ベースで見ても、診断だけのスポット支援から、月額伴走、制作込みの大きな案件まで並んでいます。</p>
-        <p>ここで大事なのは、単に安いか高いかではなく、<mark><strong>札幌単点の施策なのか、全道商圏を見据えた設計なのか、制作や記事化まで含むのか</strong></mark>で価格帯を見分けることです。北海道では取材・撮影・多言語・拠点別ページの有無で工数差が出やすいので、価格だけで比較するとブレます。</p>
+        <p>ここで大事なのは、単に安いか高いかではなく、<strong>札幌単点の施策なのか、全道商圏を見据えた設計なのか、制作や記事化まで含むのか</strong>で価格帯を見分けることです。北海道では取材・撮影・多言語・拠点別ページの有無で工数差が出やすいので、価格だけで比較するとブレます。</p>
 
         <table>
           <tr>
@@ -1253,63 +1276,63 @@
 
         <h3>まずは診断だけなら10万円前後から検討しやすい</h3>
         <p>公開価格で最もわかりやすいのは診断プランです。たとえばLiKGはLLMO診断プランを10万円〜で公開しており、まず現状把握から入りたい企業には比較的判断しやすい入口になっています。</p>
-        <p>北海道でも、いきなり全ページを直す前に、どの質問で出ていないのか、競合は何を整えているのかを知りたい会社は多いはずです。<mark><strong>自社が札幌型の競争なのか、広域商圏型なのかを見極める初期費用</strong></mark>として考えると使いやすいです。</p>
+        <p>北海道でも、いきなり全ページを直す前に、どの質問で出ていないのか、競合は何を整えているのかを知りたい会社は多いはずです。<strong>自社が札幌型の競争なのか、広域商圏型なのかを見極める初期費用</strong>として考えると使いやすいです。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>小さく始めるなら月額5万円〜15万円帯が入口になる</h3>
         <p>北海道の中小企業や店舗型ビジネスでは、最初から大きな予算をかけるより、月額の小さな改善から始めたいケースも多いです。AIMAでは月額5万円のLLMO支援を公開しており、まずは質問設計と記事制作に絞って進めたい会社にはわかりやすい価格帯です。</p>
-        <p>この帯は、札幌市内のサービス業や単一ブランドのサイトで、<mark><strong>まずは少数ページの改善からAI検索対応を試したい企業</strong></mark>に向いています。ただし、対応地域が広い会社や記事制作本数が多い会社では、この価格では足りないこともあります。</p>
+        <p>この帯は、札幌市内のサービス業や単一ブランドのサイトで、<strong>まずは少数ページの改善からAI検索対応を試したい企業</strong>に向いています。ただし、対応地域が広い会社や記事制作本数が多い会社では、この価格では足りないこともあります。</p>
         <p class="post-ref"><a href="https://ai-and-marketing.jp/" target="_blank" rel="noopener">参考：株式会社AIMA｜月額5万円のLLMO</a></p>
 
         <h3>伴走支援の中心帯は月額15万円〜30万円前後</h3>
         <p>継続的に改善提案を受けながら進めるなら、月額15万円〜30万円前後が一つの目安です。ジオコードは通常プラン15万円〜、PifteeはSEO+AIOコンサルティングを月額25万円、LiKGはLLMO×SEOコンサルティングを30万円〜で公開しています。</p>
-        <p>この帯になると、分析、戦略、コンテンツ方針、改善提案、定例のような伴走要素が含まれやすくなります。北海道では、観光・食品・物流・医療など業種ごとの差が大きいため、<mark><strong>単発ではなく継続で調整していく支援</strong></mark>のほうが向く会社も多いです。</p>
+        <p>この帯になると、分析、戦略、コンテンツ方針、改善提案、定例のような伴走要素が含まれやすくなります。北海道では、観光・食品・物流・医療など業種ごとの差が大きいため、<strong>単発ではなく継続で調整していく支援</strong>のほうが向く会社も多いです。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
         <p class="post-ref"><a href="https://piftee.co.jp/service/seo-aio/" target="_blank" rel="nofollow noopener">参考：株式会社Piftee｜SEO+AIOコンサルティング</a></p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>制作やLP改善まで含めると30万円台〜120万円超まで広がる</h3>
         <p>北海道では、観光LP、多拠点ページ、採用ページ、地域別サービスページなど、制作そのものが必要なケースも少なくありません。この場合は、月額ではなく制作費や導入費としてまとまった予算を見る必要があります。</p>
-        <p>From NorthのLLMO/GEO LPでは、費用120万円のうち助成金適用で実質30万円の例が示されており、制作込み案件ではこのくらいの幅が出ることがわかります。<mark><strong>戦略だけではなく、ページを実際に作り替える案件ほど総額は上がりやすい</strong></mark>です。</p>
+        <p>From NorthのLLMO/GEO LPでは、費用120万円のうち助成金適用で実質30万円の例が示されており、制作込み案件ではこのくらいの幅が出ることがわかります。<strong>戦略だけではなく、ページを実際に作り替える案件ほど総額は上がりやすい</strong>です。</p>
         <p class="post-ref"><a href="https://from-north.jp/llmo_geo/lp/" target="_blank" rel="nofollow noopener">参考：株式会社From North｜助成金で始めるAI検索・LLMO対策</a></p>
 
         <h3>北海道では取材・撮影・多言語・多拠点で費用が上がりやすい</h3>
         <p>北海道の案件が本州と少し違うのは、取材対象や商圏が広く、写真や動画も重要になりやすいことです。札幌の1拠点だけならシンプルですが、函館、旭川、帯広、釧路、北見まで広げると、ページ数も確認項目も増えます。</p>
-        <p>さらに観光や宿泊では多言語ページ、食品や物流ではエリア別配送条件、医療や介護では圏域別の案内が必要になるため、<mark><strong>北海道案件は「広域対応の情報整理コスト」が価格に乗りやすい</strong></mark>と考えたほうがよいです。</p>
+        <p>さらに観光や宿泊では多言語ページ、食品や物流ではエリア別配送条件、医療や介護では圏域別の案内が必要になるため、<strong>北海道案件は「広域対応の情報整理コスト」が価格に乗りやすい</strong>と考えたほうがよいです。</p>
 
         <h3>札幌単点で始めるか、全道商圏で組むかで予算の考え方を分ける</h3>
         <p>北海道のLLMO費用で最も大きい分かれ目は、札幌市内だけを狙うのか、全道商圏を見据えるのかです。前者なら小さく始めやすい一方で、後者は対応エリアや業種ごとの情報整理が増えるので、どうしても費用は上がります。</p>
-        <p>迷う場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口で優先順位を整理し、その後に札幌単点から広げるのか、最初から全道前提で作るのかを決めると失敗しにくいです。費用は金額だけでなく、<mark><strong>どこまでの商圏を取りにいくか</strong></mark>とセットで考えましょう。</p>
+        <p>迷う場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口で優先順位を整理し、その後に札幌単点から広げるのか、最初から全道前提で作るのかを決めると失敗しにくいです。費用は金額だけでなく、<strong>どこまでの商圏を取りにいくか</strong>とセットで考えましょう。</p>
 
         <h2>北海道のLLMO会社に関するよくある質問</h2>
         <p>最後に、北海道の企業や店舗から出やすい疑問を整理します。比較ポイントや費用相場とは役割を分けて、ここでは意思決定の直前に気になりやすい点だけを短く確認します。</p>
 
         <h3>北海道のLLMO会社に依頼する意味はありますか？</h3>
-        <p>あります。北海道は札幌だけでなく、観光、食、物流、医療など広い文脈で比較される地域なので、<mark><strong>AI検索で自社情報がどう見つかるかを整える価値</strong></mark>があります。</p>
+        <p>あります。北海道は札幌だけでなく、観光、食、物流、医療など広い文脈で比較される地域なので、<strong>AI検索で自社情報がどう見つかるかを整える価値</strong>があります。</p>
 
         <h3>札幌の会社でないと意味はありませんか？</h3>
-        <p>必ずしも札幌本社である必要はありません。重要なのは、北海道の広域商圏を理解し、<mark><strong>札幌以外の地域名や導線も含めて設計できるか</strong></mark>です。</p>
+        <p>必ずしも札幌本社である必要はありません。重要なのは、北海道の広域商圏を理解し、<strong>札幌以外の地域名や導線も含めて設計できるか</strong>です。</p>
 
         <h3>北海道の観光・宿泊・飲食でもLLMOは効果がありますか？</h3>
-        <p>あります。季節性、アクセス、価格帯、周遊、FAQを整理すると、AI検索の比較回答に入りやすくなります。特に北海道は<mark><strong>多言語やエリア別の整理</strong></mark>が効きやすいです。</p>
+        <p>あります。季節性、アクセス、価格帯、周遊、FAQを整理すると、AI検索の比較回答に入りやすくなります。特に北海道は<strong>多言語やエリア別の整理</strong>が効きやすいです。</p>
 
         <h3>北海道の食品製造・水産・物流系企業でもLLMOは有効ですか？</h3>
-        <p>有効です。対応品目、供給体制、納期、認証、配送範囲などを一次情報として整理すると、法人比較の場面で理解されやすくなります。<mark><strong>一般的な会社紹介だけでは弱い</strong></mark>業種ほど効果があります。</p>
+        <p>有効です。対応品目、供給体制、納期、認証、配送範囲などを一次情報として整理すると、法人比較の場面で理解されやすくなります。<strong>一般的な会社紹介だけでは弱い</strong>業種ほど効果があります。</p>
 
         <h3>北海道の医療・介護・地域サービスでもLLMOは効果がありますか？</h3>
-        <p>あります。対象エリア、利用の流れ、安心材料を整理すると、住民がAIで調べるときにも情報が伝わりやすくなります。<mark><strong>圏域や訪問範囲の明確化</strong></mark>が重要です。</p>
+        <p>あります。対象エリア、利用の流れ、安心材料を整理すると、住民がAIで調べるときにも情報が伝わりやすくなります。<strong>圏域や訪問範囲の明確化</strong>が重要です。</p>
 
         <h3>SEO会社とLLMO会社は何が違いますか？</h3>
-        <p>SEOは検索結果で見つけてもらうための施策、LLMOはAIの回答内で引用・参照されやすくする施策です。北海道では両方をつなげて考えないと、<mark><strong>観光やBtoBの複雑な導線</strong></mark>に対応しにくいです。</p>
+        <p>SEOは検索結果で見つけてもらうための施策、LLMOはAIの回答内で引用・参照されやすくする施策です。北海道では両方をつなげて考えないと、<strong>観光やBtoBの複雑な導線</strong>に対応しにくいです。</p>
 
         <h3>北海道のLLMO会社に依頼したら、どれくらいで成果が出ますか？</h3>
-        <p>一般的には3〜6か月が目安です。短期で激変するより、ページ整備と観測を積み重ねて少しずつ変わる施策なので、<mark><strong>継続前提で見る</strong></mark>ほうが現実的です。</p>
+        <p>一般的には3〜6か月が目安です。短期で激変するより、ページ整備と観測を積み重ねて少しずつ変わる施策なので、<strong>継続前提で見る</strong>ほうが現実的です。</p>
 
         <h3>北海道のLLMO会社を選ぶときは何を確認すればよいですか？</h3>
         <p>確認すべきなのは、どの地域のどの商圏を狙うのか、制作や多言語まで任せるのか、料金に何が含まれるのかの3点です。北海道では、この3点が曖昧だと比較がぶれやすいです。</p>
 
         <h2>北海道でLLMO会社を選ぶなら、札幌基点と全道商圏の両方から逆算しましょう</h2>
-        <p>北海道のLLMOで大切なのは、<mark><strong>札幌中心の都市型集客と、全道に広がる広域商圏を同じやり方で扱わないこと</strong></mark>です。観光・宿泊なら季節性と多言語、食品製造や物流なら一次情報、医療・介護なら対象圏域の整理が判断軸になります。</p>
+        <p>北海道のLLMOで大切なのは、<strong>札幌中心の都市型集客と、全道に広がる広域商圏を同じやり方で扱わないこと</strong>です。観光・宿泊なら季節性と多言語、食品製造や物流なら一次情報、医療・介護なら対象圏域の整理が判断軸になります。</p>
         <p>そのうえで、戦略だけで終わらず、ページ改修、FAQ追加、地域別ページの作成まで動ける会社を選ぶと前に進めやすいです。北海道でLLMO会社を選ぶなら、まず自社が札幌単点なのか全道商圏なのかを決め、その前提から逆算して会社と予算を選びましょう。</p>
         <p>比較の起点としては、<a href="blog-tokyo-llmo-kaisha.html">東京のLLMO会社比較</a>や<a href="blog-fukuoka-llmo-kaisha.html">福岡のLLMO会社比較</a>を見比べると、北海道の広域性がよりわかりやすくなります。まずは<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問文脈で見つかるべきかを整理していくのがおすすめです。</p>
       </div>
@@ -1338,14 +1361,14 @@
         </div>
       </section>
 
-      <div class="post-nav">
+                  <div class="post-nav">
         <a href="blog-kanagawa-llmo-kaisha.html">
           <span class="post-nav-label">&larr; 前の記事</span>
-          神奈川県でおすすめのLLMO会社10選を見る
+          神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
-        <a href="llmo-shindan.html" style="text-align: right;">
-          <span class="post-nav-label">関連ページ &rarr;</span>
-          無料LLMO診断で現状を確認する
+        <a href="blog-aomori-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
       </div>
 
@@ -1359,11 +1382,11 @@
           <article class="post-related-card">
             <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
                 <p class="post-related-card-text">本社集積地のBtoB比較と、北海道の広域商圏との違いを見比べたい方に向いています。</p>
                 <div class="post-related-date">2026.04.14</div>
               </div>
@@ -1372,11 +1395,11 @@
           <article class="post-related-card">
             <a href="blog-osaka-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-osaka-llmo-kaisha/eyecatch.webp" alt="大阪でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+                <img src="images/blog-osaka-llmo-kaisha/eyecatch.webp" alt="大阪のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">大阪でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">大阪のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶ</div>
                 <p class="post-related-card-text">中小企業の密集地での比較軸と、北海道の広域導線の違いを整理したい方におすすめです。</p>
                 <div class="post-related-date">2026.04.12</div>
               </div>
@@ -1385,11 +1408,11 @@
           <article class="post-related-card">
             <a href="blog-fukuoka-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-fukuoka-llmo-kaisha/eyecatch.webp" alt="福岡でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+                <img src="images/blog-fukuoka-llmo-kaisha/eyecatch.webp" alt="福岡のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">福岡でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">福岡のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶ</div>
                 <p class="post-related-card-text">観光・物流・スタートアップ都市としての比較視点を北海道と見比べたい方向けです。</p>
                 <div class="post-related-date">2026.04.15</div>
               </div>
@@ -1428,33 +1451,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1576,7 +1599,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

@@ -164,7 +164,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -912,26 +914,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -949,14 +972,14 @@
   <div class="post-header">
     <div class="post-meta">
       <span class="post-tag">LLMO</span>
-      <time class="post-date" datetime="2026-04-20">公開 2026.04.20</time>
-      <time class="post-date post-updated" datetime="2026-04-20">更新 2026.04.20</time>
+      <time class="post-date" datetime="2026-04-20">公開日 2026.04.20</time>
+      <time class="post-date post-updated" datetime="2026-04-20">更新日 2026.04.20</time>
     </div>
 
     <h1 class="post-title">神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</h1>
 
     <div class="post-thumb">
-      <img src="images/blog-kanagawa-llmo-kaisha/eyecatch.webp" alt="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のアイキャッチ画像" width="1672" height="941" loading="eager" decoding="async">
+      <img src="images/blog-kanagawa-llmo-kaisha/eyecatch.webp" alt="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
     </div>
   </div>
 
@@ -978,7 +1001,7 @@
     <section class="post-supervisor" aria-label="監修者情報">
       <div class="post-supervisor-label">監修者情報</div>
       <div class="post-supervisor-card">
-        <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+        <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
         <div>
           <div class="post-supervisor-name">水間 雄紀</div>
           <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1054,7 +1077,7 @@
     <div class="aima-feature" aria-label="株式会社AIMAのご案内">
       <div class="aima-feature-kicker">運営会社のご案内</div>
       <div class="aima-feature-title">株式会社AIMA</div>
-      <p>株式会社AIMAは神奈川本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。まずは現状だけ確認したい場合は<a href="llmo-shindan.html">無料LLMO診断</a>から入るのもおすすめです。</p>
+      <p>株式会社AIMAは神奈川本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。まずは現状だけ確認したい場合は<a href="llmo-shindan.html">無料LLMO診断</a>から入るのもおすすめです。</p>
       <div class="aima-feature-actions">
         <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
         <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1064,142 +1087,142 @@
     <h3>1. 株式会社エンカラーズ</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/encolors.webp" alt="株式会社エンカラーズのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社エンカラーズのトップページ<span class="figure-source"><a href="https://encolors.co.jp/" target="_blank" rel="noopener">出典：株式会社エンカラーズ</a></span></figcaption>
+      <figcaption>株式会社エンカラーズのトップページ<span class="figure-source"><a href="https://encolors.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社エンカラーズ</a></span></figcaption>
     </figure>
 
     <p>株式会社エンカラーズは、横浜市西区に本社を置くデジタルマーケティング会社です。SEO対策やWeb制作に加えて、AIO・LLMO対策の専用ページも公開しており、AIに選ばれるためのコンテンツ設計や実行支援まで相談しやすいのが特徴です。</p>
 
     <p>神奈川県内でも、BtoBサイトやECサイト、企業サイトの導線整理を含めて改善したい会社に向いています。LLMOだけを単独で切り出すというより、<mark><strong>SEOやサイト改善と一体で進めたい会社</strong></mark>と相性がよい候補です。</p>
 
-    <p class="post-ref"><a href="https://encolors.co.jp/" target="_blank" rel="noopener">参考：株式会社エンカラーズ｜トップページ</a></p>
+    <p class="post-ref"><a href="https://encolors.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社エンカラーズ｜トップページ</a></p>
 
-    <p class="post-ref"><a href="https://encolors.co.jp/services/seo/ai/" target="_blank" rel="noopener">参考：株式会社エンカラーズ｜LLMO対策（AI検索対策）</a></p>
+    <p class="post-ref"><a href="https://encolors.co.jp/services/seo/ai/" target="_blank" rel="nofollow noopener">参考：株式会社エンカラーズ｜LLMO対策（AI検索対策）</a></p>
 
     <h3>2. 株式会社仁頼</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/jinrai.webp" alt="株式会社仁頼のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社仁頼のトップページ<span class="figure-source"><a href="https://jinrai.co.jp/" target="_blank" rel="noopener">出典：株式会社仁頼</a></span></figcaption>
+      <figcaption>株式会社仁頼のトップページ<span class="figure-source"><a href="https://jinrai.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社仁頼</a></span></figcaption>
     </figure>
 
     <p>株式会社仁頼は、横浜市神奈川区に本社を置くデジタルマーケティング会社です。GEO対策（AI検索最適化）を明確に打ち出しており、SEO、コンテンツマーケティング、広告運用、Web制作まで幅広く対応しています。</p>
 
     <p>AI検索対策を前面に出している点がわかりやすく、神奈川県内でも<mark><strong>AIにどう見つけられるかを意識して依頼先を探したい会社</strong></mark>に向いています。SEOだけでなく、AI時代を踏まえた支援を受けたい場合に検討しやすいです。</p>
 
-    <p class="post-ref"><a href="https://jinrai.co.jp/corporate/" target="_blank" rel="noopener">参考：株式会社仁頼｜会社概要</a></p>
+    <p class="post-ref"><a href="https://jinrai.co.jp/corporate/" target="_blank" rel="nofollow noopener">参考：株式会社仁頼｜会社概要</a></p>
 
-    <p class="post-ref"><a href="https://jinrai.co.jp/" target="_blank" rel="noopener">参考：株式会社仁頼｜トップページ</a></p>
+    <p class="post-ref"><a href="https://jinrai.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社仁頼｜トップページ</a></p>
 
     <h3>3. 株式会社Piftee</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/piftee.webp" alt="株式会社Pifteeのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社Pifteeのトップページ<span class="figure-source"><a href="https://piftee.co.jp/" target="_blank" rel="noopener">出典：株式会社Piftee</a></span></figcaption>
+      <figcaption>株式会社Pifteeのトップページ<span class="figure-source"><a href="https://piftee.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社Piftee</a></span></figcaption>
     </figure>
 
     <p>株式会社Pifteeは、横浜市西区に本社を置くSEO×AI対策の専門会社です。公式サイトでも、AIO・LLMO・GEO・AEOまで含めたAI検索最適化を案内しており、従来のSEOと切り分けずに支援している点が特徴です。</p>
 
     <p>神奈川県で、SEOの延長線上としてLLMOを進めたい会社に向いています。記事制作や被リンク施策まで含めて、<mark><strong>検索流入全体を見ながら改善したい会社</strong></mark>に合いやすい候補です。</p>
 
-    <p class="post-ref"><a href="https://piftee.co.jp/company/" target="_blank" rel="noopener">参考：株式会社Piftee｜会社情報</a></p>
+    <p class="post-ref"><a href="https://piftee.co.jp/company/" target="_blank" rel="nofollow noopener">参考：株式会社Piftee｜会社情報</a></p>
 
-    <p class="post-ref"><a href="https://piftee.co.jp/service/seo-aio/" target="_blank" rel="noopener">参考：株式会社Piftee｜SEO＋AIOコンサルティング</a></p>
+    <p class="post-ref"><a href="https://piftee.co.jp/service/seo-aio/" target="_blank" rel="nofollow noopener">参考：株式会社Piftee｜SEO＋AIOコンサルティング</a></p>
 
     <h3>4. プリズムゲート株式会社</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/prismgate.webp" alt="プリズムゲート株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>プリズムゲート株式会社のトップページ<span class="figure-source"><a href="https://prismgate.jp/" target="_blank" rel="noopener">出典：プリズムゲート株式会社</a></span></figcaption>
+      <figcaption>プリズムゲート株式会社のトップページ<span class="figure-source"><a href="https://prismgate.jp/" target="_blank" rel="nofollow noopener">出典：プリズムゲート株式会社</a></span></figcaption>
     </figure>
 
     <p>プリズムゲート株式会社は、横浜市中区に本社を置くWeb制作会社です。もともとWebサイト構築やSEO対策を手がけてきた会社ですが、現在はLLMO対策の専用サービスも公開しており、既存サイトのAI対応や新規制作にも対応しています。</p>
 
     <p>神奈川県の中小企業で、制作会社寄りの支援を受けながらAI検索対策を進めたい場合に向いています。採用サイトや集客サイトなど、<mark><strong>見せ方まで含めて整えたい会社</strong></mark>と相性がよいです。</p>
 
-    <p class="post-ref"><a href="https://prismgate.jp/info/" target="_blank" rel="noopener">参考：プリズムゲート株式会社｜会社案内</a></p>
+    <p class="post-ref"><a href="https://prismgate.jp/info/" target="_blank" rel="nofollow noopener">参考：プリズムゲート株式会社｜会社案内</a></p>
 
-    <p class="post-ref"><a href="https://prismgate.jp/" target="_blank" rel="noopener">参考：プリズムゲート株式会社｜トップページ</a></p>
+    <p class="post-ref"><a href="https://prismgate.jp/" target="_blank" rel="nofollow noopener">参考：プリズムゲート株式会社｜トップページ</a></p>
 
     <h3>5. 株式会社Mayui</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/mayui.webp" alt="株式会社Mayuiのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社Mayuiのトップページ<span class="figure-source"><a href="https://mayui.co.jp/" target="_blank" rel="noopener">出典：株式会社Mayui</a></span></figcaption>
+      <figcaption>株式会社Mayuiのトップページ<span class="figure-source"><a href="https://mayui.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社Mayui</a></span></figcaption>
     </figure>
 
     <p>株式会社Mayuiは、厚木市に本社を置くSEOコンサルティング会社です。SEO対策を主軸にしながら、LLMO対策コンサルティングもサービスとして案内しており、ローカルサイトの改善やCVR改善まで含めて支援しています。</p>
 
     <p>神奈川県の中でも県央エリアに本社があり、地域性を意識した改善提案を受けやすいのが特徴です。SEOだけでなく、<mark><strong>問い合わせや予約など成果に近い部分まで一緒に見直したい会社</strong></mark>に向いています。</p>
 
-    <p class="post-ref"><a href="https://mayui.co.jp/" target="_blank" rel="noopener">参考：株式会社Mayui｜トップページ</a></p>
+    <p class="post-ref"><a href="https://mayui.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社Mayui｜トップページ</a></p>
 
-    <p class="post-ref"><a href="https://mayui.co.jp/service/llmo-consalting/" target="_blank" rel="noopener">参考：株式会社Mayui｜LLMO対策コンサルティング</a></p>
+    <p class="post-ref"><a href="https://mayui.co.jp/service/llmo-consalting/" target="_blank" rel="nofollow noopener">参考：株式会社Mayui｜LLMO対策コンサルティング</a></p>
 
     <h3>6. 株式会社shicoo</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/shicoo.webp" alt="株式会社shicooのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社shicooのトップページ<span class="figure-source"><a href="https://shicoo.co.jp/" target="_blank" rel="noopener">出典：株式会社shicoo</a></span></figcaption>
+      <figcaption>株式会社shicooのトップページ<span class="figure-source"><a href="https://shicoo.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社shicoo</a></span></figcaption>
     </figure>
 
     <p>株式会社shicooは、鎌倉市に本社を置くWebマーケティング会社です。SEOコンサルティング、記事作成代行、Webサイト制作、広告運用などを提供しており、コンテンツと集客の両面から支援を受けられます。</p>
 
     <p>LLMO専業ではありませんが、神奈川県の中でも湘南・鎌倉エリアに近い会社として、地域密着型の相談先を探したい場合に候補になります。<mark><strong>コンテンツ設計から改善まで一緒に進めたい会社</strong></mark>に向いています。</p>
 
-    <p class="post-ref"><a href="https://shicoo.co.jp/company/" target="_blank" rel="noopener">参考：株式会社shicoo｜会社紹介</a></p>
+    <p class="post-ref"><a href="https://shicoo.co.jp/company/" target="_blank" rel="nofollow noopener">参考：株式会社shicoo｜会社紹介</a></p>
 
-    <p class="post-ref"><a href="https://shicoo.co.jp/" target="_blank" rel="noopener">参考：株式会社shicoo｜トップページ</a></p>
+    <p class="post-ref"><a href="https://shicoo.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社shicoo｜トップページ</a></p>
 
     <h3>7. 株式会社ベルカ</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/belka.webp" alt="株式会社ベルカのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社ベルカのトップページ<span class="figure-source"><a href="https://www.belka.co.jp/" target="_blank" rel="noopener">出典：株式会社ベルカ</a></span></figcaption>
+      <figcaption>株式会社ベルカのトップページ<span class="figure-source"><a href="https://www.belka.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ベルカ</a></span></figcaption>
     </figure>
 
     <p>株式会社ベルカは、横浜市中区に本社を置くSEO対策会社です。ホームページ集客、SEOコンサルティング、コンテンツ作成、ホームページ制作などを長く提供しており、横浜のSEO会社として実績を積み上げてきました。</p>
 
     <p>神奈川県で、まずはSEOに強い会社を軸に候補を探したい場合に外しにくい会社です。LLMOを前面に打ち出しているわけではありませんが、<mark><strong>AI時代でも土台になる検索流入の強化を重視したい会社</strong></mark>に向いています。</p>
 
-    <p class="post-ref"><a href="https://www.belka.co.jp/company/" target="_blank" rel="noopener">参考：株式会社ベルカ｜会社概要</a></p>
+    <p class="post-ref"><a href="https://www.belka.co.jp/company/" target="_blank" rel="nofollow noopener">参考：株式会社ベルカ｜会社概要</a></p>
 
-    <p class="post-ref"><a href="https://www.belka.co.jp/" target="_blank" rel="noopener">参考：株式会社ベルカ｜トップページ</a></p>
+    <p class="post-ref"><a href="https://www.belka.co.jp/" target="_blank" rel="nofollow noopener">参考：株式会社ベルカ｜トップページ</a></p>
 
     <h3>8. 株式会社ハマ企画</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/hamakikaku.webp" alt="株式会社ハマ企画のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社ハマ企画のトップページ<span class="figure-source"><a href="https://hamakikaku.co.jp/" target="_blank" rel="noopener">出典：株式会社ハマ企画</a></span></figcaption>
+      <figcaption>株式会社ハマ企画のトップページ<span class="figure-source"><a href="https://hamakikaku.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ハマ企画</a></span></figcaption>
     </figure>
 
     <p>株式会社ハマ企画は、横浜市西区に本社を置くマーケティング支援会社です。SEO対策、コンテンツマーケティング、サイト制作、広告運用などを提供しており、AI時代のSEOやLLMOに触れた情報発信も増えています。</p>
 
-    <p>神奈川県の中小企業向けに、サイト改善から運用まで伴走する色が強い会社です。施策を単発で終わらせず、<mark><strong>分析や改善を重ねながら進めたい会社</strong></mark>に向いています。</p>
+    <p>神奈川県の中小企業向けに、サイト改善から運用まで伴走する色が強い会社です。施策を単発で終わらせず、<strong>分析や改善を重ねながら進めたい会社</strong>に向いています。</p>
 
-    <p class="post-ref"><a href="https://hamakikaku.co.jp/company" target="_blank" rel="noopener">参考：株式会社ハマ企画｜会社情報</a></p>
+    <p class="post-ref"><a href="https://hamakikaku.co.jp/company" target="_blank" rel="nofollow noopener">参考：株式会社ハマ企画｜会社情報</a></p>
 
-    <p class="post-ref"><a href="https://hamakikaku.co.jp/service/consulting/seo" target="_blank" rel="noopener">参考：株式会社ハマ企画｜SEO対策</a></p>
+    <p class="post-ref"><a href="https://hamakikaku.co.jp/service/consulting/seo" target="_blank" rel="nofollow noopener">参考：株式会社ハマ企画｜SEO対策</a></p>
 
     <h3>9. 株式会社YTC・PLUS</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/ytc-plus.webp" alt="株式会社YTC・PLUSのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>株式会社YTC・PLUSのトップページ<span class="figure-source"><a href="https://ytc-plus.jp/" target="_blank" rel="noopener">出典：株式会社YTC・PLUS</a></span></figcaption>
+      <figcaption>株式会社YTC・PLUSのトップページ<span class="figure-source"><a href="https://ytc-plus.jp/" target="_blank" rel="nofollow noopener">出典：株式会社YTC・PLUS</a></span></figcaption>
     </figure>
 
     <p>株式会社YTC・PLUSは、横浜市栄区に本社を置くWeb制作・システム開発会社です。ホームページ制作、ECサイト構築、SEO対策、広告運用まで対応しており、システム寄りの開発も含めて相談しやすいのが特徴です。</p>
 
-    <p>神奈川県で、<mark><strong>制作だけでなく運用や技術面までまとめて相談したい会社</strong></mark>に向いています。LLMO専業ではありませんが、SEOを軸にしたサイト改善の候補として入れやすい会社です。</p>
+    <p>神奈川県で、<strong>制作だけでなく運用や技術面までまとめて相談したい会社</strong>に向いています。LLMO専業ではありませんが、SEOを軸にしたサイト改善の候補として入れやすい会社です。</p>
 
-    <p class="post-ref"><a href="https://ytc-plus.jp/public/profile.html" target="_blank" rel="noopener">参考：株式会社YTC・PLUS｜会社概要</a></p>
+    <p class="post-ref"><a href="https://ytc-plus.jp/public/profile.html" target="_blank" rel="nofollow noopener">参考：株式会社YTC・PLUS｜会社概要</a></p>
 
-    <p class="post-ref"><a href="https://ytc-plus.jp/service/seo.html" target="_blank" rel="noopener">参考：株式会社YTC・PLUS｜SEO対策</a></p>
+    <p class="post-ref"><a href="https://ytc-plus.jp/service/seo.html" target="_blank" rel="nofollow noopener">参考：株式会社YTC・PLUS｜SEO対策</a></p>
 
     <h3>10. Law'z LLC.</h3>
     <figure>
       <img src="images/blog-kanagawa-llmo-kaisha/lawz.webp" alt="Law&#x27;z LLC.のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-      <figcaption>Law'z LLC.のトップページ<span class="figure-source"><a href="https://www.lawz.jp/" target="_blank" rel="noopener">出典：Law'z LLC.</a></span></figcaption>
+      <figcaption>Law'z LLC.のトップページ<span class="figure-source"><a href="https://www.lawz.jp/" target="_blank" rel="nofollow noopener">出典：Law'z LLC.</a></span></figcaption>
     </figure>
 
     <p>Law'z LLC.は、横浜市中区に本社を置くSEO対策専門会社です。公式サイトでも横浜市でSEO対策を専門にしていることを打ち出しており、SEO対策、MEO対策、SEOに強いホームページ制作などを提供しています。</p>
 
-    <p>神奈川県内で、まずは検索に強い土台を作りたい会社に向いています。AI検索対策を直接打ち出しているわけではありませんが、<mark><strong>地域密着型でSEOの基礎を固めたい場合</strong></mark>には十分候補になります。</p>
+    <p>神奈川県内で、まずは検索に強い土台を作りたい会社に向いています。AI検索対策を直接打ち出しているわけではありませんが、<strong>地域密着型でSEOの基礎を固めたい場合</strong>には十分候補になります。</p>
 
-    <p class="post-ref"><a href="https://www.lawz.jp/" target="_blank" rel="noopener">参考：Law'z LLC.｜トップページ</a></p>
+    <p class="post-ref"><a href="https://www.lawz.jp/" target="_blank" rel="nofollow noopener">参考：Law'z LLC.｜トップページ</a></p>
 
-    <p class="post-ref"><a href="https://www.lawz.jp/seo-implementation/" target="_blank" rel="noopener">参考：Law'z LLC.｜SEO対策の費用・料金</a></p>
+    <p class="post-ref"><a href="https://www.lawz.jp/seo-implementation/" target="_blank" rel="nofollow noopener">参考：Law'z LLC.｜SEO対策の費用・料金</a></p>
 
     <p>地域比較も含めて見たい方は<a href="blog-tokyo-llmo-kaisha.html">東京でおすすめのLLMO会社10選</a>や<a href="blog-aichi-llmo-kaisha.html">愛知県でおすすめのLLMO会社10選</a>、BtoB寄りの判断軸を見たい方は<a href="blog-btob-llmo-kaisha.html">BtoBに強いおすすめのLLMO会社10選</a>もあわせて確認すると、神奈川ならではの違いが見えやすくなります。</p>
 
@@ -1209,7 +1232,7 @@
 
     <p>一方で、相模原や県央のように広く商圏が広がる地域、湘南や箱根のように来訪を前提に選ばれる地域もあり、同じ県内でも集客の前提がかなり違います。</p>
 
-    <p>そのため、神奈川県のLLMO会社を比較するときは、<mark><strong>どの地域のどの質問文脈に対応できるか、そして制作まで落とせるか</strong></mark>を見たほうが失敗しにくくなります。ここでは、特に確認しておきたいポイントを具体的に整理します。</p>
+    <p>そのため、神奈川県のLLMO会社を比較するときは、<strong>どの地域のどの質問文脈に対応できるか、そして制作まで落とせるか</strong>を見たほうが失敗しにくくなります。ここでは、特に確認しておきたいポイントを具体的に整理します。</p>
 
     <p class="post-ref"><a href="https://www.pref.kanagawa.jp/docs/x6z/tc20/ran_kana/chiiki/data.html" target="_blank" rel="noopener">参考：神奈川県｜ランキングかながわ（地域編）指標数値一覧（第1章）</a></p>
 
@@ -1219,7 +1242,7 @@
 
     <p>横浜・川崎は、神奈川県の中でも競合が密集しやすい都市型商圏です。神奈川県の統計では、横浜市のサービス系産業の事業所数は4万9,797、従業者数は51万1,464にのぼります。さらに、横浜・川崎エリアの延べ観光客数は7,887万人で、県内でも特に人の流れが大きいエリアです。</p>
 
-    <p>このような地域では、ただ会社情報を載せるだけでは弱くなります。「横浜でLLMOに強い会社はどこか」「川崎でBtoB集客に強い会社はどこか」といった比較文脈に合わせて、サービスページ、比較ページ、FAQまで整理できる会社のほうが向いています。都市型商圏では、<mark><strong>ページ単位で誰向けかをはっきりさせられるか</strong></mark>を確認しましょう。</p>
+    <p>このような地域では、ただ会社情報を載せるだけでは弱くなります。「横浜でLLMOに強い会社はどこか」「川崎でBtoB集客に強い会社はどこか」といった比較文脈に合わせて、サービスページ、比較ページ、FAQまで整理できる会社のほうが向いています。都市型商圏では、<strong>ページ単位で誰向けかをはっきりさせられるか</strong>を確認しましょう。</p>
 
     <p class="post-ref"><a href="https://www.pref.kanagawa.jp/docs/x6z/tc20/ran_kana/chiiki/data2.html" target="_blank" rel="noopener">参考：神奈川県｜ランキングかながわ（地域編）指標数値一覧（第2章）</a></p>
 
@@ -1229,7 +1252,7 @@
 
     <p>神奈川県は横浜・川崎のような都市部だけで成り立っているわけではありません。県全体で見ると、工業事業所数は7,202、工業従業者数は34万8,312人、学術・開発研究機関数は528あり、製造業や研究開発に関わる産業基盤も厚い県です。こうした業種では、商圏が市内で閉じず、県央や相模原、周辺エリアまで広がることも珍しくありません。</p>
 
-    <p>そのため、神奈川県のLLMOでは、都市部の店舗集客の考え方をそのまま当てはめるだけでは足りません。対応エリア、導入実績、対象業種、提供範囲などを地域別・用途別に整理しながら、<mark><strong>「どの地域のどの悩みで探されるか」まで設計できる会社</strong></mark>を選ぶ必要があります。広域商圏を扱う会社ほど、サービスページの切り分け方が重要です。</p>
+    <p>そのため、神奈川県のLLMOでは、都市部の店舗集客の考え方をそのまま当てはめるだけでは足りません。対応エリア、導入実績、対象業種、提供範囲などを地域別・用途別に整理しながら、<strong>「どの地域のどの悩みで探されるか」まで設計できる会社</strong>を選ぶ必要があります。広域商圏を扱う会社ほど、サービスページの切り分け方が重要です。</p>
 
     <p class="post-ref"><a href="https://www.pref.kanagawa.jp/docs/x6z/tc20/ran_kana/kenbetsu/data.html" target="_blank" rel="noopener">参考：神奈川県｜ランキングかながわ［統計指標でみる神奈川］指標数値一覧</a></p>
 
@@ -1239,7 +1262,7 @@
 
     <p>このタイプの商圏では、会社情報そのものよりも、エリア名、体験価値、アクセス、比較情報、利用シーンの見せ方が重要です。たとえば湘南なら「海沿い」「デート」「日帰り」などの探し方、箱根なら「宿泊」「温泉」「観光ルート」などの探し方が出やすくなります。</p>
 
-    <p>来訪型ビジネスを支援するLLMO会社を選ぶなら、こうした<mark><strong>検索文脈の違いを理解してページ設計できるか</strong></mark>を見たほうがよいです。</p>
+    <p>来訪型ビジネスを支援するLLMO会社を選ぶなら、こうした<strong>検索文脈の違いを理解してページ設計できるか</strong>を見たほうがよいです。</p>
 
     <p class="post-ref"><a href="https://www.pref.kanagawa.jp/docs/b6m/cnt/f80022/r6irikomi.html" target="_blank" rel="noopener">参考：神奈川県｜令和6年入込観光客調査</a></p>
 
@@ -1247,7 +1270,7 @@
 
     <p>神奈川県では、医療、介護、生活サービスのように、地域との結びつきが強い業種も大きな比重を占めています。神奈川県の第8次保健医療計画では、「誰でも等しく良質かつ適切な保健医療サービスを受けられる」ことを基本理念に掲げ、医療機関相互の連携の下で、切れ目のない保健医療福祉サービスを提供する体制を整備するとしています。</p>
 
-    <p>この領域では、一般的な集客記事を増やすだけでは弱くなりやすいです。医院、介護、地域サービスなどでは、対象エリア、対応内容、利用の流れ、よくある質問、安心材料をわかりやすく整理する必要があります。生活導線型の業種で実績があるか、<mark><strong>YMYL領域でも情報整理を丁寧に進められるか</strong></mark>は、LLMO会社を比較するうえで重要な視点です。</p>
+    <p>この領域では、一般的な集客記事を増やすだけでは弱くなりやすいです。医院、介護、地域サービスなどでは、対象エリア、対応内容、利用の流れ、よくある質問、安心材料をわかりやすく整理する必要があります。生活導線型の業種で実績があるか、<strong>YMYL領域でも情報整理を丁寧に進められるか</strong>は、LLMO会社を比較するうえで重要な視点です。</p>
 
     <p class="post-ref"><a href="https://www.pref.kanagawa.jp/docs/f6z/cnt/f742/8ji_keikaku.html" target="_blank" rel="noopener">参考：神奈川県｜第8次神奈川県保健医療計画（令和6年度～令和11年度）</a></p>
 
@@ -1257,7 +1280,7 @@
 
     <p>AI検索では、単に検索順位を追うだけでなく、比較候補としてどう見つけられるかが重要になります。Google Search Centralでも、AI OverviewsやAI Modeに表示されるために特別な追加要件はなく、通常のSEOのベストプラクティスが引き続き重要だと案内しています。</p>
 
-    <p>つまり神奈川県のLLMOでは、裏技よりも「誰向けに何が違うのか」「どの質問に対して出るべきか」を整理したページ設計のほうが重要です。人口規模が大きく、業種も多い神奈川県では、<mark><strong>最初から比較される前提で、サービスの違い、対象エリア、向いている会社像を明確にできる会社</strong></mark>のほうが成果につながりやすいです。</p>
+    <p>つまり神奈川県のLLMOでは、裏技よりも「誰向けに何が違うのか」「どの質問に対して出るべきか」を整理したページ設計のほうが重要です。人口規模が大きく、業種も多い神奈川県では、<strong>最初から比較される前提で、サービスの違い、対象エリア、向いている会社像を明確にできる会社</strong>のほうが成果につながりやすいです。</p>
 
     <p class="post-ref"><a href="https://developers.google.com/search/docs/appearance/ai-overviews" target="_blank" rel="noopener">参考：Google for Developers｜AI Features and Your Website</a></p>
 
@@ -1265,7 +1288,7 @@
 
     <p>LLMOは、方針だけ決めても前に進みにくい施策です。Googleも、AI機能に出るためにはページがGoogle検索で表示可能で、スニペット表示の対象になっている必要があると案内しています。つまり、実際にはサービスページの書き換え、FAQ追加、内部リンク整理、地域別ページの作成など、サイト上の実装まで動かしてはじめて意味が出ます。</p>
 
-    <p>神奈川県のように商圏の幅が広い地域では、コンサルだけで終わるよりも、<mark><strong>制作や改善まで一緒に進められる会社のほうが相性がよい</strong></mark>ことがあります。特に横浜・川崎向けの都市型ページ、湘南・箱根向けの来訪型ページ、県央向けの広域対応ページを分ける必要がある会社ほど、どこまで実行支援してくれるかを確認したほうがよいです。</p>
+    <p>神奈川県のように商圏の幅が広い地域では、コンサルだけで終わるよりも、<strong>制作や改善まで一緒に進められる会社のほうが相性がよい</strong>ことがあります。特に横浜・川崎向けの都市型ページ、湘南・箱根向けの来訪型ページ、県央向けの広域対応ページを分ける必要がある会社ほど、どこまで実行支援してくれるかを確認したほうがよいです。</p>
 
     <p class="post-ref"><a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide" target="_blank" rel="noopener">参考：Google for Developers｜SEO Starter Guide</a></p>
 
@@ -1273,7 +1296,7 @@
 
     <p>神奈川県でLLMO会社を探す場合も、費用はかなり幅があります。診断だけのスポット依頼から、月額の伴走支援、制作込みの包括支援まであり、どこまで任せるかで金額は大きく変わります。</p>
 
-    <p>そのため、安いか高いかだけで判断するのではなく、<mark><strong>地域別の設計が入るのか、記事制作が含まれるのか、サービスページ改善まで対応するのか</strong></mark>を見ながら比較することが大切です。</p>
+    <p>そのため、安いか高いかだけで判断するのではなく、<strong>地域別の設計が入るのか、記事制作が含まれるのか、サービスページ改善まで対応するのか</strong>を見ながら比較することが大切です。</p>
 
     <table>
       <tr>
@@ -1307,13 +1330,13 @@
 
     <p>まず現状を把握したい会社であれば、診断だけを依頼する方法があります。簡易的な診断であれば、1万円〜3万円台から見つかるケースもあり、最初の入口としては試しやすい価格帯です。</p>
 
-    <p>神奈川県内でも、どの質問で出ていないのか、競合がどう出ているのかを先に確認したい会社には向いています。<mark><strong>まずは状況把握から始めたい場合に選びやすい方法</strong></mark>です。</p>
+    <p>神奈川県内でも、どの質問で出ていないのか、競合がどう出ているのかを先に確認したい会社には向いています。<strong>まずは状況把握から始めたい場合に選びやすい方法</strong>です。</p>
 
     <h3>月額5万円前後は「格安帯」だが、神奈川でも試しやすい価格でもある</h3>
 
     <p>月額5万円前後は、LLMO支援の中では比較的始めやすい価格帯です。大きな予算を組まずに、質問設計や小規模な改善から試したい会社に向いています。</p>
 
-    <p><mark><strong>神奈川県の中小企業や店舗型ビジネスでも、この価格帯なら導入しやすい</strong></mark>ことがあります。ただし、どこまで対応してもらえるかは会社ごとの差が大きいため、記事制作や改善範囲は事前に確認が必要です。</p>
+    <p><strong>神奈川県の中小企業や店舗型ビジネスでも、この価格帯なら導入しやすい</strong>ことがあります。ただし、どこまで対応してもらえるかは会社ごとの差が大きいため、記事制作や改善範囲は事前に確認が必要です。</p>
 
     <h3>神奈川の伴走型支援は月額15万円〜20万円前後がひとつの目安</h3>
 
@@ -1325,19 +1348,19 @@
 
     <p>より大きな支援になると、費用はさらに上がります。複数サービスを持つ会社や、既存サイトの改修まで含める場合は、月額20万円〜100万円以上になることもあります。</p>
 
-    <p>神奈川県内でも、県全体の導線を組み直したい場合や、複数商圏を同時にカバーしたい場合は、この価格帯を見ておいたほうが現実的です。<mark><strong>単なる記事追加だけではない案件ほど高くなりやすい</strong></mark>です。</p>
+    <p>神奈川県内でも、県全体の導線を組み直したい場合や、複数商圏を同時にカバーしたい場合は、この価格帯を見ておいたほうが現実的です。<strong>単なる記事追加だけではない案件ほど高くなりやすい</strong>です。</p>
 
     <h3>神奈川で費用を見るときは「商圏に合う内容か」を必ず確認する</h3>
 
     <p>神奈川県は、都市型、広域型、来訪型の商圏が同じ県内に混在しています。そのため、同じ金額でも、どこまで地域別の設計をしてくれるかで価値は大きく変わります。</p>
 
-    <p>費用を見るときは、記事本数やミーティング回数だけでなく、<mark><strong>地域ごとの質問設計やサービスページ改善まで入るのかを確認することが重要</strong></mark>です。神奈川では、この視点を外すと比較がぶれやすくなります。</p>
+    <p>費用を見るときは、記事本数やミーティング回数だけでなく、<strong>地域ごとの質問設計やサービスページ改善まで入るのかを確認することが重要</strong>です。神奈川では、この視点を外すと比較がぶれやすくなります。</p>
 
     <h3>神奈川のLLMO費用は「小さく始める会社」と「本格投資する会社」で分かれやすい</h3>
 
     <p>神奈川県でのLLMOは、まず一部商圏から小さく始める会社と、県全体の導線まで見直して本格的に取り組む会社で、選ぶべきプランが大きく変わります。そのため、費用の幅も広くなりやすいです。</p>
 
-    <p>最初から広く取りに行く必要があるのか、それとも横浜や川崎など一部商圏から試すのかを先に決めておくと、会社選びもしやすくなります。費用は予算ではなく、進め方に合わせて考えましょう。 迷う場合は、<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口から優先順位を整理したり、<a href="blog-kakuyasu-llmo-daiko.html">格安LLMO代行の比較記事</a>で予算の切り方を確認したりする進め方も有効です。</p>
+    <p>最初から広く取りに行く必要があるのか、それとも横浜や川崎など一部商圏から試すのかを先に決めておくと、会社選びもしやすくなります。費用は予算ではなく、進め方に合わせて考えましょう。 迷う場合は、<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口から優先順位を整理したり、<a href="blog-kakuyasu-llmo-taisaku-kaisha.html">LLMO対策会社の比較記事</a>で予算の切り方を確認したりする進め方も有効です。</p>
 
     <h2>神奈川県のLLMO会社に関するよくある質問</h2>
 
@@ -1345,37 +1368,37 @@
 
     <h3>神奈川県のLLMO会社に依頼する意味はありますか？</h3>
 
-    <p>あります。AI検索では、検索結果で上位を取るだけでなく、比較候補として見つかることの重要性が高まっています。神奈川県のように業種も商圏も多い地域では、<mark><strong>質問文脈ごとに整理しておく意味があります</strong></mark>。</p>
+    <p>あります。AI検索では、検索結果で上位を取るだけでなく、比較候補として見つかることの重要性が高まっています。神奈川県のように業種も商圏も多い地域では、<strong>質問文脈ごとに整理しておく意味があります</strong>。</p>
 
     <h3>神奈川本社のLLMO会社でないと意味はありませんか？</h3>
 
-    <p>いいえ、本社所在地そのものが重要なのではありません。神奈川県の商圏の違いを理解し、<mark><strong>地域ごとの質問文脈に合わせて設計できるかどうか</strong></mark>のほうが重要です。</p>
+    <p>いいえ、本社所在地そのものが重要なのではありません。神奈川県の商圏の違いを理解し、<strong>地域ごとの質問文脈に合わせて設計できるかどうか</strong>のほうが重要です。</p>
 
     <h3>神奈川県の中小企業でもLLMOに取り組む意味はありますか？</h3>
 
-    <p>あります。<mark><strong>最初は小さな診断や一部ページの改善からでも始められる</strong></mark>ため、大きな予算がなくても取り組みやすいです。まずは特定エリアや特定サービスから始めるだけでも十分意味があります。</p>
+    <p>あります。<strong>最初は小さな診断や一部ページの改善からでも始められる</strong>ため、大きな予算がなくても取り組みやすいです。まずは特定エリアや特定サービスから始めるだけでも十分意味があります。</p>
 
     <h3>神奈川県の製造業や店舗型ビジネスでもLLMOは効果がありますか？</h3>
 
-    <p>あります。製造業なら対応範囲や強みの整理、店舗型ビジネスならエリア別の比較情報やFAQ整理がしやすいため、AIに理解されやすい土台を作れます。<mark><strong>業種に合わせた見せ方が重要です</strong></mark>。</p>
+    <p>あります。製造業なら対応範囲や強みの整理、店舗型ビジネスならエリア別の比較情報やFAQ整理がしやすいため、AIに理解されやすい土台を作れます。<strong>業種に合わせた見せ方が重要です</strong>。</p>
 
     <h3>SEO会社とLLMO会社は何が違いますか？</h3>
 
-    <p>SEO会社は主に検索結果で見つかるための支援を行います。一方でLLMO会社は、AIの回答内でどう比較されるか、どう引用されるかまで意識して情報を設計する点が違います。ただし、<mark><strong>実際には両方をつなげて考えられる会社のほうが強い</strong></mark>です。</p>
+    <p>SEO会社は主に検索結果で見つかるための支援を行います。一方でLLMO会社は、AIの回答内でどう比較されるか、どう引用されるかまで意識して情報を設計する点が違います。ただし、<strong>実際には両方をつなげて考えられる会社のほうが強い</strong>です。</p>
 
     <h3>神奈川県のLLMO会社に依頼したら、どれくらいで成果が出ますか？</h3>
 
-    <p><mark><strong>一般的には3か月〜6か月程度を目安</strong></mark>に考えるのが現実的です。質問の種類や競合状況によって差はありますが、短期で一気に変わるというより、改善を積み重ねながら変化を見ていく施策です。</p>
+    <p><strong>一般的には3か月〜6か月程度を目安</strong>に考えるのが現実的です。質問の種類や競合状況によって差はありますが、短期で一気に変わるというより、改善を積み重ねながら変化を見ていく施策です。</p>
 
     <h3>神奈川県のLLMO会社を選ぶときは何を確認すればよいですか？</h3>
 
-    <p>確認すべきなのは、<mark><strong>どの地域のどの質問を狙うのか、制作まで対応するのか、料金に何が含まれるのかの3点</strong></mark>です。神奈川県は商圏の幅が広いため、この3つを曖昧にしたまま選ぶと失敗しやすくなります。</p>
+    <p>確認すべきなのは、<strong>どの地域のどの質問を狙うのか、制作まで対応するのか、料金に何が含まれるのかの3点</strong>です。神奈川県は商圏の幅が広いため、この3つを曖昧にしたまま選ぶと失敗しやすくなります。</p>
 
     <h2>神奈川県でLLMO会社を選ぶなら、商圏ごとの違いから逆算しましょう</h2>
 
-    <p>神奈川県のLLMOは、<mark><strong>横浜・川崎の都市型集客、相模原や県央の広域商圏、湘南・箱根の来訪型商圏を同じやり方でまとめないこと</strong></mark>が大切です。どのエリアで、どの質問に対して出たいのかを先に決めることで、選ぶべき会社も費用の考え方もはっきりします。</p>
+    <p>神奈川県のLLMOは、<strong>横浜・川崎の都市型集客、相模原や県央の広域商圏、湘南・箱根の来訪型商圏を同じやり方でまとめないこと</strong>が大切です。どのエリアで、どの質問に対して出たいのかを先に決めることで、選ぶべき会社も費用の考え方もはっきりします。</p>
 
-    <p>そのうえで、<mark><strong>方針だけで終わらず、制作や改善まで動かせる会社を選ぶ</strong></mark>と前に進めやすくなります。神奈川県でLLMO会社を選ぶなら、県内の商圏差を前提に、自社に合う進め方から逆算して選びましょう。</p>
+    <p>そのうえで、<strong>方針だけで終わらず、制作や改善まで動かせる会社を選ぶ</strong>と前に進めやすくなります。神奈川県でLLMO会社を選ぶなら、県内の商圏差を前提に、自社に合う進め方から逆算して選びましょう。</p>
 
     <p>比較の起点としては、<a href="blog-tokyo-llmo-kaisha.html">東京のLLMO会社比較</a>や<a href="blog-aichi-llmo-kaisha.html">愛知県のLLMO会社比較</a>も見比べると、神奈川ならではの商圏差が見えやすくなります。まずは<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問文脈で見つかるべきかを整理していくのがおすすめです。</p>
   </div>
@@ -1406,16 +1429,16 @@
   </section>
 
   <!-- 前後の記事リンク -->
-  <div class="post-nav">
-    <a href="blog-aichi-llmo-kaisha.html">
-      <span class="post-nav-label">&larr; 前の記事</span>
-      愛知県でおすすめのLLMO会社10選を見る
-    </a>
-    <a href="llmo-shindan.html" style="text-align: right;">
-      <span class="post-nav-label">関連ページ &rarr;</span>
-      無料LLMO診断で現状を確認する
-    </a>
-  </div>
+              <div class="post-nav">
+        <a href="blog-aichi-llmo-kaisha.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+        <a href="blog-hokkaido-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+      </div>
 
   <section class="post-related" aria-labelledby="post-related-title">
     <div class="post-related-header">
@@ -1427,11 +1450,11 @@
       <article class="post-related-card">
         <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
           <div class="post-related-thumb">
-            <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+            <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
           </div>
           <div class="post-related-body">
             <div class="post-related-tag">LLMO</div>
-            <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+            <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
             <p class="post-related-card-text">本社集積エリアの比較導線と横浜・川崎の違いを見比べたい方に向いています。</p>
             <div class="post-related-date">2026.04.14</div>
           </div>
@@ -1440,7 +1463,7 @@
       <article class="post-related-card">
         <a href="blog-aichi-llmo-kaisha.html" class="post-related-card-link">
           <div class="post-related-thumb">
-            <img src="images/blog-aichi-llmo-kaisha/eyecatch.webp" alt="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1672" height="941" loading="lazy" decoding="async">
+            <img src="images/blog-aichi-llmo-kaisha/eyecatch.webp" alt="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
           </div>
           <div class="post-related-body">
             <div class="post-related-tag">LLMO</div>
@@ -1453,7 +1476,7 @@
       <article class="post-related-card">
         <a href="blog-btob-llmo-kaisha.html" class="post-related-card-link">
           <div class="post-related-thumb">
-            <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いおすすめのLLMO会社10選｜選び方・費用相場・依頼時の注意点を解説のサムネイル" width="1672" height="941" loading="lazy" decoding="async">
+            <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoBに強いおすすめのLLMO会社10選｜選び方・費用相場・依頼時の注意点を解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
           </div>
           <div class="post-related-body">
             <div class="post-related-tag">LLMO</div>
@@ -1496,33 +1519,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1644,7 +1667,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

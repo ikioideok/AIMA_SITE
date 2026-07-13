@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略｜AIMA ブログ</title>
+<meta name="description" content="AI検索でクリックやPVが減る時代に、問い合わせやCVを増やす考え方を初心者向けに解説。AI回答での表出、指名検索、相談数を見ながら進めるLLMO戦略を整理します。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="水間 雄紀">
+<link rel="canonical" href="https://ai-and-marketing.jp/blog-ai-search-zero-click.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略">
+<meta property="og:description" content="AI検索でクリックやPVが減る時代に、問い合わせやCVを増やす考え方を初心者向けに解説。AI回答での表出、指名検索、相談数を見ながら進めるLLMO戦略を整理します。">
+<meta property="og:url" content="https://ai-and-marketing.jp/blog-ai-search-zero-click.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/blog-ai-search-zero-click/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-07-01">
+<meta property="article:modified_time" content="2026-07-01">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略">
+<meta name="twitter:description" content="AI検索でクリックやPVが減る時代に、問い合わせやCVを増やす考え方を初心者向けに解説。AI回答での表出、指名検索、相談数を見ながら進めるLLMO戦略を整理します。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/blog-ai-search-zero-click/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略",
+  "description": "AI検索でクリックやPVが減る時代に、問い合わせやCVを増やす考え方を初心者向けに解説。AI回答での表出、指名検索、相談数を見ながら進めるLLMO戦略を整理します。",
+  "image": [
+    "https://ai-and-marketing.jp/images/blog-ai-search-zero-click/og.jpg"
+  ],
+  "datePublished": "2026-07-01",
+  "dateModified": "2026-07-01",
+  "author": {
+    "@type": "Person",
+    "name": "水間 雄紀"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-marketing.jp/images/ogp.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-marketing.jp/blog-ai-search-zero-click.html"
+  },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://ai-and-marketing.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ブログ",
+      "item": "https://ai-and-marketing.jp/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略",
+      "item": "https://ai-and-marketing.jp/blog-ai-search-zero-click.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "PVが減ったらSEO記事はやめるべきですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "やめる必要はありません。AI回答に引用される材料、指名検索につながる説明、問い合わせ前の不安を消す情報として、記事の役割を見直すことが大切です。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "ゼロクリック対策は何から始めればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "まずは見込み客が聞きそうな質問で、AI回答に自社名、競合名、引用URLが出るかを記録します。そのうえで、会社情報、料金、事例、FAQを優先して直します。"
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
+<style>
+  .post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8rem 2.5rem 4rem;
+  }
+  .post-header {
+    max-width: none;
+    margin: 0;
+  }
+  .post-content-layout {
+    display: block;
+  }
+  .post-main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .post-breadcrumbs {
+    margin: 0 0 1.3rem;
+  }
+  .post-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-breadcrumbs-item + .post-breadcrumbs-item::before {
+    content: '/';
+    margin: 0 0.45rem;
+    color: var(--gray-400);
+  }
+  .post-breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-breadcrumbs-link:hover {
+    color: var(--black);
+  }
+  .post-breadcrumbs-current {
+    color: var(--gray-600);
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #7759f6;
+    background: rgba(119,89,246,0.08);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+  .post-date {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .post-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  .post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-toc {
+    margin: 2rem 0 2.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .post-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+  .post-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-toc-summary-icon {
+    width: 0.68rem;
+    height: 0.68rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+    flex: none;
+  }
+  .post-toc[open] .post-toc-summary-icon {
+    transform: rotate(225deg) translateY(-1px);
+  }
+  .post-toc-nav {
+    padding: 0 1.15rem 1.05rem;
+    border-top: 1px solid var(--gray-200);
+    max-height: 24rem;
+    overflow: auto;
+  }
+  .post-toc-list,
+  .post-toc-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-toc-list {
+    padding-top: 0.9rem;
+  }
+  .post-toc-item + .post-toc-item {
+    margin-top: 0.55rem;
+  }
+  .post-toc-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .post-toc-link:hover {
+    color: var(--black);
+  }
+  .post-toc-sublist {
+    margin-top: 0.45rem;
+    margin-left: 0.25rem;
+    padding-left: 0.95rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  .post-toc-sublist .post-toc-item + .post-toc-item {
+    margin-top: 0.35rem;
+  }
+  .post-toc-sublist .post-toc-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+  }
+  .post-supervisor {
+    margin: 0 0 2.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-supervisor-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7759f6;
+    background: rgba(119, 89, 246, 0.08);
+    border-radius: 999px;
+  }
+  .post-supervisor-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .post-supervisor-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+  }
+  .post-supervisor-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+  .post-supervisor-role {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .post-supervisor-text {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  .post-sidebar {
+    display: none;
+    align-self: start;
+    position: sticky;
+    top: 6.8rem;
+    height: max-content;
+  }
+  .post-sidebar-stack > * + * {
+    margin-top: 1rem;
+  }
+  .post-sidebar-inner,
+  .post-sidebar-module {
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-sidebar-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .post-sidebar.is-visible .post-sidebar-inner {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .post-sidebar-label,
+  .post-sidebar-module-label {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+  }
+  .post-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-sidebar-item + .post-sidebar-item {
+    margin-top: 0.8rem;
+  }
+  .post-sidebar-link {
+    position: relative;
+    display: block;
+    padding-left: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .post-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 999px;
+    background: var(--gray-200);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .post-sidebar-link:hover {
+    color: var(--black);
+  }
+  .post-sidebar-link.is-active {
+    color: var(--black);
+    font-weight: 700;
+  }
+  .post-sidebar-link.is-active::before {
+    background: #7759f6;
+    transform: scale(1.15);
+  }
+  .post-body p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+  .post-body ul, .post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-body li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid #7759f6;
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 400;
+  }
+  .post-body blockquote .quote-source {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-body blockquote .quote-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-body blockquote .quote-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .post-body mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, rgba(255, 227, 130, 0.9) 58%);
+    padding: 0 0.08em;
+  }
+  .post-body a {
+    color: #7759f6;
+    text-decoration: underline;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+  .post-body figure {
+    margin: 1.8rem 0 2rem;
+  }
+  .post-body figure img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid var(--gray-200);
+  }
+  .post-body figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .post-body figcaption .figure-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-body figcaption .figure-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  }
+  .post-body figcaption .figure-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--gray-200);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .post-body th {
+    background: var(--gray-50);
+    font-weight: 500;
+    color: var(--black);
+  }
+  .post-body td {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+  .post-body .post-ref {
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  .post-cta {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .post-cta-text {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .post-cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: opacity 0.2s;
+  }
+  .post-cta-btn:hover { opacity: 0.8; }
+  .post-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-related-header {
+    margin-bottom: 1.25rem;
+  }
+  .post-related-label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .post-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+  }
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .post-related-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .post-related-card:hover {
+    box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
+    transform: translateY(-2px);
+  }
+  .post-related-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-related-thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--gray-100);
+    overflow: hidden;
+  }
+  .post-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-related-body {
+    padding: 1.1rem;
+  }
+  .post-related-tag {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .post-related-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-card-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 0.9rem;
+  }
+  .post-related-date {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-related-more {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .post-related-more a {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-related-more a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-nav a {
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-nav a:hover { color: var(--black); }
+  .post-nav-label {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 640px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .post-content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 3.2rem;
+      align-items: start;
+    }
+    .post-main {
+      max-width: none;
+      margin: 0;
+    }
+    .post-sidebar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .post-page { padding: 7rem 1.5rem 3rem; }
+    .post-title { font-size: 1.4rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-toc summary {
+      padding: 0.95rem 1rem;
+      font-size: 0.9rem;
+    }
+    .post-toc-nav {
+      padding: 0 1rem 0.95rem;
+    }
+    .post-supervisor {
+      padding: 1rem;
+    }
+    .post-supervisor-card {
+      grid-template-columns: 72px 1fr;
+      gap: 0.85rem;
+    }
+    .post-supervisor-photo {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
+</head>
+<body class="media-article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-page">
+
+  <div class="post-content-layout">
+    <div class="post-main">
+      <nav class="post-breadcrumbs" aria-label="パンくずリスト">
+        <ol class="post-breadcrumbs-list">
+          <li class="post-breadcrumbs-item"><a href="/" class="post-breadcrumbs-link">トップ</a></li>
+          <li class="post-breadcrumbs-item"><a href="blog.html" class="post-breadcrumbs-link">ブログ</a></li>
+          <li class="post-breadcrumbs-item"><span class="post-breadcrumbs-current" aria-current="page">AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略</span></li>
+        </ol>
+      </nav>
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-tag">戦略解説</span>
+          <time class="post-date" datetime="2026-07-01">公開日 2026.07.01</time>
+          <time class="post-date post-updated" datetime="2026-07-01">更新日 2026.07.01</time>
+        </div>
+
+        <h1 class="post-title">AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略</h1>
+
+        <div class="post-thumb">
+          <img src="images/blog-ai-search-zero-click/eyecatch.jpg" alt="AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
+        </div>
+      </div>
+
+      <div class="post-body">
+        <p>AI検索が広がると、ユーザーは検索結果を開く前に、AI回答の中で答えや比較候補を見ます。そのため、これまで通りPVだけを見ていると「アクセスが減ったから失敗」と感じやすくなります。</p>
+        <p>しかし、ゼロクリック時代でも問い合わせやCVを増やす余地はあります。大事なのは、AI回答の中で自社名が出るか、どんな強みで紹介されるか、その後に指名検索や相談につながるかを見ることです。近いテーマは<a href="blog-llmo-kpi.html">LLMOのKPI</a>や<a href="blog-ai-search-traffic-measurement.html">AI検索流入の計測方法</a>でも解説しています。</p>
+        <p>この記事では、シート候補の「PVではなく相談数・AI表出をKPIに」という切り口に沿って、専門担当者がいない会社でも始めやすいゼロクリック対策を説明します。</p>
+
+        <details class="post-toc">
+          <summary>
+            <span>目次</span>
+            <span class="post-toc-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <nav class="post-toc-nav" aria-label="記事の目次"></nav>
+        </details>
+
+        <section class="post-supervisor" aria-label="監修者情報">
+          <div class="post-supervisor-label">監修者情報</div>
+          <div class="post-supervisor-card">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
+            <div>
+              <div class="post-supervisor-name">水間 雄紀</div>
+              <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
+              <div class="post-supervisor-text">1986年和歌山県生まれ、近畿大学卒。金融機関、経営コンサルティング会社を経て、2018年にコンテンツ制作の専門会社である株式会社circlizeを創業。2024年、ラグザス株式会社に事業譲渡。現在は株式会社AIMAにてAI×マーケティング事業に従事し、株式会社フォーティーファイヴでコンテンツの品質管理責任者を務める。</div>
+            </div>
+          </div>
+        </section>
+
+        <h2>AI検索時代のゼロクリック対策とは</h2>
+        <p>ゼロクリック対策とは、検索結果からクリックされない場面が増えても、AI回答の中で自社を知ってもらい、指名検索、再訪、問い合わせにつなげる考え方です。単にクリックを取り戻す施策ではありません。</p>
+
+        <h3>ゼロクリックは「クリックされない＝負け」ではない</h3>
+        <p>ゼロクリックという言葉だけ聞くと、サイトに来てもらえないので終わりだと感じるかもしれません。ですが、AI回答の中で会社名、サービス名、料金、強みが読まれたなら、ユーザーはサイトを開く前に自社を知っています。ここで大切なのは、<mark><strong>クリック前の接触</strong></mark>も見込み客との出会いとして扱うことです。</p>
+        <p>たとえば「中小企業向けのLLMO会社は？」と聞いたAI回答に自社名が出れば、その場で候補に入ります。その後、ユーザーが会社名で検索したり、料金ページを直接見たり、問い合わせフォームに来たりすることがあります。PVが減っても、AI回答内の見られ方が良くなれば、CVに近い行動は残ります。</p>
+
+        <h3>AI回答内で比較候補に入ることが入口になる</h3>
+        <p>AI検索では、ユーザーが複数ページを読み比べる前に、AIが候補をまとめます。その候補に入るには、公式サイト、比較記事、FAQ、事例、料金ページに、AIが説明しやすい材料が必要です。会社の強みをふわっと書くだけでは、AIは比較しにくくなります。まず狙うべきは、AI回答の中で<mark><strong>比較候補として名前が出る</strong></mark>状態です。</p>
+        <p>候補に入った後は、どんな理由で紹介されるかが重要です。「低予算で始めやすい」「LLMOに特化」「相談しやすい」「記事修正までできる」のような説明が出れば、クリック前から選ばれる理由が伝わります。逆に、名前だけ出ても理由が薄い場合は、サービスページやFAQに具体情報が足りない可能性があります。</p>
+
+        <blockquote>
+          <p>“clicked on a traditional search result link in 8% of all visits”</p>
+          <p class="quote-source">出典：<a href="https://www.pewresearch.org/data-labs/2025/05/23/what-web-browsing-data-tells-us-about-how-ai-appears-online/" target="_blank" rel="noopener">Pew Research Center「What web-browsing data tells us about how AI appears online」</a></p>
+        </blockquote>
+
+        <figure>
+          <img src="images/blog-ai-search-zero-click/infographic-zero-click-flow.jpg" alt="検索で知り、AI回答で比べ、指名検索し、相談や購入につながるゼロクリック時代の流れ" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>ゼロクリック時代は、検索結果のクリックだけでなく、AI回答内で知る、比べる、指名検索する、相談する流れを見ます。</figcaption>
+        </figure>
+
+        <h2>PVが減ってもCVを増やす考え方</h2>
+        <p>PVが減ると不安になりますが、すべてのPVが同じ価値ではありません。AI検索時代は、薄い流入を大量に集めるより、相談に近い質問で自社が見えるかを重視します。</p>
+
+        <h3>PVだけでなく指名検索と相談数を見る</h3>
+        <p>AI回答で情報を見たユーザーは、その場でクリックせず、後から会社名で検索することがあります。そのため、PVだけを見ると成果を見落とします。確認したいのは、AI回答での自社名表示、引用URL、指名検索、問い合わせ、商談化の流れです。特にBtoBでは、<mark><strong>相談数と指名検索</strong></mark>を一緒に見ると判断しやすくなります。</p>
+        <p>たとえば、自然検索PVが少し下がっても、会社名検索や問い合わせが増えているなら、AI回答や比較情報で認知されている可能性があります。逆にPVは多いのに相談が増えない場合は、読者が知りたい料金、範囲、事例、依頼後の流れが足りないかもしれません。数字は1つだけで見ず、流れで見ます。</p>
+
+        <h3>AI回答で出る言葉を問い合わせ前提で整える</h3>
+        <p>ゼロクリック対策では、「AIが何を説明するか」を意識してページを直します。会社紹介が抽象的だと、AI回答も抽象的になります。見込み客が問い合わせ前に知りたいのは、費用、期間、対応範囲、得意分野、他社との違い、失敗しやすい点です。ここを公式サイトに書くと、AI回答にも<mark><strong>選ばれる理由</strong></mark>が出やすくなります。</p>
+        <p>AIMAなら、LLMO特化、月額5万円、相談回数の上限なし、記事作成・記事修正込み、最低契約期間なし、といった具体情報をはっきり出すべきです。このような情報は、人間が見ても安心材料になりますし、AIが会社を説明するときの材料にもなります。きれいな言葉より、比べやすい事実を増やしてください。</p>
+
+        <h3>クリック後の受け皿を強くする</h3>
+        <p>ゼロクリック対策は、AI回答に出るだけでは終わりません。AI回答を見て興味を持った人がサイトに来たとき、すぐに料金、事例、FAQ、問い合わせ方法が分かる必要があります。クリック数が少ない時代ほど、来てくれた人を迷わせないことが重要です。クリック後は<mark><strong>受け皿ページの分かりやすさ</strong></mark>で差が出ます。</p>
+        <p>具体的には、サービスページの冒頭に「誰向けか」「いくらか」「何をしてくれるか」を書きます。FAQには、契約期間、追加費用、記事数、修正範囲、相談方法を入れます。関連記事からも料金や診断ページへつなぎます。AI回答で知った人が、すぐ相談できる道を作っておくことがCVにつながります。</p>
+
+        <blockquote>
+          <p>“There are no additional requirements to appear in AI Overviews or AI Mode”</p>
+          <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google Search Central「AI features and your website」</a></p>
+        </blockquote>
+
+        <figure>
+          <img src="images/blog-ai-search-zero-click/infographic-kpi-map.jpg" alt="PVだけでなくAI表出、引用URL、指名検索、相談数、CVを見るKPIマップ" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>ゼロクリック対策では、PVだけではなく、AI表出、引用URL、指名検索、相談数、CVをまとめて見ます。</figcaption>
+        </figure>
+
+        <h2>AI回答で選ばれやすくするLLMO施策</h2>
+        <p>AI回答に出るには、AIが読み取りやすい情報をそろえる必要があります。難しい技術よりも、会社情報、サービス内容、FAQ、事例を正しくつなぐことが先です。</p>
+
+        <h3>会社情報とサービス情報を一枚岩にする</h3>
+        <p>AIは、会社概要、サービスページ、記事、FAQ、外部掲載を見比べながら回答を作ります。ページごとに料金や対応範囲が違うと、AIも人も迷います。まずは正式社名、サービス名、対象企業、料金、契約期間、対応範囲、強みをそろえます。サイト全体で<mark><strong>同じ説明が出ている状態</strong></mark>を作ることが基本です。</p>
+        <p>会社概要だけに情報を置くのではなく、サービスページ、料金ページ、FAQ、関連記事を内部リンクでつなぎましょう。たとえば、LLMOの基本を説明する記事から<a href="blog-llmo-taisaku.html">LLMO対策の記事</a>や<a href="llmo-shindan.html">無料LLMO診断</a>へつなぐと、読者もAIも関連情報を追いやすくなります。</p>
+
+        <h3>比較される理由と向かない条件も書く</h3>
+        <p>AI回答では「おすすめ会社」「比較」「費用」「向いている会社」のような形で紹介されます。そのとき、良いことだけを書いているページより、向いている会社と向かない会社が分かるページのほうが比較しやすくなります。自社の強みだけでなく、<mark><strong>選ぶ判断材料</strong></mark>を出すことが大切です。</p>
+        <p>AIMAなら、低予算でLLMOを始めたい会社、記事作成と修正をまとめて任せたい会社、相談しながら進めたい会社に向いています。一方で、大規模な広告運用や大規模開発を一括で任せたい場合は別の支援が合うこともあります。このように書くと、ユーザーもAIも誤解しにくくなります。</p>
+
+        <h3>FAQと事例で不安を先に消す</h3>
+        <p>ゼロクリック時代のFAQは、単なる補足ではありません。AIが回答に使いやすい短い答えを置く場所です。「月5万円で何が含まれますか？」「最低契約期間はありますか？」「記事作成は何本までですか？」「SEO会社との違いは？」のように、問い合わせ前の疑問へ先に答えます。FAQは<mark><strong>不安を消す入口</strong></mark>になります。</p>
+        <p>事例や実績も、数字だけではなく背景を書きます。どんな会社が、何に困っていて、何を直して、どう変わったのかを短く整理します。AIは具体的な文脈がある情報を説明しやすくなります。FAQの作り方は<a href="blog-llmo-faq.html">LLMOに強いFAQの作り方</a>も参考にしてください。</p>
+
+        <blockquote>
+          <p>“OAI-SearchBot is used to surface websites in search results”</p>
+          <p class="quote-source">出典：<a href="https://platform.openai.com/docs/bots" target="_blank" rel="noopener">OpenAI Platform「Overview of OpenAI crawlers」</a></p>
+        </blockquote>
+
+        <figure>
+          <img src="images/blog-ai-search-zero-click/infographic-action-flow.jpg" alt="現状確認、回答内で選ばれる理由、クリック後の受け皿、指名再訪導線、月次改善の実務フロー" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>実務では、現状確認、AI回答で選ばれる理由作り、クリック後の受け皿、指名・再訪導線、月次改善の順で進めます。</figcaption>
+        </figure>
+
+        <h2>ゼロクリック対策の実務手順</h2>
+        <p>ゼロクリック対策は、難しい分析から始める必要はありません。まずは、AI回答で自社がどう見えているかを表に残し、足りない情報をページに足すことから始めます。</p>
+
+        <h3>まず現状のAI回答を記録する</h3>
+        <p>最初に、見込み客が聞きそうな質問を10個ほど作ります。「中小企業向けのLLMO会社は？」「AI検索対策を月額で頼むなら？」「AI検索で問い合わせを増やすには？」のように、費用、比較、地域、悩みを混ぜます。ChatGPT、Gemini、Perplexity、AI Overviewsで試し、<mark><strong>自社名と競合名の出方</strong></mark>を記録します。</p>
+        <p>表には、質問、AI名、自社名の有無、引用URL、競合名、紹介された理由、気になる誤情報、次に直すページを入れます。最初から完璧なツールを使わなくても、スプレッドシートで十分です。毎月同じ質問で見ると、変化が分かります。詳しい見方は<a href="blog-ai-search-competitor-analysis.html">AI検索の競合分析</a>も参考になります。</p>
+
+        <h3>既存ページを直して新規記事を足す</h3>
+        <p>記録したら、AI回答に出てほしい情報を既存ページへ足します。料金が出ないなら料金ページ、比較理由が弱いならサービスページ、よくある不安が出るならFAQ、導入後のイメージが弱いなら事例を直します。いきなり新規記事を量産するより、<mark><strong>CVに近いページの修正</strong></mark>から進めるほうが早いです。</p>
+        <p>そのうえで、足りない検索意図に合わせて新規記事を作ります。たとえば「ゼロクリック対策」「AI検索のKPI」「LLMOの費用」のような記事は、問い合わせ前の理解を助けます。記事内からサービス、診断、料金、FAQへ自然にリンクすれば、AIにも読者にもサイト全体の意味が伝わりやすくなります。</p>
+
+        <h3>月次でAI表出・引用・CVを見直す</h3>
+        <p>AI回答は日によって変わるため、1回の確認だけで判断しないでください。月1回、同じ質問で、自社名が出たか、引用URLが出たか、競合が誰か、問い合わせ内容が変わったかを見ます。大事なのは、順位だけではなく<mark><strong>相談につながる変化</strong></mark>を見ることです。</p>
+        <p>月次確認では、GA4やGSCで見える流入、指名検索、問い合わせフォームの内容も見ます。AI回答に出たあと、会社名検索が増えているなら、クリック前の接触が効いている可能性があります。逆に、AI回答に出ても相談が増えないなら、受け皿ページやCTAを直します。</p>
+
+        <table>
+          <tr>
+            <th>見る数字</th>
+            <th>意味</th>
+            <th>直す場所</th>
+          </tr>
+          <tr>
+            <td>AI表出</td>
+            <td>AI回答に自社名が出たか</td>
+            <td>会社概要、サービスページ、比較記事</td>
+          </tr>
+          <tr>
+            <td>引用URL</td>
+            <td>AIがどのページを根拠にしたか</td>
+            <td>引用された記事、FAQ、料金ページ</td>
+          </tr>
+          <tr>
+            <td>指名検索</td>
+            <td>AI回答を見た後に会社名で探された可能性</td>
+            <td>トップページ、サービスページ、会社概要</td>
+          </tr>
+          <tr>
+            <td>相談数・CV</td>
+            <td>問い合わせや資料請求につながったか</td>
+            <td>CTA、フォーム、料金、事例</td>
+          </tr>
+        </table>
+
+        <h2>AIMAならゼロクリック時代のLLMOを小さく始められる</h2>
+        <p>ゼロクリック対策は、調査だけで終わると意味が薄くなります。AI回答の見え方を確認し、ページを直し、記事を足し、毎月見直すところまで続ける必要があります。</p>
+
+        <h3>月5万円で相談・記事作成・修正まで回せる</h3>
+        <p>AIMAは、LLMOに特化した支援を月額5万円で提供しています。AI回答の確認、競合との見え方の比較、既存ページの修正、FAQ追加、記事作成、記事リライトまで、毎月できる範囲で進めます。高額な診断だけで止めず、<mark><strong>直すところまで進める</strong></mark>ことを重視しています。</p>
+        <p>ゼロクリック対策では、記事を増やすだけでなく、CVに近いページを整えることが大切です。AIMAでは、読者がAI回答で知った後に見るサービスページ、料金、FAQ、問い合わせ導線も一緒に見ます。相談回数の上限がないため、小さな疑問もその都度確認できます。</p>
+
+        <h3>最低契約期間なしで小さく試せる</h3>
+        <p>AI検索対策は新しい領域なので、いきなり大きな契約を結ぶのが不安な会社も多いはずです。AIMAは最低契約期間がないため、まず数か月だけ、AI回答の現状確認、既存ページ修正、記事作成を試せます。最初は<mark><strong>小さく始めて続ける</strong></mark>ほうが失敗しにくいです。</p>
+        <p>「PVは減っているが問い合わせを増やしたい」「AI回答に競合だけが出る」「自社の強みがAIに伝わっていない」と感じる場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>をご利用ください。自社がAI検索でどう見えているかを確認し、直す優先順位を整理できます。</p>
+
+        <p class="post-ref"><a href="https://digitalidentity.co.jp/service/forte-ai/llmo-dco/" target="_blank" rel="nofollow noopener">参考：デジタルアイデンティティ LLMO/DCOサービス</a></p>
+        <p class="post-ref"><a href="https://www.sedesign.co.jp/service/llmo/" target="_blank" rel="nofollow noopener">参考：SEデザイン LLMO診断・伴走支援サービス</a></p>
+        <p class="post-ref"><a href="https://www.cinc-j.co.jp/service/analytics/geoconsulting" target="_blank" rel="nofollow noopener">参考：CINC GEOコンサルティングサービス</a></p>
+
+        <h2>AI検索時代のゼロクリック対策に関するよくある質問</h2>
+
+        <h3>PVが減ったらSEO記事はやめるべきですか？</h3>
+        <p><mark><strong>やめる必要はありません</strong></mark>。ただし、記事の役割は変わります。PVだけを集める記事ではなく、AI回答に引用される材料、指名検索につながる説明、問い合わせ前の不安を消す情報として記事を見直してください。古い記事は、料金、FAQ、事例、内部リンクを追加すると使いやすくなります。</p>
+
+        <h3>ゼロクリック対策は何から始めればいいですか？</h3>
+        <p>まずは<mark><strong>AI回答の記録</strong></mark>から始めます。見込み客が聞きそうな質問を10個ほど作り、自社名、競合名、引用URL、紹介理由を表に残してください。その後、会社情報、料金、事例、FAQを優先して直します。最初から大きなツールを入れなくても、手作業で十分に始められます。</p>
+
+        <h2>まとめ</h2>
+        <p>AI検索時代のゼロクリック対策では、クリックやPVだけを追うと成果を見落とします。AI回答の中で自社名が出るか、どんな理由で紹介されるか、その後に指名検索や相談へ進むかを見ることが大切です。</p>
+        <p>まずはAI回答の現状を記録し、会社情報、サービスページ、料金、FAQ、事例を整えます。AIが比較しやすく、人間も相談しやすい情報を増やせば、PVが減ってもCVにつながる道を作れます。</p>
+        <p>AIMAは、LLMO特化、月額5万円、相談無制限、記事作成・修正込み、最低契約期間なしで、ゼロクリック時代のAI検索対策を支援します。まずは<a href="llmo-shindan.html">無料LLMO診断</a>または<a href="/#contact">お問い合わせ</a>からご相談ください。</p>
+      </div>
+
+      <!-- 記事下CTA -->
+      <div class="post-cta">
+        <div class="post-cta-title">PVだけに頼らないAI検索対策を始めませんか</div>
+        <div class="post-cta-text">月額5万円で、AI回答の見え方、記事修正、FAQ追加、問い合わせ導線までまとめて整えます。</div>
+        <a href="/#contact" class="post-cta-btn">まずは相談する</a>
+      </div>
+
+      <section class="newsletter-inline" aria-label="メルマガ登録導線">
+        <div class="newsletter-card">
+          <div class="newsletter-eyebrow">Newsletter</div>
+          <div class="newsletter-title">LLMO内製化マガジン</div>
+          <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。ブログ更新だけでなく、現場で詰まりやすい論点もまとめます。</p>
+          <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-inline">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-inline-email">メールアドレス</label>
+              <input type="email" id="newsletter-inline-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+              <button type="submit" class="newsletter-submit">無料で登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 前後の記事リンク -->
+      <div class="post-nav">
+        <a href="blog.html">
+          <span class="post-nav-label">&larr; ブログ一覧</span>
+          AI検索対策の記事一覧を見る
+        </a>
+        <a href="blog-ai-search-misinformation.html" style="text-align: right;">
+          <span class="post-nav-label">関連記事 &rarr;</span>
+          AI検索の誤情報対策を見る
+        </a>
+      </div>
+
+      <section class="post-related" aria-labelledby="post-related-title">
+        <div class="post-related-header">
+          <div class="post-related-label">Related Articles</div>
+          <h2 class="post-related-title" id="post-related-title">関連記事</h2>
+          <p class="post-related-text">AI検索の見え方、計測、競合比較もあわせて確認できます。</p>
+        </div>
+        <div class="post-related-grid">
+          <article class="post-related-card">
+            <a href="blog-llmo-kpi.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-kpi/eyecatch.jpg" alt="LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">計測ガイド</div>
+                <div class="post-related-card-title">LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法</div>
+                <p class="post-related-card-text">PV以外に見るべき数字を詳しく確認できます。</p>
+                <div class="post-related-date">2026.05.28</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-ai-search-traffic-measurement.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-ai-search-traffic-measurement/eyecatch.jpg" alt="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">計測ガイド</div>
+                <div class="post-related-card-title">AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本</div>
+                <p class="post-related-card-text">AI回答後の流入や問い合わせを確認できます。</p>
+                <div class="post-related-date">2026.06.28</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-ai-search-competitor-analysis.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-ai-search-competitor-analysis/eyecatch.jpg" alt="AI検索の競合分析とは？ChatGPT・Geminiで自社が出ない理由を調べる方法のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">分析ガイド</div>
+                <div class="post-related-card-title">AI検索の競合分析とは？ChatGPT・Geminiで自社が出ない理由を調べる方法</div>
+                <p class="post-related-card-text">AI回答で競合だけが出る理由を調べられます。</p>
+                <div class="post-related-date">2026.06.29</div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
+      </section>
+    </div>
+
+    <aside class="post-sidebar" aria-label="記事サイドバー">
+      <div class="post-sidebar-stack">
+        <div class="post-sidebar-inner">
+          <div class="post-sidebar-label">CONTENTS</div>
+          <nav class="post-sidebar-toc" aria-label="サイドバー目次"></nav>
+        </div>
+
+        <section class="post-sidebar-module newsletter-sidebar-card" aria-label="メルマガ登録">
+          <div class="post-sidebar-module-label">NEWSLETTER</div>
+          <div class="newsletter-sidebar-title">LLMO内製化マガジン</div>
+          <p class="newsletter-sidebar-text">まずは自分たちで進めたい方向けに、設計・運用・改善のヒントを短く配信します。</p>
+          <form class="newsletter-form" aria-label="サイドバーのメルマガ登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-sidebar">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-sidebar-email">メールアドレス</label>
+              <input type="email" id="newsletter-sidebar-email" name="email" class="newsletter-input" placeholder="メールアドレス" required>
+              <button type="submit" class="newsletter-submit">登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。</p>
+          </form>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+
+<script>
+  (function () {
+    const postBody = document.querySelector('.post-body');
+    const tocNav = document.querySelector('.post-toc-nav');
+    const tocDetails = document.querySelector('.post-toc');
+    const sidebarNav = document.querySelector('.post-sidebar-toc');
+    const sidebar = document.querySelector('.post-sidebar');
+    if (!postBody) return;
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3'));
+    if (!headings.length) {
+      if (tocDetails) tocDetails.hidden = true;
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = 'section-' + String(index + 1).padStart(2, '0');
+      }
+    });
+
+    if (tocNav && tocDetails) {
+      const rootList = document.createElement('ol');
+      rootList.className = 'post-toc-list';
+      let currentGroup = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        item.className = 'post-toc-item';
+
+        const link = document.createElement('a');
+        link.className = 'post-toc-link';
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        item.appendChild(link);
+
+        if (heading.tagName === 'H2') {
+          const sublist = document.createElement('ol');
+          sublist.className = 'post-toc-sublist';
+          item.appendChild(sublist);
+          rootList.appendChild(item);
+          currentGroup = sublist;
+          return;
+        }
+
+        if (currentGroup) {
+          currentGroup.appendChild(item);
+        } else {
+          rootList.appendChild(item);
+        }
+      });
+
+      rootList.querySelectorAll('.post-toc-sublist').forEach((sublist) => {
+        if (!sublist.children.length) {
+          sublist.remove();
+        }
+      });
+
+      tocNav.appendChild(rootList);
+    }
+
+    const sidebarHeadings = headings.filter((heading) => heading.tagName === 'H2');
+    if (!sidebarNav || !sidebar || !sidebarHeadings.length) {
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    const sidebarList = document.createElement('ol');
+    sidebarList.className = 'post-sidebar-list';
+
+    sidebarHeadings.forEach((heading) => {
+      const item = document.createElement('li');
+      item.className = 'post-sidebar-item';
+
+      const link = document.createElement('a');
+      link.className = 'post-sidebar-link';
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      sidebarList.appendChild(item);
+    });
+
+    sidebarNav.appendChild(sidebarList);
+
+    const sidebarLinks = Array.from(sidebarNav.querySelectorAll('.post-sidebar-link'));
+    const setActiveLink = (id) => {
+      sidebarLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const updateSidebarActive = () => {
+      const revealOffset = 160;
+      const shouldShowSidebar = window.scrollY + revealOffset >= sidebarHeadings[0].offsetTop;
+      sidebar.classList.toggle('is-visible', shouldShowSidebar);
+
+      const scrollPoint = window.scrollY + 180;
+      let current = sidebarHeadings[0];
+      sidebarHeadings.forEach((heading) => {
+        if (heading.offsetTop <= scrollPoint) {
+          current = heading;
+        }
+      });
+      setActiveLink(current.id);
+    };
+
+    window.addEventListener('scroll', updateSidebarActive, { passive: true });
+    window.addEventListener('resize', updateSidebarActive);
+    updateSidebarActive();
+
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        setActiveLink(id);
+      });
+    });
+  }());
+</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
+
+</body>
+</html>

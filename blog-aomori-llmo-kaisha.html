@@ -172,7 +172,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -920,26 +922,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -986,7 +1009,7 @@
         <section class="post-supervisor" aria-label="監修者情報">
           <div class="post-supervisor-label">監修者情報</div>
           <div class="post-supervisor-card">
-            <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
             <div>
               <div class="post-supervisor-name">水間 雄紀</div>
               <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1071,7 +1094,7 @@
         <div class="aima-feature" aria-label="株式会社AIMAのご案内">
           <div class="aima-feature-kicker">運営会社のご案内</div>
           <div class="aima-feature-title">株式会社AIMA</div>
-          <p>株式会社AIMAは青森本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。青森市・弘前市・八戸市など商圏ごとの見え方を確認したい場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>から入るのがおすすめです。</p>
+          <p>株式会社AIMAは青森本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。青森市・弘前市・八戸市など商圏ごとの見え方を確認したい場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>から入るのがおすすめです。</p>
           <div class="aima-feature-actions">
             <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
             <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1134,7 +1157,7 @@
           <figcaption>有限会社オラネットのトップページ<span class="figure-source"><a href="https://www.oranet.jp/" target="_blank" rel="nofollow noopener">出典：有限会社オラネット</a></span></figcaption>
         </figure>
         <p>有限会社オラネットは、八戸市のWeb制作専門会社で、会社概要ページでは2000年創業、2026年現在10名体制、ホームページは反響があってこそ意味があるという方針を明確にしています。ホームページ制作ページでも、検索対策を重視し、制作から公開後のサポートまで一貫して行うことを打ち出しています。</p>
-        <p>八戸市周辺の中小企業、医院、店舗、不動産関連など、<mark><strong>まずは検索反響を改善したい地場事業者</strong></mark>に向いている会社です。LLMO専業ではありませんが、AI検索で引用されやすい情報の前提には、サイトの基本設計、FAQ、検索意図に沿った見せ方が欠かせません。その土台づくりに強い会社として比較に入れやすいです。</p>
+        <p>八戸市周辺の中小企業、医院、店舗、不動産関連など、<strong>まずは検索反響を改善したい地場事業者</strong>に向いている会社です。LLMO専業ではありませんが、AI検索で引用されやすい情報の前提には、サイトの基本設計、FAQ、検索意図に沿った見せ方が欠かせません。その土台づくりに強い会社として比較に入れやすいです。</p>
         <p class="post-ref"><a href="https://www.oranet.jp/company/" target="_blank" rel="nofollow noopener">参考：有限会社オラネット｜会社概要</a></p>
         <p class="post-ref"><a href="https://www.oranet.jp/hp/" target="_blank" rel="nofollow noopener">参考：有限会社オラネット｜ホームページ制作</a></p>
 
@@ -1144,7 +1167,7 @@
           <figcaption>北の国ウェブ工房のトップページ<span class="figure-source"><a href="https://www.kitaguniweb.com/" target="_blank" rel="nofollow noopener">出典：北の国ウェブ工房</a></span></figcaption>
         </figure>
         <p>北の国ウェブ工房は、八戸市を拠点に主に八戸市周辺で活動するWeb制作会社です。会社案内では、レスポンシブWebデザイン、Googleストリートビュー、パノラマVR、MEO対策、店舗アプリ、電子ブック制作などを案内しており、視覚訴求や店舗集客に強い構成を得意としています。</p>
-        <p>店舗、観光施設、地域サービス、住宅・不動産のように、<mark><strong>写真や現地感の伝わり方が成果に直結しやすい事業</strong></mark>と相性がよいです。AI検索では、施設の特徴、立地、見学導線、営業時間、利用方法などの整理が重要なので、地図やビジュアルを絡めた情報整備が必要な案件では比較しやすい会社です。</p>
+        <p>店舗、観光施設、地域サービス、住宅・不動産のように、<strong>写真や現地感の伝わり方が成果に直結しやすい事業</strong>と相性がよいです。AI検索では、施設の特徴、立地、見学導線、営業時間、利用方法などの整理が重要なので、地図やビジュアルを絡めた情報整備が必要な案件では比較しやすい会社です。</p>
         <p class="post-ref"><a href="https://www.kitaguniweb.com/about/" target="_blank" rel="nofollow noopener">参考：北の国ウェブ工房｜会社案内</a></p>
         <p class="post-ref"><a href="https://www.kitaguniweb.com/" target="_blank" rel="nofollow noopener">参考：北の国ウェブ工房｜トップページ</a></p>
 
@@ -1154,7 +1177,7 @@
           <figcaption>メディアワークス株式会社のトップページ<span class="figure-source"><a href="https://mdws.co.jp/" target="_blank" rel="nofollow noopener">出典：メディアワークス株式会社</a></span></figcaption>
         </figure>
         <p>メディアワークス株式会社は、八戸市に本社を置き、会社概要ページではWebマーケティングコンサルティング、SEO対策、SNS運用、ホームページ制作、地域活性化ポータルサイト事業を案内しています。八戸商工会議所認定専門家や青森県DX総合窓口登録IT企業であることも公開しており、地域の中小企業向け支援色が強い会社です。</p>
-        <p>小規模事業者や地域サービス業で、SEO、SNS、ホームページを別々に見るのではなく、<mark><strong>需要の見極めから集客導線まで一体で進めたい会社</strong></mark>に向いています。AI検索だけを単発で入れるより、発信テーマ、記事設計、SNS導線まで含めて整えたい事業者には比較候補になりやすいです。</p>
+        <p>小規模事業者や地域サービス業で、SEO、SNS、ホームページを別々に見るのではなく、<strong>需要の見極めから集客導線まで一体で進めたい会社</strong>に向いています。AI検索だけを単発で入れるより、発信テーマ、記事設計、SNS導線まで含めて整えたい事業者には比較候補になりやすいです。</p>
         <p class="post-ref"><a href="https://mdws.co.jp/company-2/" target="_blank" rel="nofollow noopener">参考：メディアワークス株式会社｜会社概要</a></p>
         <p class="post-ref"><a href="https://mdws.co.jp/" target="_blank" rel="nofollow noopener">参考：メディアワークス株式会社｜トップページ</a></p>
 
@@ -1164,7 +1187,7 @@
           <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
         </figure>
         <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作まで公開しており、AI OverviewやChatGPTにおける露出状況の調査、20項目の診断、改善レポートまで含めた支援体制を案内しています。</p>
-        <p>青森県の企業でも、すでにサイトやオウンドメディアがあり、<mark><strong>AI検索向けに何を直すべきかを診断から明確にしたい会社</strong></mark>と相性がよいです。りんご、食品加工、製造、観光のように一次情報を持っている事業ほど、LLMO専業会社の診断と記事設計が活きやすいです。</p>
+        <p>青森県の企業でも、すでにサイトやオウンドメディアがあり、<strong>AI検索向けに何を直すべきかを診断から明確にしたい会社</strong>と相性がよいです。りんご、食品加工、製造、観光のように一次情報を持っている事業ほど、LLMO専業会社の診断と記事設計が活きやすいです。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
 
         <h3>10. 株式会社ジオコード</h3>
@@ -1173,7 +1196,7 @@
           <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
         </figure>
         <p>株式会社ジオコードは、SEO対策、コンテンツ、オウンドメディア支援に加え、AIO・LLMOなどAI最適化も案内している全国対応会社です。サービスページでは通常プラン15万円からの料金例も公開しており、戦略だけでなくコンテンツ制作や実装改善まで含めて相談しやすいのが特徴です。</p>
-        <p>青森県内でも、県外商圏を持つBtoB企業や、社内リソースが限られていて<mark><strong>分析から実行まで外部チームに寄せたい会社</strong></mark>に向いています。地方の中堅企業が全国比較に入っていく文脈では、SEOとAI最適化を一体で進められる会社として見ておく価値があります。</p>
+        <p>青森県内でも、県外商圏を持つBtoB企業や、社内リソースが限られていて<strong>分析から実行まで外部チームに寄せたい会社</strong>に向いています。地方の中堅企業が全国比較に入っていく文脈では、SEOとAI最適化を一体で進められる会社として見ておく価値があります。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
 
         <p>他地域との違いまで見たい方は、<a href="blog-hokkaido-llmo-kaisha.html">北海道の比較記事</a>や<a href="blog-fukuoka-llmo-kaisha.html">福岡の比較記事</a>もあわせて確認すると、青森県で何を優先すべきかが見えやすくなります。</p>
@@ -1185,41 +1208,41 @@
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/seisaku/seisaku/files/yokuwakaru2026.pdf" target="_blank" rel="noopener">参考：青森県｜よくわかる青森県2026</a></p>
 
         <h3>青森市・弘前市・八戸市の三極で検索意図を切り分けられるか</h3>
-        <p>青森県では、県庁所在地の青森市、観光とりんご産業の弘前市、工業・物流・水産の八戸市で、ユーザーがAIに聞く内容が変わります。青森市では行政機関や生活インフラ、弘前市では観光・文化・農産物、八戸市では製造や港湾物流が前面に出やすく、<mark><strong>同じ「県内向けページ」でも必要なFAQや比較軸が違う</strong></mark>のが実情です。</p>
+        <p>青森県では、県庁所在地の青森市、観光とりんご産業の弘前市、工業・物流・水産の八戸市で、ユーザーがAIに聞く内容が変わります。青森市では行政機関や生活インフラ、弘前市では観光・文化・農産物、八戸市では製造や港湾物流が前面に出やすく、<strong>同じ「県内向けページ」でも必要なFAQや比較軸が違う</strong>のが実情です。</p>
         <p>そのため、青森県のLLMO会社を選ぶなら、県全体を一枚で説明するのではなく、ターゲット都市圏、対応地域、訪問可否、オンライン対応、拠点別の導線まで分けて設計できるかを見たほうがよいです。青森県は市場規模が大きい地域ではない分、どの商圏を狙うのかを曖昧にしたまま施策を始めると、情報設計がぼやけやすいです。</p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/seisaku/tokei/files/2025zentai.pdf" target="_blank" rel="noopener">参考：青森県｜2025年度版 青森県社会経済白書</a></p>
 
         <h3>観光・祭り・宿泊の回遊導線を設計できるか</h3>
         <p>「よくわかる青森県2026」では、2024年の観光入込客数は延べ3,237万8,000人、実人数推計で1,386万3,000人でした。内訳では県外客が535万4,000人、訪日外国人が34万7,000人まで回復しており、行祭事では弘前さくらまつりが245万人、八戸三社大祭が156万5,000人、青森ねぶた祭が105万人と、都市ごとに強い観光フックがあります。</p>
-        <p>観光・宿泊・飲食のLLMOでは、「青森県旅行」だけでなく、祭り日程、アクセス、滞在エリア、温泉、レンタカー移動、子連れ可否、冬季営業など、回遊前提の比較情報が重要です。<mark><strong>イベント単位、都市単位、季節単位でページを切り分け、FAQまで実装できる会社</strong></mark>のほうが、AI検索でも比較候補に入りやすくなります。</p>
+        <p>観光・宿泊・飲食のLLMOでは、「青森県旅行」だけでなく、祭り日程、アクセス、滞在エリア、温泉、レンタカー移動、子連れ可否、冬季営業など、回遊前提の比較情報が重要です。<strong>イベント単位、都市単位、季節単位でページを切り分け、FAQまで実装できる会社</strong>のほうが、AI検索でも比較候補に入りやすくなります。</p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/seisaku/seisaku/files/yokuwakaru2026.pdf" target="_blank" rel="noopener">参考：青森県｜よくわかる青森県2026</a></p>
 
         <h3>りんご・野菜・水産・食品加工の一次情報を構造化できるか</h3>
         <p>青森県の強みは、観光だけではありません。青森りんご総合戦略では、青森りんごは150年の歴史を経て生産量40万トン、販売額1,000億円の日本一産地に成長したと整理されています。また、県の野菜ページでは、野菜全体の産出額が31年連続東北1位で、「ながいも」「にんにく」「ごぼう」は作付面積全国1位とされています。さらに「よくわかる青森県2026」では、2024年の海面漁業・養殖業の漁獲量・生産量は9万1,100トン、2023年の漁業産出額は503億円でした。</p>
-        <p>この領域で重要なのは、単なる会社紹介ではなく、品目、規格、収穫・出荷時期、加工体制、認証、配送条件、ロット、導入事例などの一次情報を構造化することです。青森県のBtoBや食品系サイトでは、<mark><strong>AIが「何を、どこまで、どの条件で提供できるか」を誤読しにくい形で示せるか</strong></mark>が特に重要です。</p>
+        <p>この領域で重要なのは、単なる会社紹介ではなく、品目、規格、収穫・出荷時期、加工体制、認証、配送条件、ロット、導入事例などの一次情報を構造化することです。青森県のBtoBや食品系サイトでは、<strong>AIが「何を、どこまで、どの条件で提供できるか」を誤読しにくい形で示せるか</strong>が特に重要です。</p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/nourin/ringo/R7ringo_senryaku.html" target="_blank" rel="noopener">参考：青森県｜青森りんご総合戦略</a></p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/nourin/noen/aomorinoyasai.html" target="_blank" rel="noopener">参考：青森県｜あおもりのやさい</a></p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/seisaku/seisaku/files/yokuwakaru2026.pdf" target="_blank" rel="noopener">参考：青森県｜よくわかる青森県2026</a></p>
 
         <h3>八戸港と青森空港を含む広域物流・商流を説明できるか</h3>
         <p>青森県は、県内物流や観光導線だけでなく、港湾・空港も強い県です。県の公表では、2024年度の青森空港利用者数は1,259,234人でした。八戸港についても、県の港湾ページで韓国・中国、北米西岸への定期コンテナ航路に加え、東京港・横浜港との国際フィーダー航路が就航し、北東北の国際物流拠点港として重要性が高まっていると説明されています。</p>
-        <p>食品加工、機械、部材、観光、採用のどれを取っても、青森県では「どこへつながる県なのか」の説明が成果に直結しやすいです。<mark><strong>配送範囲、港湾・空港アクセス、納期感、出張対応、越境・広域対応まで含めて情報設計できる会社</strong></mark>かどうかを見ると、BtoBや広域商圏の案件で失敗しにくくなります。</p>
+        <p>食品加工、機械、部材、観光、採用のどれを取っても、青森県では「どこへつながる県なのか」の説明が成果に直結しやすいです。<strong>配送範囲、港湾・空港アクセス、納期感、出張対応、越境・広域対応まで含めて情報設計できる会社</strong>かどうかを見ると、BtoBや広域商圏の案件で失敗しにくくなります。</p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/release/2025/78094.html" target="_blank" rel="noopener">参考：青森県｜令和6年度の青森空港・三沢空港の利用状況</a></p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/kendo/kowan/kowan_hachinohekou.html" target="_blank" rel="noopener">参考：青森県｜八戸港</a></p>
 
         <h3>高齢化率の高さを前提に医療・介護・生活サービスを整備できるか</h3>
         <p>青森県社会経済白書2025では、2024年の65歳以上人口割合は35.7％とされています。つまり、青森県では医療、介護、福祉、生活支援の検索が、若年層中心の都市部とは違い、本人だけでなく家族や遠方居住者による代理検索も起きやすい県です。</p>
-        <p>こうした領域では、サービス一覧を並べるだけでは足りません。対象地域、受診や利用の流れ、送迎・訪問の可否、予約手順、よくある質問、更新日、監修性まで丁寧に整理し、<mark><strong>不安を減らす説明ができる会社</strong></mark>を選ぶべきです。YMYLに近い領域ほど、派手な訴求より正確な情報構造が効きます。</p>
+        <p>こうした領域では、サービス一覧を並べるだけでは足りません。対象地域、受診や利用の流れ、送迎・訪問の可否、予約手順、よくある質問、更新日、監修性まで丁寧に整理し、<strong>不安を減らす説明ができる会社</strong>を選ぶべきです。YMYLに近い領域ほど、派手な訴求より正確な情報構造が効きます。</p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/seisaku/tokei/files/2025zentai.pdf" target="_blank" rel="noopener">参考：青森県｜2025年度版 青森県社会経済白書</a></p>
 
         <h3>多言語・採用・更新運用まで実装できるか</h3>
         <p>青森県のサイト改善でボトルネックになりやすいのは、戦略そのものより実装と更新です。観光分野では英語ページやFAQの継続更新、食品分野では出荷情報や規格の更新、採用分野では社内の人手不足を前提にした運用設計が必要になります。2024年の訪日外国人が34万7,000人まで戻っていることを考えても、多言語導線の重要度は上がっています。</p>
-        <p>LLMO会社を比較するときは、診断や提案で終わらず、<mark><strong>実際にページを直す、FAQを足す、英語ページを整える、採用・地域別ページを増やすところまで動けるか</strong></mark>を確認しましょう。青森県では小さな組織ほど、ここを外部パートナーに任せられるかが成果差になります。</p>
+        <p>LLMO会社を比較するときは、診断や提案で終わらず、<strong>実際にページを直す、FAQを足す、英語ページを整える、採用・地域別ページを増やすところまで動けるか</strong>を確認しましょう。青森県では小さな組織ほど、ここを外部パートナーに任せられるかが成果差になります。</p>
         <p class="post-ref"><a href="https://www.pref.aomori.lg.jp/soshiki/seisaku/seisaku/files/yokuwakaru2026.pdf" target="_blank" rel="noopener">参考：青森県｜よくわかる青森県2026</a></p>
 
         <h2>青森県のLLMO会社に依頼する費用相場</h2>
         <p>青森県でLLMOを外注する場合、費用はかなり幅があります。診断だけのスポット支援から、月額伴走、ホームページ改修込みの案件まで並んでいるため、単純に安い高いでは比較しにくいです。</p>
-        <p>ここで大事なのは、単に金額を見るのではなく、<mark><strong>現状サイトの作り直しが必要なのか、AI検索向けの診断から入るのか、記事制作やFAQ追加まで含むのか</strong></mark>で価格帯を分けて考えることです。青森県では、観光撮影、取材、多拠点ページ、ECや多言語対応の有無で工数差が出やすいので、制作範囲と運用範囲を必ず分けて確認しましょう。</p>
+        <p>ここで大事なのは、単に金額を見るのではなく、<strong>現状サイトの作り直しが必要なのか、AI検索向けの診断から入るのか、記事制作やFAQ追加まで含むのか</strong>で価格帯を分けて考えることです。青森県では、観光撮影、取材、多拠点ページ、ECや多言語対応の有無で工数差が出やすいので、制作範囲と運用範囲を必ず分けて確認しましょう。</p>
 
         <table>
           <tr>
@@ -1251,63 +1274,63 @@
 
         <h3>まずは診断からなら10万円前後が入口になる</h3>
         <p>公開価格で最も分かりやすい入口は診断プランです。たとえばLiKGはLLMO診断プランを10万円から公開しており、まずは現状把握から入りたい企業にとって判断しやすい価格帯です。</p>
-        <p>青森県でも、いきなり全ページを直す前に、どの質問で出ていないのか、競合がどんな一次情報を整えているのかを確認したい会社は多いはずです。<mark><strong>自社が観光型なのか、地域サービス型なのか、BtoB型なのかを見極める初期費用</strong></mark>として使いやすい帯です。</p>
+        <p>青森県でも、いきなり全ページを直す前に、どの質問で出ていないのか、競合がどんな一次情報を整えているのかを確認したい会社は多いはずです。<strong>自社が観光型なのか、地域サービス型なのか、BtoB型なのかを見極める初期費用</strong>として使いやすい帯です。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>小さく始めるなら月額5万円〜15万円帯が現実的</h3>
         <p>中小企業や店舗型ビジネスでは、最初から大きな予算をかけるより、月額の小さな改善から始めたいケースも多いです。AIMAでは月額5万円のLLMO支援を公開しており、まずは質問設計や少数ページの改善から着手したい会社にとって分かりやすい価格帯になっています。</p>
-        <p>この帯は、青森市や弘前市の店舗型ビジネス、採用ページを持つ地域企業、単一ブランドのサービスサイトで、<mark><strong>まずは小さくAI検索対応を試したい会社</strong></mark>に向いています。ただし、県内広域対応や記事制作本数が多い場合は、この価格だけでは足りないこともあります。</p>
+        <p>この帯は、青森市や弘前市の店舗型ビジネス、採用ページを持つ地域企業、単一ブランドのサービスサイトで、<strong>まずは小さくAI検索対応を試したい会社</strong>に向いています。ただし、県内広域対応や記事制作本数が多い場合は、この価格だけでは足りないこともあります。</p>
         <p class="post-ref"><a href="https://ai-and-marketing.jp/" target="_blank" rel="noopener">参考：株式会社AIMA｜月額5万円のLLMO</a></p>
 
         <h3>伴走支援の中心帯は月額15万円〜30万円前後</h3>
         <p>継続的に改善提案を受けながら進めるなら、月額15万円〜30万円前後が一つの目安です。ジオコードは通常プラン15万円から、LiKGはLLMO×SEOコンサルティングを30万円から公開しており、分析、改善提案、記事方針、実装相談まで含む支援がこの帯に集まりやすいです。</p>
-        <p>青森県では、観光、食品加工、採用、医療、物流で見るべき指標が違うため、<mark><strong>単発よりも継続伴走で仮説を調整していく支援</strong></mark>のほうが向く会社も少なくありません。特に、県内市場だけでなく県外・海外への流通や送客を狙う会社では、この帯が現実的になりやすいです。</p>
+        <p>青森県では、観光、食品加工、採用、医療、物流で見るべき指標が違うため、<strong>単発よりも継続伴走で仮説を調整していく支援</strong>のほうが向く会社も少なくありません。特に、県内市場だけでなく県外・海外への流通や送客を狙う会社では、この帯が現実的になりやすいです。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>制作や改修まで含めると総額50万円台以上を見ておく</h3>
         <p>青森県では、LLMOだけを入れるというより、ホームページの刷新、FAQ整備、撮影、採用ページ追加、商品説明の整理までまとめて必要になるケースが多いです。この場合は月額ではなく、制作費や導入費としてまとまった予算を見る必要があります。</p>
-        <p>オラネットは自社サイト規模の制作費を50万円からの目安として紹介しており、Arteも管理・更新を月額5,000円から案内しています。つまり、<mark><strong>LLMO費用とは別に、土台となるサイト制作や保守運用の費用が乗る</strong></mark>前提で考えたほうが実態に近いです。</p>
+        <p>オラネットは自社サイト規模の制作費を50万円からの目安として紹介しており、Arteも管理・更新を月額5,000円から案内しています。つまり、<strong>LLMO費用とは別に、土台となるサイト制作や保守運用の費用が乗る</strong>前提で考えたほうが実態に近いです。</p>
         <p class="post-ref"><a href="https://www.oranet.jp/nav/" target="_blank" rel="nofollow noopener">参考：有限会社オラネット｜目的別一覧</a></p>
         <p class="post-ref"><a href="https://arte.aomori.jp/" target="_blank" rel="noopener">参考：Arte株式会社｜トップページ</a></p>
 
         <h3>青森県では取材・撮影・多拠点・ECで費用が上がりやすい</h3>
         <p>青森県の案件が都市部と違うのは、取材対象や商圏が広く、写真や現地感が重要になりやすいことです。りんごや食品加工では収穫時期や工場写真、観光では季節ごとの景観、医療や介護では設備やアクセスの説明が必要になり、文章だけでは伝わりにくいことが多いです。</p>
-        <p>さらに、県内複数拠点、EC導線、英語ページ、イベント更新が入ると、ページ数も確認項目も増えます。<mark><strong>青森県案件は「現地情報を整理して更新し続けるコスト」が価格に乗りやすい</strong></mark>と考えたほうがよいです。</p>
+        <p>さらに、県内複数拠点、EC導線、英語ページ、イベント更新が入ると、ページ数も確認項目も増えます。<strong>青森県案件は「現地情報を整理して更新し続けるコスト」が価格に乗りやすい</strong>と考えたほうがよいです。</p>
 
         <h3>青森市単点か県内広域かで予算の組み方を分ける</h3>
         <p>青森県のLLMO費用で最も大きい分かれ目は、青森市内や単一店舗だけを狙うのか、弘前・八戸を含む県内広域、あるいは県外商圏まで見据えるのかです。前者なら小さく始めやすい一方で、後者は対応地域や業種別ページが増えるため、どうしても費用は上がります。</p>
-        <p>迷う場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口で優先順位を整理し、その後に単一商圏で回すのか、最初から県内広域を設計するのかを決めると失敗しにくいです。費用は金額だけでなく、<mark><strong>どこまでの市場を取りにいくか</strong></mark>とセットで考えましょう。</p>
+        <p>迷う場合は、まず<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口で優先順位を整理し、その後に単一商圏で回すのか、最初から県内広域を設計するのかを決めると失敗しにくいです。費用は金額だけでなく、<strong>どこまでの市場を取りにいくか</strong>とセットで考えましょう。</p>
 
         <h2>青森県のLLMO会社に関するよくある質問</h2>
         <p>最後に、青森県の企業や店舗から出やすい疑問を整理します。比較ポイントと費用相場とは役割を分け、ここでは意思決定の直前に気になりやすい点だけを短く確認します。</p>
 
         <h3>青森県のLLMO会社に依頼する意味はありますか？</h3>
-        <p>あります。青森県は青森市・弘前市・八戸市で商圏や検索意図が分かれ、観光、りんご、食品加工、水産、物流、医療まで業種も多様です。<mark><strong>AI検索で自社情報がどう見つかるかを整える価値</strong></mark>は十分あります。</p>
+        <p>あります。青森県は青森市・弘前市・八戸市で商圏や検索意図が分かれ、観光、りんご、食品加工、水産、物流、医療まで業種も多様です。<strong>AI検索で自社情報がどう見つかるかを整える価値</strong>は十分あります。</p>
 
         <h3>県内会社でないと意味はありませんか？</h3>
-        <p>必ずしも県内本社である必要はありません。重要なのは、青森県の地理や産業構造を理解し、<mark><strong>都市圏ごとの違いや一次産業の文脈を踏まえて設計できるか</strong></mark>です。</p>
+        <p>必ずしも県内本社である必要はありません。重要なのは、青森県の地理や産業構造を理解し、<strong>都市圏ごとの違いや一次産業の文脈を踏まえて設計できるか</strong>です。</p>
 
         <h3>青森県の観光・宿泊・飲食でもLLMOは効果がありますか？</h3>
-        <p>あります。祭り、桜、温泉、アクセス、価格帯、周遊、FAQを整理すると、AI検索の比較回答に入りやすくなります。特に青森県は<mark><strong>季節性と都市ごとの違い</strong></mark>を出すことが重要です。</p>
+        <p>あります。祭り、桜、温泉、アクセス、価格帯、周遊、FAQを整理すると、AI検索の比較回答に入りやすくなります。特に青森県は<strong>季節性と都市ごとの違い</strong>を出すことが重要です。</p>
 
         <h3>青森県のりんご・野菜・水産・食品加工の会社でもLLMOは有効ですか？</h3>
-        <p>有効です。取扱品目、規格、出荷時期、加工体制、認証、配送範囲などを一次情報として整理すると、法人比較や仕入れ検討の場面で理解されやすくなります。<mark><strong>一般的な会社紹介だけでは弱い</strong></mark>業種ほど効果が出やすいです。</p>
+        <p>有効です。取扱品目、規格、出荷時期、加工体制、認証、配送範囲などを一次情報として整理すると、法人比較や仕入れ検討の場面で理解されやすくなります。<strong>一般的な会社紹介だけでは弱い</strong>業種ほど効果が出やすいです。</p>
 
         <h3>青森県の医療・介護・地域サービスでもLLMOは効果がありますか？</h3>
-        <p>あります。対象エリア、利用の流れ、安心材料、アクセス、予約方法を整理すると、住民や家族がAIで調べるときにも情報が伝わりやすくなります。<mark><strong>対象地域と更新日の明確化</strong></mark>が重要です。</p>
+        <p>あります。対象エリア、利用の流れ、安心材料、アクセス、予約方法を整理すると、住民や家族がAIで調べるときにも情報が伝わりやすくなります。<strong>対象地域と更新日の明確化</strong>が重要です。</p>
 
         <h3>SEO会社とLLMO会社は何が違いますか？</h3>
-        <p>SEOは検索結果で見つけてもらう施策、LLMOはAIの回答内で引用・参照されやすくする施策です。青森県では両方をつなげて考えないと、<mark><strong>観光回遊やBtoBの複雑な導線</strong></mark>に対応しにくいです。</p>
+        <p>SEOは検索結果で見つけてもらう施策、LLMOはAIの回答内で引用・参照されやすくする施策です。青森県では両方をつなげて考えないと、<strong>観光回遊やBtoBの複雑な導線</strong>に対応しにくいです。</p>
 
         <h3>青森県のLLMO会社に依頼したら、どれくらいで成果が出ますか？</h3>
-        <p>一般的には3〜6か月が目安です。短期で激変するより、ページ整備と観測を積み重ねて少しずつ変わる施策なので、<mark><strong>継続前提で見る</strong></mark>ほうが現実的です。</p>
+        <p>一般的には3〜6か月が目安です。短期で激変するより、ページ整備と観測を積み重ねて少しずつ変わる施策なので、<strong>継続前提で見る</strong>ほうが現実的です。</p>
 
         <h3>青森県のLLMO会社を選ぶときは何を確認すればよいですか？</h3>
         <p>確認すべきなのは、どの都市圏や業種文脈を狙うのか、制作や更新まで任せるのか、料金に何が含まれるのかの3点です。青森県では、この3点が曖昧だと比較がぶれやすいです。</p>
 
         <h2>青森県でLLMO会社を選ぶなら、三都市軸と一次情報の強さから逆算しましょう</h2>
-        <p>青森県のLLMOで大切なのは、<mark><strong>青森市・弘前市・八戸市を同じ商圏として扱わないこと</strong></mark>です。観光・宿泊なら季節性と回遊導線、りんごや食品加工なら一次情報、医療・介護なら対象地域と安心材料が判断軸になります。</p>
+        <p>青森県のLLMOで大切なのは、<strong>青森市・弘前市・八戸市を同じ商圏として扱わないこと</strong>です。観光・宿泊なら季節性と回遊導線、りんごや食品加工なら一次情報、医療・介護なら対象地域と安心材料が判断軸になります。</p>
         <p>そのうえで、戦略だけで終わらず、ページ改修、FAQ追加、写真や図版の整理、地域別ページの作成まで動ける会社を選ぶと前に進めやすいです。比較の起点としては、<a href="blog-hokkaido-llmo-kaisha.html">北海道のLLMO会社比較</a>や<a href="blog-tokyo-llmo-kaisha.html">東京のLLMO会社比較</a>を見比べると、青森県の商圏の特殊性がより分かりやすくなります。まずは<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問文脈で見つかるべきかを整理していくのがおすすめです。</p>
       </div>
 
@@ -1335,14 +1358,14 @@
         </div>
       </section>
 
-      <div class="post-nav">
+                  <div class="post-nav">
         <a href="blog-hokkaido-llmo-kaisha.html">
           <span class="post-nav-label">&larr; 前の記事</span>
-          北海道でおすすめのLLMO会社10選を見る
+          北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
-        <a href="llmo-shindan.html" style="text-align: right;">
-          <span class="post-nav-label">関連ページ &rarr;</span>
-          無料LLMO診断で現状を確認する
+        <a href="blog-iwate-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
       </div>
 
@@ -1369,11 +1392,11 @@
           <article class="post-related-card">
             <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
                 <p class="post-related-card-text">BtoBや本社集積地での比較軸を、青森県の地域密着市場と対比したい方におすすめです。</p>
                 <div class="post-related-date">2026.04.14</div>
               </div>
@@ -1382,11 +1405,11 @@
           <article class="post-related-card">
             <a href="blog-fukuoka-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-fukuoka-llmo-kaisha/eyecatch.webp" alt="福岡でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+                <img src="images/blog-fukuoka-llmo-kaisha/eyecatch.webp" alt="福岡のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">福岡でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">福岡のLLMO対策会社10選【2026年版】｜地元密着型と全国対応で選ぶ</div>
                 <p class="post-related-card-text">観光・物流・スタートアップ都市としての比較視点を、青森県の観光回遊や物流文脈と見比べたい方向けです。</p>
                 <div class="post-related-date">2026.04.15</div>
               </div>
@@ -1425,33 +1448,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1573,7 +1596,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

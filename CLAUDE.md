@@ -8,6 +8,7 @@
 - Use the supervisor profile from `company.html`.
 - Put quote source links inside the same `blockquote`.
 - After creating an article, update the article card in `blog.html`.
+- The shared blog header/footer lives in `blog-post.html` only. To change it, edit `blog-post.html` and run `python3 scripts/sync_blog_layout.py` to propagate to all blog pages. Never hand-edit the `media-site-header` / `blog-footer` blocks in other files.
 - Deploy notes are in `docs/deploy.md`.
 
 # Google API Auth
@@ -28,4 +29,3 @@
 - For GA4 reads, use the `analytics-read` token entry first.
 - If a required GA4 property ID is unknown, list accessible properties with `python3 scripts/ga4_run_report.py --list-properties` before asking the user.
 - Do not invent GA4 property IDs, Search Console property IDs, dimensions, or metrics. If the API rejects a combination, reduce the query and retry with a smaller set.
-- If canonical tokens are missing or insufficient, stop and ask for the needed credential path instead of searching broadly.

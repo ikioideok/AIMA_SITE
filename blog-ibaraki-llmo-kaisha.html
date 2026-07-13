@@ -171,7 +171,9 @@
   ]
 }</script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=53" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link href="css/style.css?v=54" rel="stylesheet"/>
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -919,25 +921,46 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- HEADER -->
-<header>
-<a class="logo" href="/">AIMA</a>
-<button aria-label="メニューを開く" class="hamburger" id="hamburger">
-<span></span><span></span><span></span>
-</button>
-<nav class="header-nav" id="header-nav">
-<a href="company.html">会社概要</a>
-<a href="/service.html">サービス</a>
-<a href="/#case">事例</a>
-<a href="/#pricing">料金</a>
-<a href="blog.html">ブログ</a>
-<a class="header-nav-cta" href="/#contact">お問い合わせ</a>
-</nav>
-<a class="header-cta" href="/#contact">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
 </header>
 <!-- ARTICLE -->
 <article class="post-page">
@@ -975,7 +998,7 @@
 <section aria-label="監修者情報" class="post-supervisor">
 <div class="post-supervisor-label">監修者情報</div>
 <div class="post-supervisor-card">
-<img alt="水間 雄紀" class="post-supervisor-photo" decoding="async" height="1024" loading="lazy" src="images/member-photo.png" width="1024"/>
+<img alt="水間 雄紀" class="post-supervisor-photo" decoding="async" height="320" loading="lazy" src="images/member-photo.webp" width="320"/>
 <div>
 <div class="post-supervisor-name">水間 雄紀</div>
 <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1002,7 +1025,7 @@
 <div aria-label="株式会社AIMAのご案内" class="aima-feature">
 <div class="aima-feature-kicker">運営会社のご案内</div>
 <div class="aima-feature-title">株式会社AIMA</div>
-<p>株式会社AIMAは茨城本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。水戸、つくば、県南、県西、鹿行、県北のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
+<p>株式会社AIMAは茨城本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。水戸、つくば、県南、県西、鹿行、県北のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
 <div class="aima-feature-actions">
 <a class="aima-feature-btn aima-feature-btn-secondary" href="llmo-shindan.html">無料診断はこちら</a>
 <a class="aima-feature-btn" href="/#contact">まずは相談する</a>
@@ -1011,32 +1034,32 @@
 <h3>1. 株式会社日宣メディックス</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/nissenmedix.webp" alt="株式会社日宣メディックスのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社日宣メディックスのトップページ<span class="figure-source"><a href="https://nissenmedix.co.jp/" target="_blank" rel="noopener">出典：株式会社日宣メディックス</a></span></figcaption>
+  <figcaption>株式会社日宣メディックスのトップページ<span class="figure-source"><a href="https://nissenmedix.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社日宣メディックス</a></span></figcaption>
 </figure>
 <p>株式会社日宣メディックスは、水戸市に本社を置く広告・出版・Web制作会社です。公式サイトでは、Webサイト制作について、顧客視点での情報発信、サイトマップや画面設計書の作成、SEO対策、Web広告や紙面広告、プロモーションツールの活用まで案内しています。茨城県内の情報誌や地域メディア、Web制作実績も確認できます。</p>
 <p>茨城県では、地域の生活者に向けた情報発信と、検索・AIで比較される情報設計の両方が必要です。日宣メディックスは、<mark><strong>水戸・県央を中心に、広告、地域メディア、Web、コンテンツをまとめて動かしたい企業</strong></mark>に向いています。</p>
-<p class="post-ref"><a href="https://nissenmedix.co.jp/service/digital/web/website" rel="noopener" target="_blank">参考：株式会社日宣メディックス｜WEBサイト制作</a></p>
+<p class="post-ref"><a href="https://nissenmedix.co.jp/service/digital/web/website" rel="nofollow noopener" target="_blank">参考：株式会社日宣メディックス｜WEBサイト制作</a></p>
 <h3>2. 株式会社アイテックプラス</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/itec-plus.webp" alt="株式会社アイテックプラスのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社アイテックプラスのトップページ<span class="figure-source"><a href="https://www.itec-plus.jp/" target="_blank" rel="noopener">出典：株式会社アイテックプラス</a></span></figcaption>
+  <figcaption>株式会社アイテックプラスのトップページ<span class="figure-source"><a href="https://www.itec-plus.jp/" target="_blank" rel="nofollow noopener">出典：株式会社アイテックプラス</a></span></figcaption>
 </figure>
 <p>株式会社アイテックプラスは、水戸市双葉台に拠点を置くWeb制作会社です。公式サイトでは、中小企業向けのWebサービス、SNSコンテンツ表示、Web接客ツール、マルチデバイス対応CMS、チャットボット型マーケティングツールなどを案内しています。会社案内では、企業や団体のWebサイト企画、ディレクション、デザイン、制作、運用、SaaS導入支援を中心に活動していると説明されています。</p>
 <p>LLMOでは、公開後の運用とユーザーの声の活用が重要です。アイテックプラスは、<mark><strong>茨城県内の中小企業、公的団体、スポーツ・地域団体が、運用しながら情報を育てたい場合</strong></mark>に比較しやすい会社です。</p>
-<p class="post-ref"><a href="https://www.itec-plus.jp/" rel="noopener" target="_blank">参考：株式会社アイテックプラス｜トップページ</a></p>
-<p class="post-ref"><a href="https://www.itec-plus.jp/company/index.html" rel="noopener" target="_blank">参考：株式会社アイテックプラス｜会社案内</a></p>
+<p class="post-ref"><a href="https://www.itec-plus.jp/" rel="nofollow noopener" target="_blank">参考：株式会社アイテックプラス｜トップページ</a></p>
+<p class="post-ref"><a href="https://www.itec-plus.jp/company/index.html" rel="nofollow noopener" target="_blank">参考：株式会社アイテックプラス｜会社案内</a></p>
 <h3>3. 株式会社ヘレナメディアリサーチ</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/helena.webp" alt="株式会社ヘレナメディアリサーチのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ヘレナメディアリサーチのトップページ<span class="figure-source"><a href="https://www.helena.jp/" target="_blank" rel="noopener">出典：株式会社ヘレナメディアリサーチ</a></span></figcaption>
+  <figcaption>株式会社ヘレナメディアリサーチのトップページ<span class="figure-source"><a href="https://www.helena.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ヘレナメディアリサーチ</a></span></figcaption>
 </figure>
 <p>株式会社ヘレナメディアリサーチは、土浦市小松の総合広告制作・マーケティング会社です。公式サイトでは、ホームページ制作、システム開発、サーバー管理、映像制作、印刷制作、デジタルサイネージ、コンサルティングを営業品目として掲げています。Web、映像、印刷、コンサルを組み合わせたクロスメディアマーケティングや、800件以上の制作実績も案内されています。</p>
 <p>茨城県では、観光、病院、ホテル、学校、自治体、研究機関、製造業など、Webだけでは伝わりにくい案件があります。ヘレナメディアリサーチは、<mark><strong>土浦・つくば・水戸を含む県内企業が、Web、動画、印刷、システムを一体で整えたい場合</strong></mark>に向いています。</p>
-<p class="post-ref"><a href="https://www.helena.jp/" rel="noopener" target="_blank">参考：株式会社ヘレナメディアリサーチ｜トップページ</a></p>
+<p class="post-ref"><a href="https://www.helena.jp/" rel="nofollow noopener" target="_blank">参考：株式会社ヘレナメディアリサーチ｜トップページ</a></p>
 <h3>4. 株式会社つくばマルチメディア</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/tsukuba-multimedia.webp" alt="株式会社つくばマルチメディアのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社つくばマルチメディアのトップページ<span class="figure-source"><a href="https://www.tsukuba.co.jp/" target="_blank" rel="noopener">出典：株式会社つくばマルチメディア</a></span></figcaption>
+  <figcaption>株式会社つくばマルチメディアのトップページ<span class="figure-source"><a href="https://www.tsukuba.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社つくばマルチメディア</a></span></figcaption>
 </figure>
 <p>株式会社つくばマルチメディアは、つくば市花室のWeb制作・CMS・サーバー関連会社です。公式サイトでは、ホームページ制作、SEO対策、CMS、複数ホームページ制作、スマートフォン対応、サーバー、ドメイン管理などを案内しています。科学的根拠に基づいたキーワード選択、ホームページ設計、運営管理マニュアルに基づく指導など、SEO支援の考え方も示しています。</p>
 <p>つくば市では、研究機関、大学、スタートアップ、医療・バイオ、BtoB技術企業のように、専門情報を分かりやすく構造化する力が必要です。つくばマルチメディアは、<mark><strong>専門性の高い情報をCMSで継続更新し、SEOと運用管理まで整えたい組織</strong></mark>に向いています。</p>
@@ -1044,79 +1067,79 @@
 <h3>5. 株式会社エフズフィールド</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/fsfield.webp" alt="株式会社エフズフィールドのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社エフズフィールドのトップページ<span class="figure-source"><a href="https://fsfield.jp/" target="_blank" rel="noopener">出典：株式会社エフズフィールド</a></span></figcaption>
+  <figcaption>株式会社エフズフィールドのトップページ<span class="figure-source"><a href="https://fsfield.jp/" target="_blank" rel="nofollow noopener">出典：株式会社エフズフィールド</a></span></figcaption>
 </figure>
 <p>株式会社エフズフィールドは、つくば市千現のWeb制作会社です。公式サイトでは、Web標準仕様のコーディングとSEOを施したホームページ制作を掲げ、掲載原稿の準備、根拠のあるデザイン、正しく構造化されたコーディング、公開後のメンテナンス体制まで案内しています。つくば研究支援センター内に拠点がある点も特徴です。</p>
 <p>LLMOでは、見た目よりも、AIが読めるHTML構造、ページ見出し、FAQ、内部リンク、更新体制が重要になります。エフズフィールドは、<mark><strong>つくば周辺の研究開発・BtoB・地域企業が、Web標準と構造化を重視してサイトを作りたい場合</strong></mark>に比較しやすい会社です。</p>
-<p class="post-ref"><a href="https://fsfield.jp/" rel="noopener" target="_blank">参考：株式会社エフズフィールド｜トップページ</a></p>
+<p class="post-ref"><a href="https://fsfield.jp/" rel="nofollow noopener" target="_blank">参考：株式会社エフズフィールド｜トップページ</a></p>
 <h3>6. 株式会社ADesign</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/adesign.webp" alt="株式会社ADesignのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ADesignのトップページ<span class="figure-source"><a href="https://adesign.jp/" target="_blank" rel="noopener">出典：株式会社ADesign</a></span></figcaption>
+  <figcaption>株式会社ADesignのトップページ<span class="figure-source"><a href="https://adesign.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ADesign</a></span></figcaption>
 </figure>
 <p>株式会社ADesignは、水戸市のホームページ制作・SEO対策会社です。公式サイトでは、ホームページ制作・SEO対策「HP-SEO」事業を案内し、W3Cに準じたサイト構築、コピーライト、CMS、アクセス解析、ヒートマップ分析、Googleマップ情報更新、LINE公式アカウント、Google広告、SNS広告などを支援領域として示しています。</p>
-<p>水戸・県央の店舗や企業では、Webサイト、Googleマップ、広告、SNS、採用LPをバラバラに動かすと管理が難しくなります。ADesignは、<mark><strong>デザイン性を保ちながら、SEO、広告、SNS、運用改善までまとめて相談したい企業</strong></mark>に向いています。</p>
-<p class="post-ref"><a href="https://adesign.jp/seo/" rel="noopener" target="_blank">参考：株式会社ADesign｜ホームページ制作・SEO対策</a></p>
+<p>水戸・県央の店舗や企業では、Webサイト、Googleマップ、広告、SNS、採用LPをバラバラに動かすと管理が難しくなります。ADesignは、<strong>デザイン性を保ちながら、SEO、広告、SNS、運用改善までまとめて相談したい企業</strong>に向いています。</p>
+<p class="post-ref"><a href="https://adesign.jp/seo/" rel="nofollow noopener" target="_blank">参考：株式会社ADesign｜ホームページ制作・SEO対策</a></p>
 <h3>7. 株式会社つくばアドワークス</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/tsukuba-adworks.webp" alt="株式会社つくばアドワークスのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社つくばアドワークスのトップページ<span class="figure-source"><a href="https://adworks24.co.jp/" target="_blank" rel="noopener">出典：株式会社つくばアドワークス</a></span></figcaption>
+  <figcaption>株式会社つくばアドワークスのトップページ<span class="figure-source"><a href="https://adworks24.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社つくばアドワークス</a></span></figcaption>
 </figure>
 <p>株式会社つくばアドワークスは、土浦市を拠点に、ホームページ制作、チラシ作成、販促ツール全般の企画制作を行う総合広告代理店です。公式サイトでは、Web標準コーディングとSEOを施したホームページ制作を案内し、県央、県南、県西、千葉、東京、埼玉、栃木までの出張可能エリアも示しています。</p>
-<p>茨城県南や県西では、つくば、土浦、牛久、龍ケ崎、守谷、古河、筑西、常総など、市町村をまたいだ商圏設計が必要です。つくばアドワークスは、<mark><strong>Webと紙の販促を合わせ、広域商圏に向けて情報を届けたい企業</strong></mark>に向いています。</p>
-<p class="post-ref"><a href="https://adworks24.co.jp/" rel="noopener" target="_blank">参考：つくばアドワークス｜ホームページ制作</a></p>
+<p>茨城県南や県西では、つくば、土浦、牛久、龍ケ崎、守谷、古河、筑西、常総など、市町村をまたいだ商圏設計が必要です。つくばアドワークスは、<strong>Webと紙の販促を合わせ、広域商圏に向けて情報を届けたい企業</strong>に向いています。</p>
+<p class="post-ref"><a href="https://adworks24.co.jp/" rel="nofollow noopener" target="_blank">参考：つくばアドワークス｜ホームページ制作</a></p>
 <h3>8. 合同会社acroweb</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/acroweb.webp" alt="合同会社acrowebのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>合同会社acrowebのトップページ<span class="figure-source"><a href="https://acroweb.jp/" target="_blank" rel="noopener">出典：合同会社acroweb</a></span></figcaption>
+  <figcaption>合同会社acrowebのトップページ<span class="figure-source"><a href="https://acroweb.jp/" target="_blank" rel="nofollow noopener">出典：合同会社acroweb</a></span></figcaption>
 </figure>
 <p>合同会社acrowebは、水戸市見川のWebコンサルティング会社です。公式サイトでは、SEO対策をしたホームページを軸に、SNS、Googleマイビジネス、動画配信、名刺、チラシなどを目的に合わせて連携させる提案を案内しています。Indeed連携による求人情報の自動更新や、業務改善につながる問い合わせフォーム活用にも触れています。</p>
-<p>小規模事業者では、高額なコンサルティングよりも、まず基本情報、地域名、FAQ、採用、SNS、Googleビジネスプロフィールをそろえるほうが現実的です。acrowebは、<mark><strong>水戸周辺の店舗・小規模企業が、SEO、MEO、SNS、求人を無理なく連動したい場合</strong></mark>に比較しやすい会社です。</p>
-<p class="post-ref"><a href="https://acroweb.jp/" rel="noopener" target="_blank">参考：合同会社acroweb｜トップページ</a></p>
+<p>小規模事業者では、高額なコンサルティングよりも、まず基本情報、地域名、FAQ、採用、SNS、Googleビジネスプロフィールをそろえるほうが現実的です。acrowebは、<strong>水戸周辺の店舗・小規模企業が、SEO、MEO、SNS、求人を無理なく連動したい場合</strong>に比較しやすい会社です。</p>
+<p class="post-ref"><a href="https://acroweb.jp/" rel="nofollow noopener" target="_blank">参考：合同会社acroweb｜トップページ</a></p>
 <h3>9. 株式会社LiKG</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/likg.webp" alt="株式会社LiKGのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="noopener">出典：株式会社LiKG</a></span></figcaption>
+  <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
 </figure>
 <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作を案内し、AI OverviewやChatGPTでの露出状況調査、20項目診断、改善レポート、構造化データ改善指示、記事構成作成などを説明しています。料金も、LLMO診断10万円から、LLMO×SEOコンサルティング30万円からと公開されています。</p>
-<p>茨城県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。<mark><strong>研究開発、農業、食品、観光、医療、採用、製造など、一次情報を持っているのにAI検索で拾われていない会社</strong></mark>は、診断から始める価値があります。</p>
-<p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" rel="noopener" target="_blank">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
+<p>茨城県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。<strong>研究開発、農業、食品、観光、医療、採用、製造など、一次情報を持っているのにAI検索で拾われていない会社</strong>は、診断から始める価値があります。</p>
+<p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" rel="nofollow noopener" target="_blank">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
 <h3>10. 株式会社ジオコード</h3>
 <figure>
   <img src="images/blog-ibaraki-llmo-kaisha/geocode.webp" alt="株式会社ジオコードのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="noopener">出典：株式会社ジオコード</a></span></figcaption>
+  <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
 </figure>
 <p>株式会社ジオコードは、SEO対策、コンテンツマーケティング、オウンドメディア運用、サイト修正・実装、AIO・LLMOなどAI最適化まで案内している全国対応会社です。サービスページでは通常プラン15万円からと公開されており、SEO対策コンサルティング、サイト修正、UI/UX改善、AI最適化、コンテンツマーケティングを組み合わせられる構成です。</p>
-<p>茨城県内でも、県外商圏を持つBtoB企業、EC企業、採用を強める企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、<mark><strong>SEOとLLMOを分けず、分析から実装まで任せたい企業</strong></mark>に向いています。</p>
-<p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" rel="noopener" target="_blank">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
+<p>茨城県内でも、県外商圏を持つBtoB企業、EC企業、採用を強める企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、<strong>SEOとLLMOを分けず、分析から実装まで任せたい企業</strong>に向いています。</p>
+<p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" rel="nofollow noopener" target="_blank">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
 <h2>茨城県のLLMO会社を比較する際のポイント</h2>
-<p>茨城県でLLMO会社を比較するときは、会社名の知名度よりも、<mark><strong>茨城県の地域構造と産業の違いをページ設計に落とし込めるか</strong></mark>を見てください。ここでは、会社一覧とは役割を分け、茨城県ならではの比較軸だけを整理します。</p>
+<p>茨城県でLLMO会社を比較するときは、会社名の知名度よりも、<strong>茨城県の地域構造と産業の違いをページ設計に落とし込めるか</strong>を見てください。ここでは、会社一覧とは役割を分け、茨城県ならではの比較軸だけを整理します。</p>
 <h3>水戸・つくば・県南・県西・鹿行・県北で検索意図を分けられるか</h3>
 <p>茨城県は、県庁所在地の水戸、研究開発拠点のつくば、首都圏通勤・住宅商圏の県南、製造と物流が絡む県西、鹿島臨海工業地帯を抱える鹿行、日立・ひたちなかを含む県北で検索意図が変わります。人口も約278万人規模で、地域ごとの産業と生活導線が大きく違います。</p>
-<p>LLMO会社には、水戸、つくば、土浦、取手、守谷、日立、ひたちなか、古河、筑西、神栖を同じ「茨城県」として一括りにせず、<mark><strong>地域ごとの相談内容、移動距離、商圏、採用事情、産業文脈を分けて設計できるか</strong></mark>を確認しましょう。</p>
-<p class="post-ref"><a href="https://www.pref.ibaraki.jp/kikaku/tokei/fukyu/tokei/betsu/jinko/getsu/jinko2603.html" rel="noopener" target="_blank">参考：茨城県｜茨城県の人口と世帯（推計）令和8年3月1日現在</a></p>
+<p>LLMO会社には、水戸、つくば、土浦、取手、守谷、日立、ひたちなか、古河、筑西、神栖を同じ「茨城県」として一括りにせず、<strong>地域ごとの相談内容、移動距離、商圏、採用事情、産業文脈を分けて設計できるか</strong>を確認しましょう。</p>
+<p class="post-ref"><a href="https://www.pref.ibaraki.jp/kikaku/tokei/fukyu/tokei/betsu/jinko/getsu/jinko2603.html" rel="nofollow noopener" target="_blank">参考：茨城県｜茨城県の人口と世帯（推計）令和8年3月1日現在</a></p>
 <h3>観光はひたちなか・大洗・筑波山・笠間・常総を分けられるか</h3>
 <p>茨城県の令和6年観光客動態調査では、2024年の観光入込客数は延べ6,180万人、観光消費額は4,447億円でした。入込客数上位市町村には、ひたちなか市、大洗町、つくば市、笠間市、阿見町が並び、道の駅常総、御船祭、古河花火大会、筑波山などの増加要因も示されています。</p>
-<p>観光・宿泊・飲食では、AIが「ひたち海浜公園はいつ行くべきか」「大洗で子連れに向く宿」「筑波山のアクセス」「笠間焼とカフェ巡り」「道の駅常総の混雑」のような質問に答えます。LLMO会社には、<mark><strong>観光地名、季節、交通、予約、周辺施設、よくある不安をセットで整理できるか</strong></mark>を見てください。</p>
-<p class="post-ref"><a href="https://www.pref.ibaraki.jp/shokorodo/kanbutsu/kikaku/documents/r6doutai.pdf" rel="noopener" target="_blank">参考：茨城県｜2024年（令和6年）観光客動態調査の結果について</a></p>
+<p>観光・宿泊・飲食では、AIが「ひたち海浜公園はいつ行くべきか」「大洗で子連れに向く宿」「筑波山のアクセス」「笠間焼とカフェ巡り」「道の駅常総の混雑」のような質問に答えます。LLMO会社には、<strong>観光地名、季節、交通、予約、周辺施設、よくある不安をセットで整理できるか</strong>を見てください。</p>
+<p class="post-ref"><a href="https://www.pref.ibaraki.jp/shokorodo/kanbutsu/kikaku/documents/r6doutai.pdf" rel="nofollow noopener" target="_blank">参考：茨城県｜2024年（令和6年）観光客動態調査の結果について</a></p>
 <h3>農業・食品・ECでは園芸、米、畜産の情報を構造化できるか</h3>
 <p>茨城県の2024年農業産出額は5,494億円で、2017年から8年連続で全国第3位です。部門別では、米が26％、園芸が48％、畜産が23％となっており、メロン、れんこん、かんしょ、米、野菜、畜産、加工食品、ギフト、ECなど、商品情報が成果に直結しやすい地域です。</p>
-<p>この領域では、商品名だけでは不十分です。産地、品種、出荷時期、保存方法、配送温度、ギフト対応、法人取引、レシピ、賞味期限、購入方法まで出す必要があります。LLMO会社には、<mark><strong>商品情報をAIが読みやすい表、FAQ、構造化データ、比較ページに落とせるか</strong></mark>を確認しましょう。</p>
-<p class="post-ref"><a href="https://www.pref.ibaraki.jp/nourinsuisan/noseisaku/senryaku/5sonota/sanshutsugaku.html" rel="noopener" target="_blank">参考：茨城県｜農業産出額及び生産農業所得</a></p>
+<p>この領域では、商品名だけでは不十分です。産地、品種、出荷時期、保存方法、配送温度、ギフト対応、法人取引、レシピ、賞味期限、購入方法まで出す必要があります。LLMO会社には、<strong>商品情報をAIが読みやすい表、FAQ、構造化データ、比較ページに落とせるか</strong>を確認しましょう。</p>
+<p class="post-ref"><a href="https://www.pref.ibaraki.jp/nourinsuisan/noseisaku/senryaku/5sonota/sanshutsugaku.html" rel="nofollow noopener" target="_blank">参考：茨城県｜農業産出額及び生産農業所得</a></p>
 <h3>つくば研究学園都市の専門情報を扱えるか</h3>
 <p>つくば市公式サイトでは、筑波研究学園都市は世界的な科学技術拠点都市として実績を積み重ね、現在ではおよそ2万人の研究従事者を有する日本最大のサイエンスシティと説明されています。研究機関、大学、スタートアップ、バイオ、医療、AI、ロボット、宇宙、材料など、専門性の高い情報が多い地域です。</p>
-<p>BtoBや研究開発系のLLMOでは、専門用語を並べるだけでは足りません。研究内容、技術の用途、共同研究、導入事例、設備、論文、認証、採用情報を、購買担当者や求職者が理解できる形に翻訳する必要があります。<mark><strong>専門情報を正確に、かつ分かりやすくページ化できる会社</strong></mark>を選びましょう。</p>
+<p>BtoBや研究開発系のLLMOでは、専門用語を並べるだけでは足りません。研究内容、技術の用途、共同研究、導入事例、設備、論文、認証、採用情報を、購買担当者や求職者が理解できる形に翻訳する必要があります。<strong>専門情報を正確に、かつ分かりやすくページ化できる会社</strong>を選びましょう。</p>
 <p class="post-ref"><a href="https://www.city.tsukuba.lg.jp/soshikikarasagasu/toshikeikakubutoshikeikakuka/gyomuannai/4/3/1002135.html" rel="noopener" target="_blank">参考：つくば市｜筑波研究学園都市とは</a></p>
 <h3>鹿島臨海工業地帯・物流・エネルギーのBtoB情報を説明できるか</h3>
 <p>茨城県の鹿島臨海工業地帯の将来ビジョンでは、同地域が鉄鋼、石油精製・石油化学、食糧・飼料、木材、物流など多様な産業集積を持ち、発電所や再生可能エネルギー、水素関連の拠点としても期待されていると説明されています。鹿行地域では、工場、物流、港湾、エネルギー、保守、採用の情報設計が重要です。</p>
-<p>AI検索では「どの加工に対応できるか」「納入先業界はどこか」「港湾や工業団地との距離」「安全管理」「資格」「保守体制」「採用条件」が比較されます。LLMO会社には、<mark><strong>技術情報を営業前の判断材料として整理できるか</strong></mark>を確認してください。</p>
-<p class="post-ref"><a href="https://www.pref.ibaraki.jp/kikaku/jisui/kashima/plan/documents/bijyonn.pdf" rel="noopener" target="_blank">参考：茨城県｜鹿島臨海工業地帯の競争力強化に向けた将来ビジョン</a></p>
+<p>AI検索では「どの加工に対応できるか」「納入先業界はどこか」「港湾や工業団地との距離」「安全管理」「資格」「保守体制」「採用条件」が比較されます。LLMO会社には、<strong>技術情報を営業前の判断材料として整理できるか</strong>を確認してください。</p>
+<p class="post-ref"><a href="https://www.pref.ibaraki.jp/kikaku/jisui/kashima/plan/documents/bijyonn.pdf" rel="nofollow noopener" target="_blank">参考：茨城県｜鹿島臨海工業地帯の競争力強化に向けた将来ビジョン</a></p>
 <h3>首都圏近接の採用・住宅・医療福祉まで運用に入れられるか</h3>
 <p>茨城県は東京圏に近く、つくばエクスプレス沿線や県南地域では住宅、教育、医療、士業、クリニック、工務店、採用の情報競争が起こりやすいです。一方で、県北や県西では広域移動、車利用、求人、事業承継、地域医療・福祉の情報が重要になります。</p>
-<p>比較時には、制作費だけでなく、<mark><strong>誰が、いつ、どの情報を更新するのか</strong></mark>を確認しましょう。CMS、更新代行、写真差し替え、FAQ追加、Googleビジネスプロフィール、SNSまで含めた運用設計ができる会社のほうが、茨城県の実務には合いやすいです。</p>
+<p>比較時には、制作費だけでなく、<strong>誰が、いつ、どの情報を更新するのか</strong>を確認しましょう。CMS、更新代行、写真差し替え、FAQ追加、Googleビジネスプロフィール、SNSまで含めた運用設計ができる会社のほうが、茨城県の実務には合いやすいです。</p>
 <h2>茨城県のLLMO会社に依頼する費用相場</h2>
 <p>茨城県でLLMOを外注する場合、費用は「どこまで任せるか」で大きく変わります。診断だけなら10万円前後から検討できますが、水戸市内の店舗サイトを少し直すのか、つくば・県南・県西・鹿行まで地域別ページを作るのか、食品ECや観光ページ、採用サイト、BtoB技術ページまで整えるのかで必要な予算は違います。</p>
-<p>大事なのは、単に安い会社を探すことではありません。<mark><strong>単一商圏の集客なのか、県内広域の情報設計なのか、ECや採用や専門産業の一次情報まで含むのか</strong></mark>を先に分けて見積もることです。</p>
+<p>大事なのは、単に安い会社を探すことではありません。<strong>単一商圏の集客なのか、県内広域の情報設計なのか、ECや採用や専門産業の一次情報まで含むのか</strong>を先に分けて見積もることです。</p>
 <table>
 <tr><th>支援タイプ</th><th>目安</th><th>主な内容</th></tr>
 <tr><td>診断・スポット相談</td><td>10万円前後〜</td><td>AI検索での出方確認、競合比較、改善優先度の整理</td></tr>
@@ -1126,30 +1149,30 @@
 </table>
 <h3>まずは診断だけなら10万円前後から始めやすい</h3>
 <p>公開価格で分かりやすい入口は診断プランです。LiKGはLLMO診断プランを10万円から公開しています。まずAI検索で自社がどう扱われているか、競合と比べて何が足りないかを知りたい企業には使いやすい価格帯です。</p>
-<p>茨城県では、地域名、観光地名、商品名、研究分野、産業分野が複雑に組み合わさります。いきなり記事を量産するより、<mark><strong>どの質問で出たいのか、どの地域と商品を優先するのかを先に決める</strong></mark>ほうが無駄が少ないです。</p>
-<p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" rel="noopener" target="_blank">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
+<p>茨城県では、地域名、観光地名、商品名、研究分野、産業分野が複雑に組み合わさります。いきなり記事を量産するより、<strong>どの質問で出たいのか、どの地域と商品を優先するのかを先に決める</strong>ほうが無駄が少ないです。</p>
+<p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" rel="nofollow noopener" target="_blank">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 <h3>小さく始めるなら月額5万円〜15万円帯が入口になる</h3>
 <p>店舗、クリニック、士業、工務店、美容、飲食、教室のように、まず少数ページを整えたい場合は月額5万円〜15万円帯が入口になります。AIMAでも月額5万円のLLMO支援を公開しており、質問設計や記事制作から小さく始めることができます。</p>
 <p>この帯は、水戸市やつくば市の単一店舗なら現実的です。ただし、県南広域、食品EC、研究開発系BtoB、鹿島臨海工業地帯関連、採用ページまで作る案件では、追加費用を見ておく必要があります。</p>
 <p class="post-ref"><a href="https://ai-and-marketing.jp/" rel="noopener" target="_blank">参考：株式会社AIMA｜月額5万円のLLMO</a></p>
 <h3>伴走支援の中心帯は月額15万円〜30万円前後</h3>
 <p>毎月改善を進めるなら、月額15万円〜30万円前後が一つの中心帯です。ジオコードは通常プラン15万円から、LiKGはLLMO×SEOコンサルティングを30万円から公開しています。この帯になると、戦略設計、競合調査、記事構成、ページ改善指示、構造化データ、レポート、定例打ち合わせまで含まれやすくなります。</p>
-<p>茨城県では、都市型サービス、観光、農業・食品、医療福祉、採用、製造、研究開発で必要なページが違います。<mark><strong>一度作って終わりではなく、AI検索の出方を見ながら直す支援</strong></mark>が必要な会社は、この価格帯で比較すると現実的です。</p>
-<p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" rel="noopener" target="_blank">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
-<p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" rel="noopener" target="_blank">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
+<p>茨城県では、都市型サービス、観光、農業・食品、医療福祉、採用、製造、研究開発で必要なページが違います。<strong>一度作って終わりではなく、AI検索の出方を見ながら直す支援</strong>が必要な会社は、この価格帯で比較すると現実的です。</p>
+<p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" rel="nofollow noopener" target="_blank">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
+<p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" rel="nofollow noopener" target="_blank">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 <h3>制作・EC・採用まで含めると総額30万円台〜150万円超まで広がる</h3>
 <p>既存サイトが古い、スマホで見づらい、CMSがない、採用ページが弱い、EC導線がない場合は、LLMOだけでなく制作費が必要です。茨城県では、農産品、加工食品、観光、研究開発、製造、物流、医療福祉など、写真や商品説明が成果に直結する案件が多くあります。</p>
-<p>地場制作会社に相談する場合は、Web制作費、写真撮影、原稿作成、CMS設定、更新代行、保守費用がどこまで含まれるかを確認しましょう。<mark><strong>AI検索以前に、ユーザーとAIが読める情報をサイト内に用意する費用</strong></mark>が含まれているかが重要です。</p>
+<p>地場制作会社に相談する場合は、Web制作費、写真撮影、原稿作成、CMS設定、更新代行、保守費用がどこまで含まれるかを確認しましょう。<strong>AI検索以前に、ユーザーとAIが読める情報をサイト内に用意する費用</strong>が含まれているかが重要です。</p>
 <h3>茨城県では取材・撮影・専門情報整理で費用が上がりやすい</h3>
 <p>茨城県の案件では、現地取材や写真撮影、商品情報整理、技術情報の翻訳が効きやすいです。観光ではアクセスや季節、農産品では品種や出荷時期、製造では設備や加工範囲、研究開発では用途と事例、採用では働く人の雰囲気が判断材料になります。</p>
-<p>AI検索でも、会社名、住所、サービス名、商品名、価格、実績、FAQが整理されているほうが理解されやすくなります。<mark><strong>取材・撮影・原稿作成・更新作業が見積もりに含まれているか</strong></mark>を必ず確認しましょう。</p>
+<p>AI検索でも、会社名、住所、サービス名、商品名、価格、実績、FAQが整理されているほうが理解されやすくなります。<strong>取材・撮影・原稿作成・更新作業が見積もりに含まれているか</strong>を必ず確認しましょう。</p>
 <h3>水戸・つくば単点か、県内広域かで予算を分ける</h3>
 <p>費用で大きく変わるのは、水戸市やつくば市だけを狙うのか、県南、県西、鹿行、県北まで広げるのかです。単一店舗なら、主要ページとFAQだけでも始めやすいです。一方、県内広域や県外商圏まで含めると、地域別ページ、観光導線、商品ページ、事例、配送条件、採用情報が増えます。</p>
 <p>迷う場合は、最初に<a href="llmo-shindan.html">無料LLMO診断</a>のような小さい入口で優先順位を決め、その後に単一商圏で進めるか、県内広域で設計するかを決めるのが安全です。</p>
 <h2>茨城県のLLMO会社に関するよくある質問</h2>
 <p>ここでは、茨城県の企業や店舗がLLMO会社を検討するときに出やすい疑問を整理します。比較ポイントや費用相場とは役割を分け、依頼前に確認すべきことだけを短くまとめます。</p>
 <h3>茨城県のLLMO会社に依頼する意味はありますか？</h3>
-<p>あります。茨城県は水戸、つくば、県南、県西、鹿行、県北で商圏や検索意図が変わります。観光、医療福祉、農業・食品、研究開発、製造、物流、採用などの情報を<mark><strong>AIに正しく理解される形で整える価値</strong></mark>があります。</p>
+<p>あります。茨城県は水戸、つくば、県南、県西、鹿行、県北で商圏や検索意図が変わります。観光、医療福祉、農業・食品、研究開発、製造、物流、採用などの情報を<strong>AIに正しく理解される形で整える価値</strong>があります。</p>
 <h3>茨城県内の会社でないと意味はありませんか？</h3>
 <p>必ずしも県内本社である必要はありません。重要なのは、水戸市、つくば市、土浦市、守谷市、日立市、ひたちなか市、古河市、神栖市などの違いや、研究開発、農業、鹿島臨海工業地帯、観光の文脈を理解して設計できるかです。</p>
 <h3>水戸市やつくば市以外の会社でもLLMOは必要ですか？</h3>
@@ -1165,7 +1188,7 @@
 <h3>茨城県のLLMO会社に依頼したら、どれくらいで成果が出ますか？</h3>
 <p>一般的には3〜6か月が目安です。既存サイトの状態、競合、記事やFAQの量、構造化データの整備状況によって変わります。短期で断定せず、観測しながら直す進め方が現実的です。</p>
 <h2>茨城県でLLMO会社を選ぶなら、研究・農業・工業・首都圏商圏の違いから逆算しましょう</h2>
-<p>茨城県のLLMO会社選びでは、<mark><strong>水戸・つくば中心の集客と、県南・県西・鹿行・県北の産業文脈を分けて考えること</strong></mark>が重要です。都市型サービスなら生活者の不安を解消するFAQ、観光なら季節性と移動導線、農業・食品なら商品情報と配送条件、研究開発や製造なら設備・実績・技術領域、採用なら働く地域と生活情報まで整理する必要があります。</p>
+<p>茨城県のLLMO会社選びでは、<strong>水戸・つくば中心の集客と、県南・県西・鹿行・県北の産業文脈を分けて考えること</strong>が重要です。都市型サービスなら生活者の不安を解消するFAQ、観光なら季節性と移動導線、農業・食品なら商品情報と配送条件、研究開発や製造なら設備・実績・技術領域、採用なら働く地域と生活情報まで整理する必要があります。</p>
 <p>まずは、自社が「市内の見込み客」を狙うのか、「茨城県内の複数地域」を狙うのか、「首都圏・全国の商談」を狙うのかを決めてください。そのうえで、戦略だけでなく、ページ改修、記事制作、構造化データ、写真、FAQ、更新運用まで実行できる会社を選ぶと前に進めやすいです。迷う場合は、<a href="blog-llmo-taisaku.html">LLMO対策の基礎</a>を確認し、必要なら<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問で選ばれるべきかを整理していきましょう。</p>
 </div>
 <div class="post-cta">
@@ -1190,10 +1213,16 @@
 </form>
 </div>
 </section>
-<div class="post-nav">
-<a href="blog-fukushima-llmo-kaisha.html"><span class="post-nav-label">← 前の記事</span>福島県でおすすめのLLMO会社10選を見る</a>
-<a href="blog.html"><span class="post-nav-label">次の記事 →</span>ブログ一覧を見る</a>
-</div>
+            <div class="post-nav">
+        <a href="blog-fukushima-llmo-kaisha.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+        <a href="blog-tochigi-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+      </div>
 <section aria-labelledby="post-related-title" class="post-related">
 <div class="post-related-header">
 <div class="post-related-label">Related Articles</div>
@@ -1202,7 +1231,7 @@
 </div>
 <div class="post-related-grid">
 <article class="post-related-card"><a class="post-related-card-link" href="blog-fukushima-llmo-kaisha.html"><div class="post-related-thumb"><img alt="福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-fukushima-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">広域県の観光・食品・製造業の整理を、茨城県と比較したい方に向いています。</p><div class="post-related-date">2026.04.24</div></div></a></article>
-<article class="post-related-card"><a class="post-related-card-link" href="blog-tokyo-llmo-kaisha.html"><div class="post-related-thumb"><img alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="752" loading="lazy" src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" width="1360"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">首都圏商圏やBtoBの比較軸を、茨城県と対比したい方におすすめです。</p><div class="post-related-date">2026.04.14</div></div></a></article>
+<article class="post-related-card"><a class="post-related-card-link" href="blog-tokyo-llmo-kaisha.html"><div class="post-related-thumb"><img alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div><p class="post-related-card-text">首都圏商圏やBtoBの比較軸を、茨城県と対比したい方におすすめです。</p><div class="post-related-date">2026.04.14</div></div></a></article>
 <article class="post-related-card"><a class="post-related-card-link" href="blog-kanagawa-llmo-kaisha.html"><div class="post-related-thumb"><img alt="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-kanagawa-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">首都圏近接県の産業・住宅・観光商圏を比較したい方向けです。</p><div class="post-related-date">2026.04.20</div></div></a></article>
 </div>
 <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
@@ -1234,33 +1263,33 @@
 </div>
 </article>
 <!-- FOOTER -->
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-top">
-<div class="footer-brand">
-<a class="footer-logo" href="/">AIMA</a>
-<p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br/>大阪駅前第2ビル2階5-6号室</p>
-</div>
-<div class="footer-links">
-<div class="footer-col">
-<h4 class="footer-col-title">サービス</h4>
-<a href="/service.html">サービス一覧</a>
-<a href="/#pricing">料金</a>
-<a href="/#faq">よくある質問</a>
-</div>
-<div class="footer-col">
-<h4 class="footer-col-title">会社情報</h4>
-<a href="company.html">会社概要</a>
-<a href="/#contact">お問い合わせ</a>
-<a href="blog.html">ブログ</a>
-<a href="privacy.html">プライバシーポリシー</a>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 株式会社AIMA</p>
-</div>
-</div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 <script>
   (function () {
@@ -1381,6 +1410,7 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 </body>
 </html>

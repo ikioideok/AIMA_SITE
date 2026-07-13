@@ -1,0 +1,30 @@
+{
+  "slug": "microsoft-365-copilot-gpt-5-6",
+  "title": "Microsoft 365 Copilot、GPT-5.6を優先モデルに──Word・Excel・PowerPointへ展開",
+  "category": "製品",
+  "breaking": true,
+  "datetime": "2026-07-11T12:03",
+  "description": "Microsoft 365 CopilotでOpenAIのGPT-5.6が優先モデルになる。Word、Excel、PowerPoint、Chat、Coworkに展開され、仕事の下書き・分析・資料作成への影響が大きい。",
+  "summary": "Microsoft 365 CopilotでGPT-5.6が優先モデルに。Word、Excel、PowerPoint、Chat、Coworkへ展開される。",
+  "lead3": [
+    "Microsoft 365 Copilotで、OpenAIのGPT-5.6が優先モデルとして使われるようになる",
+    "対象はWord、Excel、PowerPoint、Copilot Chat、Copilot Coworkで、順次ロールアウトされる",
+    "ただし利用可否は地域やテナント設定で変わるため、自社環境での確認が必要"
+  ],
+  "body_html": "<h2>何が発表されたか</h2>\n<p>Microsoftは2026年7月9日、Microsoft 365 CopilotにOpenAIの<span class=\"em\">GPT-5.6ファミリー</span>を導入し、優先モデルにすると発表しました。対象はWord、Excel、PowerPoint、Copilot Chat、Copilot Coworkです。</p>\n<p>OpenAIも同日、GPT-5.6がMicrosoft 365 Copilotの新しい優先モデルになると発表しています。つまり、会社員が毎日使う文書作成、表計算、資料作成、チャット、共同作業の中に、新しいモデルが入るという話です。</p>\n<h2>詳細</h2>\n<p>Microsoftの公式ブログでは、GPT-5.6はMicrosoft 365アプリでのナレッジワーク向けにOpenAIと共同で最適化されたと説明されています。Wordでは文章の下書きや整理、Excelでは複雑な分析、PowerPointでは資料のたたき台作りを支援するとされています。</p>\n<p>Copilot Chatでは、選択肢の比較、計画づくり、問題の切り分けなど、少しあいまいで複雑な相談に使われます。Copilot Coworkでは、複数ステップの作業を計画し、ツールやファイルをまたいで進め、完成物に近い形で返すことが説明されています。</p>\n<p>ただし、すべての利用者が同時に使えるとは限りません。Microsoftは、利用可否は地域やテナント設定によって変わると明記しています。利用できる場合、Copilotが必要に応じてGPT-5.6を自動で使うことがあり、モデル選択が用意されている環境ではユーザーが直接選べる場合もあります。</p>\n<h2>なぜ重要か</h2>\n<p>この発表の大きな意味は、AIの進化が専用チャット画面だけでなく、普段の業務ツールに入っていく点です。Word、Excel、PowerPointは多くの会社で毎日使われているため、資料作成や分析の時間短縮に直結しやすい領域です。</p>\n<p>会社側は、単に「新モデルが入った」と見るだけでは足りません。社内ファイルをAIにどこまで使わせるか、出力された資料を誰が確認するか、モデル切り替えの権限を誰に持たせるかを決める必要があります。特にExcel分析や顧客向け資料では、AIの答えをそのまま使わず、人が数字と表現を確認するルールが重要です。</p>",
+  "sources": [
+    {
+      "label": "Microsoft Tech Community",
+      "url": "https://techcommunity.microsoft.com/blog/microsoft365copilotblog/available-today-openai%E2%80%99s-gpt-5-6-in-microsoft-365-copilot/4533152"
+    },
+    {
+      "label": "openai.com",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/"
+    },
+    {
+      "label": "ITmedia AI+",
+      "url": "https://www.itmedia.co.jp/aiplus/article/2607/10/2000000184/"
+    }
+  ],
+  "candidate_url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot"
+}

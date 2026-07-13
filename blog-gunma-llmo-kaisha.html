@@ -171,7 +171,9 @@
   ]
 }</script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=53" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link href="css/style.css?v=54" rel="stylesheet"/>
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -919,25 +921,46 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- HEADER -->
-<header>
-<a class="logo" href="/">AIMA</a>
-<button aria-label="メニューを開く" class="hamburger" id="hamburger">
-<span></span><span></span><span></span>
-</button>
-<nav class="header-nav" id="header-nav">
-<a href="company.html">会社概要</a>
-<a href="/service.html">サービス</a>
-<a href="/#case">事例</a>
-<a href="/#pricing">料金</a>
-<a href="blog.html">ブログ</a>
-<a class="header-nav-cta" href="/#contact">お問い合わせ</a>
-</nav>
-<a class="header-cta" href="/#contact">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
 </header>
 <!-- ARTICLE -->
 <article class="post-page">
@@ -975,7 +998,7 @@
 <section aria-label="監修者情報" class="post-supervisor">
 <div class="post-supervisor-label">監修者情報</div>
 <div class="post-supervisor-card">
-<img alt="水間 雄紀" class="post-supervisor-photo" decoding="async" height="1024" loading="lazy" src="images/member-photo.png" width="1024"/>
+<img alt="水間 雄紀" class="post-supervisor-photo" decoding="async" height="320" loading="lazy" src="images/member-photo.webp" width="320"/>
 <div>
 <div class="post-supervisor-name">水間 雄紀</div>
 <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1002,7 +1025,7 @@
 <div aria-label="株式会社AIMAのご案内" class="aima-feature">
 <div class="aima-feature-kicker">運営会社のご案内</div>
 <div class="aima-feature-title">株式会社AIMA</div>
-<p>株式会社AIMAは群馬本社の会社ではありませんが、全国対応でLLMO支援を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は初期費用なし・1ヶ月単位で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。前橋・高崎、太田・伊勢崎、草津・伊香保、富岡・安中、利根沼田のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
+<p>株式会社AIMAは群馬本社の会社ではありませんが、全国対応でLLMO支援を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は初期費用なし・1ヶ月単位で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。前橋・高崎、太田・伊勢崎、草津・伊香保、富岡・安中、利根沼田のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
 <div class="aima-feature-actions">
 <a class="aima-feature-btn aima-feature-btn-secondary" href="llmo-shindan.html">無料診断はこちら</a>
 <a class="aima-feature-btn" href="/#contact">まずは相談する</a>
@@ -1011,7 +1034,7 @@
 <h3>1. 株式会社ロジカルフォース</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/logical-force.webp" alt="株式会社ロジカルフォースのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ロジカルフォースのトップページ<span class="figure-source"><a href="https://www.lfc.co.jp/" target="_blank" rel="noopener">出典：株式会社ロジカルフォース</a></span></figcaption>
+  <figcaption>株式会社ロジカルフォースのトップページ<span class="figure-source"><a href="https://www.lfc.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ロジカルフォース</a></span></figcaption>
 </figure>
 <p>株式会社ロジカルフォースは、高崎市栄町に拠点を置くホームページ制作会社です。公式サイトでは、群馬で創業35年、地域密着型で対面打ち合わせを重視していること、ホームページ制作、SEO対策、WordPress構築、ショッピングサイト制作、サイト保守・管理、Webシステムやアプリケーション開発を案内しています。</p>
 <p>群馬県でLLMOを進める場合、公開後にFAQや事例、採用情報を追加できる運用体制が重要です。ロジカルフォースは、高崎・前橋を中心に、制作後の管理やSEOまで相談しながら長くサイトを育てたい企業に向いています。</p>
@@ -1019,7 +1042,7 @@
 <h3>2. 株式会社ラップル</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/rapl.webp" alt="株式会社ラップルのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ラップルのトップページ<span class="figure-source"><a href="https://www.rapl.co.jp/" target="_blank" rel="noopener">出典：株式会社ラップル</a></span></figcaption>
+  <figcaption>株式会社ラップルのトップページ<span class="figure-source"><a href="https://www.rapl.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ラップル</a></span></figcaption>
 </figure>
 <p>株式会社ラップルは、前橋市にあるホームページ制作会社です。公式サイトでは、お客様の業務内容とニーズを理解し、伝えたい情報を明確にした魅力的なホームページ制作を案内しています。前橋市を拠点に、地域企業のサイト制作を相談しやすい会社です。</p>
 <p>LLMOでは、業務内容、対象顧客、対応エリア、料金、よくある質問、実績を分かりやすく整理することが大事です。ラップルは、前橋周辺の企業が、自社の強みを整理し直し、見込み客にもAIにも伝わるサイトへ整えたい場合に比較しやすい会社です。</p>
@@ -1027,7 +1050,7 @@
 <h3>3. Webshop Marketing株式会社</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/webshop-marketing.webp" alt="Webshop Marketing株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>Webshop Marketing株式会社のトップページ<span class="figure-source"><a href="https://webshop-marketing.co.jp/" target="_blank" rel="noopener">出典：Webshop Marketing株式会社</a></span></figcaption>
+  <figcaption>Webshop Marketing株式会社のトップページ<span class="figure-source"><a href="https://webshop-marketing.co.jp/" target="_blank" rel="nofollow noopener">出典：Webshop Marketing株式会社</a></span></figcaption>
 </figure>
 <p>Webshop Marketing株式会社は、前橋市南町のホームページ制作・Webマーケティング会社です。公式サイトでは、WordPressサイト制作、SEO対策、CS-Cartを使った独自ECサイト構築、スマホ対応レスポンシブサイトなどを案内しています。会社情報では前橋市の所在地も確認できます。</p>
 <p>群馬県では、食品、農畜産、観光、地場産品、教育、地域サービスなど、ECや問い合わせ導線が成果に直結しやすい業種があります。Webshop Marketingは、WordPressやEC、SEOを組み合わせて、公開後も更新できるサイトを作りたい企業に向いています。</p>
@@ -1035,7 +1058,7 @@
 <h3>4. 株式会社アルファー企画</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/alpha-planning.webp" alt="株式会社アルファー企画のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社アルファー企画のトップページ<span class="figure-source"><a href="https://www.alpha-planning.co.jp/" target="_blank" rel="noopener">出典：株式会社アルファー企画</a></span></figcaption>
+  <figcaption>株式会社アルファー企画のトップページ<span class="figure-source"><a href="https://www.alpha-planning.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社アルファー企画</a></span></figcaption>
 </figure>
 <p>株式会社アルファー企画は、前橋市下小出町に本社・スタジオを置く広告デザイン会社です。公式サイトでは、前橋市・高崎市を拠点とし、ブランド価値向上のイメージ戦略から、ホームページ制作、会社案内制作、サイン制作、プロモーションまで一貫して提供すると説明されています。創業40年以上の実績や、企画、コピー、写真撮影への対応も案内されています。</p>
 <p>LLMOでは、文章だけでなく、写真、実績、会社案内、採用情報、店舗情報などを統一して見せることが重要です。アルファー企画は、Web単体ではなく、広告・紙媒体・写真・ブランド表現まで含めて整えたい群馬県内企業に向いています。</p>
@@ -1043,7 +1066,7 @@
 <h3>5. 株式会社MONOCHROME</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/monochrome.webp" alt="株式会社MONOCHROMEのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社MONOCHROMEのトップページ<span class="figure-source"><a href="https://monochrome-ds.com/" target="_blank" rel="noopener">出典：株式会社MONOCHROME</a></span></figcaption>
+  <figcaption>株式会社MONOCHROMEのトップページ<span class="figure-source"><a href="https://monochrome-ds.com/" target="_blank" rel="nofollow noopener">出典：株式会社MONOCHROME</a></span></figcaption>
 </figure>
 <p>株式会社MONOCHROMEは、前橋市にあるWebデザイン・Webマーケティング会社です。公式サイトでは、小規模事業者のコーポレートサイト作成・運営、SEO・MEO対策、SNSマーケティングを得意領域として案内しています。飲食店、美容室、ナイトクラブなどの業種にも触れています。</p>
 <p>店舗型ビジネスでは、Googleマップ、SNS、営業時間、料金、予約、写真、口コミ、FAQが一体で見られます。MONOCHROMEは、前橋・高崎・伊勢崎周辺の店舗が、SEO、MEO、SNSを合わせて集客導線を整えたい場合に向いています。</p>
@@ -1051,7 +1074,7 @@
 <h3>6. プラスモーションスタジオ株式会社</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/plusmotion.webp" alt="プラスモーションスタジオ株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>プラスモーションスタジオ株式会社のトップページ<span class="figure-source"><a href="https://www.plusmo-design.com/" target="_blank" rel="noopener">出典：プラスモーションスタジオ株式会社</a></span></figcaption>
+  <figcaption>プラスモーションスタジオ株式会社のトップページ<span class="figure-source"><a href="https://www.plusmo-design.com/" target="_blank" rel="nofollow noopener">出典：プラスモーションスタジオ株式会社</a></span></figcaption>
 </figure>
 <p>プラスモーションスタジオ株式会社は、群馬のホームページ制作会社として、Webデザイン、写真・動画撮影、ロゴ、アニメーション、SNS運用、印刷、集客コンサルまで一気通貫で案内しています。公式サイトでは、撮影から納品までのホームページ制作、更新しやすい仕組み、写真・動画による表現力、制作費用の目安も確認できます。</p>
 <p>観光、飲食、美容、農畜産、製造、研修、採用では、写真と動画の質がAI検索前の判断材料になります。プラスモーションスタジオは、文章だけでなく、現場の見える化、SNS、動画、更新運用までまとめて整えたい企業に向いています。</p>
@@ -1059,7 +1082,7 @@
 <h3>7. 株式会社彩豊社</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/saihousha.webp" alt="株式会社彩豊社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社彩豊社のトップページ<span class="figure-source"><a href="https://saihousha.co.jp/" target="_blank" rel="noopener">出典：株式会社彩豊社</a></span></figcaption>
+  <figcaption>株式会社彩豊社のトップページ<span class="figure-source"><a href="https://saihousha.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社彩豊社</a></span></figcaption>
 </figure>
 <p>株式会社彩豊社は、前橋市表町にあるデザイン制作会社です。公式サイトのホームページ制作ページでは、自社の店舗を作りたい、商取引に使いたい、海外にも情報発信したいなど、Webサービス全般のデザインに対応すると案内しています。スマートフォン対応についても相談できる会社です。</p>
 <p>小規模事業者や地域企業では、最初から大きなマーケティング投資をするより、必要な情報を整え、スマホで見やすく、更新しやすい状態にすることが先です。彩豊社は、前橋周辺でデザイン性と相談しやすさを重視したい企業に向いています。</p>
@@ -1067,7 +1090,7 @@
 <h3>8. 合同会社emo planning</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/emo-planning.webp" alt="合同会社emo planningのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>合同会社emo planningのトップページ<span class="figure-source"><a href="https://emo-planning.co.jp/" target="_blank" rel="noopener">出典：合同会社emo planning</a></span></figcaption>
+  <figcaption>合同会社emo planningのトップページ<span class="figure-source"><a href="https://emo-planning.co.jp/" target="_blank" rel="nofollow noopener">出典：合同会社emo planning</a></span></figcaption>
 </figure>
 <p>合同会社emo planningは、群馬県のホームページ制作会社として、SEOに強いホームページ制作を案内しています。公式サイトでは、ホームページ制作、SEO対策、マーケティング戦略、公開後の運用、問い合わせ獲得につながる改善の考え方を確認できます。</p>
 <p>LLMOでは、公開して終わりではなく、検索意図、地域名、サービス説明、FAQ、実績、導線を継続的に改善することが重要です。emo planningは、前橋・高崎・伊勢崎・太田などの地域企業が、SEOとマーケティング視点でホームページを育てたい場合に比較しやすい会社です。</p>
@@ -1075,7 +1098,7 @@
 <h3>9. 株式会社LiKG</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/likg.webp" alt="株式会社LiKGのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="noopener">出典：株式会社LiKG</a></span></figcaption>
+  <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
 </figure>
 <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作を案内し、AI OverviewやChatGPTでの露出状況調査、20項目診断、改善レポート、構造化データ改善指示、記事構成作成などを説明しています。</p>
 <p>群馬県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。観光、製造、農畜産、食品、医療福祉、採用、BtoBの一次情報を持っているのにAI検索で拾われていない会社は、診断から始める価値があります。</p>
@@ -1083,7 +1106,7 @@
 <h3>10. 株式会社ジオコード</h3>
 <figure>
   <img src="images/blog-gunma-llmo-kaisha/geocode.webp" alt="株式会社ジオコードのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="noopener">出典：株式会社ジオコード</a></span></figcaption>
+  <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
 </figure>
 <p>株式会社ジオコードは、SEO対策、コンテンツマーケティング、Web制作、Web広告、AIO・LLMOなどAI最適化まで案内している全国対応会社です。公式サイトでは、SEO・コンテンツ・オウンドメディアからAIO・LLMOなどAI最適化まで支援するサービス構成を確認できます。</p>
 <p>群馬県内でも、県外商圏を持つBtoB企業、EC企業、採用を強める企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、SEOとLLMOを分けず、分析から実装まで任せたい企業に向いています。</p>
@@ -1093,19 +1116,19 @@
 <h3>前橋・高崎の都市型商圏と、太田・伊勢崎の製造業商圏を分けられるか</h3>
 <p>群馬県は、前橋市と高崎市だけで完結する県ではありません。2026年3月1日現在の人口は、高崎市364,467人、前橋市324,310人、太田市221,134人、伊勢崎市210,043人です。都市型サービス、医療福祉、教育、住宅、店舗、製造業、物流で検索意図が変わります。</p>
 <p>LLMO会社には、「群馬県」で一括りにせず、前橋・高崎の生活サービス、太田・伊勢崎の製造業、桐生・館林の地場産業、富岡・安中の観光と食品まで分けて設計できるかを確認しましょう。</p>
-<p class="post-ref"><a href="https://toukei.pref.gunma.jp/idj/idj202603.htm" rel="noopener" target="_blank">参考：群馬県統計情報提供システム｜移動人口調査 令和8年3月1日現在</a></p>
+<p class="post-ref"><a href="https://toukei.pref.gunma.jp/idj/idj202603.htm" rel="nofollow noopener" target="_blank">参考：群馬県統計情報提供システム｜移動人口調査 令和8年3月1日現在</a></p>
 <h3>草津・伊香保・みなかみ・富岡の観光質問を具体化できるか</h3>
 <p>群馬県の令和6年観光入込客数は64,352千人、観光消費額は2,809億円です。宿泊者数は9,751千人泊、外国人延べ宿泊者数は432千人泊でした。草津温泉、伊香保温泉、みなかみ、四万温泉、富岡製糸場、榛名、赤城など、目的地ごとに質問が変わります。</p>
 <p>AI検索では「草津は何月がよいか」「伊香保で子連れに向く宿」「みなかみのラフティング」「富岡製糸場の所要時間」「高崎から日帰りできる温泉」のように聞かれます。観光・宿泊・飲食の企業は、季節、アクセス、駐車場、予約、雨天、周辺施設、FAQをセットで整理できる会社を選びましょう。</p>
-<p class="post-ref"><a href="https://www.pref.gunma.jp/page/743549.html" rel="noopener" target="_blank">参考：群馬県｜令和6年（2024年）観光入込客統計調査報告書</a></p>
+<p class="post-ref"><a href="https://www.pref.gunma.jp/page/743549.html" rel="nofollow noopener" target="_blank">参考：群馬県｜令和6年（2024年）観光入込客統計調査報告書</a></p>
 <h3>ものづくり・BtoBでは設備、品質、納入実績まで説明できるか</h3>
 <p>群馬県の統計では、年間製造品出荷額等は78,889億円で全国第13位です。太田市を中心とする自動車関連、伊勢崎・桐生・館林の製造、食品、機械、部品加工など、BtoBの情報整理が成果に直結しやすい地域です。</p>
 <p>BtoB企業のLLMOでは、会社概要だけでは足りません。設備、加工範囲、技術領域、納入業界、品質管理、認証、図面対応、量産可否、採用情報まで、問い合わせ前に知りたい情報をページ化できるかが重要です。</p>
-<p class="post-ref"><a href="https://www.pref.gunma.jp/page/684404.html" rel="noopener" target="_blank">参考：群馬県｜統計で見る特徴（産業）</a></p>
+<p class="post-ref"><a href="https://www.pref.gunma.jp/page/684404.html" rel="nofollow noopener" target="_blank">参考：群馬県｜統計で見る特徴（産業）</a></p>
 <h3>こんにゃく・夏秋キャベツ・畜産など食品情報を構造化できるか</h3>
 <p>同じ統計ページでは、群馬県の農業産出額は2,959億円で全国第10位、こんにゃくいも収穫量は49,700トンで全国第1位、夏秋キャベツ収穫量も253,700トンで全国第1位とされています。生乳、豚、きゅうり、なす、うめ、しいたけなども上位です。</p>
 <p>食品・EC・農畜産のLLMOでは、品目名だけでは不十分です。産地、品種、旬、出荷時期、保存方法、配送温度、ギフト対応、法人取引、加工品、レシピ、賞味期限まで整理しましょう。AIが比較回答を作るときに、商品名だけでなく購入条件まで読める状態にしておく必要があります。</p>
-<p class="post-ref"><a href="https://www.pref.gunma.jp/page/684404.html" rel="noopener" target="_blank">参考：群馬県｜統計で見る特徴（産業）</a></p>
+<p class="post-ref"><a href="https://www.pref.gunma.jp/page/684404.html" rel="nofollow noopener" target="_blank">参考：群馬県｜統計で見る特徴（産業）</a></p>
 <h3>車移動・高速道路・北関東連携をページ設計に入れられるか</h3>
 <p>群馬県では、関越自動車道、北関東自動車道、上信越自動車道、JR高崎線、上越新幹線、北陸新幹線など、移動導線が検索意図に影響します。観光なら移動時間、店舗なら駐車場、採用なら通勤、物流なら配送範囲、BtoBなら訪問・納品のしやすさが判断材料になります。</p>
 <p>LLMO会社には、地域名だけでページを増やすのではなく、ユーザーが実際に迷う導線を説明できるかを見てください。特に前橋、高崎、太田、伊勢崎、桐生、館林、富岡、沼田、吾妻をまたぐ企業では、移動条件の説明がAI検索で効きやすくなります。</p>
@@ -1186,10 +1209,16 @@
 </form>
 </div>
 </section>
-<div class="post-nav">
-<a href="blog-tochigi-llmo-kaisha.html"><span class="post-nav-label">← 前の記事</span>栃木県でおすすめのLLMO会社10選を見る</a>
-<a href="blog.html"><span class="post-nav-label">次の記事 →</span>ブログ一覧を見る</a>
-</div>
+            <div class="post-nav">
+        <a href="blog-tochigi-llmo-kaisha.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+        <a href="blog-saitama-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          埼玉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+      </div>
 <section aria-labelledby="post-related-title" class="post-related">
 <div class="post-related-header">
 <div class="post-related-label">Related Articles</div>
@@ -1199,7 +1228,7 @@
 <div class="post-related-grid">
 <article class="post-related-card"><a class="post-related-card-link" href="blog-tochigi-llmo-kaisha.html"><div class="post-related-thumb"><img alt="栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-tochigi-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">北関東の観光・製造・食品・採用商圏を比較したい方に向いています。</p><div class="post-related-date">2026.04.24</div></div></a></article>
 <article class="post-related-card"><a class="post-related-card-link" href="blog-ibaraki-llmo-kaisha.html"><div class="post-related-thumb"><img alt="茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-ibaraki-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">研究・農業・工業・首都圏商圏を群馬県と比較したい方に向いています。</p><div class="post-related-date">2026.04.24</div></div></a></article>
-<article class="post-related-card"><a class="post-related-card-link" href="blog-tokyo-llmo-kaisha.html"><div class="post-related-thumb"><img alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="752" loading="lazy" src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" width="1360"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">首都圏商圏やBtoBの比較軸を、群馬県と対比したい方におすすめです。</p><div class="post-related-date">2026.04.14</div></div></a></article>
+<article class="post-related-card"><a class="post-related-card-link" href="blog-tokyo-llmo-kaisha.html"><div class="post-related-thumb"><img alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div><p class="post-related-card-text">首都圏商圏やBtoBの比較軸を、群馬県と対比したい方におすすめです。</p><div class="post-related-date">2026.04.14</div></div></a></article>
 </div>
 <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
 </section>
@@ -1230,33 +1259,33 @@
 </div>
 </article>
 <!-- FOOTER -->
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-top">
-<div class="footer-brand">
-<a class="footer-logo" href="/">AIMA</a>
-<p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br/>大阪駅前第2ビル2階5-6号室</p>
-</div>
-<div class="footer-links">
-<div class="footer-col">
-<h4 class="footer-col-title">サービス</h4>
-<a href="/service.html">サービス一覧</a>
-<a href="/#pricing">料金</a>
-<a href="/#faq">よくある質問</a>
-</div>
-<div class="footer-col">
-<h4 class="footer-col-title">会社情報</h4>
-<a href="company.html">会社概要</a>
-<a href="/#contact">お問い合わせ</a>
-<a href="blog.html">ブログ</a>
-<a href="privacy.html">プライバシーポリシー</a>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 株式会社AIMA</p>
-</div>
-</div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 <script>
   (function () {
@@ -1377,6 +1406,7 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 </body>
 </html>

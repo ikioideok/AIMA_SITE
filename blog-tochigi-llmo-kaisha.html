@@ -171,7 +171,9 @@
   ]
 }</script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;display=swap" rel="stylesheet"/>
-<link href="css/style.css?v=53" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link href="css/style.css?v=54" rel="stylesheet"/>
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -919,25 +921,46 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 <!-- HEADER -->
-<header>
-<a class="logo" href="/">AIMA</a>
-<button aria-label="メニューを開く" class="hamburger" id="hamburger">
-<span></span><span></span><span></span>
-</button>
-<nav class="header-nav" id="header-nav">
-<a href="company.html">会社概要</a>
-<a href="/service.html">サービス</a>
-<a href="/#case">事例</a>
-<a href="/#pricing">料金</a>
-<a href="blog.html">ブログ</a>
-<a class="header-nav-cta" href="/#contact">お問い合わせ</a>
-</nav>
-<a class="header-cta" href="/#contact">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
 </header>
 <!-- ARTICLE -->
 <article class="post-page">
@@ -975,7 +998,7 @@
 <section aria-label="監修者情報" class="post-supervisor">
 <div class="post-supervisor-label">監修者情報</div>
 <div class="post-supervisor-card">
-<img alt="水間 雄紀" class="post-supervisor-photo" decoding="async" height="1024" loading="lazy" src="images/member-photo.png" width="1024"/>
+<img alt="水間 雄紀" class="post-supervisor-photo" decoding="async" height="320" loading="lazy" src="images/member-photo.webp" width="320"/>
 <div>
 <div class="post-supervisor-name">水間 雄紀</div>
 <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1002,7 +1025,7 @@
 <div aria-label="株式会社AIMAのご案内" class="aima-feature">
 <div class="aima-feature-kicker">運営会社のご案内</div>
 <div class="aima-feature-title">株式会社AIMA</div>
-<p>株式会社AIMAは栃木本社の会社ではありませんが、全国対応でLLMO支援を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は初期費用なし・1ヶ月単位で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。宇都宮、県南、両毛、日光・那須、芳賀・真岡、県北のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
+<p>株式会社AIMAは栃木本社の会社ではありませんが、全国対応でLLMO支援を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は初期費用なし・1ヶ月単位で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。宇都宮、県南、両毛、日光・那須、芳賀・真岡、県北のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
 <div class="aima-feature-actions">
 <a class="aima-feature-btn aima-feature-btn-secondary" href="llmo-shindan.html">無料診断はこちら</a>
 <a class="aima-feature-btn" href="/#contact">まずは相談する</a>
@@ -1011,7 +1034,7 @@
 <h3>1. 株式会社Revision</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/revision.webp" alt="株式会社Revisionのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社Revisionのトップページ<span class="figure-source"><a href="https://re-v.co.jp/" target="_blank" rel="noopener">出典：株式会社Revision</a></span></figcaption>
+  <figcaption>株式会社Revisionのトップページ<span class="figure-source"><a href="https://re-v.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社Revision</a></span></figcaption>
 </figure>
 <p>株式会社Revisionは、宇都宮市錦に本社を置くWeb制作・Webマーケティング会社です。公式サイトでは、Web制作、広告運用、SNS・マーケティング、MEO、採用サイト、SEOやAI時代の集客に関する情報発信を確認できます。宇都宮本社に加え東京オフィスもあり、地域案件と広域案件の両方を見やすい会社です。</p>
 <p>栃木県の企業では、制作だけでなく、広告、SNS、Googleビジネスプロフィール、採用情報まで合わせて運用する場面が多くなります。Revisionは、宇都宮を基点に、Web制作と集客施策をまとめて設計したい企業に向いています。</p>
@@ -1019,7 +1042,7 @@
 <h3>2. 株式会社Curiver</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/curiver.webp" alt="株式会社Curiverのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社Curiverのトップページ<span class="figure-source"><a href="https://curiver.com/" target="_blank" rel="noopener">出典：株式会社Curiver</a></span></figcaption>
+  <figcaption>株式会社Curiverのトップページ<span class="figure-source"><a href="https://curiver.com/" target="_blank" rel="nofollow noopener">出典：株式会社Curiver</a></span></figcaption>
 </figure>
 <p>株式会社Curiverは、宇都宮市中岡本町のホームページ制作・マーケティング会社です。公式サイトでは、中小・零細企業のホームページ制作、Webデザイン、運用、SEO対策、記事制作、動画、写真撮影、採用PR、通販サイト運営、ローカルメディア「47BASE」の運営などを案内しています。</p>
 <p>栃木県では、商品やサービスの良さを「地域の人に伝わる言葉」に変える力が成果を左右します。Curiverは、栃木に特化した情報発信、採用PR、地域メディア、記事や動画を組み合わせたい企業に比較しやすい会社です。</p>
@@ -1027,7 +1050,7 @@
 <h3>3. ブルーフェザー株式会社</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/bluefeather.webp" alt="ブルーフェザー株式会社のトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>ブルーフェザー株式会社のトップページ<span class="figure-source"><a href="https://www.bluefeather.co.jp/" target="_blank" rel="noopener">出典：ブルーフェザー株式会社</a></span></figcaption>
+  <figcaption>ブルーフェザー株式会社のトップページ<span class="figure-source"><a href="https://www.bluefeather.co.jp/" target="_blank" rel="nofollow noopener">出典：ブルーフェザー株式会社</a></span></figcaption>
 </figure>
 <p>ブルーフェザー株式会社は、栃木でWeb集客やホームページ制作を支援する会社です。公式サイトでは、地方のWeb集客には地方ならではのノウハウがあるという考え方を示し、Webマーケティング戦略とデザインの両面から、売上向上、問い合わせ数増加、採用強化につなげるホームページ制作を案内しています。</p>
 <p>LLMOでは、きれいなページだけではなく、誰に、何を、どの順番で説明するかが重要です。ブルーフェザーは、宇都宮周辺の企業が、地方商圏に合わせた導線設計とデザインを重視したい場合に向いています。</p>
@@ -1035,7 +1058,7 @@
 <h3>4. 有限会社トレンディハウス</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/trendyhouse.webp" alt="有限会社トレンディハウスのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>有限会社トレンディハウスのトップページ<span class="figure-source"><a href="https://trendyhouse.jp/" target="_blank" rel="noopener">出典：有限会社トレンディハウス</a></span></figcaption>
+  <figcaption>有限会社トレンディハウスのトップページ<span class="figure-source"><a href="https://trendyhouse.jp/" target="_blank" rel="nofollow noopener">出典：有限会社トレンディハウス</a></span></figcaption>
 </figure>
 <p>有限会社トレンディハウスは、栃木市境町のホームページ制作会社です。公式サイトでは、ホームページ制作、マーケティングオートメーション、オンラインショップ、補助金申請サポート、写真撮影・動画制作、サーバー・ドメイン管理、SEO、Web担当者支援などを案内しています。制作実績には宇都宮市、栃木市、小山市など県内案件が並びます。</p>
 <p>県南・両毛エリアでは、商談獲得、採用、EC、医療福祉、教育、店舗、製造など、Webに載せる情報が幅広くなりやすいです。トレンディハウスは、Webだけでなく、販促、採用、写真動画、補助金活用までまとめて相談したい企業に向いています。</p>
@@ -1043,7 +1066,7 @@
 <h3>5. リアライズ</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/realize.webp" alt="リアライズのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>リアライズのトップページ<span class="figure-source"><a href="https://www.tochigi-realize.com/" target="_blank" rel="noopener">出典：リアライズ</a></span></figcaption>
+  <figcaption>リアライズのトップページ<span class="figure-source"><a href="https://www.tochigi-realize.com/" target="_blank" rel="nofollow noopener">出典：リアライズ</a></span></figcaption>
 </figure>
 <p>リアライズは、宇都宮市のホームページ制作会社です。公式サイトでは、ホームページ制作から保守管理まで外注なしの社内一貫体制を掲げ、ChatGPTをはじめとした生成AI技術の活用、リニューアル、求人サイト、スマホ対応、ランディングページ、楽天ショップ、BASE、SEO対策などを案内しています。</p>
 <p>小規模事業者や初めてWebに投資する企業では、難しい専門用語よりも、制作費、更新方法、公開後の修正、SEOの基本を分かりやすく説明してもらえるかが大事です。リアライズは、AI活用と低コスト制作を入口に、WordPressやSEOも相談したい企業に向いています。</p>
@@ -1051,7 +1074,7 @@
 <h3>6. LOGZAWEB</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/logzaweb.webp" alt="LOGZAWEBのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>LOGZAWEBのトップページ<span class="figure-source"><a href="https://logza.jp/" target="_blank" rel="noopener">出典：LOGZAWEB</a></span></figcaption>
+  <figcaption>LOGZAWEBのトップページ<span class="figure-source"><a href="https://logza.jp/" target="_blank" rel="nofollow noopener">出典：LOGZAWEB</a></span></figcaption>
 </figure>
 <p>LOGZAWEBは、栃木県内全域対応を掲げるホームページ制作サービスです。公式サイトでは、最短5日で公開、1ページ単位の修正料金、月5,000円からの保守・運用、予約システム、顧客管理、オンライン決済、リマインド通知、LINE通知、Googleビジネス、SEO対策、AI検索対策などを案内しています。</p>
 <p>栃木県内の店舗や小規模事業者では、Webサイトを作って終わりではなく、予約、問い合わせ、再来店、採用、Googleマップまでつなげる必要があります。LOGZAWEBは、制作費を抑えながら、運用と業務効率化まで整えたい会社に比較しやすいです。</p>
@@ -1059,7 +1082,7 @@
 <h3>7. ハッスルウェブ</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/hustle-web.webp" alt="ハッスルウェブのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>ハッスルウェブのトップページ<span class="figure-source"><a href="https://hustle-web.com/" target="_blank" rel="noopener">出典：ハッスルウェブ</a></span></figcaption>
+  <figcaption>ハッスルウェブのトップページ<span class="figure-source"><a href="https://hustle-web.com/" target="_blank" rel="nofollow noopener">出典：ハッスルウェブ</a></span></figcaption>
 </figure>
 <p>ハッスルウェブは、宇都宮のホームページ制作・SEO対策会社です。公式サイトでは、ローカルビジネス向けのWeb集客支援、AIを組み込んだSEO対策、リスティング広告運用、ホームページ制作、WordPress導入、3C分析、文章コンテンツ、公開後のアフターフォローなどを案内しています。</p>
 <p>医療、士業、店舗、教室、美容、修理、住宅など、栃木県内のローカルビジネスでは「地域名＋悩み」で見つけられることが重要です。ハッスルウェブは、SEOを強く意識したホームページ制作を相談したい店舗・医院・小規模企業に向いています。</p>
@@ -1067,7 +1090,7 @@
 <h3>8. 株式会社EQクリエイト</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/eq-create.webp" alt="株式会社EQクリエイトのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社EQクリエイトのトップページ<span class="figure-source"><a href="https://eq-create.jp/" target="_blank" rel="noopener">出典：株式会社EQクリエイト</a></span></figcaption>
+  <figcaption>株式会社EQクリエイトのトップページ<span class="figure-source"><a href="https://eq-create.jp/" target="_blank" rel="nofollow noopener">出典：株式会社EQクリエイト</a></span></figcaption>
 </figure>
 <p>株式会社EQクリエイトは、小山市城東に拠点を置く総合広告会社です。公式サイトでは、チラシデザイン、ホームページ制作、動画制作、MEO対策、SEO対策、LP制作、Web広告、Webマーケティング、マンガ動画、サジェスト対策などを案内しています。LP制作では、データ計測、広告配信、分析、ABテスト、改善までの流れも示されています。</p>
 <p>小山市、下野市、栃木市、佐野市、足利市など県南・両毛では、店舗集客、採用、イベント、販促物、動画、広告が一体になりやすいです。EQクリエイトは、Webサイトだけでなく、LP、広告、動画、MEOまで合わせて成果を作りたい企業に向いています。</p>
@@ -1075,7 +1098,7 @@
 <h3>9. 株式会社LiKG</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/likg.webp" alt="株式会社LiKGのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="noopener">出典：株式会社LiKG</a></span></figcaption>
+  <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
 </figure>
 <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作を案内し、AI OverviewやChatGPTでの露出状況調査、20項目診断、改善レポート、構造化データ改善指示、記事構成作成などを説明しています。</p>
 <p>栃木県の企業でも、すでにサイトや記事があり、AI検索にどう出ているかを診断したい場合に向いています。製造、観光、食品、医療福祉、採用、BtoBの一次情報を持っているのにAI検索で拾われていない会社は、診断から始める価値があります。</p>
@@ -1083,7 +1106,7 @@
 <h3>10. 株式会社ジオコード</h3>
 <figure>
   <img src="images/blog-tochigi-llmo-kaisha/geocode.webp" alt="株式会社ジオコードのトップページのスクリーンショット" width="1416" height="704" loading="lazy" decoding="async">
-  <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="noopener">出典：株式会社ジオコード</a></span></figcaption>
+  <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
 </figure>
 <p>株式会社ジオコードは、SEO対策、コンテンツマーケティング、Web制作、Web広告、AIO・LLMOなどAI最適化まで案内している全国対応会社です。公式サイトでは、SEO・コンテンツ・オウンドメディアからAIO・LLMOなどAI最適化まで支援するサービス構成を確認できます。</p>
 <p>栃木県内でも、県外商圏を持つBtoB企業、EC企業、採用を強める企業では、地場制作会社だけでなく全国のSEO会社も比較対象になります。ジオコードは、SEOとLLMOを分けず、分析から実装まで任せたい企業に向いています。</p>
@@ -1190,10 +1213,16 @@
 </form>
 </div>
 </section>
-<div class="post-nav">
-<a href="blog-ibaraki-llmo-kaisha.html"><span class="post-nav-label">← 前の記事</span>茨城県でおすすめのLLMO会社10選を見る</a>
-<a href="blog.html"><span class="post-nav-label">次の記事 →</span>ブログ一覧を見る</a>
-</div>
+            <div class="post-nav">
+        <a href="blog-ibaraki-llmo-kaisha.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+        <a href="blog-gunma-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          群馬県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
+        </a>
+      </div>
 <section aria-labelledby="post-related-title" class="post-related">
 <div class="post-related-header">
 <div class="post-related-label">Related Articles</div>
@@ -1203,7 +1232,7 @@
 <div class="post-related-grid">
 <article class="post-related-card"><a class="post-related-card-link" href="blog-ibaraki-llmo-kaisha.html"><div class="post-related-thumb"><img alt="茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-ibaraki-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">北関東の研究・農業・工業・首都圏商圏を比較したい方に向いています。</p><div class="post-related-date">2026.04.24</div></div></a></article>
 <article class="post-related-card"><a class="post-related-card-link" href="blog-fukushima-llmo-kaisha.html"><div class="post-related-thumb"><img alt="福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-fukushima-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">広域県の観光・食品・製造業の整理を、栃木県と比較したい方に向いています。</p><div class="post-related-date">2026.04.24</div></div></a></article>
-<article class="post-related-card"><a class="post-related-card-link" href="blog-tokyo-llmo-kaisha.html"><div class="post-related-thumb"><img alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" decoding="async" height="752" loading="lazy" src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" width="1360"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div><p class="post-related-card-text">首都圏商圏やBtoBの比較軸を、栃木県と対比したい方におすすめです。</p><div class="post-related-date">2026.04.14</div></div></a></article>
+<article class="post-related-card"><a class="post-related-card-link" href="blog-tokyo-llmo-kaisha.html"><div class="post-related-thumb"><img alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" decoding="async" height="900" loading="lazy" src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" width="1600"/></div><div class="post-related-body"><div class="post-related-tag">LLMO</div><div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div><p class="post-related-card-text">首都圏商圏やBtoBの比較軸を、栃木県と対比したい方におすすめです。</p><div class="post-related-date">2026.04.14</div></div></a></article>
 </div>
 <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
 </section>
@@ -1234,33 +1263,33 @@
 </div>
 </article>
 <!-- FOOTER -->
-<footer class="site-footer">
-<div class="footer-inner">
-<div class="footer-top">
-<div class="footer-brand">
-<a class="footer-logo" href="/">AIMA</a>
-<p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br/>大阪駅前第2ビル2階5-6号室</p>
-</div>
-<div class="footer-links">
-<div class="footer-col">
-<h4 class="footer-col-title">サービス</h4>
-<a href="/service.html">サービス一覧</a>
-<a href="/#pricing">料金</a>
-<a href="/#faq">よくある質問</a>
-</div>
-<div class="footer-col">
-<h4 class="footer-col-title">会社情報</h4>
-<a href="company.html">会社概要</a>
-<a href="/#contact">お問い合わせ</a>
-<a href="blog.html">ブログ</a>
-<a href="privacy.html">プライバシーポリシー</a>
-</div>
-</div>
-</div>
-<div class="footer-bottom">
-<p>© 2026 株式会社AIMA</p>
-</div>
-</div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 <script>
   (function () {
@@ -1381,6 +1410,7 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 </body>
 </html>

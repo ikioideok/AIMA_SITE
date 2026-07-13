@@ -1,6 +1,7 @@
 .DS_Store
 .tokens/
 .playwright-cli/
+.playwright-mcp/
 .claude/
 node_modules/
 npm-debug.log*
@@ -8,3 +9,33 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 output/
+tmp/
+tmp-*
+*.tmp
+*.bak
+.env
+.env.*
+__pycache__/
+*.py[cod]
+**/.claude/
+**/.playwright-mcp/
+
+# Local drafts, backups, and visual QA artifacts
+backup/
+codex-tasks/
+design-qa.md
+aio-llmo-current.png
+clinic-article-top.png
+*-redesign.html
+*-redesign-v*.html
+samples/
+data/shinpo_queue.json
+data/shinpo_seen.json
+
+# Unselected design exploration images
+images/index-redesign-v5-hero/photo-*.png
+images/index-sample-ai-citation/
+images/service-redesign-v5/hero-illustration-*.png
+images/service-redesign-v5/hero-mockups/
+images/service-redesign-v5/hero-photo*.png
+images/service-redesign-v5/strengths/*-v*.png

@@ -1,0 +1,19 @@
+{
+  "slug": "meta-muse-spark-1-1",
+  "title": "Meta、推論モデル「Muse Spark 1.1」発表──開発者向け「Meta Model API」もプレビュー開始",
+  "category": "モデル",
+  "breaking": true,
+  "datetime": "2026-07-11T10:30",
+  "description": "Metaがマルチモーダル推論モデル「Muse Spark 1.1」を発表。100万トークンのコンテキスト管理、エージェントタスク対応。開発者向け「Meta Model API」もパブリックプレビューを開始した。",
+  "summary": "100万トークン管理・エージェント対応の新推論モデル。開発者向けAPIもプレビュー開始で、料金は競合より低価格とされる。",
+  "lead3": [
+    "Metaが7月9日（現地時間）、マルチモーダル推論モデル「Muse Spark 1.1」を発表",
+    "ツール操作・コーディング・マルチモーダル理解が向上。100万トークンのコンテキストを能動的に管理",
+    "開発者向け「Meta Model API」もパブリックプレビュー開始。まずは米国の開発者向け"
+  ],
+  "body_html": "<h2>何が発表されたか</h2>\n<p>Meta（Meta Superintelligence Labs）は2026年7月9日（現地時間）、マルチモーダル推論モデル<span class=\"em\">「Muse Spark 1.1」</span>を発表しました。ツールやコンピュータの操作、コーディング、マルチモーダル理解の改善をうたうモデルで、「Meta AI」アプリおよびWeb版（meta.ai）の「Thinking」モードとして利用できます。</p>\n<h2>モデルの特徴</h2>\n<ul>\n<li>100万トークンのコンテキストウィンドウを能動的に管理</li>\n<li>計画立案や複数エージェントの連携など、エージェント型タスクに対応</li>\n<li>複雑なコードベースの処理、バグの診断・修正、デスクトップ操作の自動化</li>\n<li>画像・動画・PDFなどのマルチモーダル入力に対応</li>\n</ul>\n<h2>開発者向け「Meta Model API」もプレビュー開始</h2>\n<p>あわせて、開発者向けの<span class=\"em\">「Meta Model API」のパブリックプレビュー</span>が始まりました。セルフサービス型で、OpenAI SDK・Anthropic SDKに対応します。ITmedia AI+の報道によれば、まずは米国の開発者向けで、料金は競合モデルより低価格に設定されるとのこと。日本を含む米国以外での提供時期は明らかにされていません。</p>\n<blockquote>参考：競合モデルの料金（100万トークンあたり）は、GPT-5.5が入力5ドル／出力30ドル、Claude Opus 4.8が入力5ドル／出力25ドル、Gemini 3.1 Proが入力2ドル／出力12ドル。<a href=\"https://www.itmedia.co.jp/aiplus/article/2607/10/2000000180/\" target=\"_blank\" rel=\"noopener\">出典：ITmedia AI+</a></blockquote>\n<h2>なぜ重要か</h2>\n<p>ChatGPT・Claude・Geminiに続き、MetaもエージェントとAPI提供を前面に出した競争に加わる形です。SDKレベルでOpenAI・Anthropic互換をうたっている点は、既存アプリからの乗り換えを強く意識した設計と言えます。米国外への展開時期が未定のため、日本の開発者は続報待ちです。</p>",
+  "sources": [
+    {"label": "ai.meta.com", "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"},
+    {"label": "itmedia.co.jp", "url": "https://www.itmedia.co.jp/aiplus/article/2607/10/2000000180/"}
+  ]
+}

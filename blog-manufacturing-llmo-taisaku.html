@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説｜AIMA ブログ</title>
+<meta name="description" content="製造業のLLMO対策を、製品情報・技術情報・導入事例・FAQ・構造化データの観点から解説します。AI検索で製品や技術を引用されるための情報設計をわかりやすく紹介します。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="水間 雄紀">
+<link rel="canonical" href="https://ai-and-marketing.jp/blog-manufacturing-llmo-taisaku.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説">
+<meta property="og:description" content="製造業のLLMO対策を、製品情報・技術情報・導入事例・FAQ・構造化データの観点から解説します。AI検索で製品や技術を引用されるための情報設計をわかりやすく紹介します。">
+<meta property="og:url" content="https://ai-and-marketing.jp/blog-manufacturing-llmo-taisaku.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/blog-manufacturing-llmo-taisaku/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-05-27">
+<meta property="article:modified_time" content="2026-05-27">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説">
+<meta name="twitter:description" content="製造業のLLMO対策を、製品情報・技術情報・導入事例・FAQ・構造化データの観点から解説します。AI検索で製品や技術を引用されるための情報設計をわかりやすく紹介します。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/blog-manufacturing-llmo-taisaku/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説",
+  "description": "製造業のLLMO対策を、製品情報・技術情報・導入事例・FAQ・構造化データの観点から解説します。AI検索で製品や技術を引用されるための情報設計をわかりやすく紹介します。",
+  "image": [
+    "https://ai-and-marketing.jp/images/blog-manufacturing-llmo-taisaku/og.jpg"
+  ],
+  "datePublished": "2026-05-27",
+  "dateModified": "2026-05-27",
+  "author": {
+    "@type": "Person",
+    "name": "水間 雄紀"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-marketing.jp/images/ogp.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-marketing.jp/blog-manufacturing-llmo-taisaku.html"
+  },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://ai-and-marketing.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ブログ",
+      "item": "https://ai-and-marketing.jp/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説",
+      "item": "https://ai-and-marketing.jp/blog-manufacturing-llmo-taisaku.html"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
+<style>
+  .post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8rem 2.5rem 4rem;
+  }
+  .post-header {
+    max-width: none;
+    margin: 0;
+  }
+  .post-content-layout {
+    display: block;
+  }
+  .post-main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .post-breadcrumbs {
+    margin: 0 0 1.3rem;
+  }
+  .post-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-breadcrumbs-item + .post-breadcrumbs-item::before {
+    content: '/';
+    margin: 0 0.45rem;
+    color: var(--gray-400);
+  }
+  .post-breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-breadcrumbs-link:hover {
+    color: var(--black);
+  }
+  .post-breadcrumbs-current {
+    color: var(--gray-600);
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #7759f6;
+    background: rgba(119,89,246,0.08);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+  .post-date {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .post-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  .post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-toc {
+    margin: 2rem 0 2.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .post-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+  .post-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-toc-summary-icon {
+    width: 0.68rem;
+    height: 0.68rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+    flex: none;
+  }
+  .post-toc[open] .post-toc-summary-icon {
+    transform: rotate(225deg) translateY(-1px);
+  }
+  .post-toc-nav {
+    padding: 0 1.15rem 1.05rem;
+    border-top: 1px solid var(--gray-200);
+    max-height: 24rem;
+    overflow: auto;
+  }
+  .post-toc-list,
+  .post-toc-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-toc-list {
+    padding-top: 0.9rem;
+  }
+  .post-toc-item + .post-toc-item {
+    margin-top: 0.55rem;
+  }
+  .post-toc-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .post-toc-link:hover {
+    color: var(--black);
+  }
+  .post-toc-sublist {
+    margin-top: 0.45rem;
+    margin-left: 0.25rem;
+    padding-left: 0.95rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  .post-toc-sublist .post-toc-item + .post-toc-item {
+    margin-top: 0.35rem;
+  }
+  .post-toc-sublist .post-toc-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+  }
+  .post-supervisor {
+    margin: 0 0 2.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-supervisor-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7759f6;
+    background: rgba(119, 89, 246, 0.08);
+    border-radius: 999px;
+  }
+  .post-supervisor-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .post-supervisor-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+  }
+  .post-supervisor-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+  .post-supervisor-role {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .post-supervisor-text {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  .post-sidebar {
+    display: none;
+    align-self: start;
+    position: sticky;
+    top: 6.8rem;
+    height: max-content;
+  }
+  .post-sidebar-stack > * + * {
+    margin-top: 1rem;
+  }
+  .post-sidebar-inner,
+  .post-sidebar-module {
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-sidebar-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .post-sidebar.is-visible .post-sidebar-inner {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .post-sidebar-label,
+  .post-sidebar-module-label {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+  }
+  .post-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-sidebar-item + .post-sidebar-item {
+    margin-top: 0.8rem;
+  }
+  .post-sidebar-link {
+    position: relative;
+    display: block;
+    padding-left: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .post-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 999px;
+    background: var(--gray-200);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .post-sidebar-link:hover {
+    color: var(--black);
+  }
+  .post-sidebar-link.is-active {
+    color: var(--black);
+    font-weight: 700;
+  }
+  .post-sidebar-link.is-active::before {
+    background: #7759f6;
+    transform: scale(1.15);
+  }
+  .post-body p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+  .post-body ul, .post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-body li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid #7759f6;
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 400;
+  }
+  .post-body blockquote .quote-source {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-body blockquote .quote-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-body blockquote .quote-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .post-body mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, rgba(255, 227, 130, 0.9) 58%);
+    padding: 0 0.08em;
+  }
+  .post-body a {
+    color: #7759f6;
+    text-decoration: underline;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+  .post-body figure {
+    margin: 1.8rem 0 2rem;
+  }
+  .post-body figure img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid var(--gray-200);
+  }
+  .post-body figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .post-body figcaption .figure-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-body figcaption .figure-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  }
+  .post-body figcaption .figure-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--gray-200);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .post-body th {
+    background: var(--gray-50);
+    font-weight: 500;
+    color: var(--black);
+  }
+  .post-body td {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+  .post-body .post-ref {
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  .post-cta {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .post-cta-text {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .post-cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: opacity 0.2s;
+  }
+  .post-cta-btn:hover { opacity: 0.8; }
+  .post-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-related-header {
+    margin-bottom: 1.25rem;
+  }
+  .post-related-label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .post-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+  }
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .post-related-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .post-related-card:hover {
+    box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
+    transform: translateY(-2px);
+  }
+  .post-related-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-related-thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--gray-100);
+    overflow: hidden;
+  }
+  .post-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-related-body {
+    padding: 1.1rem;
+  }
+  .post-related-tag {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .post-related-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-card-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 0.9rem;
+  }
+  .post-related-date {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-related-more {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .post-related-more a {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-related-more a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-nav a {
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-nav a:hover { color: var(--black); }
+  .post-nav-label {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 640px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .post-content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 3.2rem;
+      align-items: start;
+    }
+    .post-main {
+      max-width: none;
+      margin: 0;
+    }
+    .post-sidebar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .post-page { padding: 7rem 1.5rem 3rem; }
+    .post-title { font-size: 1.4rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-toc summary {
+      padding: 0.95rem 1rem;
+      font-size: 0.9rem;
+    }
+    .post-toc-nav {
+      padding: 0 1rem 0.95rem;
+    }
+    .post-supervisor {
+      padding: 1rem;
+    }
+    .post-supervisor-card {
+      grid-template-columns: 72px 1fr;
+      gap: 0.85rem;
+    }
+    .post-supervisor-photo {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
+</head>
+<body class="media-article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-page">
+
+  <div class="post-content-layout">
+    <div class="post-main">
+      <nav class="post-breadcrumbs" aria-label="パンくずリスト">
+        <ol class="post-breadcrumbs-list">
+          <li class="post-breadcrumbs-item"><a href="/" class="post-breadcrumbs-link">トップ</a></li>
+          <li class="post-breadcrumbs-item"><a href="blog.html" class="post-breadcrumbs-link">ブログ</a></li>
+          <li class="post-breadcrumbs-item"><span class="post-breadcrumbs-current" aria-current="page">製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説</span></li>
+        </ol>
+      </nav>
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-tag">基礎知識</span>
+          <time class="post-date" datetime="2026-05-27">公開日 2026.05.27</time>
+          <time class="post-date post-updated" datetime="2026-05-27">更新日 2026.05.27</time>
+        </div>
+
+        <h1 class="post-title">製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説</h1>
+
+        <div class="post-thumb">
+          <img src="images/blog-manufacturing-llmo-taisaku/eyecatch.jpg" alt="製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
+        </div>
+      </div>
+
+      <div class="post-body">
+        <p>製造業のLLMO対策は、ChatGPT、Gemini、Perplexity、Google AI OverviewsなどのAI検索で、自社の製品・技術・導入事例を見つけてもらいやすくするための情報設計です。</p>
+        <p>製造業には、製品、加工技術、対応素材、設備、品質基準、納入実績など、AIが参照しやすい具体情報が多くあります。一方で、その情報がPDFカタログ、営業資料、社内資料に閉じていると、AIにも購買担当者にも伝わりにくくなります。</p>
+        <p>この記事では、製造業がAI検索で引用されるために、どのページを整備し、どの情報をHTML上に出し、どの順番で改善すべきかをわかりやすく解説します。AI検索対策の全体像は<a href="blog-ai-search-taisaku.html">AI検索対策の記事</a>でも整理しています。</p>
+
+        <details class="post-toc">
+          <summary>
+            <span>目次</span>
+            <span class="post-toc-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <nav class="post-toc-nav" aria-label="記事の目次"></nav>
+        </details>
+
+        <section class="post-supervisor" aria-label="監修者情報">
+          <div class="post-supervisor-label">監修者情報</div>
+          <div class="post-supervisor-card">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
+            <div>
+              <div class="post-supervisor-name">水間 雄紀</div>
+              <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
+              <div class="post-supervisor-text">1986年和歌山県生まれ、近畿大学卒。金融機関、経営コンサルティング会社を経て、2018年にコンテンツ制作の専門会社である株式会社circlizeを創業。2024年、ラグザス株式会社に事業譲渡。現在は株式会社AIMAにてAI×マーケティング事業に従事し、株式会社フォーティーファイヴでコンテンツの品質管理責任者を務める。</div>
+            </div>
+          </div>
+        </section>
+
+        <h2>製造業におけるLLMO対策とは？</h2>
+        <p>製造業におけるLLMO対策とは、自社の製品、加工技術、対応領域、導入事例をAI検索に理解されやすい形で公開し、AI回答内で候補として扱われやすい状態を作る取り組みです。</p>
+        <p>単にブログ記事を増やす施策ではありません。製品ページ、技術ページ、用途別ページ、事例ページ、FAQ、会社情報を横断して、AIにも人にも伝わる形に整理することが重要です。</p>
+        <figure>
+          <img src="images/blog-manufacturing-llmo-taisaku/infographic-overview.jpg" alt="製造業のLLMO対策で製品情報、技術情報、導入事例をAI検索に理解されやすくする全体像の図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>製造業のLLMO対策では、製品情報、技術情報、導入事例をAIが理解しやすい形でつなげることが重要です。</figcaption>
+        </figure>
+        <h3>AI検索で自社の製品・技術・事例が引用されるための対策</h3>
+        <p>AI検索では、ユーザーが「耐熱性の高い部品を作れる会社」「小ロット試作に対応できる加工会社」「半導体装置向けの精密加工に強い会社」のように質問します。そのとき、自社サイトに<mark><strong>製品・技術・事例</strong></mark>が具体的に書かれていれば、AIが候補として拾いやすくなります。</p>
+        <p>逆に、製品名だけ、設備名だけ、抽象的な強みだけでは、AIは「どの課題に強い会社なのか」を判断しにくくなります。LLMO対策では、製品情報を検索者の疑問に答える形へ変えることが大切です。</p>
+        <h3>SEOとの違いは「検索順位」だけでなく「回答内の採用」を狙う点</h3>
+        <p>SEOは検索結果で上位表示されることを重視します。一方、LLMOではAIが回答を作るときに、自社情報が<mark><strong>回答内の採用</strong></mark>対象になるかが重要です。</p>
+        <blockquote>
+          <p>“The best practices for SEO remain relevant for AI features in Google Search.”</p>
+          <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener" target="_blank">Google Search Central｜AI features and your website</a></p>
+        </blockquote>
+        <p>つまり、LLMOはSEOと別物の裏技ではありません。検索エンジンがページを見つけ、内容を理解し、ユーザーに役立つ情報として扱えることが土台になります。そのうえで、AI回答に使われやすい定義、比較、FAQ、事例を整えます。基本の考え方は<a href="blog-llmo-taisaku.html">LLMO対策の記事</a>でも解説しています。</p>
+        <h3>製造業では「専門情報の分かりやすさ」が成果を左右する</h3>
+        <p>製造業の情報は、型番、規格、素材、加工条件、設備名、検査方法などが多く、専門的になりやすい領域です。だからこそ、<mark><strong>専門性を残しながら分かりやすく</strong></mark>整理する必要があります。</p>
+        <p>購買担当者は、必ずしも現場技術者と同じ知識を持っているわけではありません。「何ができるのか」「どの条件に向いているのか」「どの業界で実績があるのか」まで説明すると、AIにも人にも伝わりやすくなります。</p>
+
+        <h2>製造業がLLMO対策に取り組むべき理由</h2>
+        <p>製造業では、問い合わせ前の情報収集が長くなりやすく、複数社を比較してから相談するケースが多くあります。AI検索がその入口になると、Web上の情報量と整理の仕方が、候補に入れるかどうかを左右します。</p>
+        <p>特にBtoBでは、AIに候補を聞いてから公式サイトを見る流れが広がる可能性があります。製造業のDXやAI活用が競争力と結びつく中で、Web上の技術情報を整えることは営業面でも重要です。</p>
+        <h3>BtoBの購買担当者がAI検索で候補企業を探すようになるため</h3>
+        <p>これまではGoogleで検索し、比較サイトや企業サイトを見ながら候補を探す流れが一般的でした。今後は、購買担当者が<mark><strong>候補企業をAIに聞く</strong></mark>場面も増えます。</p>
+        <p>たとえば「医療機器向けの樹脂加工に強い会社」「食品工場向けに洗浄しやすい部品を作れる会社」と聞かれたとき、自社サイトに該当する情報がなければ、実力があっても候補に入りにくくなります。</p>
+        <h3>製品名だけでなく、課題・用途・業界名で探されるため</h3>
+        <p>製造業の見込み客は、最初から正確な製品名や加工名を知っているとは限りません。「軽量化したい」「耐熱性を高めたい」「短納期で試作したい」など、<mark><strong>課題・用途・業界名</strong></mark>から探すことがあります。</p>
+        <p>そのため、製品名だけを並べるページでは不十分です。どんな用途に向いているか、どの業界で使われるか、どんな課題を解決できるかを本文に入れることで、AIが検索者の質問と自社情報を結びつけやすくなります。</p>
+        <h3>製造業のDX・AI活用が競争力に直結するため</h3>
+        <p>経済産業省の2025年版ものづくり白書でも、製造業の競争力強化に向けてDXが重要な取り組みとして整理されています。LLMO対策も、単なる集客施策ではなく、製品情報や技術情報を外部に伝わる形へ変える<mark><strong>情報資産の再設計</strong></mark>です。</p>
+        <p>営業資料、技術資料、過去の提案書、加工事例をWeb上で整理すると、AI検索だけでなく、商談、採用、広報、技術ブランディングにも使える情報になります。</p>
+        <p class="post-ref">参考：<a href="https://www.meti.go.jp/report/whitepaper/mono/2025/index.html" rel="noopener" target="_blank">経済産業省｜2025年版ものづくり白書</a></p>
+
+        <h2>製造業のLLMO対策で重要なコンテンツ設計</h2>
+        <p>製造業のLLMO対策では、AIが「この会社は何に強いのか」を判断できる情報を用意する必要があります。特に重要なのは、製品ページ、技術ページ、導入事例、FAQです。</p>
+        <p>それぞれのページで、ただ情報を並べるのではなく、検索者が知りたい順番で説明することが大切です。</p>
+        <h3>製品ページはスペックだけでなく用途・選び方まで書く</h3>
+        <p>製品ページでは、型番、寸法、材質、対応規格などのスペックだけでなく、<mark><strong>用途・選び方・違い</strong></mark>まで書くことが重要です。</p>
+        <p>「この製品は何に使えるのか」「どんな条件では別製品が向いているのか」「代替品と何が違うのか」を説明すると、AIが比較回答に使いやすくなります。ユーザーにとっても、問い合わせ前の不安が減ります。</p>
+        <h3>技術ページは加工方法・対応範囲・強みを明確にする</h3>
+        <p>加工技術や製造技術のページでは、「〇〇加工に対応しています」だけでは弱いです。素材、加工精度、サイズ、ロット、設備、検査体制、納期目安などの<mark><strong>対応範囲</strong></mark>を具体的に書きます。</p>
+        <p>特に、競合と差が出る部分は抽象表現にせず、数値や条件で示すことが大切です。「短納期」よりも「試作は最短〇営業日から相談可能」のように書く方が判断材料になります。</p>
+        <h3>導入事例は業界・課題・解決策・成果まで入れる</h3>
+        <p>導入事例や加工事例は、製造業のLLMO対策で優先度が高いコンテンツです。AIは「実際に対応した経験があるか」を見るときに、事例を参照しやすくなります。</p>
+        <p>「〇〇を納品しました」だけではなく、<mark><strong>業界・課題・解決策・成果</strong></mark>まで書きます。社名を出せない場合でも、業界名、用途、規模、担当範囲を具体化すれば、十分に価値があります。</p>
+        <h3>FAQは購買前の具体的な疑問に答える</h3>
+        <p>FAQでは、「見積もりできますか？」のような一般的な質問だけでなく、購買担当者が実際に気にする<mark><strong>購買前の具体的な疑問</strong></mark>に答えることが重要です。</p>
+        <p>たとえば、小ロット対応、図面なし相談、試作から量産への移行、RoHSやISO対応、短納期対応、秘密保持の可否などです。こうした質問に明確に答えると、AI検索でも引用されやすい情報になります。</p>
+
+        <h2>製造業のLLMO対策で作るべきページ</h2>
+        <p>製造業では、ブログ記事だけを増やすより、公式サイト内の主要ページを整える方が先です。AIは会社の対応範囲を判断するために、製品カテゴリ、業界別、技術解説、比較、事例の情報を見ます。</p>
+        <figure>
+          <img src="images/blog-manufacturing-llmo-taisaku/infographic-pages.jpg" alt="製造業サイトでLLMO対策として整備すべき製品カテゴリ、業界別、技術解説、比較ガイド、加工事例ページの図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>製造業サイトでは、製品カテゴリ、業界別、技術解説、比較ガイド、加工事例をそろえると、AIが参照できる情報が増えます。</figcaption>
+        </figure>
+        <h3>製品カテゴリページ</h3>
+        <p>製品カテゴリページでは、個別製品を一覧で並べるだけでなく、<mark><strong>カテゴリ全体の特徴</strong></mark>、用途、選び方、対応業界、よくある課題を説明します。</p>
+        <p>たとえば「精密板金加工」なら、対応素材、加工可能サイズ、表面処理、試作・量産対応、品質管理体制までまとめます。カテゴリ単位の比較質問に対して、AIが参照しやすくなります。</p>
+        <h3>業界別・用途別ページ</h3>
+        <p>同じ技術でも、業界によって訴求ポイントは変わります。医療機器向け、食品機械向け、半導体装置向け、自動車部品向けなど、<mark><strong>業界別・用途別</strong></mark>にページを分けると、AIが強みを判断しやすくなります。</p>
+        <p>業界別ページでは、その業界で重視される品質、衛生、耐久性、納期、ロット、規格への対応を書きます。指名検索以外の入口を増やすうえでも有効です。</p>
+        <h3>技術・加工方法の解説ページ</h3>
+        <p>技術解説ページでは、自社が対応する加工方法や製造工程を、初めて読む人にもわかる形で説明します。ただし、一般論だけでは差別化できません。</p>
+        <p><mark><strong>自社の設備や実績</strong></mark>、失敗しやすいポイント、品質を安定させる工夫、対応できる条件を入れることで、独自性のあるページになります。</p>
+        <h3>比較・選定ガイドページ</h3>
+        <p>製造業の購買担当者は、製品や加工方法を比較しながら検討します。そのため、<mark><strong>比較・選定ガイド</strong></mark>はAI検索と相性がよいコンテンツです。</p>
+        <p>「アルミとステンレスの違い」「切削加工と板金加工の違い」「試作会社の選び方」「量産前に確認すべきポイント」などを整理すると、AIの比較回答に使われやすくなります。</p>
+        <h3>導入事例・加工事例ページ</h3>
+        <p><mark><strong>事例ページ</strong></mark>は、製造業の信頼性を伝えるための重要なページです。業界、課題、対応内容、使用素材、加工方法、成果、担当範囲を明記します。</p>
+        <p>社名公開が難しい場合でも、「自動車部品メーカー向け」「食品機械メーカー向け」「半導体製造装置向け」のように具体化できます。AIにも人にも、対応経験が伝わりやすくなります。</p>
+
+        <h2>製造業のLLMO対策で見直すべき技術面</h2>
+        <p>どれだけ良い文章を書いても、検索エンジンやAIが読めない状態では意味がありません。LLMO対策では、コンテンツと同時に、クロール、インデックス、構造化データ、PDFの扱いを確認します。</p>
+        <figure>
+          <img src="images/blog-manufacturing-llmo-taisaku/infographic-technical-check.jpg" alt="製造業のLLMO対策でクロール、インデックス、構造化データ、PDF整理を確認する技術チェックの図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>製造業のLLMO対策では、AIに読ませたい情報が検索エンジンに見つかり、本文として理解される状態を作ることが前提です。</figcaption>
+        </figure>
+        <h3>クロール・インデックスされる状態にする</h3>
+        <p>AI検索で参照されるには、まず検索エンジンがページを発見し、インデックスできる状態である必要があります。GoogleのAI機能でも、特別な要件より、通常検索で表示できるページであることが前提になります。</p>
+        <p>重要ページがnoindexになっていないか、robots.txtでブロックされていないか、内部リンクからたどれるかを確認します。LLMO対策でも、<mark><strong>クロール・インデックス</strong></mark>の土台は外せません。</p>
+        <h3>構造化データは製品・FAQ・企業情報を中心に整える</h3>
+        <p>構造化データは、AI検索専用の魔法ではありません。ただし、検索エンジンがページ内容を理解する補助としては有効です。</p>
+        <p>製造業では、Organization、Product、FAQPage、BreadcrumbList、Articleなどを、<mark><strong>本文と一致する範囲</strong></mark>で整備します。ページに見えない情報を構造化データだけに入れるのではなく、本文でも確認できる状態にします。</p>
+        <h3>PDFカタログだけに情報を閉じ込めない</h3>
+        <p>製造業のWebサイトでは、製品情報や技術資料がPDFカタログだけに入っていることがあります。PDF自体が悪いわけではありませんが、主要情報がHTMLページにないと文脈を把握されにくくなります。</p>
+        <p>製品の特徴、用途、選び方、FAQ、事例などの<mark><strong>主要情報はHTMLにも展開</strong></mark>します。PDFは補足資料として残しつつ、AIにもユーザーにも読める本文を用意することが大切です。</p>
+
+        <h2>製造業のLLMO対策で強化すべき外部情報</h2>
+        <p>AI検索では、自社サイトだけでなく、外部サイト上の情報も参照されます。第三者のサイトで、どのような文脈で紹介されているかも重要です。</p>
+        <p>製造業では、業界メディア、展示会、認証、受賞、共同開発、導入企業の事例記事などが外部情報として効きます。</p>
+        <h3>業界メディア・専門媒体での掲載情報を増やす</h3>
+        <p>業界メディア、専門媒体、展示会サイト、協会サイトなどで自社が紹介されると、AIが参照できる情報源が増えます。特に専門領域が明確な会社は、<mark><strong>外部での言及</strong></mark>が信頼性の補強になります。</p>
+        <p>掲載されるときは、会社名だけでなく、カテゴリ名、加工技術、対応業界、用途も一緒に書かれるようにします。AIは複数の文脈から会社の強みを判断します。</p>
+        <h3>展示会・認証・受賞・共同開発の情報を明記する</h3>
+        <p>展示会出展、ISO認証、特許、受賞歴、共同開発、補助金採択などは、製造業の<mark><strong>信頼性を示す情報</strong></mark>になります。</p>
+        <p>これらは会社概要ページだけに置くのではなく、関連する製品ページや技術ページにも紐づけると効果的です。「どの領域で信頼できるのか」をAIが判断しやすくなります。</p>
+        <h3>取引先名を出せない場合は業界・用途・規模で補う</h3>
+        <p>NDAや取引先都合で企業名を公開できないケースは多くあります。その場合でも、<mark><strong>業界・用途・規模</strong></mark>を出すことで情報価値を高められます。</p>
+        <p>たとえば「自動車部品メーカー向け」「食品機械メーカー向け」「月間〇個規模の量産対応」のように書きます。実名がなくても、具体性があれば、AIにも購買担当者にも伝わります。</p>
+
+        <h2>生成AI活用の流れと製造業LLMOの関係</h2>
+        <p>生成AIの活用は、文章作成や業務効率化だけではありません。企業の中にある技術資料、営業資料、FAQ、提案書、加工事例を再整理し、外部に伝わる情報へ変えることにも役立ちます。</p>
+        <h3>生成AIは業務効率化だけでなく価値向上にも関わる</h3>
+        <p>IPAのDX動向2025でも、AIや生成AIの利活用が企業のDXに関わるテーマとして整理されています。製造業では、社内に眠っている資料をWebコンテンツへ変えることで、<mark><strong>情報資産の再活用</strong></mark>につながります。</p>
+        <p>たとえば、過去の提案書からFAQを作る、加工事例から用途別ページを作る、営業資料から比較表を作る、といった使い方です。LLMO対策は、AI検索だけでなく、自社の知見を社外に伝わる形にする取り組みでもあります。</p>
+        <p class="post-ref">参考：<a href="https://www.ipa.go.jp/digital/chousa/dx-trend/dx-trend-2025.html" rel="noopener" target="_blank">IPA｜DX動向2025</a></p>
+
+        <h2>製造業がLLMO対策で避けるべき失敗</h2>
+        <p>LLMO対策では、AIに拾われることだけを意識しすぎると失敗します。最終的に問い合わせや商談につなげるには、人間が読んでもわかりやすい情報にする必要があります。</p>
+        <h3>汎用的なコラム記事だけを増やす</h3>
+        <p>「製造業 DXとは」「AI活用とは」のような記事を増やすだけでは、LLMO対策として弱くなります。大切なのは、自社の製品、技術、現場知見に結びついた情報です。</p>
+        <p><mark><strong>一般論だけ</strong></mark>の記事では、AIにとってもユーザーにとっても差別化しにくくなります。一般論を書く場合でも、自社の対応領域、事例、相談導線につなげる必要があります。</p>
+        <h3>専門用語を並べるだけで説明しない</h3>
+        <p>製造業では専門性が重要ですが、専門用語を並べるだけでは伝わりません。<mark><strong>使う場面や条件</strong></mark>まで説明すると、AIもユーザーも理解しやすくなります。</p>
+        <p>たとえば、加工名だけでなく、向いている素材、避けるべき条件、よくある失敗、品質を安定させる工夫まで書きます。専門性は、説明して初めて価値になります。</p>
+        <h3>自社の強みを抽象表現だけで終わらせる</h3>
+        <p>「高品質」「短納期」「柔軟対応」「豊富な実績」だけでは、競合との差がわかりません。AIも、その表現だけでは強みを判断しにくくなります。</p>
+        <p>対応可能なロット、納期目安、加工精度、検査体制、対応素材、設備、業界実績などを出し、抽象的な強みを<mark><strong>事実情報に変換</strong></mark>します。</p>
+
+        <h2>製造業のLLMO対策の進め方</h2>
+        <p>製造業のLLMO対策は、一度にすべて直す必要はありません。まずAI検索で現状を確認し、足りないページを洗い出し、優先順位を決めて改善します。</p>
+        <figure>
+          <img src="images/blog-manufacturing-llmo-taisaku/infographic-roadmap.jpg" alt="製造業がLLMO対策をAI検索調査、不足ページ確認、優先改善、定点観測の4ステップで進める図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>製造業のLLMO対策は、AI検索での現状確認から始め、重要ページを優先して改善し、表示状況を継続的に見ます。</figcaption>
+        </figure>
+        <h3>まずはAI検索で自社・競合・製品カテゴリを調査する</h3>
+        <p>最初に、自社名、競合名、製品カテゴリ、加工技術、業界用途をAI検索で確認します。<mark><strong>自社・競合・カテゴリ</strong></mark>を同じ質問で比べると、不足している情報が見えやすくなります。</p>
+        <p>表示される会社、引用されるページ、強みとして説明される内容を記録します。AI回答の見え方を定期的に見る方法は、<a href="blog-chatgpt-inyouritsu-chousa.html">ChatGPTの引用率調査</a>や<a href="blog-ai-overviews-hyouji-chousa.html">AI Overviews表示調査</a>の考え方も参考になります。</p>
+        <h3>製品・技術・事例ページの不足を洗い出す</h3>
+        <p>次に、AI検索で出てきた競合や情報源と比較し、自社サイトに足りないページを洗い出します。製品ページが薄いのか、技術解説が不足しているのか、業界別ページがないのか、事例が少ないのかを見ます。</p>
+        <p>製造業では、いきなり記事を量産するより、<mark><strong>既存ページの強化</strong></mark>の方が成果につながりやすいことがあります。問い合わせに近いページから直すのが現実的です。</p>
+        <h3>優先順位を決めてページを改善する</h3>
+        <p>すべてのページを一気に直す必要はありません。主力製品、利益率の高い技術、伸ばしたい業界、競合に勝てる用途から改善します。</p>
+        <p>ページごとに、対応範囲、用途、選び方、FAQ、事例、外部情報への導線を追加します。まずは<mark><strong>問い合わせにつながる順</strong></mark>に直すと、LLMO対策が営業成果にも結びつきやすくなります。</p>
+        <h3>AI回答内の表示状況を定期的に確認する</h3>
+        <p>LLMO対策は、一度ページを作って終わりではありません。AI検索での表示、自社名の出現、競合との比較、引用されるページ、問い合わせ内容の変化を定期的に確認します。</p>
+        <p><mark><strong>AI回答は固定ではない</strong></mark>ため、検索ニーズや競合ページの変化に合わせて改善を続ける必要があります。月1回など、確認する質問パターンを決めておくと運用しやすくなります。</p>
+
+        <h2>まとめ：製造業のLLMO対策は「技術力をAIに伝わる情報へ変える」こと</h2>
+        <p>製造業は、LLMO対策と相性がよい業界です。製品、技術、素材、設備、用途、実績など、AIが参照しやすい具体情報を多く持っているためです。</p>
+        <p>一方で、その情報がPDFカタログ、営業資料、社内資料、現場の暗黙知に閉じていると、AIにも購買担当者にも伝わりにくくなります。LLMO対策では、それらをWeb上でわかりやすく再構成する必要があります。</p>
+        <p>まずはブログ記事を量産するのではなく、製品ページ、技術ページ、業界別ページ、導入事例ページを強化しましょう。自社が何に強く、どの課題を解決でき、どの業界で実績があるのかを明確にすることが、AI検索時代の製造業サイトの土台になります。</p>
+
+        <h2>参考リンク</h2>
+        <p class="post-ref">参考：<a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener" target="_blank">Google Search Central｜AI features and your website</a></p>
+        <p class="post-ref">参考：<a href="https://www.meti.go.jp/report/whitepaper/mono/2025/index.html" rel="noopener" target="_blank">経済産業省｜2025年版ものづくり白書</a></p>
+        <p class="post-ref">参考：<a href="https://www.ipa.go.jp/digital/chousa/dx-trend/dx-trend-2025.html" rel="noopener" target="_blank">IPA｜DX動向2025</a></p>
+      </div>
+
+      <!-- 記事下CTA -->
+      <div class="post-cta">
+        <div class="post-cta-title">LLMOのご相談はお気軽に</div>
+        <div class="post-cta-text">月額5万円で、AIに引用される仕組みをつくります。</div>
+        <a href="/#contact" class="post-cta-btn">まずは相談する</a>
+      </div>
+
+      <section class="newsletter-inline" aria-label="メルマガ登録導線">
+        <div class="newsletter-card">
+          <div class="newsletter-eyebrow">Newsletter</div>
+          <div class="newsletter-title">LLMO内製化マガジン</div>
+          <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。ブログ更新だけでなく、現場で詰まりやすい論点もまとめます。</p>
+          <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-inline">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-inline-email">メールアドレス</label>
+              <input type="email" id="newsletter-inline-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+              <button type="submit" class="newsletter-submit">無料で登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 前後の記事リンク -->
+      <div class="post-nav">
+        <a href="blog-saas-llmo-taisaku.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          SaaSのLLMO対策とは？
+        </a>
+        <a href="blog.html" style="text-align: right;">
+          <span class="post-nav-label">ブログ一覧 &rarr;</span>
+          公開中の記事一覧を見る
+        </a>
+      </div>
+
+      <section class="post-related" aria-labelledby="post-related-title">
+        <div class="post-related-header">
+          <div class="post-related-label">Related Articles</div>
+          <h2 class="post-related-title" id="post-related-title">関連記事</h2>
+          <p class="post-related-text">製造業のLLMO対策を進める前後で、AI検索対策の基本や業種別の情報設計もあわせて確認できます。</p>
+        </div>
+        <div class="post-related-grid">
+          <article class="post-related-card">
+            <a href="blog-ai-search-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-ai-search-taisaku/eyecatch.jpg" alt="AI検索対策とは？AIに選ばれるサイト設計とSEOとの違いをわかりやすく解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">AI検索</div>
+                <div class="post-related-card-title">AI検索対策とは？AIに選ばれるサイト設計とSEOとの違いをわかりやすく解説</div>
+                <p class="post-related-card-text">AI検索で選ばれるサイト設計の全体像を確認できます。</p>
+                <div class="post-related-date">2026.05.17</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-llmo-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とは？SEOとの違いと実践方法を徹底解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">LLMO</div>
+                <div class="post-related-card-title">LLMO対策とは？SEOとの違いと実践方法を徹底解説</div>
+                <p class="post-related-card-text">LLMOの基本と、AIに理解される情報設計を確認できます。</p>
+                <div class="post-related-date">2026.04.01</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-chusho-kigyo-llmo.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-chusho-kigyo-llmo/eyecatch.jpg" alt="中小企業こそLLMO対策を始めるべき理由4選！AI検索で選ばれる会社になる方法のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">中小企業</div>
+                <div class="post-related-card-title">中小企業こそLLMO対策を始めるべき理由4選！AI検索で選ばれる会社になる方法</div>
+                <p class="post-related-card-text">製造業の中小企業がLLMOに取り組む意味を確認できます。</p>
+                <div class="post-related-date">2026.05.11</div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
+      </section>
+    </div>
+
+    <aside class="post-sidebar" aria-label="記事サイドバー">
+      <div class="post-sidebar-stack">
+        <div class="post-sidebar-inner">
+          <div class="post-sidebar-label">CONTENTS</div>
+          <nav class="post-sidebar-toc" aria-label="サイドバー目次"></nav>
+        </div>
+
+        <section class="post-sidebar-module newsletter-sidebar-card" aria-label="メルマガ登録">
+          <div class="post-sidebar-module-label">NEWSLETTER</div>
+          <div class="newsletter-sidebar-title">LLMO内製化マガジン</div>
+          <p class="newsletter-sidebar-text">まずは自分たちで進めたい方向けに、設計・運用・改善のヒントを短く配信します。</p>
+          <form class="newsletter-form" aria-label="サイドバーのメルマガ登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-sidebar">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-sidebar-email">メールアドレス</label>
+              <input type="email" id="newsletter-sidebar-email" name="email" class="newsletter-input" placeholder="メールアドレス" required>
+              <button type="submit" class="newsletter-submit">登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。</p>
+          </form>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+
+<script>
+  (function () {
+    const postBody = document.querySelector('.post-body');
+    const tocNav = document.querySelector('.post-toc-nav');
+    const tocDetails = document.querySelector('.post-toc');
+    const sidebarNav = document.querySelector('.post-sidebar-toc');
+    const sidebar = document.querySelector('.post-sidebar');
+    if (!postBody) return;
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3'));
+    if (!headings.length) {
+      if (tocDetails) tocDetails.hidden = true;
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = 'section-' + String(index + 1).padStart(2, '0');
+      }
+    });
+
+    if (tocNav && tocDetails) {
+      const rootList = document.createElement('ol');
+      rootList.className = 'post-toc-list';
+      let currentGroup = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        item.className = 'post-toc-item';
+
+        const link = document.createElement('a');
+        link.className = 'post-toc-link';
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        item.appendChild(link);
+
+        if (heading.tagName === 'H2') {
+          const sublist = document.createElement('ol');
+          sublist.className = 'post-toc-sublist';
+          item.appendChild(sublist);
+          rootList.appendChild(item);
+          currentGroup = sublist;
+          return;
+        }
+
+        if (currentGroup) {
+          currentGroup.appendChild(item);
+        } else {
+          rootList.appendChild(item);
+        }
+      });
+
+      rootList.querySelectorAll('.post-toc-sublist').forEach((sublist) => {
+        if (!sublist.children.length) {
+          sublist.remove();
+        }
+      });
+
+      tocNav.appendChild(rootList);
+    }
+
+    const sidebarHeadings = headings.filter((heading) => heading.tagName === 'H2');
+    if (!sidebarNav || !sidebar || !sidebarHeadings.length) {
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    const sidebarList = document.createElement('ol');
+    sidebarList.className = 'post-sidebar-list';
+
+    sidebarHeadings.forEach((heading) => {
+      const item = document.createElement('li');
+      item.className = 'post-sidebar-item';
+
+      const link = document.createElement('a');
+      link.className = 'post-sidebar-link';
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      sidebarList.appendChild(item);
+    });
+
+    sidebarNav.appendChild(sidebarList);
+
+    const sidebarLinks = Array.from(sidebarNav.querySelectorAll('.post-sidebar-link'));
+    const setActiveLink = (id) => {
+      sidebarLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const updateSidebarActive = () => {
+      const revealOffset = 160;
+      const shouldShowSidebar = window.scrollY + revealOffset >= sidebarHeadings[0].offsetTop;
+      sidebar.classList.toggle('is-visible', shouldShowSidebar);
+
+      const scrollPoint = window.scrollY + 180;
+      let current = sidebarHeadings[0];
+      sidebarHeadings.forEach((heading) => {
+        if (heading.offsetTop <= scrollPoint) {
+          current = heading;
+        }
+      });
+      setActiveLink(current.id);
+    };
+
+    window.addEventListener('scroll', updateSidebarActive, { passive: true });
+    window.addEventListener('resize', updateSidebarActive);
+    updateSidebarActive();
+
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        setActiveLink(id);
+      });
+    });
+  }());
+</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
+
+</body>
+</html>

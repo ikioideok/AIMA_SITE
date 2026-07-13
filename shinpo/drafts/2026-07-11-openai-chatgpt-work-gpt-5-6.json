@@ -1,0 +1,38 @@
+{
+  "slug": "openai-chatgpt-work-gpt-5-6",
+  "title": "OpenAI、ChatGPT WorkとGPT-5.6を発表──仕事用AIエージェントを前面に",
+  "category": "製品",
+  "breaking": true,
+  "datetime": "2026-07-11T08:05",
+  "description": "OpenAIがChatGPT WorkとGPT-5.6ファミリーを発表。仕事の文書、資料、分析、アプリ作成などを進めるAIエージェントとして、企業利用への影響が大きい。",
+  "summary": "OpenAIがChatGPT WorkとGPT-5.6を発表。文書・資料・分析など仕事の成果物作成を支援するAIエージェントを前面に出した。",
+  "lead3": [
+    "OpenAIがChatGPT WorkとGPT-5.6ファミリーを発表した",
+    "ChatGPT Workは、社内ツールやファイルの文脈を使い、文書・資料・分析などの完成物づくりを支援する",
+    "GPT-5.6はChatGPT、Codex、OpenAI APIなどで使える範囲が示され、企業のAI活用に影響がある"
+  ],
+  "body_html": "<h2>何が発表されたか</h2>\n<p>OpenAIは、仕事向けの新しい体験として<span class=\"em\">ChatGPT Work</span>を発表しました。公式ページでは、GPT-5.6を搭載し、チームのツールから文脈を集め、散らばったメモや下書き、アイデアを完成した仕事に近づけるものだと説明されています。</p>\n<p>同時に、OpenAIは<span class=\"em\">GPT-5.6ファミリー</span>も発表しました。モデル名はSol、Terra、Lunaの3種類です。OpenAIは、Solを新しい最上位モデル、Terraを日常業務向けのバランス型、Lunaを低コスト重視のモデルとして位置づけています。</p>\n<h2>詳細</h2>\n<p>ChatGPT Workは、ファイル、業務ツール、デスクトップアプリをまたいで文脈を集め、スプレッドシート、文書、スライドなどを作る用途が想定されています。公式ページでは、デスクトップでは全プラン向けに利用可能で、WebとモバイルではPlus、Pro、Business、Enterprise、Eduへ数日かけて展開するとされています。</p>\n<p>GPT-5.6について、OpenAIのヘルプページでは、通常のChatGPT会話ではPlus、Pro、Business、Enterpriseに提供され、FreeとGoでは標準会話のGPT-5.6は対象外とされています。一方で、Work in ChatGPT、Codex、OpenAI APIでの提供範囲も別に示されています。</p>\n<p>開発者向けには、OpenAI APIでSol、Terra、Lunaにアクセスできると説明されています。APIドキュメントでは、GPT-5.6が複雑な本番ワークフローの品質と効率の基準を引き上げるモデルとして紹介され、Programmatic Tool CallingやMulti-agentなどの機能も案内されています。</p>\n<h2>なぜ重要か</h2>\n<p>今回の発表は、ChatGPTを「質問に答えるチャット」から、仕事の成果物を作るAIエージェントへ寄せる動きです。会社で使う場合、議事録、調査、資料作成、表計算、簡単な社内ツール作成まで、AIに任せる範囲が広がる可能性があります。</p>\n<p>ただし、提供範囲はプランや製品によって違います。日本企業がすぐ判断するなら、「自社の契約プランで使えるか」「社内データをどこまで接続してよいか」「人の確認をどこに残すか」を先に決める必要があります。AIに全部任せるというより、仕事の下準備とたたき台作成を大きく短縮する発表として見るのが現実的です。</p>",
+  "sources": [
+    {
+      "label": "OpenAI on X",
+      "url": "https://x.com/OpenAI/status/2075274271845404744"
+    },
+    {
+      "label": "openai.com/chatgpt-work",
+      "url": "https://openai.com/chatgpt-work/"
+    },
+    {
+      "label": "openai.com/index/gpt-5-6",
+      "url": "https://openai.com/index/gpt-5-6/"
+    },
+    {
+      "label": "OpenAI Help Center",
+      "url": "https://help.openai.com/en/articles/20001354"
+    },
+    {
+      "label": "OpenAI API docs",
+      "url": "https://developers.openai.com/api/docs/guides/latest-model"
+    }
+  ],
+  "candidate_url": "https://x.com/OpenAI/status/2075274271845404744"
+}

@@ -87,6 +87,26 @@
   margin-top: 0.8rem;
 }
 
+.shindan-trust-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.shindan-trust-list li {
+  padding: 0.38rem 0.75rem;
+  border: 1px solid var(--gray-200);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.8);
+  color: var(--gray-700);
+  font-size: 0.72rem;
+  line-height: 1.5;
+}
+
 /* ===== 3 STEPS ===== */
 .shindan-steps-section {
   background: #fff;
@@ -138,6 +158,173 @@
   color: var(--gray-400);
   margin-top: 1.2rem;
   flex-shrink: 0;
+}
+
+/* ===== SAMPLE RESULT ===== */
+.shindan-sample-section {
+  background: var(--gray-50);
+  padding: 4rem 2.5rem;
+}
+
+.shindan-sample-inner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.shindan-sample-lead {
+  max-width: 680px;
+  margin: -0.8rem auto 2rem;
+  color: var(--gray-600);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 2;
+  text-align: center;
+}
+
+.shindan-sample-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+  gap: 1.4rem;
+  align-items: stretch;
+}
+
+.shindan-sample-card,
+.shindan-sample-points {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 1.6rem;
+}
+
+.shindan-sample-card {
+  box-shadow: 0 16px 36px rgba(10, 10, 10, 0.06);
+}
+
+.shindan-sample-kicker {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.25rem 0.7rem;
+  border-radius: 999px;
+  background: rgba(119, 89, 246, 0.1);
+  color: #7759f6;
+  font-family: var(--font-en);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.shindan-sample-score {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.shindan-sample-rank {
+  width: 72px;
+  height: 72px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--black);
+  color: #fff;
+  font-family: var(--font-en);
+  font-size: 2.3rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.shindan-sample-score-label {
+  color: var(--gray-500);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.2rem;
+}
+
+.shindan-sample-score-num {
+  font-family: var(--font-en);
+  font-size: 2.1rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.shindan-sample-score-num span {
+  color: var(--gray-400);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.shindan-sample-comment {
+  color: var(--gray-700);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 1.2rem;
+}
+
+.shindan-sample-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.7rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.shindan-sample-metrics li {
+  padding: 0.9rem;
+  border-radius: 10px;
+  background: var(--gray-50);
+}
+
+.shindan-sample-metrics span {
+  display: block;
+  color: var(--gray-500);
+  font-size: 0.7rem;
+  line-height: 1.5;
+  margin-bottom: 0.35rem;
+}
+
+.shindan-sample-metrics strong {
+  font-family: var(--font-en);
+  font-size: 1.2rem;
+}
+
+.shindan-sample-points h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.shindan-sample-points ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.shindan-sample-points li {
+  position: relative;
+  padding-left: 1.2rem;
+  color: var(--gray-700);
+  font-size: 0.88rem;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+.shindan-sample-points li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.72rem;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+  background: #7759f6;
 }
 
 /* ===== ANALYSIS (Loading) ===== */
@@ -338,7 +525,7 @@
 /* AI Cards */
 .shindan-ai-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   margin-bottom: 2.5rem;
 }
@@ -743,6 +930,23 @@
 
   .shindan-steps-section {
     padding: 3rem 1.5rem;
+  }
+
+  .shindan-trust-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shindan-sample-section {
+    padding: 3.5rem 1.5rem;
+  }
+
+  .shindan-sample-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .shindan-sample-metrics {
+    grid-template-columns: 1fr;
   }
 
   .shindan-ai-grid {

@@ -172,7 +172,9 @@
 }
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=53">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
 <style>
   .post-page {
     max-width: 1120px;
@@ -920,26 +922,47 @@
   }
 </style>
 </head>
-<body>
+<body class="media-article">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
 <!-- HEADER -->
-<header>
-  <a href="/" class="logo">AIMA</a>
-  <button class="hamburger" id="hamburger" aria-label="メニューを開く">
-    <span></span><span></span><span></span>
-  </button>
-  <nav class="header-nav" id="header-nav">
-    <a href="company.html">会社概要</a>
-    <a href="/service.html">サービス</a>
-    <a href="/#case">事例</a>
-    <a href="/#pricing">料金</a>
-    <a href="blog.html">ブログ</a>
-    <a href="/#contact" class="header-nav-cta">お問い合わせ</a>
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
   </nav>
-  <a href="/#contact" class="header-cta">お問い合わせ</a>
 </header>
 
 <!-- ARTICLE -->
@@ -986,7 +1009,7 @@
         <section class="post-supervisor" aria-label="監修者情報">
           <div class="post-supervisor-label">監修者情報</div>
           <div class="post-supervisor-card">
-            <img src="images/member-photo.png" alt="水間 雄紀" class="post-supervisor-photo" width="1024" height="1024" loading="lazy" decoding="async">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
             <div>
               <div class="post-supervisor-name">水間 雄紀</div>
               <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
@@ -1016,7 +1039,7 @@
         <div class="aima-feature" aria-label="株式会社AIMAのご案内">
           <div class="aima-feature-kicker">運営会社のご案内</div>
           <div class="aima-feature-title">株式会社AIMA</div>
-          <p>株式会社AIMAは岩手本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="service.html">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。盛岡、県南ものづくり、三陸沿岸、県北のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
+          <p>株式会社AIMAは岩手本社の会社ではありませんが、<mark><strong>全国対応でLLMO支援</strong></mark>を提供しています。<a href="/#flow">月額5万円のLLMO支援</a>は<mark><strong>初期費用なし・1ヶ月単位</strong></mark>で始められ、質問設計、記事制作、引用チェックに絞って実務を進められます。盛岡、県南ものづくり、三陸沿岸、県北のように検索文脈が分かれる場合も、まず<a href="llmo-shindan.html">無料LLMO診断</a>で優先順位を確認できます。</p>
           <div class="aima-feature-actions">
             <a href="llmo-shindan.html" class="aima-feature-btn aima-feature-btn-secondary">無料診断はこちら</a>
             <a href="/#contact" class="aima-feature-btn">まずは相談する</a>
@@ -1076,7 +1099,7 @@
           <figcaption>Office Kのトップページ<span class="figure-source"><a href="https://cd-officek.com/" target="_blank" rel="nofollow noopener">出典：Office K</a></span></figcaption>
         </figure>
         <p>Office Kは、岩手県盛岡市のホームページ・ECサイト・DX制作会社です。公式サイトでは、ホームページ制作、ECサイト構築、DX推進をサービスとして掲げ、Web制作では丁寧なヒアリング、SEO対策、アクセス解析ツール導入を案内しています。岩手県や盛岡市の関係団体でのIT専門家としての活動や、製造業・サービス業・建設業・医療系などの支援実績も公開しています。</p>
-        <p>岩手県では、農畜産物、食品加工、工芸品、観光体験など、ECや販路拡大と相性のよい商材が多くあります。Office Kは、<mark><strong>ホームページ制作だけでなく、ECや業務改善まで一緒に進めたい会社</strong></mark>に向いています。</p>
+        <p>岩手県では、農畜産物、食品加工、工芸品、観光体験など、ECや販路拡大と相性のよい商材が多くあります。Office Kは、<strong>ホームページ制作だけでなく、ECや業務改善まで一緒に進めたい会社</strong>に向いています。</p>
         <p class="post-ref"><a href="https://cd-officek.com/" target="_blank" rel="nofollow noopener">参考：Office K｜トップページ</a></p>
 
         <h3>7. ビークプロモーション株式会社</h3>
@@ -1085,7 +1108,7 @@
           <figcaption>ビークプロモーション株式会社のトップページ<span class="figure-source"><a href="https://beak-promo.jp/" target="_blank" rel="nofollow noopener">出典：ビークプロモーション株式会社</a></span></figcaption>
         </figure>
         <p>ビークプロモーション株式会社は、岩手・盛岡のWeb制作・集客支援会社です。公式サイトでは、メディア制作、デジタルマーケティング、仕組み化の3領域を横断し、地方や中小企業でも続けられる実践的な解決策を提供すると案内しています。顧客を増やしたい、信頼・魅力を伝えたい、業務や販促を仕組み化したいといった目的別に、デジタル広告、SXO、ホームページ制作、ブランディング、Web・SNS運用サポートなどを組み合わせる構成です。</p>
-        <p>岩手県では、限られた人員で集客・採用・販促を続ける会社が多く、単発制作だけでは更新が止まりがちです。ビークプロモーションは、<mark><strong>中小企業の現実的な運用体制に合わせて、発信と改善を仕組み化したい会社</strong></mark>に向いています。</p>
+        <p>岩手県では、限られた人員で集客・採用・販促を続ける会社が多く、単発制作だけでは更新が止まりがちです。ビークプロモーションは、<strong>中小企業の現実的な運用体制に合わせて、発信と改善を仕組み化したい会社</strong>に向いています。</p>
         <p class="post-ref"><a href="https://beak-promo.jp/" target="_blank" rel="nofollow noopener">参考：ビークプロモーション株式会社｜トップページ</a></p>
 
         <h3>8. アイビーソリューション岩手</h3>
@@ -1094,7 +1117,7 @@
           <figcaption>アイビーソリューション岩手のトップページ<span class="figure-source"><a href="https://iwate.ibsolution.jp/" target="_blank" rel="nofollow noopener">出典：アイビーソリューション岩手</a></span></figcaption>
         </figure>
         <p>アイビーソリューション岩手は、岩手向けにホームページ制作とSEOを案内している制作サービスです。公式サイトでは、岩手の制作実績としてコーポレートサイト、EC・ショップサイト、楽天市場コーディング、CMS構築などを掲載し、スマホ対応込みの制作費例も公開しています。</p>
-        <p>小規模な店舗、EC、コーポレートサイトでは、最初から高額なコンサルティングを入れるより、サイトの基本設計、商品説明、更新しやすさを整えるほうが先です。アイビーソリューション岩手は、<mark><strong>費用感を見ながら小さく制作・SEOを始めたい会社</strong></mark>に向いています。</p>
+        <p>小規模な店舗、EC、コーポレートサイトでは、最初から高額なコンサルティングを入れるより、サイトの基本設計、商品説明、更新しやすさを整えるほうが先です。アイビーソリューション岩手は、<strong>費用感を見ながら小さく制作・SEOを始めたい会社</strong>に向いています。</p>
         <p class="post-ref"><a href="https://iwate.ibsolution.jp/" target="_blank" rel="nofollow noopener">参考：アイビーソリューション岩手｜ホームページ制作とSEO</a></p>
 
         <h3>9. 株式会社LiKG</h3>
@@ -1103,7 +1126,7 @@
           <figcaption>株式会社LiKGのトップページ<span class="figure-source"><a href="https://likg.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社LiKG</a></span></figcaption>
         </figure>
         <p>株式会社LiKGは、LLMOコンサルティングを明確に打ち出している全国対応会社です。公式ページでは、LLMO診断、LLMO×SEOコンサルティング、EEAT強化記事制作まで公開しており、AI OverviewやChatGPTにおける露出状況の調査、20項目の診断、改善レポートまで含めた支援体制を案内しています。</p>
-        <p>岩手県の企業でも、すでにサイトやオウンドメディアがあり、AI検索向けに何を直すべきかを診断から明確にしたい会社と相性がよいです。<mark><strong>観光、農畜産、製造、医療など一次情報を多く持つ会社ほど、LLMO専業の診断と記事設計が活きやすい</strong></mark>です。</p>
+        <p>岩手県の企業でも、すでにサイトやオウンドメディアがあり、AI検索向けに何を直すべきかを診断から明確にしたい会社と相性がよいです。<strong>観光、農畜産、製造、医療など一次情報を多く持つ会社ほど、LLMO専業の診断と記事設計が活きやすい</strong>です。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング</a></p>
 
         <h3>10. 株式会社ジオコード</h3>
@@ -1112,7 +1135,7 @@
           <figcaption>株式会社ジオコードのトップページ<span class="figure-source"><a href="https://www.geo-code.co.jp/" target="_blank" rel="nofollow noopener">出典：株式会社ジオコード</a></span></figcaption>
         </figure>
         <p>株式会社ジオコードは、SEO対策、コンテンツ、オウンドメディア支援に加え、AIO・LLMOなどAI最適化も案内している全国対応会社です。サービスページでは通常プラン15万円からの料金例も公開しており、戦略だけでなくコンテンツ制作や実装改善まで含めて相談しやすいのが特徴です。</p>
-        <p>岩手県内でも、県外商圏を持つBtoB企業や、社内リソースが限られていて<mark><strong>分析から実行まで外部チームに寄せたい会社</strong></mark>に向いています。自動車・半導体・医療機器関連のように専門性が高い領域では、SEOとAI最適化を一体で進める視点が重要です。</p>
+        <p>岩手県内でも、県外商圏を持つBtoB企業や、社内リソースが限られていて<strong>分析から実行まで外部チームに寄せたい会社</strong>に向いています。自動車・半導体・医療機器関連のように専門性が高い領域では、SEOとAI最適化を一体で進める視点が重要です。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
 
         <p>東北の隣県との違いまで見たい方は、<a href="blog-aomori-llmo-kaisha.html">青森県の比較記事</a>や<a href="blog-hokkaido-llmo-kaisha.html">北海道の比較記事</a>もあわせて確認すると、岩手県で何を優先すべきかが見えやすくなります。</p>
@@ -1126,37 +1149,37 @@
 
         <h3>盛岡・県南・三陸沿岸・県北で検索意図を分けられるか</h3>
         <p>岩手県では、盛岡市だけを見ていても施策が浅くなりやすいです。盛岡では飲食、医療、教育、採用、観光の検索が多く、北上・奥州・金ケ崎では製造業やBtoB、三陸沿岸では水産・観光・物流、県北では農畜産や広域生活サービスの比重が高くなります。</p>
-        <p>LLMO会社を比較するときは、単に「岩手対応」と書いてあるかではなく、<mark><strong>どの地域のどの質問に答えるページを作るのか</strong></mark>を具体化できるかを見ましょう。対応地域、出張可否、オンライン対応、拠点別FAQまで整理できる会社のほうが、AI検索で誤読されにくくなります。</p>
+        <p>LLMO会社を比較するときは、単に「岩手対応」と書いてあるかではなく、<strong>どの地域のどの質問に答えるページを作るのか</strong>を具体化できるかを見ましょう。対応地域、出張可否、オンライン対応、拠点別FAQまで整理できる会社のほうが、AI検索で誤読されにくくなります。</p>
 
         <h3>観光・宿泊・飲食の季節性と回遊導線を設計できるか</h3>
         <p>令和6年の岩手県の観光入込客数は、実人数で16,907千人・回、延べ人数で26,441,111人回、観光消費額は199,273百万円でした。外国人観光客の入込客数も473,799人回となっており、盛岡、平泉、花巻温泉郷、八幡平、三陸沿岸、みちのく潮風トレイルなど、エリアごとに検索意図が分かれます。</p>
-        <p>観光・宿泊・飲食のLLMOでは、アクセス、季節、所要時間、駐車場、子連れ可否、多言語、予約導線、周辺スポットまで整理する必要があります。<mark><strong>観光地点名だけでなく、旅行者がAIに聞く比較質問まで設計できる会社</strong></mark>を選ぶと、情報が回答に入りやすくなります。</p>
+        <p>観光・宿泊・飲食のLLMOでは、アクセス、季節、所要時間、駐車場、子連れ可否、多言語、予約導線、周辺スポットまで整理する必要があります。<strong>観光地点名だけでなく、旅行者がAIに聞く比較質問まで設計できる会社</strong>を選ぶと、情報が回答に入りやすくなります。</p>
         <p class="post-ref"><a href="https://www.pref.iwate.jp/sangyoukoyou/kankou/toukei/1075241/1090309.html" target="_blank" rel="noopener">参考：岩手県｜令和6年版岩手県観光統計概要</a></p>
 
         <h3>北上川流域の自動車・半導体・医療機器の専門情報を扱えるか</h3>
         <p>岩手県は、自動車関連産業、半導体関連産業、医療機器関連産業を戦略産業に位置づけています。県の企業立地ガイドでは、トヨタグループの自動車組立工場を起点にサプライヤーが進出していること、キオクシア岩手、ジャパンセミコンダクター、デンソー岩手、東京エレクトロン系企業などの半導体関連企業が操業していることが説明されています。</p>
-        <p>この領域で必要なのは、一般的な「技術力があります」という文章ではありません。加工範囲、設備、認証、対応ロット、検査体制、納入実績、共同開発の可否などを整理し、<mark><strong>AIが専門性と対応範囲を正しく理解できる構造にすること</strong></mark>が重要です。</p>
+        <p>この領域で必要なのは、一般的な「技術力があります」という文章ではありません。加工範囲、設備、認証、対応ロット、検査体制、納入実績、共同開発の可否などを整理し、<strong>AIが専門性と対応範囲を正しく理解できる構造にすること</strong>が重要です。</p>
         <p class="post-ref"><a href="https://www2.pref.iwate.jp/~ritti/follow-up/mono-dukuri.html" target="_blank" rel="noopener">参考：岩手県企業立地ガイド｜ものづくり産業振興施策</a></p>
 
         <h3>農畜産・水産・地域産品の一次情報を構造化できるか</h3>
         <p>岩手県の農業産出額は令和5年で2,975億円、全国9位です。品目別ではブロイラー778億円、米527億円、豚388億円、鶏卵249億円、肉用牛249億円、生乳245億円など、畜産と米を中心に幅広い品目があります。りんどうは全国1位、りんごも全国3位とされており、地域産品の説明力が重要です。</p>
-        <p>食品、農畜産、水産、工芸品のLLMOでは、品目、規格、産地、加工方法、出荷時期、配送条件、認証、保存方法、取引条件などを一次情報として整理する必要があります。<mark><strong>商品ページやFAQを単なる紹介ではなく、仕入れ・購入・旅行前比較の回答素材にできる会社</strong></mark>を選びましょう。</p>
+        <p>食品、農畜産、水産、工芸品のLLMOでは、品目、規格、産地、加工方法、出荷時期、配送条件、認証、保存方法、取引条件などを一次情報として整理する必要があります。<strong>商品ページやFAQを単なる紹介ではなく、仕入れ・購入・旅行前比較の回答素材にできる会社</strong>を選びましょう。</p>
         <p class="post-ref"><a href="https://www.pref.iwate.jp/agri/i-agri/2004700/2004699.html" target="_blank" rel="noopener">参考：岩手県｜いわての農業</a></p>
 
         <h3>釜石港・大船渡港を含む広域物流を説明できるか</h3>
         <p>岩手県は内陸の製造業と沿岸港湾がつながる県です。大船渡港は県内初の国際貿易コンテナ定期航路が開設された港で、北上川流域の工業集積地と物流ネットワークを形成する国際物流拠点として整備されています。釜石港にも国際フィーダーコンテナ定期航路、中国・韓国航路があり、輸送費助成制度も案内されています。</p>
-        <p>BtoB企業や食品加工業では、配送範囲、港湾・高速道路・新幹線との接続、納期、輸送温度帯、海外対応などを整理することでAI検索で比較されやすくなります。<mark><strong>物流条件をページの端に置かず、商談前の判断材料として明示できるか</strong></mark>を確認しましょう。</p>
+        <p>BtoB企業や食品加工業では、配送範囲、港湾・高速道路・新幹線との接続、納期、輸送温度帯、海外対応などを整理することでAI検索で比較されやすくなります。<strong>物流条件をページの端に置かず、商談前の判断材料として明示できるか</strong>を確認しましょう。</p>
         <p class="post-ref"><a href="https://www.pref.iwate.jp/engan/ofuna_doboku/1014481.html" target="_blank" rel="noopener">参考：岩手県｜大船渡港港湾整備事業</a></p>
         <p class="post-ref"><a href="https://www.pref.iwate.jp/kendozukuri/kouwankuukou/kouwan/container/1009760.html" target="_blank" rel="noopener">参考：岩手県｜釜石港コンテナ定期航路</a></p>
 
         <h3>医療・福祉・採用で安心材料を整理できるか</h3>
         <p>岩手県は面積が広く、医療・福祉・生活サービスでは対象地域やアクセスの説明が重要です。県のものづくり産業振興施策でも、岩手医科大学をはじめとする研究開発機能や、20の県立病院という強みが医療機器産業の文脈で示されています。医療・介護・福祉のサイトでは、事業者の実態、利用の流れ、対象地域、相談方法、専門性がAIにも読める形で必要です。</p>
-        <p>採用でも同じです。岩手県内の企業は、地域に残る人材だけでなく、Uターン・Iターン、遠方からの応募、家族の生活環境まで比較されます。<mark><strong>採用ページ、職種別FAQ、働く地域の説明を整備できる会社</strong></mark>は、LLMOの観点でも価値があります。</p>
+        <p>採用でも同じです。岩手県内の企業は、地域に残る人材だけでなく、Uターン・Iターン、遠方からの応募、家族の生活環境まで比較されます。<strong>採用ページ、職種別FAQ、働く地域の説明を整備できる会社</strong>は、LLMOの観点でも価値があります。</p>
         <p class="post-ref"><a href="https://www2.pref.iwate.jp/~ritti/follow-up/mono-dukuri.html" target="_blank" rel="noopener">参考：岩手県企業立地ガイド｜ものづくり産業振興施策</a></p>
 
         <h2>岩手県のLLMO会社に依頼する費用相場</h2>
         <p>岩手県でLLMOを外注する場合、費用はかなり幅があります。診断だけのスポット支援、月額伴走、ホームページ改修、EC構築、採用ページ追加まで含めると、同じ「AI検索対策」でも必要な予算は変わります。</p>
-        <p>重要なのは、単に安い会社を探すことではなく、<mark><strong>盛岡の単一商圏を狙うのか、県南・沿岸・県北まで広げるのか、BtoBの専門情報やECまで含めるのか</strong></mark>で見積もりを分けて考えることです。</p>
+        <p>重要なのは、単に安い会社を探すことではなく、<strong>盛岡の単一商圏を狙うのか、県南・沿岸・県北まで広げるのか、BtoBの専門情報やECまで含めるのか</strong>で見積もりを分けて考えることです。</p>
 
         <table>
           <tr><th>支援タイプ</th><th>目安</th><th>主な内容</th></tr>
@@ -1168,7 +1191,7 @@
 
         <h3>まずは診断だけなら10万円前後から検討しやすい</h3>
         <p>公開価格で分かりやすい入口は診断プランです。LiKGはLLMO診断プランを10万円から公開しており、まずは現状把握から入りたい企業にとって判断しやすい価格帯です。</p>
-        <p>岩手県でも、いきなり全ページを直す前に、どの質問で出ていないのか、盛岡・県南・沿岸・県北のどこを優先すべきかを確認したい会社は多いはずです。<mark><strong>自社が観光型なのか、地域サービス型なのか、ものづくりBtoB型なのかを見極める初期費用</strong></mark>として使いやすい帯です。</p>
+        <p>岩手県でも、いきなり全ページを直す前に、どの質問で出ていないのか、盛岡・県南・沿岸・県北のどこを優先すべきかを確認したい会社は多いはずです。<strong>自社が観光型なのか、地域サービス型なのか、ものづくりBtoB型なのかを見極める初期費用</strong>として使いやすい帯です。</p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>小さく始めるなら月額5万円〜15万円帯が入口になる</h3>
@@ -1178,19 +1201,19 @@
 
         <h3>伴走支援の中心帯は月額15万円〜30万円前後</h3>
         <p>継続的に改善提案を受けながら進めるなら、月額15万円〜30万円前後が一つの目安です。ジオコードは通常プラン15万円から、LiKGはLLMO×SEOコンサルティングを30万円から公開しています。</p>
-        <p>この帯では、分析、改善提案、記事方針、内部リンク設計、FAQ、定例報告などが含まれやすくなります。岩手県では、観光、農畜産、製造、医療、物流で必要な説明が違うため、<mark><strong>単発ではなく継続で仮説を調整する支援</strong></mark>のほうが向く会社も多いです。</p>
+        <p>この帯では、分析、改善提案、記事方針、内部リンク設計、FAQ、定例報告などが含まれやすくなります。岩手県では、観光、農畜産、製造、医療、物流で必要な説明が違うため、<strong>単発ではなく継続で仮説を調整する支援</strong>のほうが向く会社も多いです。</p>
         <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：株式会社ジオコード｜SEO対策・AIO・LLMOなどAI最適化も徹底支援</a></p>
         <p class="post-ref"><a href="https://likg.co.jp/service/llmo-consulting/" target="_blank" rel="nofollow noopener">参考：株式会社LiKG｜LLMOコンサルティング 料金プラン</a></p>
 
         <h3>制作やECまで含めると30万円台〜100万円超まで広がる</h3>
         <p>岩手県では、既存サイトが古い、採用ページがない、商品情報が整理されていない、EC導線が弱いというケースもあります。この場合は、LLMOだけでなくサイト制作や改修の費用が必要です。KASAPROのような定額制サービス、アイビーソリューション岩手のように小規模制作費を示すサービス、ホップスのモリオカートのようなECパッケージでは、目的によって金額帯が変わります。</p>
-        <p>特にECや地域産品サイトでは、商品登録、写真撮影、送料設定、レビュー、特商法表示、FAQ、アクセス解析まで必要になり、<mark><strong>AI検索以前の商取引情報を整える費用</strong></mark>が発生します。</p>
+        <p>特にECや地域産品サイトでは、商品登録、写真撮影、送料設定、レビュー、特商法表示、FAQ、アクセス解析まで必要になり、<strong>AI検索以前の商取引情報を整える費用</strong>が発生します。</p>
         <p class="post-ref"><a href="https://hops.co.jp/moriocart/" target="_blank" rel="nofollow noopener">参考：株式会社ホップス｜モリオカート</a></p>
         <p class="post-ref"><a href="https://iwate.ibsolution.jp/" target="_blank" rel="nofollow noopener">参考：アイビーソリューション岩手｜ホームページ制作とSEO</a></p>
 
         <h3>岩手県では取材・撮影・商品情報整理で費用が上がりやすい</h3>
         <p>岩手県の案件では、現地取材や写真撮影が成果に直結しやすいです。観光では季節やアクセス、農畜産では生産者・品目・出荷時期、製造業では設備や工程、医療・福祉では施設や利用の流れを説明する必要があります。</p>
-        <p>文章だけを増やしてもAI検索には弱く、写真、表、FAQ、構造化された会社情報が必要です。<mark><strong>取材・撮影・原稿整理・更新運用まで見積もりに含まれているか</strong></mark>を確認しましょう。</p>
+        <p>文章だけを増やしてもAI検索には弱く、写真、表、FAQ、構造化された会社情報が必要です。<strong>取材・撮影・原稿整理・更新運用まで見積もりに含まれているか</strong>を確認しましょう。</p>
 
         <h3>盛岡単点か県内広域かで予算の考え方を分ける</h3>
         <p>岩手県のLLMO費用で大きい分かれ目は、盛岡市内や単一店舗だけを狙うのか、北上・奥州・一関・三陸沿岸・県北まで含めるのかです。前者なら少数ページで始めやすい一方、後者は地域別ページ、業種別FAQ、事例、配送条件などが増えます。</p>
@@ -1200,10 +1223,10 @@
         <p>最後に、岩手県の企業や店舗から出やすい疑問を整理します。比較ポイントや費用相場とは役割を分け、ここでは意思決定の直前に気になりやすい点だけを短く確認します。</p>
 
         <h3>岩手県のLLMO会社に依頼する意味はありますか？</h3>
-        <p>あります。岩手県は盛岡、県南、三陸沿岸、県北で商圏や検索意図が分かれ、観光、農畜産、水産、製造、医療福祉まで業種も多様です。<mark><strong>AI検索で自社情報がどう見つかるかを整える価値</strong></mark>は十分あります。</p>
+        <p>あります。岩手県は盛岡、県南、三陸沿岸、県北で商圏や検索意図が分かれ、観光、農畜産、水産、製造、医療福祉まで業種も多様です。<strong>AI検索で自社情報がどう見つかるかを整える価値</strong>は十分あります。</p>
 
         <h3>岩手県内の会社でないと意味はありませんか？</h3>
-        <p>必ずしも県内本社である必要はありません。重要なのは、岩手県の地理や産業構造を理解し、<mark><strong>地域圏ごとの違いやものづくり・農畜産・観光の文脈を踏まえて設計できるか</strong></mark>です。</p>
+        <p>必ずしも県内本社である必要はありません。重要なのは、岩手県の地理や産業構造を理解し、<strong>地域圏ごとの違いやものづくり・農畜産・観光の文脈を踏まえて設計できるか</strong>です。</p>
 
         <h3>岩手県の観光・宿泊・飲食でもLLMOは効果がありますか？</h3>
         <p>あります。盛岡、平泉、花巻、八幡平、三陸沿岸など、エリアごとに目的が違うため、アクセス、所要時間、季節性、予約導線、FAQを整理すると、AI検索の比較回答に入りやすくなります。</p>
@@ -1224,7 +1247,7 @@
         <p>確認すべきなのは、どの地域圏や業種文脈を狙うのか、制作や更新まで任せるのか、料金に何が含まれるのかの3点です。岩手県では、この3点が曖昧だと比較がぶれやすいです。</p>
 
         <h2>岩手県でLLMO会社を選ぶなら、盛岡単点ではなく県内の産業軸から逆算しましょう</h2>
-        <p>岩手県のLLMOで大切なのは、<mark><strong>盛岡の都市型集客、県南のものづくり、三陸沿岸の水産・観光、県北の農畜産を同じやり方で扱わないこと</strong></mark>です。観光なら回遊導線、製造業なら設備・認証・実績、農畜産や水産なら品目・出荷・配送条件、医療福祉なら対象地域と安心材料が判断軸になります。</p>
+        <p>岩手県のLLMOで大切なのは、<strong>盛岡の都市型集客、県南のものづくり、三陸沿岸の水産・観光、県北の農畜産を同じやり方で扱わないこと</strong>です。観光なら回遊導線、製造業なら設備・認証・実績、農畜産や水産なら品目・出荷・配送条件、医療福祉なら対象地域と安心材料が判断軸になります。</p>
         <p>そのうえで、戦略だけで終わらず、ページ改修、FAQ追加、写真や図版の整理、地域別ページの作成まで動ける会社を選ぶと前に進めやすいです。比較の起点としては、<a href="blog-aomori-llmo-kaisha.html">青森県のLLMO会社比較</a>や<a href="blog-hokkaido-llmo-kaisha.html">北海道のLLMO会社比較</a>を見比べると、岩手県の産業軸がより分かりやすくなります。まずは<a href="llmo-shindan.html">無料LLMO診断</a>や<a href="/#contact">お問い合わせ</a>から、自社がどの質問文脈で見つかるべきかを整理していくのがおすすめです。</p>
       </div>
 
@@ -1252,14 +1275,14 @@
         </div>
       </section>
 
-      <div class="post-nav">
+                  <div class="post-nav">
         <a href="blog-aomori-llmo-kaisha.html">
           <span class="post-nav-label">&larr; 前の記事</span>
-          青森県でおすすめのLLMO会社10選を見る
+          青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
-        <a href="llmo-shindan.html" style="text-align: right;">
-          <span class="post-nav-label">関連ページ &rarr;</span>
-          無料LLMO診断で現状を確認する
+        <a href="blog-miyagi-llmo-kaisha.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説を見る
         </a>
       </div>
 
@@ -1299,11 +1322,11 @@
           <article class="post-related-card">
             <a href="blog-tokyo-llmo-kaisha.html" class="post-related-card-link">
               <div class="post-related-thumb">
-                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1360" height="752" loading="lazy" decoding="async">
+                <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶのサムネイル" width="1600" height="900" loading="lazy" decoding="async">
               </div>
               <div class="post-related-body">
                 <div class="post-related-tag">LLMO</div>
-                <div class="post-related-card-title">東京でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説</div>
+                <div class="post-related-card-title">東京のLLMO対策会社10選【2026年版】｜BtoB実績と費用で選ぶ</div>
                 <p class="post-related-card-text">BtoBや本社集積地での比較軸を、岩手県のものづくり市場と対比したい方向けです。</p>
                 <div class="post-related-date">2026.04.14</div>
               </div>
@@ -1342,33 +1365,33 @@
 </article>
 
 <!-- FOOTER -->
-<footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-brand">
-        <a href="/" class="footer-logo">AIMA</a>
-        <p class="footer-desc">大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
-      </div>
-      <div class="footer-links">
-        <div class="footer-col">
-          <h4 class="footer-col-title">サービス</h4>
-          <a href="/service.html">サービス一覧</a>
-          <a href="/#pricing">料金</a>
-          <a href="/#faq">よくある質問</a>
-        </div>
-        <div class="footer-col">
-          <h4 class="footer-col-title">会社情報</h4>
-          <a href="company.html">会社概要</a>
-          <a href="/#contact">お問い合わせ</a>
-          <a href="blog.html">ブログ</a>
-          <a href="privacy.html">プライバシーポリシー</a>
-        </div>
-      </div>
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
     </div>
-    <div class="footer-bottom">
-      <p>&copy; 2026 株式会社AIMA</p>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
     </div>
   </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
 </footer>
 
 <script>
@@ -1490,7 +1513,8 @@
     });
   }());
 </script>
-<script src="js/main.js?v=2"></script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
 
 </body>
 </html>

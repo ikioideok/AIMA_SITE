@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google、Geminiの管理AIを拡張──長時間処理と社内連携を強化｜AI深報</title>
+<meta name="description" content="GoogleがGemini APIのManaged Agentsに、バックグラウンド実行、リモートMCP連携、カスタム関数、認証情報更新などを追加した。">
+<link rel="canonical" href="https://ai-and-marketing.jp/shinpo/2026-07-11-google-gemini-managed-agents.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Google、Geminiの管理AIを拡張──長時間処理と社内連携を強化｜AI深報">
+<meta property="og:description" content="GoogleがGemini APIのManaged Agentsに、バックグラウンド実行、リモートMCP連携、カスタム関数、認証情報更新などを追加した。">
+<meta property="og:url" content="https://ai-and-marketing.jp/shinpo/2026-07-11-google-gemini-managed-agents.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/shinpo/ogp.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="AI深報"><meta property="og:site_name" content="AI深報"><meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-07-11T14:58:00+09:00"><meta property="article:modified_time" content="2026-07-11T14:58:00+09:00">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Google、Geminiの管理AIを拡張──長時間処理と社内連携を強化｜AI深報">
+<meta name="twitter:description" content="GoogleがGemini APIのManaged Agentsに新機能を追加した。"><meta name="twitter:image" content="https://ai-and-marketing.jp/images/shinpo/ogp.png"><meta name="twitter:image:alt" content="AI深報">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"Google、Geminiの管理AIを拡張──長時間処理と社内連携を強化","description":"GoogleがGemini APIのManaged Agentsに、バックグラウンド実行、リモートMCP連携、カスタム関数、認証情報更新などを追加した。","image":["https://ai-and-marketing.jp/images/shinpo/ogp.png"],"datePublished":"2026-07-11T14:58:00+09:00","dateModified":"2026-07-11T14:58:00+09:00","articleSection":"企業動向","inLanguage":"ja","author":{"@type":"Person","name":"水間 雄紀"},"publisher":{"@type":"Organization","name":"株式会社AIMA","url":"https://ai-and-marketing.jp/","logo":{"@type":"ImageObject","url":"https://ai-and-marketing.jp/shinpo/images/ai-shinpo-logo.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://ai-and-marketing.jp/shinpo/2026-07-11-google-gemini-managed-agents.html"}}</script>
+<link rel="icon" href="../images/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700;900&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,400,0,0&family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shinpo.css?v=4">
+<script src="shinpo.js?v=2" defer></script>
+</head>
+<body>
+<a class="sh-skip-link" href="#main-content">本文へ移動</a>
+
+<header class="sh-header">
+  <div class="sh-masthead">
+    <a class="sh-logo" href="index.html" aria-label="AI深報トップ">
+      <span>AI</span><span class="sh-logo-jp">深報</span>
+    </a>
+    <p class="sh-tagline">どこよりも早く、AIの重要ニュースを。</p>
+    <a class="sh-aima-link" href="../index.html">運営：AIMA</a>
+    <button class="sh-menu-toggle" type="button" aria-expanded="false" aria-controls="sh-primary-nav">
+      <span class="material-symbols-outlined" aria-hidden="true">menu</span>
+      <span class="sh-menu-label">メニュー</span>
+    </button>
+  </div>
+  <nav class="sh-nav" id="sh-primary-nav" aria-label="記事カテゴリー">
+    <div class="sh-nav-inner">
+      <a href="index.html" data-category-link="all">トップ</a>
+      <a href="index.html?category=企業動向" data-category-link="企業動向">企業動向</a>
+      <a href="index.html?category=プロダクト" data-category-link="プロダクト">プロダクト</a>
+      <a href="index.html?category=生成AI" data-category-link="生成AI">生成AI</a>
+      <a href="index.html?category=セキュリティ" data-category-link="セキュリティ">セキュリティ</a>
+      <a href="index.html?category=お知らせ" data-category-link="お知らせ">お知らせ</a>
+    </div>
+  </nav>
+</header>
+
+<main class="sh-article-shell" id="main-content" tabindex="-1">
+  <article class="sh-article">
+    <div class="sh-article-meta">
+      <span class="sh-cat">企業動向</span>
+      <time datetime="2026-07-11T14:58">2026.07.11 14:58</time>
+    </div>
+    <h1>Google、Geminiの管理AIを拡張──長時間処理と社内連携を強化</h1>
+
+    <div class="sh-lead">
+      <span class="sh-lead-label">3行でわかる</span>
+      <ul>
+        <li>GoogleがGemini APIのManaged Agentsに新機能を追加した</li>
+        <li>バックグラウンド実行、リモートMCP、カスタム関数、認証情報更新が中心</li>
+        <li>社内システムとつながるAIエージェントを作る会社に影響がある</li>
+      </ul>
+    </div>
+
+    <div class="sh-body">
+<h2>何が発表されたか</h2>
+<p>Googleは2026年7月7日、Gemini APIの<span class="em">Managed Agents</span>に新しい機能を追加したと発表しました。主な内容は、長い処理をサーバー側で続けるバックグラウンド実行、リモートMCPサーバーとの連携、カスタム関数呼び出し、認証情報の更新です。</p>
+<p>Managed Agentsは、Gemini API上で動くエージェント機能です。Googleの説明では、1つのAPIエンドポイントを呼ぶと、推論、コード実行、パッケージ導入、ファイル管理、Web情報の利用などを、Googleが用意する隔離されたクラウド環境で扱えます。</p>
+<h2>詳細</h2>
+<p>バックグラウンド実行では、時間のかかる処理をHTTP接続に張り付けたまま待つ必要が減ります。APIを呼ぶとIDが返り、アプリ側はあとから状態確認、進捗ストリーミング、再接続ができます。調査、コード実行、複数ステップの作業など、数分以上かかるAI処理に向いた仕組みです。</p>
+<p>リモートMCPサーバー連携では、エージェントから外部のModel Context Protocolサーバーにつなげられます。つまり、会社が持つデータベース、社内API、業務ツールを、専用の中継処理を毎回作らずに、エージェントの道具として扱いやすくなります。Google Searchやコード実行などの組み込み機能と組み合わせることも示されています。</p>
+<p>カスタム関数呼び出しも強化されています。サーバー側で自動実行する組み込みツールと、アプリ側で実行する自社の業務ロジックを分けて扱えます。さらに、短時間で切れるアクセストークンやAPIキーを、既存の環境IDに新しいネットワーク設定を渡して更新できると説明されています。</p>
+<h2>なぜ重要か</h2>
+<p>今回の発表は、AIエージェントを試作品から業務アプリに近づける変更です。社内システムとつなぐAIでは、長時間タスク、権限管理、外部ツール連携、途中再接続が問題になりやすいからです。</p>
+<p>会社で見るべき点は、「AIが賢いか」だけではありません。どの社内データに接続するのか、認証情報をどう更新するのか、エージェントが失敗したときに人がどこで止めるのかが重要です。Managed Agentsの拡張は、そうした運用面をAPI側で扱いやすくする動きだと言えます。</p>
+    </div>
+
+    <p class="sh-note">※ 本記事は公開時点の一次情報にもとづいています。最新の状況は出典をご確認ください。</p>
+
+    <div class="sh-sources">出典<a class="sh-source-chip" href="https://blog.google/innovation-and-ai/technology/developers-tools/expanding-managed-agents-gemini-api/" target="_blank" rel="noopener">Google公式ブログ</a><a class="sh-source-chip" href="https://ai.google.dev/gemini-api/docs/antigravity-agent" target="_blank" rel="noopener">Google AI for Developers: Antigravity Agent</a><a class="sh-source-chip" href="https://ai.google.dev/gemini-api/docs/background-execution" target="_blank" rel="noopener">Google AI for Developers: Background execution</a></div>
+
+    <a class="sh-back" href="index.html">← AI深報トップへ</a>
+  </article>
+
+  <aside class="sh-article-sidebar">
+    <section class="sh-side-module" aria-labelledby="article-latest-title">
+      <h2 id="article-latest-title">最新ニュース</h2>
+      <div class="sh-latest-list" data-latest-list></div>
+      <a class="sh-more-link" href="index.html#latest-news">すべて見る <span aria-hidden="true">›</span></a>
+    </section>
+
+    <section class="sh-side-module sh-about-module" aria-labelledby="article-about-title">
+      <h2 id="article-about-title">運営について</h2>
+      <p>AI深報は株式会社AIMA（大阪のLLMO対策・AI対策会社）が運営しています。</p>
+      <a href="../company.html">AIMAについて <span aria-hidden="true">›</span></a>
+    </section>
+  </aside>
+</main>
+
+<footer class="sh-footer">
+  <div class="sh-footer-inner">
+    <p>AI深報は<a href="../index.html">株式会社AIMA</a>（大阪のLLMO対策・AI対策会社）が運営しています。</p>
+    <span class="sh-footer-en">AI SHINPO — FASTEST AI NEWS</span>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,1271 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計｜AIMA ブログ</title>
+<meta name="description" content="LLMOに効くナレッジベースの作り方を初心者向けに解説。会社概要、サービス、料金、FAQ、事例、外部評価をつなぎ、AIが参照しやすい会社情報へ整える手順を紹介します。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="水間 雄紀">
+<link rel="canonical" href="https://ai-and-marketing.jp/blog-llmo-knowledge-base.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計">
+<meta property="og:description" content="LLMOに効くナレッジベースの作り方を初心者向けに解説。会社概要、サービス、料金、FAQ、事例、外部評価をつなぎ、AIが参照しやすい会社情報へ整える手順を紹介します。">
+<meta property="og:url" content="https://ai-and-marketing.jp/blog-llmo-knowledge-base.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/blog-llmo-knowledge-base/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-06-27">
+<meta property="article:modified_time" content="2026-06-27">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計">
+<meta name="twitter:description" content="LLMOに効くナレッジベースの作り方を初心者向けに解説。会社概要、サービス、料金、FAQ、事例、外部評価をつなぎ、AIが参照しやすい会社情報へ整える手順を紹介します。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/blog-llmo-knowledge-base/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計",
+  "description": "LLMOに効くナレッジベースの作り方を初心者向けに解説。会社概要、サービス、料金、FAQ、事例、外部評価をつなぎ、AIが参照しやすい会社情報へ整える手順を紹介します。",
+  "image": [
+    "https://ai-and-marketing.jp/images/blog-llmo-knowledge-base/og.jpg"
+  ],
+  "datePublished": "2026-06-27",
+  "dateModified": "2026-06-27",
+  "author": {
+    "@type": "Person",
+    "name": "水間 雄紀"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-marketing.jp/images/ogp.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-marketing.jp/blog-llmo-knowledge-base.html"
+  },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://ai-and-marketing.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ブログ",
+      "item": "https://ai-and-marketing.jp/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計",
+      "item": "https://ai-and-marketing.jp/blog-llmo-knowledge-base.html"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "LLMO用のナレッジベースは新しいCMSが必要ですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "必ず新しいCMSが必要なわけではありません。まずは会社概要、サービス、料金、FAQ、事例を今のサイト上で整理し、内部リンクでつなぐことから始められます。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "どのページからナレッジベースを作ればいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "最初は会社概要、サービスページ、料金ページ、FAQ、導入事例から始めます。AIや見込み客が会社を判断するときに必要な情報が集まるページを優先します。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "社内資料をそのまま公開してもいいですか？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "そのまま公開するのは避けてください。顧客が読んで分かる言葉に直し、公開してよい情報だけを選び、古い料金や非公開情報が混ざらないよう確認します。"
+      }
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
+<style>
+  .post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8rem 2.5rem 4rem;
+  }
+  .post-header {
+    max-width: none;
+    margin: 0;
+  }
+  .post-content-layout {
+    display: block;
+  }
+  .post-main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .post-breadcrumbs {
+    margin: 0 0 1.3rem;
+  }
+  .post-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-breadcrumbs-item + .post-breadcrumbs-item::before {
+    content: '/';
+    margin: 0 0.45rem;
+    color: var(--gray-400);
+  }
+  .post-breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-breadcrumbs-link:hover {
+    color: var(--black);
+  }
+  .post-breadcrumbs-current {
+    color: var(--gray-600);
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #7759f6;
+    background: rgba(119,89,246,0.08);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+  .post-date {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .post-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  .post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-toc {
+    margin: 2rem 0 2.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .post-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+  .post-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-toc-summary-icon {
+    width: 0.68rem;
+    height: 0.68rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+    flex: none;
+  }
+  .post-toc[open] .post-toc-summary-icon {
+    transform: rotate(225deg) translateY(-1px);
+  }
+  .post-toc-nav {
+    padding: 0 1.15rem 1.05rem;
+    border-top: 1px solid var(--gray-200);
+    max-height: 24rem;
+    overflow: auto;
+  }
+  .post-toc-list,
+  .post-toc-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-toc-list {
+    padding-top: 0.9rem;
+  }
+  .post-toc-item + .post-toc-item {
+    margin-top: 0.55rem;
+  }
+  .post-toc-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .post-toc-link:hover {
+    color: var(--black);
+  }
+  .post-toc-sublist {
+    margin-top: 0.45rem;
+    margin-left: 0.25rem;
+    padding-left: 0.95rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  .post-toc-sublist .post-toc-item + .post-toc-item {
+    margin-top: 0.35rem;
+  }
+  .post-toc-sublist .post-toc-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+  }
+  .post-supervisor {
+    margin: 0 0 2.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-supervisor-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7759f6;
+    background: rgba(119, 89, 246, 0.08);
+    border-radius: 999px;
+  }
+  .post-supervisor-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .post-supervisor-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+  }
+  .post-supervisor-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+  .post-supervisor-role {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .post-supervisor-text {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  .post-sidebar {
+    display: none;
+    align-self: start;
+    position: sticky;
+    top: 6.8rem;
+    height: max-content;
+  }
+  .post-sidebar-stack > * + * {
+    margin-top: 1rem;
+  }
+  .post-sidebar-inner,
+  .post-sidebar-module {
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-sidebar-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .post-sidebar.is-visible .post-sidebar-inner {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .post-sidebar-label,
+  .post-sidebar-module-label {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+  }
+  .post-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-sidebar-item + .post-sidebar-item {
+    margin-top: 0.8rem;
+  }
+  .post-sidebar-link {
+    position: relative;
+    display: block;
+    padding-left: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .post-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 999px;
+    background: var(--gray-200);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .post-sidebar-link:hover {
+    color: var(--black);
+  }
+  .post-sidebar-link.is-active {
+    color: var(--black);
+    font-weight: 700;
+  }
+  .post-sidebar-link.is-active::before {
+    background: #7759f6;
+    transform: scale(1.15);
+  }
+  .post-body p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+  .post-body ul, .post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-body li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid #7759f6;
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 400;
+  }
+  .post-body blockquote .quote-source {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-body blockquote .quote-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-body blockquote .quote-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .post-body mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, rgba(255, 227, 130, 0.9) 58%);
+    padding: 0 0.08em;
+  }
+  .post-body a {
+    color: #7759f6;
+    text-decoration: underline;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+  .post-body figure {
+    margin: 1.8rem 0 2rem;
+  }
+  .post-body figure img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid var(--gray-200);
+  }
+  .post-body figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .post-body figcaption .figure-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-body figcaption .figure-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  }
+  .post-body figcaption .figure-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--gray-200);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .post-body th {
+    background: var(--gray-50);
+    font-weight: 500;
+    color: var(--black);
+  }
+  .post-body td {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+  .post-body .post-ref {
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  .post-cta {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .post-cta-text {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .post-cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: opacity 0.2s;
+  }
+  .post-cta-btn:hover { opacity: 0.8; }
+  .post-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-related-header {
+    margin-bottom: 1.25rem;
+  }
+  .post-related-label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .post-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+  }
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .post-related-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .post-related-card:hover {
+    box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
+    transform: translateY(-2px);
+  }
+  .post-related-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-related-thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--gray-100);
+    overflow: hidden;
+  }
+  .post-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-related-body {
+    padding: 1.1rem;
+  }
+  .post-related-tag {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .post-related-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-card-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 0.9rem;
+  }
+  .post-related-date {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-related-more {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .post-related-more a {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-related-more a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-nav a {
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-nav a:hover { color: var(--black); }
+  .post-nav-label {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 640px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .post-content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 3.2rem;
+      align-items: start;
+    }
+    .post-main {
+      max-width: none;
+      margin: 0;
+    }
+    .post-sidebar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .post-page { padding: 7rem 1.5rem 3rem; }
+    .post-title { font-size: 1.4rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-toc summary {
+      padding: 0.95rem 1rem;
+      font-size: 0.9rem;
+    }
+    .post-toc-nav {
+      padding: 0 1rem 0.95rem;
+    }
+    .post-supervisor {
+      padding: 1rem;
+    }
+    .post-supervisor-card {
+      grid-template-columns: 72px 1fr;
+      gap: 0.85rem;
+    }
+    .post-supervisor-photo {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
+</head>
+<body class="media-article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-page">
+
+  <div class="post-content-layout">
+    <div class="post-main">
+      <nav class="post-breadcrumbs" aria-label="パンくずリスト">
+        <ol class="post-breadcrumbs-list">
+          <li class="post-breadcrumbs-item"><a href="/" class="post-breadcrumbs-link">トップ</a></li>
+          <li class="post-breadcrumbs-item"><a href="blog.html" class="post-breadcrumbs-link">ブログ</a></li>
+          <li class="post-breadcrumbs-item"><span class="post-breadcrumbs-current" aria-current="page">LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計</span></li>
+        </ol>
+      </nav>
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-tag">ハウツー</span>
+          <time class="post-date" datetime="2026-06-27">公開日 2026.06.27</time>
+          <time class="post-date post-updated" datetime="2026-06-27">更新日 2026.06.27</time>
+        </div>
+
+        <h1 class="post-title">LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計</h1>
+
+        <div class="post-thumb">
+          <img src="images/blog-llmo-knowledge-base/eyecatch.jpg" alt="LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
+        </div>
+      </div>
+
+      <div class="post-body">
+        <p>LLMOでいうナレッジベースとは、AIや見込み客が「この会社は何をしていて、誰に向いていて、どんな根拠があるのか」を理解しやすくするための会社情報の置き場です。難しいシステムを新しく作る話ではありません。</p>
+        <p>最初に整えるのは、会社概要、サービス、料金、FAQ、事例、外部での紹介情報です。これらがばらばらだと、AI検索でも人間の比較検討でも説明が弱くなります。全体像を先に見たい方は、<a href="blog-llmo-taisaku.html">LLMO対策とは何か</a>もあわせて確認してください。</p>
+        <p>この記事では、シート候補の「サービス/会社/FAQ/事例を接続」という切り口に沿って、AIが参照しやすい会社情報の作り方を、初心者でも迷わない順番で整理します。</p>
+
+        <details class="post-toc">
+          <summary>
+            <span>目次</span>
+            <span class="post-toc-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <nav class="post-toc-nav" aria-label="記事の目次"></nav>
+        </details>
+
+        <section class="post-supervisor" aria-label="監修者情報">
+          <div class="post-supervisor-label">監修者情報</div>
+          <div class="post-supervisor-card">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
+            <div>
+              <div class="post-supervisor-name">水間 雄紀</div>
+              <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
+              <div class="post-supervisor-text">1986年和歌山県生まれ、近畿大学卒。金融機関、経営コンサルティング会社を経て、2018年にコンテンツ制作の専門会社である株式会社circlizeを創業。2024年、ラグザス株式会社に事業譲渡。現在は株式会社AIMAにてAI×マーケティング事業に従事し、株式会社フォーティーファイヴでコンテンツの品質管理責任者を務める。</div>
+            </div>
+          </div>
+        </section>
+
+        <h2>LLMOに効くナレッジベースとは何か</h2>
+        <p>ナレッジベースという言葉だけ聞くと、問い合わせ対応用のヘルプサイトや社内マニュアルを想像しやすいです。しかしLLMOで大切なのは、社内の知識をそのまま並べることではありません。AIと見込み客が会社を判断できる材料を、公式サイト上で読みやすく整理することです。</p>
+
+        <h3>AIが会社を説明するための根拠集を作る</h3>
+        <p>AI検索では、会社名だけで選ばれるわけではありません。何を提供しているか、誰に向いているか、料金はどのくらいか、実績はあるか、よくある不安に答えているかを見ます。だからナレッジベースは、単なる情報置き場ではなく、<mark><strong>会社を説明する根拠集</strong></mark>として作ります。</p>
+        <p>たとえば「LLMO支援会社」とだけ書いても、AIにも読者にも違いは伝わりません。「月額5万円」「相談回数の上限なし」「記事作成と修正込み」「最低契約期間なし」のように、判断に使える情報を同じ文脈で出す必要があります。抽象的な強みより、比較時に使われる具体情報を優先しましょう。</p>
+
+        <blockquote>
+          <p>“Create valuable, non-commodity content for your audience”</p>
+          <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide" target="_blank" rel="noopener">Google Search Central「Optimizing your website for generative AI features on Google Search」</a></p>
+        </blockquote>
+
+        <h3>ただの社内FAQやヘルプとは違う</h3>
+        <p>社内FAQは、社内の人が困らないための資料です。一方、LLMO向けのナレッジベースは、顧客とAIが判断に使う情報を公開するためのものです。専門用語、社内略語、古い料金、非公開条件が混ざっていると逆効果になります。公開前に、<mark><strong>顧客が読む言葉</strong></mark>へ直すことが大切です。</p>
+        <p>競合ページを見ると、ナレッジベース構築、一次情報コンテンツ、情報構造、モニタリングなどを支援範囲に含める会社が増えています。ただし、中小企業が最初にやるべきことは大きなシステム導入ではありません。今ある重要ページを見直し、足りない説明を足し、内部リンクでつなぐことです。</p>
+
+        <figure>
+          <img src="images/blog-llmo-knowledge-base/infographic-knowledge-map.jpg" alt="LLMO向けナレッジベースで会社概要、サービス、料金、FAQ、事例、外部評価をつなぐ図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>LLMO向けナレッジベースは、会社概要、サービス、料金、FAQ、事例、外部評価をつなぐ情報の地図です。</figcaption>
+        </figure>
+
+        <h2>最初に整えるべき会社情報</h2>
+        <p>ナレッジベースは、いきなり大量の記事を作るより、会社の判断材料をそろえるところから始めます。読者が問い合わせ前に見る情報は、AIが回答を作るときの材料にもなりやすいからです。</p>
+
+        <h3>会社概要・代表者・所在地をひとつにまとめる</h3>
+        <p>まず、会社名、所在地、代表者、事業内容、設立背景、対応エリア、連絡先を確認します。会社概要ページが薄いと、AIは外部サイトや古い情報を拾いやすくなります。公式サイト側に、正しい会社情報を<mark><strong>一番信頼できる場所</strong></mark>として置きましょう。</p>
+        <p>代表者プロフィールも重要です。誰が監修しているのか、どんな経験があるのか、なぜそのテーマを語れるのかを短く書きます。AIMAの記事で監修者情報を毎回入れているのは、読者とAIの両方に「誰の情報か」を伝えるためです。</p>
+
+        <h3>サービス範囲と向き不向きを明文化する</h3>
+        <p>サービスページでは、何をやるかだけでなく、何をやらないかも書きます。たとえばLLMO支援なら、調査だけなのか、記事作成まで含むのか、既存ページ修正やFAQ追加まで対応するのかを分けます。AIにも見込み客にも、<mark><strong>提供範囲の境界線</strong></mark>が見えるほど比較されやすくなります。</p>
+        <p>また、向いている会社と向いていない会社も書くと親切です。「社内に記事担当がいない会社向け」「毎月小さく改善したい会社向け」のように表現すると、AI回答で推薦される文脈も作りやすくなります。良いことだけを並べるより、選び方まで見せるほうが信頼されます。</p>
+
+        <blockquote>
+          <p>“We recommend placing this information on your home page”</p>
+          <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/appearance/structured-data/organization" target="_blank" rel="noopener">Google Search Central「Organization structured data」</a></p>
+        </blockquote>
+
+        <h3>料金・契約条件・対応範囲を曖昧にしない</h3>
+        <p>料金をまったく出していないページは、比較検討で不利になりやすいです。最低価格、月額費用、含まれる作業、別料金になりやすい作業、契約期間、解約条件を整理しましょう。全部を細かく出せない場合でも、<mark><strong>判断できる目安</strong></mark>は必要です。</p>
+        <p>AIMAなら、月額5万円、相談回数の上限なし、記事作成・既存記事修正込み、最低契約期間なしという情報を明記しています。こうした条件が見えると、AIも読者も「低予算で小さく始めたい会社向け」と理解しやすくなります。</p>
+
+        <figure>
+          <img src="images/blog-llmo-knowledge-base/infographic-info-checklist.jpg" alt="LLMO向けナレッジベースで最初に整える会社情報のチェックリスト図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>最初は、会社概要、サービス範囲、料金、FAQ、事例の不足を確認します。</figcaption>
+        </figure>
+
+        <table>
+          <tr>
+            <th>情報</th>
+            <th>書くこと</th>
+            <th>置く場所</th>
+          </tr>
+          <tr>
+            <td>会社情報</td>
+            <td>正式名称、所在地、代表者、事業内容</td>
+            <td>会社概要、トップ</td>
+          </tr>
+          <tr>
+            <td>サービス</td>
+            <td>対象者、提供範囲、向き不向き</td>
+            <td>サービスページ</td>
+          </tr>
+          <tr>
+            <td>料金</td>
+            <td>月額、含まれる作業、契約条件</td>
+            <td>料金ページ、FAQ</td>
+          </tr>
+          <tr>
+            <td>実績</td>
+            <td>業種、課題、対応内容、結果</td>
+            <td>事例、ブログ</td>
+          </tr>
+        </table>
+
+        <h2>FAQ・事例・外部評価をつなぐ</h2>
+        <p>会社情報とサービス情報を整えたら、次は問い合わせ前の不安を減らす情報を足します。FAQ、事例、外部評価はそれぞれ役割が違いますが、つながっているとAIにも読者にも伝わりやすくなります。</p>
+
+        <h3>FAQは顧客の質問をそのまま見出しにする</h3>
+        <p>FAQは、AI検索と相性がよい情報です。ただし、社内都合の質問ではなく、顧客が本当に聞く言葉で作ります。「LLMOは何から始める？」「SEO会社に依頼中でも追加できる？」「月5万円で何まで含まれる？」のように、<mark><strong>そのまま聞かれる質問</strong></mark>を見出しにしてください。</p>
+        <p>回答は、最初の一文で結論を出します。そのあとに理由、条件、次に見るページを短く続けます。FAQを増やすだけでなく、該当するサービスページや事例ページへ内部リンクでつなぐと、ナレッジベース全体が読みやすくなります。具体的な作り方は<a href="blog-llmo-faq.html">LLMOに強いFAQの作り方</a>も参考になります。</p>
+
+        <h3>事例は業種・課題・結果まで書く</h3>
+        <p>事例は、AIと見込み客に「この会社は本当にできるのか」を伝える材料です。会社名を出せない場合でも、業種、課題、実施内容、期間、結果、使ったページ、追加したFAQなどは書けます。事例では、<mark><strong>何をどう直したか</strong></mark>を具体的に見せます。</p>
+        <p>「記事を作成しました」だけでは弱いです。「BtoBサービスの料金ページに比較表を追加し、FAQを5件増やし、AI検索での見え方を月次確認した」のように、作業と目的が分かる表現にします。数字が出せないときも、改善したページや判断材料を具体化しましょう。</p>
+
+        <h3>外部掲載やプロフィール情報も見直す</h3>
+        <p>AIは公式サイトだけを見るとは限りません。業界メディア、採用媒体、Googleビジネスプロフィール、比較サイト、SNSプロフィールなどに古い住所やサービス名が残っていると、誤った説明につながることがあります。ナレッジベース作りでは、<mark><strong>外部情報のズレ</strong></mark>も点検します。</p>
+        <p>まずは、自社名、代表者名、サービス名、料金、所在地で検索し、古い情報が出ていないかを見ます。修正できる外部プロフィールは直し、直せない情報は公式サイト側で正しい説明を厚くします。AI検索の誤情報対策にもつながる地味ですが大事な作業です。</p>
+
+        <figure>
+          <img src="images/blog-llmo-knowledge-base/infographic-update-flow.jpg" alt="LLMO向けナレッジベースを集める、整える、つなぐ、確認する、更新する流れの図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>ナレッジベースは、情報を集め、整え、ページ同士をつなぎ、AI検索での見え方を確認しながら更新します。</figcaption>
+        </figure>
+
+        <h2>AIが読みやすい置き方と技術確認</h2>
+        <p>ナレッジベースは文章だけでなく、置き方も大切です。どのページに何があるのか、検索エンジンが読めるのか、AIクローラーを必要以上に止めていないかを確認します。</p>
+
+        <h3>重要ページへ内部リンクでつなぐ</h3>
+        <p>サービスページ、料金ページ、FAQ、事例、会社概要、関連ブログが孤立していると、情報のまとまりが弱くなります。サービスページから料金とFAQへ、FAQから詳しい記事へ、記事からサービスページへ戻す流れを作ります。内部リンクは、<mark><strong>情報の道案内</strong></mark>です。</p>
+        <p>たとえばこの記事では、LLMOの全体像、FAQの作り方、構造化データ、企業サイト設計の記事へ自然につないでいます。読者が迷わないだけでなく、検索エンジンにも「このサイトはLLMOの専門情報をまとまって持っている」と伝えやすくなります。</p>
+
+        <h3>Organization・Breadcrumb・FAQを本文と合わせる</h3>
+        <p>構造化データは、本文の代わりではありません。会社概要に表示している会社情報、記事に表示している公開日、ページ上に見えているFAQと合わせて使います。AI検索向けの特別な裏技ではなく、<mark><strong>見える情報の補助</strong></mark>として扱いましょう。</p>
+        <p>会社概要にはOrganization、記事にはArticleとBreadcrumbList、FAQがあるページにはFAQPageを検討します。詳しくは<a href="blog-llmo-structured-data.html">LLMOに構造化データは必要？</a>で整理しています。大切なのは、JSON-LDだけを増やすのではなく、本文と同じ情報にすることです。</p>
+
+        <blockquote>
+          <p>“OpenAI uses web crawlers (“robots”) and user agents”</p>
+          <p class="quote-source">出典：<a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener">OpenAI「Overview of OpenAI Crawlers」</a></p>
+        </blockquote>
+
+        <h3>robots.txtとクロール状態を確認する</h3>
+        <p>どれだけ良い会社情報を書いても、検索エンジンや必要なクローラーが読めない状態では意味が伝わりません。robots.txt、noindex、canonical、サイトマップ、404ページを確認します。まずは、重要ページが<mark><strong>読める状態</strong></mark>かを見るだけでも十分です。</p>
+        <p>OpenAIやGoogleなど、AI検索に関係する仕組みは変化します。すべてを追いかける必要はありませんが、重要ページを誤ってブロックしていないか、古いテスト設定が残っていないかは定期的に確認してください。</p>
+
+        <h2>更新運用とAIMAでできること</h2>
+        <p>ナレッジベースは、作って終わりではありません。料金、サービス範囲、事例、FAQ、外部掲載は変わります。古い情報が残るほど、AIにも読者にも誤解されやすくなります。</p>
+
+        <h3>月1回で古い情報を直す</h3>
+        <p>毎月1回、会社概要、サービス、料金、FAQ、事例、外部プロフィールを見直します。新しい事例が出たら追加し、対応していないサービスは削り、よく聞かれた質問はFAQに足します。大がかりなリニューアルより、<mark><strong>小さな更新を続ける</strong></mark>ほうが現実的です。</p>
+        <p>更新するときは、どのページを直したか、何を追加したか、AI検索でどう見えたかをメモしておきます。LLMOは一度の作業で終わる施策ではなく、情報の鮮度を保ちながら改善する運用です。<a href="blog-llmo-monitoring.html">LLMOモニタリング</a>と組み合わせると、月次で迷いにくくなります。</p>
+
+        <h3>AIMAなら月5万円で記事・FAQ・修正をまとめて進める</h3>
+        <p>AIMAはLLMOに特化し、月額5万円、相談回数の上限なし、最低契約期間なしで支援しています。記事作成だけでなく、既存記事の修正、FAQ追加、内部リンク、会社情報の整理まで、範囲内でまとめて進められます。社内に専門担当者がいなくても、<mark><strong>手を動かすところ</strong></mark>まで支援します。</p>
+        <p>まずは<a href="llmo-shindan.html">無料LLMO診断</a>で、自社サイトがAI検索でどう見られているかを確認してください。ナレッジベースに足りないページ、先に直すべきFAQ、追加すべき事例を分けると、月5万円でも無理なく始められます。詳しい支援範囲は<a href="/service/">サービス内容</a>をご覧ください。</p>
+
+        <p class="post-ref"><a href="https://mediareach.co.jp/seo-consulting/llmo-service/" target="_blank" rel="nofollow noopener">参考：メディアリーチ LLMO（AIO）コンサルティング・運用代行</a></p>
+        <p class="post-ref"><a href="https://www.sedesign.co.jp/service/llmo/" target="_blank" rel="nofollow noopener">参考：SEデザイン LLMO診断・伴走支援サービス</a></p>
+        <p class="post-ref"><a href="https://www.geo-code.co.jp/seo/" target="_blank" rel="nofollow noopener">参考：ジオコード SEO・AIO・LLMO支援</a></p>
+
+        <h2>LLMO向けナレッジベースに関するよくある質問</h2>
+
+        <h3>LLMO用のナレッジベースは新しいCMSが必要ですか？</h3>
+        <p><mark><strong>新しいCMSは必須ではありません</strong></mark>。まずは今のサイトで、会社概要、サービス、料金、FAQ、事例を整えます。ページが足りなければ追加し、古い情報があれば直します。大きなシステム導入より、公式サイト上の情報整理が先です。</p>
+
+        <h3>どのページからナレッジベースを作ればいいですか？</h3>
+        <p>最初は<mark><strong>問い合わせに近いページ</strong></mark>から始めます。会社概要、サービスページ、料金ページ、FAQ、導入事例を優先してください。そのあと、比較記事、用語解説、業界別ページ、外部プロフィールの修正へ広げると進めやすいです。</p>
+
+        <h3>社内資料をそのまま公開してもいいですか？</h3>
+        <p><mark><strong>そのまま公開しない</strong></mark>ほうが安全です。社内資料には、専門用語、古い条件、非公開情報、顧客に伝わりにくい言い回しが混ざりやすいです。公開前に、顧客が理解できる文章へ直し、出してよい情報だけを選びましょう。</p>
+
+        <h2>まとめ</h2>
+        <p>LLMOに効くナレッジベースは、AI専用の難しい仕組みではありません。会社概要、サービス、料金、FAQ、事例、外部評価を、公式サイト上で分かりやすくつなぐことです。</p>
+        <p>まずは、会社情報を正しくまとめ、サービス範囲と料金を明確にし、FAQと事例を足し、内部リンクでつなぎます。そのうえで、構造化データやrobots.txt、クロール状態を確認すると、AIにも人にも伝わりやすいサイトになります。</p>
+        <p>AIMAは、LLMO特化、月額5万円、相談回数の上限なし、記事作成・修正込みで、ナレッジベース作りを支援します。まずは<a href="llmo-shindan.html">無料LLMO診断</a>または<a href="/#contact">お問い合わせ</a>からご相談ください。</p>
+      </div>
+
+      <!-- 記事下CTA -->
+      <div class="post-cta">
+        <div class="post-cta-title">AIが理解しやすい会社情報へ整えませんか</div>
+        <div class="post-cta-text">月額5万円で、記事作成・FAQ追加・会社情報の見直しまで一緒に進めます。</div>
+        <a href="/#contact" class="post-cta-btn">まずは相談する</a>
+      </div>
+
+      <section class="newsletter-inline" aria-label="メルマガ登録導線">
+        <div class="newsletter-card">
+          <div class="newsletter-eyebrow">Newsletter</div>
+          <div class="newsletter-title">LLMO内製化マガジン</div>
+          <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。ブログ更新だけでなく、現場で詰まりやすい論点もまとめます。</p>
+          <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-inline">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-inline-email">メールアドレス</label>
+              <input type="email" id="newsletter-inline-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+              <button type="submit" class="newsletter-submit">無料で登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 前後の記事リンク -->
+      <div class="post-nav">
+        <a href="blog-llmo-faq.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          LLMOに強いFAQの作り方を見る
+        </a>
+        <a href="blog-llmo-structured-data.html" style="text-align: right;">
+          <span class="post-nav-label">関連記事 &rarr;</span>
+          構造化データの基本を見る
+        </a>
+      </div>
+
+      <section class="post-related" aria-labelledby="post-related-title">
+        <div class="post-related-header">
+          <div class="post-related-label">Related Articles</div>
+          <h2 class="post-related-title" id="post-related-title">関連記事</h2>
+          <p class="post-related-text">LLMOの基礎、構造化データ、企業サイト設計もあわせて確認できます。</p>
+        </div>
+        <div class="post-related-grid">
+          <article class="post-related-card">
+            <a href="blog-llmo-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とは？SEOとの違いと実践方法を徹底解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">LLMO</div>
+                <div class="post-related-card-title">LLMO対策とは？SEOとの違いと実践方法を徹底解説</div>
+                <p class="post-related-card-text">LLMOの全体像を先に押さえたい方向けの記事です。</p>
+                <div class="post-related-date">2026.04.01</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-llmo-structured-data.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-structured-data/eyecatch.jpg" alt="LLMOに構造化データは必要？AIに伝わるSchema・FAQ実装の基本のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">実装</div>
+                <div class="post-related-card-title">LLMOに構造化データは必要？AIに伝わるSchema・FAQ実装の基本</div>
+                <p class="post-related-card-text">会社情報やFAQを構造化データと合わせる基本を確認できます。</p>
+                <div class="post-related-date">2026.06.25</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-ai-search-corporate-site-design.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-ai-search-corporate-site-design/eyecatch.jpg" alt="AI検索に強い企業サイト設計とは？引用されやすい構成と見直し手順のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">サイト設計</div>
+                <div class="post-related-card-title">AI検索に強い企業サイト設計とは？引用されやすい構成と見直し手順</div>
+                <p class="post-related-card-text">会社情報やFAQをサイト全体で整える考え方が分かります。</p>
+                <div class="post-related-date">2026.06.12</div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
+      </section>
+    </div>
+
+    <aside class="post-sidebar" aria-label="記事サイドバー">
+      <div class="post-sidebar-stack">
+        <div class="post-sidebar-inner">
+          <div class="post-sidebar-label">CONTENTS</div>
+          <nav class="post-sidebar-toc" aria-label="サイドバー目次"></nav>
+        </div>
+
+        <section class="post-sidebar-module newsletter-sidebar-card" aria-label="メルマガ登録">
+          <div class="post-sidebar-module-label">NEWSLETTER</div>
+          <div class="newsletter-sidebar-title">LLMO内製化マガジン</div>
+          <p class="newsletter-sidebar-text">まずは自分たちで進めたい方向けに、設計・運用・改善のヒントを短く配信します。</p>
+          <form class="newsletter-form" aria-label="サイドバーのメルマガ登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-sidebar">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-sidebar-email">メールアドレス</label>
+              <input type="email" id="newsletter-sidebar-email" name="email" class="newsletter-input" placeholder="メールアドレス" required>
+              <button type="submit" class="newsletter-submit">登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。</p>
+          </form>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+
+<script>
+  (function () {
+    const postBody = document.querySelector('.post-body');
+    const tocNav = document.querySelector('.post-toc-nav');
+    const tocDetails = document.querySelector('.post-toc');
+    const sidebarNav = document.querySelector('.post-sidebar-toc');
+    const sidebar = document.querySelector('.post-sidebar');
+    if (!postBody) return;
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3'));
+    if (!headings.length) {
+      if (tocDetails) tocDetails.hidden = true;
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = 'section-' + String(index + 1).padStart(2, '0');
+      }
+    });
+
+    if (tocNav && tocDetails) {
+      const rootList = document.createElement('ol');
+      rootList.className = 'post-toc-list';
+      let currentGroup = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        item.className = 'post-toc-item';
+
+        const link = document.createElement('a');
+        link.className = 'post-toc-link';
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        item.appendChild(link);
+
+        if (heading.tagName === 'H2') {
+          const sublist = document.createElement('ol');
+          sublist.className = 'post-toc-sublist';
+          item.appendChild(sublist);
+          rootList.appendChild(item);
+          currentGroup = sublist;
+          return;
+        }
+
+        if (currentGroup) {
+          currentGroup.appendChild(item);
+        } else {
+          rootList.appendChild(item);
+        }
+      });
+
+      rootList.querySelectorAll('.post-toc-sublist').forEach((sublist) => {
+        if (!sublist.children.length) {
+          sublist.remove();
+        }
+      });
+
+      tocNav.appendChild(rootList);
+    }
+
+    const sidebarHeadings = headings.filter((heading) => heading.tagName === 'H2');
+    if (!sidebarNav || !sidebar || !sidebarHeadings.length) {
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    const sidebarList = document.createElement('ol');
+    sidebarList.className = 'post-sidebar-list';
+
+    sidebarHeadings.forEach((heading) => {
+      const item = document.createElement('li');
+      item.className = 'post-sidebar-item';
+
+      const link = document.createElement('a');
+      link.className = 'post-sidebar-link';
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      sidebarList.appendChild(item);
+    });
+
+    sidebarNav.appendChild(sidebarList);
+
+    const sidebarLinks = Array.from(sidebarNav.querySelectorAll('.post-sidebar-link'));
+    const setActiveLink = (id) => {
+      sidebarLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const updateSidebarActive = () => {
+      const revealOffset = 160;
+      const shouldShowSidebar = window.scrollY + revealOffset >= sidebarHeadings[0].offsetTop;
+      sidebar.classList.toggle('is-visible', shouldShowSidebar);
+
+      const scrollPoint = window.scrollY + 180;
+      let current = sidebarHeadings[0];
+      sidebarHeadings.forEach((heading) => {
+        if (heading.offsetTop <= scrollPoint) {
+          current = heading;
+        }
+      });
+      setActiveLink(current.id);
+    };
+
+    window.addEventListener('scroll', updateSidebarActive, { passive: true });
+    window.addEventListener('resize', updateSidebarActive);
+    updateSidebarActive();
+
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        setActiveLink(id);
+      });
+    });
+  }());
+</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
+
+</body>
+</html>

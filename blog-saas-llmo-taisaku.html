@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説｜AIMA ブログ</title>
+<meta name="description" content="採用に必要なLLMO対策を、採用サイト・求人ページ・FAQ・社員インタビュー・構造化データの観点から解説します。AI検索時代に候補者から選ばれる採用情報の作り方も紹介します。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="水間 雄紀">
+<link rel="canonical" href="https://ai-and-marketing.jp/blog-saas-llmo-taisaku.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説">
+<meta property="og:description" content="採用に必要なLLMO対策を、採用サイト・求人ページ・FAQ・社員インタビュー・構造化データの観点から解説します。AI検索時代に候補者から選ばれる採用情報の作り方も紹介します。">
+<meta property="og:url" content="https://ai-and-marketing.jp/blog-saas-llmo-taisaku.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/blog-saas-llmo-taisaku/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-05-26">
+<meta property="article:modified_time" content="2026-05-26">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説">
+<meta name="twitter:description" content="採用に必要なLLMO対策を、採用サイト・求人ページ・FAQ・社員インタビュー・構造化データの観点から解説します。AI検索時代に候補者から選ばれる採用情報の作り方も紹介します。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/blog-saas-llmo-taisaku/og.jpg">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説",
+  "description": "採用に必要なLLMO対策を、採用サイト・求人ページ・FAQ・社員インタビュー・構造化データの観点から解説します。AI検索時代に候補者から選ばれる採用情報の作り方も紹介します。",
+  "image": [
+    "https://ai-and-marketing.jp/images/blog-saas-llmo-taisaku/og.jpg"
+  ],
+  "datePublished": "2026-05-26",
+  "dateModified": "2026-05-26",
+  "author": {
+    "@type": "Person",
+    "name": "水間 雄紀"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-marketing.jp/images/ogp.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-marketing.jp/blog-saas-llmo-taisaku.html"
+  },
+  "inLanguage": "ja"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://ai-and-marketing.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ブログ",
+      "item": "https://ai-and-marketing.jp/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説",
+      "item": "https://ai-and-marketing.jp/blog-saas-llmo-taisaku.html"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
+<style>
+  .post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8rem 2.5rem 4rem;
+  }
+  .post-header {
+    max-width: none;
+    margin: 0;
+  }
+  .post-content-layout {
+    display: block;
+  }
+  .post-main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .post-breadcrumbs {
+    margin: 0 0 1.3rem;
+  }
+  .post-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-breadcrumbs-item + .post-breadcrumbs-item::before {
+    content: '/';
+    margin: 0 0.45rem;
+    color: var(--gray-400);
+  }
+  .post-breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-breadcrumbs-link:hover {
+    color: var(--black);
+  }
+  .post-breadcrumbs-current {
+    color: var(--gray-600);
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #7759f6;
+    background: rgba(119,89,246,0.08);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+  .post-date {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .post-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  .post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-toc {
+    margin: 2rem 0 2.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .post-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+  .post-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-toc-summary-icon {
+    width: 0.68rem;
+    height: 0.68rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+    flex: none;
+  }
+  .post-toc[open] .post-toc-summary-icon {
+    transform: rotate(225deg) translateY(-1px);
+  }
+  .post-toc-nav {
+    padding: 0 1.15rem 1.05rem;
+    border-top: 1px solid var(--gray-200);
+    max-height: 24rem;
+    overflow: auto;
+  }
+  .post-toc-list,
+  .post-toc-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-toc-list {
+    padding-top: 0.9rem;
+  }
+  .post-toc-item + .post-toc-item {
+    margin-top: 0.55rem;
+  }
+  .post-toc-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .post-toc-link:hover {
+    color: var(--black);
+  }
+  .post-toc-sublist {
+    margin-top: 0.45rem;
+    margin-left: 0.25rem;
+    padding-left: 0.95rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  .post-toc-sublist .post-toc-item + .post-toc-item {
+    margin-top: 0.35rem;
+  }
+  .post-toc-sublist .post-toc-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+  }
+  .post-supervisor {
+    margin: 0 0 2.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-supervisor-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7759f6;
+    background: rgba(119, 89, 246, 0.08);
+    border-radius: 999px;
+  }
+  .post-supervisor-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .post-supervisor-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+  }
+  .post-supervisor-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+  .post-supervisor-role {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .post-supervisor-text {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  .post-sidebar {
+    display: none;
+    align-self: start;
+    position: sticky;
+    top: 6.8rem;
+    height: max-content;
+  }
+  .post-sidebar-stack > * + * {
+    margin-top: 1rem;
+  }
+  .post-sidebar-inner,
+  .post-sidebar-module {
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-sidebar-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .post-sidebar.is-visible .post-sidebar-inner {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .post-sidebar-label,
+  .post-sidebar-module-label {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+  }
+  .post-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-sidebar-item + .post-sidebar-item {
+    margin-top: 0.8rem;
+  }
+  .post-sidebar-link {
+    position: relative;
+    display: block;
+    padding-left: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .post-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 999px;
+    background: var(--gray-200);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .post-sidebar-link:hover {
+    color: var(--black);
+  }
+  .post-sidebar-link.is-active {
+    color: var(--black);
+    font-weight: 700;
+  }
+  .post-sidebar-link.is-active::before {
+    background: #7759f6;
+    transform: scale(1.15);
+  }
+  .post-body p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+  .post-body ul, .post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-body li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid #7759f6;
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 400;
+  }
+  .post-body blockquote .quote-source {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-body blockquote .quote-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-body blockquote .quote-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .post-body mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, rgba(255, 227, 130, 0.9) 58%);
+    padding: 0 0.08em;
+  }
+  .post-body a {
+    color: #7759f6;
+    text-decoration: underline;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+  .post-body figure {
+    margin: 1.8rem 0 2rem;
+  }
+  .post-body figure img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid var(--gray-200);
+  }
+  .post-body figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .post-body figcaption .figure-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-body figcaption .figure-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  }
+  .post-body figcaption .figure-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--gray-200);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .post-body th {
+    background: var(--gray-50);
+    font-weight: 500;
+    color: var(--black);
+  }
+  .post-body td {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+  .post-body .post-ref {
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  .post-cta {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .post-cta-text {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .post-cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: opacity 0.2s;
+  }
+  .post-cta-btn:hover { opacity: 0.8; }
+  .post-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-related-header {
+    margin-bottom: 1.25rem;
+  }
+  .post-related-label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .post-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+  }
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .post-related-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .post-related-card:hover {
+    box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
+    transform: translateY(-2px);
+  }
+  .post-related-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-related-thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--gray-100);
+    overflow: hidden;
+  }
+  .post-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-related-body {
+    padding: 1.1rem;
+  }
+  .post-related-tag {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .post-related-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-card-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 0.9rem;
+  }
+  .post-related-date {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-related-more {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .post-related-more a {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-related-more a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-nav a {
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-nav a:hover { color: var(--black); }
+  .post-nav-label {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 640px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .post-content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 3.2rem;
+      align-items: start;
+    }
+    .post-main {
+      max-width: none;
+      margin: 0;
+    }
+    .post-sidebar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .post-page { padding: 7rem 1.5rem 3rem; }
+    .post-title { font-size: 1.4rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-toc summary {
+      padding: 0.95rem 1rem;
+      font-size: 0.9rem;
+    }
+    .post-toc-nav {
+      padding: 0 1rem 0.95rem;
+    }
+    .post-supervisor {
+      padding: 1rem;
+    }
+    .post-supervisor-card {
+      grid-template-columns: 72px 1fr;
+      gap: 0.85rem;
+    }
+    .post-supervisor-photo {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
+</head>
+<body class="media-article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-page">
+
+  <div class="post-content-layout">
+    <div class="post-main">
+      <nav class="post-breadcrumbs" aria-label="パンくずリスト">
+        <ol class="post-breadcrumbs-list">
+          <li class="post-breadcrumbs-item"><a href="/" class="post-breadcrumbs-link">トップ</a></li>
+          <li class="post-breadcrumbs-item"><a href="blog.html" class="post-breadcrumbs-link">ブログ</a></li>
+          <li class="post-breadcrumbs-item"><span class="post-breadcrumbs-current" aria-current="page">SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説</span></li>
+        </ol>
+      </nav>
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-tag">基礎知識</span>
+          <time class="post-date" datetime="2026-05-26">公開日 2026.05.26</time>
+          <time class="post-date post-updated" datetime="2026-05-26">更新日 2026.05.26</time>
+        </div>
+
+        <h1 class="post-title">SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説</h1>
+
+        <div class="post-thumb">
+          <img src="images/blog-saas-llmo-taisaku/eyecatch.jpg" alt="SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
+        </div>
+      </div>
+
+      <div class="post-body">
+        <p>SaaSのLLMO対策は、ChatGPTやGeminiなどのAI検索で自社サービスを比較候補に入れてもらうための情報設計です。検索順位だけでなく、AIがどの情報を読んで候補に出すかまで考えます。</p>
+        <p>特にBtoB SaaSでは、ユーザーがサービス名を知らない段階で「おすすめのツール」「中小企業向けのCRM」などとAIに聞く場面が増えています。AI検索の全体像は<a href="blog-ai-search-taisaku.html">AI検索対策の記事</a>でも整理しています。</p>
+        <p>この記事では、SaaS企業がまず整えるべき情報設計、コンテンツ、外部対策、技術チェック、効果測定の進め方をわかりやすく解説します。</p>
+
+        <details class="post-toc">
+          <summary>
+            <span>目次</span>
+            <span class="post-toc-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <nav class="post-toc-nav" aria-label="記事の目次"></nav>
+        </details>
+
+        <section class="post-supervisor" aria-label="監修者情報">
+          <div class="post-supervisor-label">監修者情報</div>
+          <div class="post-supervisor-card">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
+            <div>
+              <div class="post-supervisor-name">水間 雄紀</div>
+              <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
+              <div class="post-supervisor-text">1986年和歌山県生まれ、近畿大学卒。金融機関、経営コンサルティング会社を経て、2018年にコンテンツ制作の専門会社である株式会社circlizeを創業。2024年、ラグザス株式会社に事業譲渡。現在は株式会社AIMAにてAI×マーケティング事業に従事し、株式会社フォーティーファイヴでコンテンツの品質管理責任者を務める。</div>
+            </div>
+          </div>
+        </section>
+
+        <h2>SaaSのLLMO対策とは？</h2>
+        <p>SaaSのLLMO対策とは、ChatGPTやGemini、Perplexity、Google AI OverviewsなどのAI検索で、自社サービスが正しく認識され、比較候補として挙がりやすい状態を作る施策です。</p>
+        <p>従来の<a href="blog-llmo-taisaku.html">SEO対策</a>が検索結果での上位表示を重視していたのに対し、LLMOではAIが回答を作る際に、どの情報を参照し、どのサービスを候補として提示するかが重要になります。</p>
+        <figure>
+        <img alt="SaaSのLLMO対策で情報設計、コンテンツ整備、外部言及、技術確認を進める全体像の図解" decoding="async" height="900" loading="lazy" src="images/blog-saas-llmo-taisaku/infographic-overview.jpg" width="1600"/>
+        <figcaption>SaaSのLLMO対策は、情報設計、コンテンツ整備、外部言及、技術確認をつなげて、AI検索の比較候補に入りやすい状態を作ります。</figcaption>
+        </figure>
+        <h3>LLMOとはAI検索で自社サービスを見つけてもらうための施策</h3>
+        <p>LLMOは、Large Language Model Optimizationの略で、大規模言語モデルに自社や自社サービスを正しく理解してもらうための最適化施策です。検索エンジンだけでなく、ChatGPTやGemini、PerplexityなどのAIがユーザーの質問に回答する場面を前提にします。</p>
+        <p>たとえば「おすすめのSaaSを教えて」「中小企業向けのCRMを比較して」と聞かれたときに、自社サービスが候補として表示されるかどうかが重要です。LLMO対策では、<mark><strong>サービス名、カテゴリ、対象顧客</strong></mark>、機能、料金、導入事例などをAIが読み取りやすい形で整えます。</p>
+        <h3>SaaSではAIに「比較候補」として認識されることが重要</h3>
+        <p>SaaSは、購入前に複数サービスを比較される商材です。ユーザーは機能、料金、導入規模、サポート体制、セキュリティ、連携ツールなどを見比べながら、自社に合うサービスを選びます。</p>
+        <p>AI検索では、この比較プロセスが一気に短縮されます。ユーザーが「〇〇に強いSaaSを比較して」と質問すると、AIが候補リストや比較表を作成します。そこで自社名が出なければ、検索結果をクリックされる以前に<mark><strong>検討対象から外れる可能性</strong></mark>があります。</p>
+        <h3>SEO対策とLLMO対策は対立するものではない</h3>
+        <p>LLMO対策は、SEO対策を否定するものではありません。Googleは、AI OverviewsやAI ModeなどのAI機能でも、従来のSEOの基本が引き続き重要だと説明しています。</p>
+        <blockquote>
+        <p>“The best practices for SEO remain relevant for AI features in Google Search”</p>
+        <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener" target="_blank">Google Search Central｜AI features and your website</a></p>
+        </blockquote>
+        <p>ただし、SEOで上位表示を狙うだけでは不十分です。AIが回答を生成する際には、検索上位ページ、自社サイト、第三者サイト、レビュー、比較記事など複数の情報をもとに判断します。そのため、LLMOでは「検索される」だけでなく「<mark><strong>AIに理解される</strong></mark>」情報設計が必要になります。</p>
+        <h2>SaaS企業がLLMO対策に取り組むべき理由</h2>
+        <p>SaaS企業にとって、LLMO対策は単なる認知施策ではありません。AI検索上で比較候補に入るかどうかは、資料請求、デモ予約、商談化に直結する可能性があります。</p>
+        <p>特にBtoB SaaSでは、導入前の情報収集やベンダー比較にAIが使われる機会が増えており、AI上での見え方を放置することは、将来の商談機会を失うリスクになります。</p>
+        <h3>BtoBソフトウェアの購買行動がAI検索に移行している</h3>
+        <p>BtoBソフトウェアの購入プロセスでは、AIチャットボットを使った情報収集が広がっています。G2の2026年調査では、BtoBソフトウェア購入者の51%が、GoogleよりもAIチャットボットから調査を始めることが増えているとされています。</p>
+        <blockquote>
+        <p>“51% of B2B software buyers now start their research with an AI chatbot more often than with Google”</p>
+        <p class="quote-source">出典：<a href="https://www.prnewswire.com/news-releases/new-g2-research-half-of-b2b-software-buyers-now-start-their-research-with-ai-chatbots-302742807.html" rel="noopener" target="_blank">G2｜New G2 Research: Half of B2B Software Buyers Now Start Their Research With AI Chatbots</a></p>
+        </blockquote>
+        <p>これはSaaS企業にとって大きな変化です。従来は検索結果で上位表示され、比較記事や公式サイトに訪問してもらう流れが中心でした。しかし今後は、<mark><strong>AIが最初に候補を絞り込む</strong></mark>場面が増えます。AIに認識されていないSaaSは、検討の入口に立てない可能性があります。</p>
+        <h3>AIの推薦がベンダー選定に影響する</h3>
+        <p>AI検索は、単に情報収集を楽にするだけではありません。G2の調査では、69%の購入者がAIチャットボットの案内をきっかけに、当初予定していたベンダーとは別のソフトウェアを選んでいます。さらに、3分の1はそれまで知らなかったベンダーから購入しています。</p>
+        <p>つまり、AI検索は既存のブランド認知を補完するだけでなく、<mark><strong>無名のSaaSが比較候補に入る機会</strong></mark>にもなります。一方で、既に認知があるサービスでも、AI上で十分に言及されなければ、競合に候補枠を奪われる可能性があります。</p>
+        <h3>指名検索の前段階で候補から外れるリスクがある</h3>
+        <p>SaaSの購買では、ユーザーがいきなりサービス名で検索するとは限りません。多くの場合、「請求管理を自動化したい」「営業管理を効率化したい」「問い合わせ対応を改善したい」など、課題起点で情報収集を始めます。</p>
+        <p>AI検索では、この課題起点の質問に対して、AIが数社の候補を提示します。ここで名前が出なければ、ユーザーは自社サービスを知らないまま比較を進めます。LLMO対策では、指名検索を増やす前に、<mark><strong>課題名やカテゴリ名の段階で候補に入る状態</strong></mark>を作ることが重要です。</p>
+        <h2>SaaSのLLMO対策で重要な情報設計</h2>
+        <p>SaaSのLLMO対策では、AIが自社サービスを正しく分類できるように情報を整える必要があります。抽象的なコピーだけでは、AIはサービスの特徴や対象顧客を判断しにくくなります。</p>
+        <p>重要なのは、サービスのカテゴリ、対象企業、利用シーン、機能、料金、導入効果を明確にすることです。AIが比較や推薦に使える材料を、自社サイト内に十分に用意しておく必要があります。</p>
+        <figure>
+        <img alt="SaaSのサービス名、カテゴリ、機能、料金、対象、競合比較の軸を整理する図解" decoding="async" height="900" loading="lazy" src="images/blog-saas-llmo-taisaku/infographic-information-design.jpg" width="1600"/>
+        <figcaption>AIにサービスを正しく分類してもらうには、サービス名、カテゴリ、対象企業、料金、比較軸を見える形で整理することが重要です。</figcaption>
+        </figure>
+        <h3>サービス名・カテゴリ・対象企業を明確にする</h3>
+        <p>SaaSサイトでは、「何のサービスなのか」を一目で理解できる状態にすることが大切です。「業務効率化を支援します」のような抽象的な表現だけでは、AIが正確にカテゴリを判断できません。</p>
+        <p>たとえば「中小企業向けの勤怠管理システム」「BtoB企業向けのマーケティングオートメーションツール」「士業向けの顧客管理SaaS」のように、<mark><strong>対象顧客とカテゴリを明記</strong></mark>します。AIは文脈から情報を判断するため、サービス名とカテゴリ名を一貫して使うことが重要です。</p>
+        <h3>機能・料金・導入対象を一覧で把握できるようにする</h3>
+        <p>SaaSの比較では、機能、料金、無料トライアル、契約期間、導入規模、対応業種、サポート内容、連携ツールなどが重視されます。これらの情報がページ内に散らばっていると、AIもユーザーも比較しにくくなります。</p>
+        <p>サービスページや料金ページでは、<mark><strong>主要な判断材料を表や見出しで明確に分ける</strong></mark>ことが大切です。料金が問い合わせ必須の場合でも、プランの違いや対象企業、利用開始までの流れを補足しておくと、AIがサービスの位置づけを理解しやすくなります。</p>
+        <h3>競合比較で使われる軸を先回りして用意する</h3>
+        <p>AI検索では、「A社とB社の違い」「〇〇に強いSaaS」「中小企業におすすめのツール」などの比較質問が行われます。そのため、自社がどの比較軸で評価されるべきかを先に定義しておくことが重要です。</p>
+        <p>たとえば、低価格、導入スピード、サポート体制、業界特化、連携機能、セキュリティなど、競合と比べられやすい軸を明確にします。自社の強みだけでなく、<mark><strong>向いている企業・向いていない企業</strong></mark>まで書くことで、AIにもユーザーにも信頼されやすい情報になります。</p>
+        <h2>SaaSサイトで整備すべきLLMO対策コンテンツ</h2>
+        <p>LLMO対策では、単にブログ記事を増やすだけでは不十分です。AIがサービスを理解し、比較候補として扱うには、公式サイト内に複数の判断材料が必要です。</p>
+        <p>特に重要なのは、サービスページ、導入事例、比較記事、FAQ、セキュリティページです。これらを整えることで、AIが自社サービスをカテゴリや課題と結びつけやすくなります。</p>
+        <figure>
+        <img alt="SaaSサイトで整備すべきサービスページ、導入事例、比較記事、FAQ、セキュリティページの図解" decoding="async" height="900" loading="lazy" src="images/blog-saas-llmo-taisaku/infographic-content-pages.jpg" width="1600"/>
+        <figcaption>サービスページ、導入事例、比較記事、FAQ、セキュリティ情報をそろえると、AIが比較に使える材料が増えます。</figcaption>
+        </figure>
+        <h3>サービスページ</h3>
+        <p>サービスページは、SaaSのLLMO対策における<mark><strong>中心コンテンツ</strong></mark>です。誰向けのサービスなのか、どの業務課題を解決するのか、どのような機能があるのかを明確に記載します。</p>
+        <p>特にファーストビューでは、抽象的なキャッチコピーだけで終わらせないことが大切です。「〇〇業界向け」「〇〇業務を自動化」「〇〇名規模の企業に対応」など、AIがサービスの分類に使える言葉を入れます。サービスの強みは、導入対象や利用シーンとセットで書くと伝わりやすくなります。</p>
+        <h3>導入事例ページ</h3>
+        <p>導入事例は、AIにとって「どの企業が、どの課題で、どのように使っているか」を判断する材料になります。会社名、業種、従業員規模、<mark><strong>導入前の課題、導入後の成果</strong></mark>、利用した機能を具体的に書くことが重要です。</p>
+        <p>「業務効率化に成功しました」だけでは情報が弱くなります。問い合わせ対応時間の削減、作業工数の短縮、管理コストの削減、商談化率の改善など、成果が具体的にわかる形にします。導入事例が増えるほど、AIは特定の業界や課題とサービスを結びつけやすくなります。</p>
+        <h3>比較・選び方コンテンツ</h3>
+        <p>「〇〇システム 比較」「〇〇 SaaS おすすめ」「〇〇ツール 選び方」のような記事は、AI検索でも参照されやすい重要なコンテンツです。ユーザーがまだ特定のサービス名を決めていない段階で接点を作れます。</p>
+        <p>比較記事では、自社サービスを一方的に押し出すのではなく、<mark><strong>選定基準を丁寧に示す</strong></mark>ことが大切です。機能、料金、サポート、セキュリティ、導入スピード、運用負荷などを客観的に解説し、その中で自社が向いている条件を自然に示します。</p>
+        <h3>FAQコンテンツ</h3>
+        <p>FAQは、AIが短い回答を作る際に参照しやすいコンテンツです。料金、契約期間、無料トライアル、解約、データ移行、セキュリティ、導入期間、サポート体制など、商談前によく聞かれる質問をページ上に明記します。</p>
+        <p>FAQを作るときは、単なる一問一答ではなく、<mark><strong>ユーザーが意思決定しやすい情報</strong></mark>を入れることが大切です。たとえば「無料トライアルはありますか？」に対して、期間、使える機能、申し込み方法、注意点まで書くと、AIにもユーザーにも有用な回答になります。</p>
+        <h3>セキュリティ・運用体制ページ</h3>
+        <p>BtoB SaaSでは、セキュリティや運用体制が導入判断に大きく影響します。ISMS、Pマーク、SOC2、データ保管場所、権限管理、バックアップ、障害対応、サポート体制などをまとめたページを用意します。</p>
+        <p>特に法人向けSaaSでは、情報システム部門や管理部門が導入前に確認する項目を先回りして書くことが大切です。セキュリティ情報が不足していると、AIが法人向けの信頼性を判断しにくくなります。<mark><strong>導入前の不安を減らす情報</strong></mark>は、LLMO対策としても重要です。</p>
+        <h2>SaaSのLLMO対策で行うべき外部対策</h2>
+        <p>LLMO対策では、自社サイトだけでなく、外部サイトでどのように言及されているかも重要です。AIは自社サイトだけを見て回答するのではなく、比較サイト、レビューサイト、ニュース記事、業界メディアなども参考にします。</p>
+        <p>SaaS企業は、自社がどのカテゴリで、どのような強みを持つサービスとして紹介されているかを外部にも広げる必要があります。</p>
+        <figure>
+        <img alt="SaaSの外部対策で指名、カテゴリ、課題の3方向の言及を増やす図解" decoding="async" height="900" loading="lazy" src="images/blog-saas-llmo-taisaku/infographic-external-mentions.jpg" width="1600"/>
+        <figcaption>外部対策では、サービス名だけでなく、カテゴリ名や課題名と一緒に言及される状態を作ることが大切です。</figcaption>
+        </figure>
+        <h3>レビューサイトの情報を整える</h3>
+        <p>SaaSでは、レビューサイトの情報がAI検索上の信頼材料になりやすい傾向があります。G2の調査でも、AIチャットボットの推薦を信頼するうえで、レビューサイトからの引用が重要なシグナルになっています。</p>
+        <p>そのため、G2、ITreview、BOXIL、Capterraなどに掲載されているサービス情報は定期的に確認します。カテゴリ、機能、料金、対象企業、導入事例、口コミ内容が古いままだと、AIにも誤った情報が伝わる可能性があります。<mark><strong>レビュー獲得と情報更新</strong></mark>を継続することが重要です。</p>
+        <h3>比較メディア・業界メディアへの掲載を増やす</h3>
+        <p>外部メディアでの掲載は、AIに対して第三者情報を増やす役割があります。比較記事、業界メディア、導入インタビュー、プレスリリースなどに掲載されることで、自社サイト以外にもサービスの説明文脈が生まれます。</p>
+        <p>重要なのは、掲載数だけを増やすことではありません。どのカテゴリで紹介されているか、どの強みと結びついているか、競合と比べてどの位置づけなのかが大切です。外部記事でも、自社が<mark><strong>狙いたいカテゴリ名や課題名</strong></mark>と一緒に言及される状態を作ります。</p>
+        <h3>指名・カテゴリ・課題の3方向で言及を増やす</h3>
+        <p>SaaSの外部対策では、サービス名だけを露出させても効果が限定的です。AIに比較候補として認識されるには、<mark><strong>指名、カテゴリ、課題の3方向</strong></mark>で言及を増やす必要があります。</p>
+        <p>たとえば、サービス名だけでなく「中小企業向けCRM」「営業管理の属人化を防ぐSaaS」「BtoB企業向けMAツール」のように、カテゴリや課題と一緒に言及されることが重要です。AIは複数の文脈からサービスを理解するため、狙いたい市場での意味づけを外部にも作る必要があります。</p>
+        <h2>SaaSサイトで実施したい技術的なLLMO対策</h2>
+        <p>LLMO対策というとコンテンツ施策に目が向きがちですが、AIや検索エンジンがページを読み取れる状態にしておくことも重要です。</p>
+        <p>特にSaaSサイトでは、LP、料金ページ、ヘルプページ、比較ページなどがnoindexになっていたり、重要情報が画像だけで掲載されていたりするケースがあります。まずは読める状態を作ることが前提です。</p>
+        <figure>
+        <img alt="SaaSサイトでrobots.txt、noindex、構造化データ、HTMLテキスト、JavaScript表示を確認する図解" decoding="async" height="900" loading="lazy" src="images/blog-saas-llmo-taisaku/infographic-technical-check.jpg" width="1600"/>
+        <figcaption>AIに読ませたいページは、robots.txt、noindex、構造化データ、HTMLテキスト、JavaScript表示を確認しておきます。</figcaption>
+        </figure>
+        <h3>AIクローラーが重要ページを読める状態にする</h3>
+        <p>ChatGPTの検索機能に表示されるには、OAI-SearchBotがページにアクセスできる状態が重要です。OpenAIは、OAI-SearchBotをChatGPTの検索機能でWebサイトを表示するために使用すると説明しています。</p>
+        <blockquote>
+        <p>“OAI-SearchBot is used to surface websites in search results in ChatGPT’s search features.”</p>
+        <p class="quote-source">出典：<a href="https://developers.openai.com/api/docs/bots" rel="noopener" target="_blank">OpenAI Developers｜Overview of OpenAI Crawlers</a></p>
+        </blockquote>
+        <p>SaaSサイトでは、CDN、WAF、セキュリティ設定によってAIクローラーをまとめて遮断している場合があります。サービスページや比較ページをいくら改善しても、AIがアクセスできなければ十分に参照されません。まずは<mark><strong>robots.txt、サーバー設定、noindex</strong></mark>の状態を確認します。</p>
+        <h3>構造化データでサービス情報を補足する</h3>
+        <p>構造化データは、ページ内容を検索エンジンに伝えるための標準化された形式です。SaaSサイトでは、Organization、SoftwareApplication、Product、FAQPage、BreadcrumbList、Articleなどをページ内容に合わせて使います。</p>
+        <p>ただし、構造化データだけで順位やAI回答が決まるわけではありません。<mark><strong>ページ上に見える本文と一致</strong></mark>した情報を、補助的にマークアップすることが大切です。サービス名、カテゴリ、料金、FAQ、記事情報などを整理し、検索エンジンやAIが誤解しにくい状態を作ります。</p>
+        <h3>重要情報を画像だけにしない</h3>
+        <p>料金表、機能一覧、導入実績、比較表などを画像だけで掲載すると、AIや検索エンジンが内容を正確に読み取りにくくなります。デザイン上は画像を使っても問題ありませんが、重要な情報は<mark><strong>HTMLテキストでも掲載</strong></mark>する必要があります。</p>
+        <p>特に料金、機能、対象企業、対応範囲、導入効果はAIが比較に使いやすい情報です。画像内の文字だけに頼らず、本文や表として読める形にしておくことで、AI検索だけでなく通常検索やユーザー体験の面でも有利になります。</p>
+        <h3>noindex・robots.txt・JavaScript表示を確認する</h3>
+        <p>SaaSサイトでは、開発時の設定が残ったまま重要ページがnoindexになっていたり、特定ディレクトリがrobots.txtでブロックされていたりするケースがあります。こうした状態では、AI検索以前に検索エンジンへ正しく認識されません。</p>
+        <p>また、JavaScriptで後から表示される料金表や比較表は、環境によって読み取りにくくなる場合があります。Search ConsoleのURL検査、レンダリング確認、robots.txtの確認を行い、<mark><strong>AIに読ませたい情報が公開状態で取得できるか</strong></mark>を確認します。</p>
+        <h2>SaaSのLLMO対策で作るべき記事テーマ例</h2>
+        <p>SaaSのLLMO対策では、サービスページだけでなく、課題解決型の記事や比較記事も重要です。ユーザーがAIに質問する内容を想定し、その回答に使われる情報を自社サイト内に用意します。</p>
+        <p>記事テーマを考える際は、単なる検索ボリュームだけで判断しないことが大切です。AI検索で比較候補に入るためには、カテゴリ名、課題名、競合名、導入シーンに対応したコンテンツが必要です。</p>
+        <h3>「〇〇 SaaS 比較」系の記事</h3>
+        <p>「〇〇 SaaS 比較」系の記事は、検討度の高いユーザーに接触しやすいテーマです。勤怠管理、営業管理、請求管理、問い合わせ管理、採用管理など、カテゴリごとに比較記事を用意することで、AIが候補を提示する際の参照材料になります。</p>
+        <p>記事では、単にサービス名を並べるだけでは不十分です。<mark><strong>選定基準、向いている企業</strong></mark>、料金の見方、導入時の注意点、比較表を入れます。自社サービスを含める場合も、強引に1位扱いするのではなく、どの条件で選ぶべきかを明確にした方が信頼されやすくなります。</p>
+        <h3>「〇〇ツール 選び方」系の記事</h3>
+        <p>「〇〇ツール 選び方」系の記事は、ユーザーがまだ具体的なサービス名を決めていない段階で役立ちます。AI検索でも「どのツールを選べばいいか」という相談形式の質問に対して、選定基準を示すページは参照されやすくなります。</p>
+        <p>記事では、機能、料金、サポート、セキュリティ、連携、導入後の運用負荷などを解説します。SaaSは導入して終わりではなく、社内定着や運用改善まで含めて成果が決まります。そのため、選び方記事では<mark><strong>導入後の運用まで</strong></mark>踏み込むことが重要です。</p>
+        <h3>「〇〇 課題 解決」系の記事</h3>
+        <p>SaaSは、カテゴリ名ではなく課題名から探されることも多い商材です。「営業管理 属人化」「請求業務 自動化」「問い合わせ対応 効率化」「採用管理 工数削減」など、ユーザーが抱える課題を起点に記事を作ります。</p>
+        <p>課題解決型の記事では、最初からサービス紹介に入らないことが大切です。<mark><strong>課題が起きる原因</strong></mark>、放置した場合のリスク、解決策の選択肢、SaaS導入が有効なケースを順番に説明します。そのうえで、自社サービスがどの条件に向いているかを自然に示します。</p>
+        <h3>「競合比較」系の記事</h3>
+        <p>「A社 B社 比較」「〇〇 代替」「〇〇 競合」のような記事は、購買意欲が高いユーザーに近いテーマです。すでに特定サービスを検討しているユーザーが、別の選択肢を探すタイミングで接点を作れます。</p>
+        <p>競合比較では、相手を下げる表現は避けるべきです。機能、価格、サポート、導入規模、対象業種、連携性などを客観的に比較し、どの企業にはどちらが向いているかを明確にします。AIにとっても、人間にとっても、<mark><strong>冷静な比較情報</strong></mark>の方が使いやすいコンテンツになります。</p>
+        <h2>SaaSのLLMO対策で見るべき指標</h2>
+        <p>LLMO対策は、記事を公開して終わりではありません。AI検索上で自社サービスがどのように表示されているか、流入やCVにどう影響しているかを確認しながら改善する必要があります。</p>
+        <p>SaaSでは、AI回答内での表示、AI検索からの流入、比較候補への入り方、資料請求やデモ予約への貢献をあわせて見ることが重要です。</p>
+        <h3>AI検索からの流入数</h3>
+        <p>ChatGPTやPerplexityなどからの流入は、GA4などのアクセス解析で確認します。参照元としてchatgpt.comやperplexity.aiなどが表示される場合は、AI検索経由の接点として把握できます。</p>
+        <p>ただし、AI検索の影響は流入数だけでは測れません。AIの回答内でサービス名を見たユーザーが、後から指名検索や広告経由で訪問するケースもあります。そのため、AI検索からの直接流入に加えて、<mark><strong>指名検索数、ブランド名の検索クエリ</strong></mark>、比較ページのCVもあわせて確認します。</p>
+        <h3>AI回答内での自社名・サービス名の表示回数</h3>
+        <p>LLMO対策では、狙いたいカテゴリや課題でAIに質問し、自社名が回答内に表示されるかを定期的に確認します。<a href="blog-chatgpt-inyouritsu-chousa.html">ChatGPTの引用率調査</a>のように、質問パターンを決めて見ると確認しやすくなります。「おすすめの〇〇SaaS」「中小企業向けの〇〇ツール」「〇〇を効率化できるサービス」など、実際の検討に近い質問を使います。</p>
+        <p>確認するときは、表示されるかどうかだけでなく、<mark><strong>どのような文脈で紹介されるか</strong></mark>も見ます。強みが正しく説明されているか、古い料金や誤った機能が出ていないか、競合と比べて不利な書かれ方をしていないかを確認し、必要に応じて自社サイトや外部情報を改善します。</p>
+        <h3>比較候補への入り方</h3>
+        <p>AI回答に自社名が表示されても、それだけで十分とはいえません。比較候補の何番目に出るか、どのカテゴリで出るか、どの強みと一緒に紹介されるかが重要です。</p>
+        <p>たとえば「安いSaaS」として表示されるのか、「大企業向け」として表示されるのか、「導入しやすいツール」として表示されるのかによって、獲得できる見込み客の質が変わります。<mark><strong>狙いたいポジション</strong></mark>とAI上の説明がズレている場合は、ページ内の表現や外部掲載情報を見直します。</p>
+        <h3>資料請求・デモ予約への貢献</h3>
+        <p>LLMO対策は、最終的に商談や売上につながるかで評価する必要があります。AI検索で表示されること自体が目的ではなく、資料請求、デモ予約、問い合わせ、無料トライアルなどにどう貢献しているかを見ます。</p>
+        <p>具体的には、AI検索経由のCV、比較記事経由のCV、指名検索の増加、商談時の流入経路ヒアリングなどを確認します。SaaSは検討期間が長くなりやすいため、<mark><strong>初回接触からCVまでの経路</strong></mark>を一つのチャネルだけで判断しないことが大切です。</p>
+        <h2>SaaS企業がLLMO対策を進める手順</h2>
+        <p>SaaSのLLMO対策は、やみくもに記事を増やすより、現状把握から始める方が効果的です。AI上での表示状況を確認し、足りない情報を補い、外部情報を増やし、定点観測しながら改善します。</p>
+        <p>特に最初は、サービスページ、料金ページ、導入事例、FAQ、比較記事を優先して見直すのがおすすめです。</p>
+        <figure>
+        <img alt="SaaS企業がLLMO対策を現状確認、自社サイト整備、外部掲載、AI回答改善の4ステップで進める図解" decoding="async" height="900" loading="lazy" src="images/blog-saas-llmo-taisaku/infographic-roadmap.jpg" width="1600"/>
+        <figcaption>最初は現状確認から始め、自社サイトと外部掲載を整えたうえで、AI回答の見え方を継続的に改善します。</figcaption>
+        </figure>
+        <h3>まずAI上での現状を確認する</h3>
+        <p>最初に、ChatGPT、Gemini、Perplexity、Google AI Overviewsなどで、自社がどのように表示されるかを確認します。<a href="blog-ai-overviews-hyouji-chousa.html">AI Overviews表示調査</a>の考え方も参考になります。サービス名だけでなく、カテゴリ名、課題名、競合名、業界名を組み合わせて質問します。</p>
+        <p>たとえば「中小企業向けの〇〇SaaSを比較して」「〇〇業務を効率化できるツールを教えて」「A社の代替サービスは？」のように、<mark><strong>実際の検討に近い質問</strong></mark>を使います。自社名が出ない、説明が古い、強みが違う場合は、改善すべき情報が見えてきます。</p>
+        <h3>自社サイトのサービス情報を整える</h3>
+        <p>次に、自社サイトのサービス情報を見直します。サービスページ、料金ページ、機能ページ、導入事例、FAQ、セキュリティページを確認し、AIが理解しやすい情報になっているかを確認します。</p>
+        <p>特に「<mark><strong>誰向けか</strong></mark>」「何を解決するか」「どの業務に使うか」「競合と何が違うか」を明確にします。抽象的な表現が多い場合は、業種、企業規模、部門、利用シーン、成果を具体化します。AIに伝わる情報は、そのままユーザーにとってもわかりやすい情報になります。</p>
+        <h3>外部掲載情報を増やす</h3>
+        <p>自社サイトを整えた後は、外部での言及を増やします。レビューサイト、比較メディア、業界メディア、プレスリリース、導入インタビューなどに掲載されることで、AIが参照できる情報の幅が広がります。</p>
+        <p>外部掲載では、サービス名だけでなく、<mark><strong>カテゴリ名や課題名と一緒に紹介</strong></mark>されることが重要です。たとえば「問い合わせ管理SaaS」「営業管理の属人化を防ぐツール」「バックオフィス効率化サービス」のように、狙いたい文脈で言及される状態を作ります。</p>
+        <h3>定期的にAI回答を確認して改善する</h3>
+        <p>LLMO対策は、一度設定すれば終わる施策ではありません。AIの回答は、検索結果、外部情報、モデルの変化によって変わります。そのため、<mark><strong>月に1回程度</strong></mark>は主要な質問パターンで表示状況を確認します。</p>
+        <p>確認すべき項目は、自社名が出るか、競合と並んでいるか、強みが正しく書かれているか、古い情報が残っていないかです。問題が見つかった場合は、該当するページや外部掲載情報を更新します。継続的な改善によって、AI上での見え方を安定させやすくなります。</p>
+        <h2>SaaSのLLMO対策でよくある失敗</h2>
+        <p>SaaSのLLMO対策では、AI検索だけを意識しすぎて、本来のユーザー価値を見失うケースがあります。AIに拾われるための施策であっても、最終的に読むのは人間です。</p>
+        <p>ここでは、SaaS企業がLLMO対策で避けたい失敗を紹介します。</p>
+        <h3>自社サイトだけを直して終わってしまう</h3>
+        <p>LLMO対策でよくある失敗が、自社サイトだけを改善して終わってしまうことです。もちろん公式サイトの情報は重要ですが、AIは外部サイトの情報も参考にします。</p>
+        <p>SaaSでは、レビューサイト、比較記事、業界メディア、導入事例、プレスリリースなど、外部の情報が比較候補に影響します。自社サイトでは「中小企業向け」と書いていても、外部では別カテゴリで紹介されていれば、AIの認識がズレる可能性があります。<mark><strong>外部情報まで含めて整える</strong></mark>ことが大切です。</p>
+        <h3>抽象的な強みばかりで具体情報が足りない</h3>
+        <p>「使いやすい」「業務効率化できる」「サポートが手厚い」といった表現だけでは、AIは他社との違いを判断しにくくなります。SaaSの比較では、具体的な機能や導入条件が重要です。</p>
+        <p>強みを書くときは、対象業種、企業規模、利用部門、導入期間、連携ツール、対応範囲、実績などをセットで書きます。たとえば「サポートが手厚い」ではなく、「初期設定から運用定着まで専任担当が支援する」のように、<mark><strong>判断材料になる表現</strong></mark>に変える必要があります。</p>
+        <h3>AI生成記事を量産してしまう</h3>
+        <p>LLMO対策として、AIで記事を大量生成すればよいと考えるのは危険です。生成AIはリサーチや構成作成に役立ちますが、ユーザーに価値を加えない大量生成コンテンツは、検索エンジンから評価されにくくなる可能性があります。</p>
+        <p>SaaSの記事では、一般論だけでは差別化できません。実際の導入事例、顧客の課題、比較表、料金の見方、運用上の注意点など、<mark><strong>自社だから出せる情報</strong></mark>を入れる必要があります。AIで下書きを作る場合でも、人間が判断材料として使える内容に仕上げることが重要です。</p>
+        <h2>SaaSのLLMO対策は比較候補に入るための情報設計から始めよう</h2>
+        <p>SaaSのLLMO対策は、AIに好かれる裏技ではありません。より広い考え方は<a href="blog-ai-search-taisaku.html">AI検索対策の基本</a>でも整理しています。自社サービスの情報を正確に整理し、AIにもユーザーにも理解しやすい形で公開する取り組みです。</p>
+        <p>特にSaaSでは、AI検索が比較候補を作る場面と相性が強いため、サービスページ、導入事例、比較記事、FAQ、レビューサイト、外部メディアを横断して整える必要があります。</p>
+        <p>AI検索で候補に入るためには、まず自社がどのカテゴリで、どの課題を解決し、どの企業に向いているのかを明確にすることが大切です。そのうえで、自社サイトと外部情報の両方を改善し、AI回答での表示状況を定期的に確認します。</p>
+        <p>SaaSのLLMO対策は、短期的にはAI検索からの流入や指名検索の増加につながります。中長期的には、比較検討の初期段階で自社サービスを認識してもらい、資料請求やデモ予約の機会を増やすための重要な施策になります。</p>
+        <h2>参考リンク</h2>
+        <p class="post-ref">参考：<a href="https://developers.google.com/search/docs/appearance/ai-features" rel="noopener" target="_blank">Google Search Central｜AI features and your website</a></p>
+        <p class="post-ref">参考：<a href="https://www.prnewswire.com/news-releases/new-g2-research-half-of-b2b-software-buyers-now-start-their-research-with-ai-chatbots-302742807.html" rel="noopener" target="_blank">G2｜New G2 Research: Half of B2B Software Buyers Now Start Their Research With AI Chatbots</a></p>
+        <p class="post-ref">参考：<a href="https://developers.openai.com/api/docs/bots" rel="noopener" target="_blank">OpenAI Developers｜Overview of OpenAI Crawlers</a></p>
+      </div>
+
+      <!-- 記事下CTA -->
+      <div class="post-cta">
+        <div class="post-cta-title">LLMOのご相談はお気軽に</div>
+        <div class="post-cta-text">月額5万円で、AIに引用される仕組みをつくります。</div>
+        <a href="/#contact" class="post-cta-btn">まずは相談する</a>
+      </div>
+
+      <section class="newsletter-inline" aria-label="メルマガ登録導線">
+        <div class="newsletter-card">
+          <div class="newsletter-eyebrow">Newsletter</div>
+          <div class="newsletter-title">LLMO内製化マガジン</div>
+          <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。ブログ更新だけでなく、現場で詰まりやすい論点もまとめます。</p>
+          <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-inline">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-inline-email">メールアドレス</label>
+              <input type="email" id="newsletter-inline-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+              <button type="submit" class="newsletter-submit">無料で登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 前後の記事リンク -->
+      <div class="post-nav">
+        <a href="blog-saiyo-llmo-taisaku.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          採用のLLMO対策とは？
+        </a>
+        <a href="blog.html" style="text-align: right;">
+          <span class="post-nav-label">ブログ一覧 &rarr;</span>
+          公開中の記事一覧を見る
+        </a>
+      </div>
+
+      <section class="post-related" aria-labelledby="post-related-title">
+        <div class="post-related-header">
+          <div class="post-related-label">Related Articles</div>
+          <h2 class="post-related-title" id="post-related-title">関連記事</h2>
+          <p class="post-related-text">SaaSのLLMO対策を進める前後で、AI検索対策の基本や業種別の情報設計もあわせて確認できます。</p>
+        </div>
+        <div class="post-related-grid">
+          <article class="post-related-card">
+            <a href="blog-ai-search-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-ai-search-taisaku/eyecatch.jpg" alt="AI検索対策とは？AIに選ばれるサイト設計とSEOとの違いをわかりやすく解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">AI検索</div>
+                <div class="post-related-card-title">AI検索対策とは？AIに選ばれるサイト設計とSEOとの違いをわかりやすく解説</div>
+                <p class="post-related-card-text">AI検索で選ばれるサイト設計の全体像を確認できます。</p>
+                <div class="post-related-date">2026.05.17</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-llmo-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とは？SEOとの違いと実践方法を徹底解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">LLMO</div>
+                <div class="post-related-card-title">LLMO対策とは？SEOとの違いと実践方法を徹底解説</div>
+                <p class="post-related-card-text">LLMOの基本と、AIに理解される情報設計を確認できます。</p>
+                <div class="post-related-date">2026.04.01</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-saiyo-llmo-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-saiyo-llmo-taisaku/eyecatch.jpg" alt="採用のLLMO対策とは？AI検索時代に候補者から選ばれる採用サイトの作り方のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">業種別</div>
+                <div class="post-related-card-title">採用のLLMO対策とは？AI検索時代に候補者から選ばれる採用サイトの作り方</div>
+                <p class="post-related-card-text">SaaS以外の業種別LLMO対策として、採用サイトの情報設計を確認できます。</p>
+                <div class="post-related-date">2026.05.26</div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
+      </section>
+    </div>
+
+    <aside class="post-sidebar" aria-label="記事サイドバー">
+      <div class="post-sidebar-stack">
+        <div class="post-sidebar-inner">
+          <div class="post-sidebar-label">CONTENTS</div>
+          <nav class="post-sidebar-toc" aria-label="サイドバー目次"></nav>
+        </div>
+
+        <section class="post-sidebar-module newsletter-sidebar-card" aria-label="メルマガ登録">
+          <div class="post-sidebar-module-label">NEWSLETTER</div>
+          <div class="newsletter-sidebar-title">LLMO内製化マガジン</div>
+          <p class="newsletter-sidebar-text">まずは自分たちで進めたい方向けに、設計・運用・改善のヒントを短く配信します。</p>
+          <form class="newsletter-form" aria-label="サイドバーのメルマガ登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-sidebar">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-sidebar-email">メールアドレス</label>
+              <input type="email" id="newsletter-sidebar-email" name="email" class="newsletter-input" placeholder="メールアドレス" required>
+              <button type="submit" class="newsletter-submit">登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。</p>
+          </form>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+
+<script>
+  (function () {
+    const postBody = document.querySelector('.post-body');
+    const tocNav = document.querySelector('.post-toc-nav');
+    const tocDetails = document.querySelector('.post-toc');
+    const sidebarNav = document.querySelector('.post-sidebar-toc');
+    const sidebar = document.querySelector('.post-sidebar');
+    if (!postBody) return;
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3'));
+    if (!headings.length) {
+      if (tocDetails) tocDetails.hidden = true;
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = 'section-' + String(index + 1).padStart(2, '0');
+      }
+    });
+
+    if (tocNav && tocDetails) {
+      const rootList = document.createElement('ol');
+      rootList.className = 'post-toc-list';
+      let currentGroup = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        item.className = 'post-toc-item';
+
+        const link = document.createElement('a');
+        link.className = 'post-toc-link';
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        item.appendChild(link);
+
+        if (heading.tagName === 'H2') {
+          const sublist = document.createElement('ol');
+          sublist.className = 'post-toc-sublist';
+          item.appendChild(sublist);
+          rootList.appendChild(item);
+          currentGroup = sublist;
+          return;
+        }
+
+        if (currentGroup) {
+          currentGroup.appendChild(item);
+        } else {
+          rootList.appendChild(item);
+        }
+      });
+
+      rootList.querySelectorAll('.post-toc-sublist').forEach((sublist) => {
+        if (!sublist.children.length) {
+          sublist.remove();
+        }
+      });
+
+      tocNav.appendChild(rootList);
+    }
+
+    const sidebarHeadings = headings.filter((heading) => heading.tagName === 'H2');
+    if (!sidebarNav || !sidebar || !sidebarHeadings.length) {
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    const sidebarList = document.createElement('ol');
+    sidebarList.className = 'post-sidebar-list';
+
+    sidebarHeadings.forEach((heading) => {
+      const item = document.createElement('li');
+      item.className = 'post-sidebar-item';
+
+      const link = document.createElement('a');
+      link.className = 'post-sidebar-link';
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      sidebarList.appendChild(item);
+    });
+
+    sidebarNav.appendChild(sidebarList);
+
+    const sidebarLinks = Array.from(sidebarNav.querySelectorAll('.post-sidebar-link'));
+    const setActiveLink = (id) => {
+      sidebarLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const updateSidebarActive = () => {
+      const revealOffset = 160;
+      const shouldShowSidebar = window.scrollY + revealOffset >= sidebarHeadings[0].offsetTop;
+      sidebar.classList.toggle('is-visible', shouldShowSidebar);
+
+      const scrollPoint = window.scrollY + 180;
+      let current = sidebarHeadings[0];
+      sidebarHeadings.forEach((heading) => {
+        if (heading.offsetTop <= scrollPoint) {
+          current = heading;
+        }
+      });
+      setActiveLink(current.id);
+    };
+
+    window.addEventListener('scroll', updateSidebarActive, { passive: true });
+    window.addEventListener('resize', updateSidebarActive);
+    updateSidebarActive();
+
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        setActiveLink(id);
+      });
+    });
+  }());
+</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
+
+</body>
+</html>

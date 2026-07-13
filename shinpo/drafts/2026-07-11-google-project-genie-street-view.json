@@ -1,0 +1,30 @@
+{
+  "slug": "google-project-genie-street-view",
+  "title": "Google、Project GenieにStreet View連携──実在の場所からAI世界を作成",
+  "category": "製品",
+  "breaking": false,
+  "datetime": "2026-07-11T14:03",
+  "description": "GoogleがProject GenieにStreet View grounding機能を追加。米国内の場所を起点に、実在の風景とAI生成を組み合わせたインタラクティブな世界を作れるようにした。",
+  "summary": "GoogleのProject GenieがStreet Viewと連携。実在の場所を起点に、AIで動ける仮想世界を作れる。",
+  "lead3": [
+    "GoogleはProject Genieに、Street Viewの実世界画像を使う機能を追加した",
+    "米国内の対応場所を選び、スタイルやキャラクターを指定して動けるAI世界を作れる",
+    "広告、教育、観光、ロボット訓練などで、試作の作り方が変わる可能性がある"
+  ],
+  "body_html": "<h2>何が発表されたか</h2>\n<p>Googleは、実験的な研究プロトタイプ<span class=\"em\">Project Genie</span>に、Google MapsのStreet View画像を使う新機能を追加しました。公式ブログでの発表日は2026年5月19日です。今回のキュー候補は2026年7月10日のGoogle AI公式X投稿ですが、本文の事実確認はGoogle公式ブログとGoogle DeepMindの説明で行いました。</p>\n<p>Project Genieは、文章や画像から、ユーザーが中を移動できるインタラクティブな世界を作る仕組みです。今回のStreet View groundingにより、完全な空想世界だけでなく、実在する場所を出発点にして、別のスタイルの世界へ作り替えることができます。</p>\n<h2>詳細</h2>\n<p>Googleの説明では、ユーザーはProject GenieでMapsのピンを使い、米国内の場所を選べます。そのうえで「Desert Sands」や「Stone Age」のようなスタイル、キャラクターの説明を入れると、Street Viewの実世界画像を手がかりにした世界が作られます。</p>\n<p>提供範囲は限定されています。公式ブログでは、Street View画像を使うProject Genieは米国内の場所で利用でき、今後さらに多くの場所へ広げる計画だと説明されています。また、Project Genie本体は、18歳以上の対象となるGoogle AI Ultra加入者へ段階的に提供される実験的なプロトタイプです。</p>\n<p>Google DeepMindの説明では、Genie 3はリアルタイムに操作できる世界モデルで、20〜24フレーム/秒、720pのフォトリアルな世界生成、世界の一貫性、Street View groundingなどが特徴として挙げられています。ただし、研究段階のため、現実の完全なコピーや商用ゲームエンジンのような完成度を前提に見るべきではありません。</p>\n<h2>なぜ重要か</h2>\n<p>会社目線で見ると、これは「きれいな画像を1枚作るAI」から、<span class=\"em\">人が動いて試せる空間を作るAI</span>への一歩です。たとえば観光地の見せ方、店舗周辺のキャンペーン、教育用の歴史再現、不動産や街づくりのイメージ検討などで、文章だけでは伝わりにくい企画を早く試せる可能性があります。</p>\n<p>もう一つ重要なのは、ロボットやAIエージェントの訓練にも関わる点です。Googleは、Genieが複雑な仮想環境でAIエージェントが学習・推論するための土台になり、Waymoの道路環境シミュレーションにも役立っていると説明しています。現時点では一般企業がすぐ大規模導入する段階ではありませんが、将来のシミュレーション、広告、教育コンテンツ制作の方向を示す発表です。</p>",
+  "sources": [
+    {
+      "label": "Google AI on X",
+      "url": "https://x.com/GoogleAI/status/2075609303029776872"
+    },
+    {
+      "label": "Google Blog",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/google-deepmind/project-genie-expands/"
+    },
+    {
+      "label": "Google DeepMind",
+      "url": "https://deepmind.google/models/genie/"
+    }
+  ],
+  "candidate_url": "https://x.com/GoogleAI/status/2075609303029776872"
+}

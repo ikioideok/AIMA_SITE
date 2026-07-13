@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説｜AIMA ブログ</title>
+<meta name="description" content="llms.txtとは何か、AI検索対策として本当に必要なのかを解説。Google、Claude、OpenAI、Perplexityの扱い、書き方、設置方法、優先度をわかりやすく紹介します。">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="水間 雄紀">
+<link rel="canonical" href="https://ai-and-marketing.jp/blog-llms-txt.html">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-KMFPC2DD');</script>
+<!-- End Google Tag Manager -->
+<meta property="og:type" content="article">
+<meta property="og:title" content="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説">
+<meta property="og:description" content="llms.txtとは何か、AI検索対策として本当に必要なのかを解説。Google、Claude、OpenAI、Perplexityの扱い、書き方、設置方法、優先度をわかりやすく紹介します。">
+<meta property="og:url" content="https://ai-and-marketing.jp/blog-llms-txt.html">
+<meta property="og:image" content="https://ai-and-marketing.jp/images/blog-llms-txt/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説のアイキャッチ画像">
+<meta property="og:site_name" content="株式会社AIMA">
+<meta property="og:locale" content="ja_JP">
+<meta property="article:published_time" content="2026-05-15">
+<meta property="article:modified_time" content="2026-05-15">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説">
+<meta name="twitter:description" content="llms.txtとは何か、AI検索対策として本当に必要なのかを解説。Google、Claude、OpenAI、Perplexityの扱い、書き方、設置方法、優先度をわかりやすく紹介します。">
+<meta name="twitter:image" content="https://ai-and-marketing.jp/images/blog-llms-txt/og.jpg">
+<meta name="twitter:image:alt" content="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説のアイキャッチ画像">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説",
+  "description": "llms.txtとは何か、AI検索対策として本当に必要なのかを解説。Google、Claude、OpenAI、Perplexityの扱い、書き方、設置方法、優先度をわかりやすく紹介します。",
+  "image": [
+    "https://ai-and-marketing.jp/images/blog-llms-txt/og.jpg"
+  ],
+  "datePublished": "2026-05-15",
+  "dateModified": "2026-05-15",
+  "keywords": [
+    "llms.txt",
+    "LLMO対策",
+    "AI検索対策",
+    "AI Overview"
+  ],
+  "articleSection": [
+    "AI検索対策",
+    "LLMO"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "水間 雄紀"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "株式会社AIMA",
+    "url": "https://ai-and-marketing.jp/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://ai-and-marketing.jp/images/ogp.png"
+    }
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://ai-and-marketing.jp/blog-llms-txt.html"
+  },
+  "inLanguage": "ja",
+  "isAccessibleForFree": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "トップ",
+      "item": "https://ai-and-marketing.jp/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "ブログ",
+      "item": "https://ai-and-marketing.jp/blog.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説",
+      "item": "https://ai-and-marketing.jp/blog-llms-txt.html"
+    }
+  ]
+}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<link rel="stylesheet" href="css/blog-media.css">
+<style>
+  .post-page {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 8rem 2.5rem 4rem;
+  }
+  .post-header {
+    max-width: none;
+    margin: 0;
+  }
+  .post-content-layout {
+    display: block;
+  }
+  .post-main {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .post-breadcrumbs {
+    margin: 0 0 1.3rem;
+  }
+  .post-breadcrumbs-list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-breadcrumbs-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-breadcrumbs-item + .post-breadcrumbs-item::before {
+    content: '/';
+    margin: 0 0.45rem;
+    color: var(--gray-400);
+  }
+  .post-breadcrumbs-link {
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-breadcrumbs-link:hover {
+    color: var(--black);
+  }
+  .post-breadcrumbs-current {
+    color: var(--gray-600);
+  }
+  .post-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .post-tag {
+    display: inline-block;
+    font-size: 0.68rem;
+    font-weight: 500;
+    color: #7759f6;
+    background: rgba(119,89,246,0.08);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+  .post-date {
+    font-family: var(--font-en);
+    font-size: 0.75rem;
+    color: var(--gray-400);
+  }
+  .post-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 2.5rem;
+  }
+  .post-thumb {
+    width: 100%;
+    aspect-ratio: 16/9;
+    background: var(--gray-100);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    color: var(--gray-400);
+  }
+  .post-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-body h2 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid var(--gray-200);
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+    scroll-margin-top: 6.5rem;
+  }
+  .post-toc {
+    margin: 2rem 0 2.8rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+    overflow: hidden;
+  }
+  .post-toc summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 1.15rem;
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: var(--black);
+  }
+  .post-toc summary::-webkit-details-marker {
+    display: none;
+  }
+  .post-toc-summary-icon {
+    width: 0.68rem;
+    height: 0.68rem;
+    border-right: 2px solid var(--gray-500);
+    border-bottom: 2px solid var(--gray-500);
+    transform: rotate(45deg) translateY(-1px);
+    transition: transform 0.2s ease;
+    flex: none;
+  }
+  .post-toc[open] .post-toc-summary-icon {
+    transform: rotate(225deg) translateY(-1px);
+  }
+  .post-toc-nav {
+    padding: 0 1.15rem 1.05rem;
+    border-top: 1px solid var(--gray-200);
+    max-height: 24rem;
+    overflow: auto;
+  }
+  .post-toc-list,
+  .post-toc-sublist {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-toc-list {
+    padding-top: 0.9rem;
+  }
+  .post-toc-item + .post-toc-item {
+    margin-top: 0.55rem;
+  }
+  .post-toc-link {
+    display: inline-block;
+    font-size: 0.9rem;
+    line-height: 1.65;
+    color: var(--gray-700);
+    text-decoration: none;
+  }
+  .post-toc-link:hover {
+    color: var(--black);
+  }
+  .post-toc-sublist {
+    margin-top: 0.45rem;
+    margin-left: 0.25rem;
+    padding-left: 0.95rem;
+    border-left: 1px solid var(--gray-200);
+  }
+  .post-toc-sublist .post-toc-item + .post-toc-item {
+    margin-top: 0.35rem;
+  }
+  .post-toc-sublist .post-toc-link {
+    font-size: 0.82rem;
+    color: var(--gray-600);
+  }
+  .post-supervisor {
+    margin: 0 0 2.8rem;
+    padding: 1.25rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-supervisor-label {
+    display: inline-block;
+    margin-bottom: 0.85rem;
+    padding: 0.18rem 0.55rem;
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #7759f6;
+    background: rgba(119, 89, 246, 0.08);
+    border-radius: 999px;
+  }
+  .post-supervisor-card {
+    display: grid;
+    grid-template-columns: 88px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+  .post-supervisor-photo {
+    width: 88px;
+    height: 88px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--gray-200);
+    background: var(--gray-100);
+  }
+  .post-supervisor-name {
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    color: var(--black);
+  }
+  .post-supervisor-role {
+    margin-top: 0.2rem;
+    font-size: 0.82rem;
+    color: var(--gray-600);
+    font-weight: 500;
+    line-height: 1.6;
+  }
+  .post-supervisor-text {
+    margin-top: 0.7rem;
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 1.9;
+  }
+  .post-sidebar {
+    display: none;
+    align-self: start;
+    position: sticky;
+    top: 6.8rem;
+    height: max-content;
+  }
+  .post-sidebar-stack > * + * {
+    margin-top: 1rem;
+  }
+  .post-sidebar-inner,
+  .post-sidebar-module {
+    padding: 1.05rem 1rem 1.15rem;
+    border: 1px solid var(--gray-200);
+    border-radius: 12px;
+    background: var(--white);
+  }
+  .post-sidebar-inner {
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+  .post-sidebar.is-visible .post-sidebar-inner {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .post-sidebar-label,
+  .post-sidebar-module-label {
+    margin-bottom: 0.85rem;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    color: var(--gray-500);
+  }
+  .post-sidebar-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .post-sidebar-item + .post-sidebar-item {
+    margin-top: 0.8rem;
+  }
+  .post-sidebar-link {
+    position: relative;
+    display: block;
+    padding-left: 0.95rem;
+    font-size: 0.82rem;
+    line-height: 1.65;
+    color: var(--gray-600);
+    text-decoration: none;
+    transition: color 0.18s ease;
+  }
+  .post-sidebar-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.52rem;
+    width: 0.36rem;
+    height: 0.36rem;
+    border-radius: 999px;
+    background: var(--gray-200);
+    transition: background 0.18s ease, transform 0.18s ease;
+  }
+  .post-sidebar-link:hover {
+    color: var(--black);
+  }
+  .post-sidebar-link.is-active {
+    color: var(--black);
+    font-weight: 700;
+  }
+  .post-sidebar-link.is-active::before {
+    background: #7759f6;
+    transform: scale(1.15);
+  }
+  .post-body p {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 1.5rem;
+  }
+  .post-body ul, .post-body ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+  .post-body li {
+    font-size: 0.95rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    line-height: 2.1;
+    margin-bottom: 0.4rem;
+  }
+  .post-body blockquote {
+    margin: 2rem 0;
+    padding: 1.2rem 1.5rem;
+    border-left: 3px solid #7759f6;
+    background: var(--gray-50);
+    border-radius: 0 6px 6px 0;
+  }
+  .post-body blockquote p {
+    margin-bottom: 0;
+    color: var(--black);
+    font-weight: 400;
+  }
+  .post-body blockquote .quote-source {
+    margin-top: 0.9rem;
+    font-size: 0.72rem;
+    line-height: 1.6;
+    color: var(--gray-500);
+  }
+  .post-body blockquote .quote-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-body blockquote .quote-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+  .post-body strong {
+    color: var(--black);
+    font-weight: 500;
+  }
+  .post-body mark {
+    color: inherit;
+    background: linear-gradient(transparent 58%, rgba(255, 227, 130, 0.9) 58%);
+    padding: 0 0.08em;
+  }
+  .post-body a {
+    color: #7759f6;
+    text-decoration: underline;
+  }
+  .post-body img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    margin: 1.5rem 0;
+  }
+  .post-body figure {
+    margin: 1.8rem 0 2rem;
+  }
+  .post-body figure img {
+    width: 100%;
+    display: block;
+    margin: 0;
+    border: 1px solid var(--gray-200);
+  }
+  .post-body figcaption {
+    margin-top: 0.75rem;
+    font-size: 0.78rem;
+    color: var(--gray-400);
+    line-height: 1.7;
+    text-align: center;
+  }
+  .post-body figcaption .figure-source {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-body figcaption .figure-source a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.16);
+  }
+  .post-body figcaption .figure-source a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.42);
+  }
+
+  .post-body code {
+    padding: 0.12em 0.36em;
+    border-radius: 4px;
+    background: var(--gray-100);
+    color: var(--black);
+    font-size: 0.92em;
+  }
+  .post-body pre {
+    margin: 1.2rem 0 1.7rem;
+    padding: 1rem 1.1rem;
+    border-radius: 8px;
+    background: #111827;
+    color: #f8fafc;
+    overflow-x: auto;
+    line-height: 1.7;
+    font-size: 0.86rem;
+  }
+  .post-body pre code {
+    padding: 0;
+    background: transparent;
+    color: inherit;
+    font-size: inherit;
+  }
+  .post-body table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+  }
+  .post-body th, .post-body td {
+    border: 1px solid var(--gray-200);
+    padding: 0.7rem 1rem;
+    text-align: left;
+    line-height: 1.8;
+  }
+  .post-body th {
+    background: var(--gray-50);
+    font-weight: 500;
+    color: var(--black);
+  }
+  .post-body td {
+    color: var(--gray-700);
+    font-weight: 400;
+  }
+  .post-body .post-ref {
+    font-size: 0.72rem;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 0.25rem;
+  }
+  .post-cta {
+    margin-top: 4rem;
+    padding: 2.5rem;
+    background: var(--gray-50);
+    border-radius: 10px;
+    text-align: center;
+  }
+  .post-cta-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+  }
+  .post-cta-text {
+    font-size: 0.88rem;
+    color: var(--gray-700);
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    line-height: 1.8;
+  }
+  .post-cta-btn {
+    display: inline-block;
+    padding: 0.85rem 2.5rem;
+    background: var(--black);
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border-radius: 3px;
+    transition: opacity 0.2s;
+  }
+  .post-cta-btn:hover { opacity: 0.8; }
+  .post-related {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-related-header {
+    margin-bottom: 1.25rem;
+  }
+  .post-related-label {
+    display: inline-block;
+    margin-bottom: 0.45rem;
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gray-500);
+  }
+  .post-related-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-text {
+    font-size: 0.88rem;
+    line-height: 1.8;
+    color: var(--gray-700);
+  }
+  .post-related-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+  .post-related-card {
+    border: 1px solid var(--gray-200);
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--white);
+    transition: box-shadow 0.25s, transform 0.25s;
+  }
+  .post-related-card:hover {
+    box-shadow: 0 12px 32px rgba(10, 10, 10, 0.08);
+    transform: translateY(-2px);
+  }
+  .post-related-card-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+  }
+  .post-related-thumb {
+    aspect-ratio: 16 / 9;
+    background: var(--gray-100);
+    overflow: hidden;
+  }
+  .post-related-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .post-related-body {
+    padding: 1.1rem;
+  }
+  .post-related-tag {
+    display: inline-block;
+    margin-bottom: 0.6rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    background: var(--gray-100);
+    color: var(--gray-700);
+    font-size: 0.68rem;
+    font-weight: 600;
+  }
+  .post-related-card-title {
+    font-size: 0.92rem;
+    font-weight: 700;
+    line-height: 1.6;
+    margin-bottom: 0.55rem;
+  }
+  .post-related-card-text {
+    font-size: 0.82rem;
+    line-height: 1.75;
+    color: var(--gray-700);
+    margin-bottom: 0.9rem;
+  }
+  .post-related-date {
+    font-family: var(--font-en);
+    font-size: 0.72rem;
+    color: var(--gray-500);
+  }
+  .post-related-more {
+    margin-top: 1rem;
+    font-size: 0.82rem;
+  }
+  .post-related-more a {
+    color: var(--gray-700);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.18);
+  }
+  .post-related-more a:hover {
+    color: var(--black);
+    border-bottom-color: rgba(0, 0, 0, 0.4);
+  }
+  .post-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--gray-200);
+  }
+  .post-nav a {
+    font-size: 0.82rem;
+    color: var(--gray-700);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .post-nav a:hover { color: var(--black); }
+  .post-nav-label {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  @media (max-width: 640px) {
+    .post-related-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (min-width: 960px) {
+    .post-content-layout {
+      display: grid;
+      grid-template-columns: minmax(0, 720px) 240px;
+      gap: 3.2rem;
+      align-items: start;
+    }
+    .post-main {
+      max-width: none;
+      margin: 0;
+    }
+    .post-sidebar {
+      display: block;
+    }
+  }
+  @media (max-width: 640px) {
+    .post-page { padding: 7rem 1.5rem 3rem; }
+    .post-title { font-size: 1.4rem; }
+    .post-body h2 { font-size: 1.15rem; }
+    .post-toc summary {
+      padding: 0.95rem 1rem;
+      font-size: 0.9rem;
+    }
+    .post-toc-nav {
+      padding: 0 1rem 0.95rem;
+    }
+    .post-supervisor {
+      padding: 1rem;
+    }
+    .post-supervisor-card {
+      grid-template-columns: 72px 1fr;
+      gap: 0.85rem;
+    }
+    .post-supervisor-photo {
+      width: 72px;
+      height: 72px;
+    }
+  }
+</style>
+</head>
+<body class="media-article">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KMFPC2DD" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- HEADER -->
+<header class="media-site-header">
+  <div class="media-header-top">
+    <div class="media-header-inner">
+      <p class="media-brand">
+        <a href="/blog.html" aria-label="AIMA MEDIA トップ">
+          <img src="/images/blog-media-logo/aima-media-logo.png" alt="AIMA MEDIA" width="1200" height="148">
+        </a>
+      </p>
+      <div class="media-publication-info">
+        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
+      </div>
+      <form class="media-search" action="/blog.html" method="get" role="search">
+        <label class="sr-only" for="blog-search">記事を検索</label>
+        <input type="search" id="blog-search" name="q" placeholder="記事を検索" autocomplete="off">
+        <button type="submit" aria-label="記事を検索"><span class="material-symbols-rounded" aria-hidden="true">search</span></button>
+      </form>
+      <a class="media-consult-link" href="/#contact">
+        <span class="material-symbols-rounded" aria-hidden="true">forum</span>
+        <span>AI対策の相談をする</span>
+      </a>
+      <button class="media-menu-toggle" id="menu-toggle" type="button" aria-label="メニューを開く" aria-controls="nav" aria-expanded="false">
+        <span class="material-symbols-rounded" aria-hidden="true">menu</span>
+      </button>
+    </div>
+  </div>
+  <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
+    <div class="media-nav-inner">
+      <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
+      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
+      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
+      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+    </div>
+  </nav>
+</header>
+
+<!-- ARTICLE -->
+<article class="post-page">
+
+  <div class="post-content-layout">
+    <div class="post-main">
+      <nav class="post-breadcrumbs" aria-label="パンくずリスト">
+        <ol class="post-breadcrumbs-list">
+          <li class="post-breadcrumbs-item"><a href="/" class="post-breadcrumbs-link">トップ</a></li>
+          <li class="post-breadcrumbs-item"><a href="blog.html" class="post-breadcrumbs-link">ブログ</a></li>
+          <li class="post-breadcrumbs-item"><span class="post-breadcrumbs-current" aria-current="page">llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説</span></li>
+        </ol>
+      </nav>
+      <div class="post-header">
+        <div class="post-meta">
+          <span class="post-tag">AI検索対策</span>
+          <time class="post-date" datetime="2026-05-15">公開日 2026.05.15</time>
+          <time class="post-date post-updated" datetime="2026-05-15">更新日 2026.05.15</time>
+        </div>
+
+        <h1 class="post-title">llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説</h1>
+
+        <div class="post-thumb">
+          <img src="images/blog-llms-txt/eyecatch.jpg" alt="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説のアイキャッチ画像" width="1600" height="900" loading="eager" decoding="async">
+        </div>
+      </div>
+
+      <div class="post-body">
+
+        <p>AI検索対策や<a href="blog-llmo-taisaku.html">LLMO対策</a>の文脈で、「llms.txtを設置したほうがよいのでは？」という話を見かけるようになりました。</p>
+        <p>llms.txtは、Webサイトの概要や重要ページをLLMに伝えるためのテキストファイルです。たとえば、サービス概要、料金ページ、事例、FAQ、技術ドキュメントなどをMarkdown形式でまとめ、AIやエージェントがサイトの全体像を把握しやすくする役割を持ちます。</p>
+        <p>この記事では、llms.txtの意味、Googleや主要LLMサービスの扱い、実際の書き方、設置すべきサイト・優先度が低いサイト、AIに引用されるために本当に重要なことを解説します。</p>
+
+        <details class="post-toc">
+          <summary>
+            <span>目次</span>
+            <span class="post-toc-summary-icon" aria-hidden="true"></span>
+          </summary>
+          <nav class="post-toc-nav" aria-label="記事の目次"></nav>
+        </details>
+
+        <section class="post-supervisor" aria-label="監修者情報">
+          <div class="post-supervisor-label">監修者情報</div>
+          <div class="post-supervisor-card">
+            <img src="images/member-photo.webp" alt="水間 雄紀" class="post-supervisor-photo" width="320" height="320" loading="lazy" decoding="async">
+            <div>
+              <div class="post-supervisor-name">水間 雄紀</div>
+              <div class="post-supervisor-role">株式会社AIMA 代表取締役</div>
+              <div class="post-supervisor-text">1986年和歌山県生まれ、近畿大学卒。金融機関、経営コンサルティング会社を経て、2018年にコンテンツ制作の専門会社である株式会社circlizeを創業。2024年、ラグザス株式会社に事業譲渡。現在は株式会社AIMAにてAI×マーケティング事業に従事し、株式会社フォーティーファイヴでコンテンツの品質管理責任者を務める。</div>
+            </div>
+          </div>
+        </section>
+
+        <p>ただし、llms.txtを設置すれば、ChatGPTやClaude、GoogleのAI Overviewに引用されやすくなるわけではありません。</p>
+        <p>Googleは、AI OverviewsやAI Modeに表示されるために、特別なAI向けファイルや専用マークアップを作る必要はないと明記しています。GoogleのJohn Mueller氏も、llms.txtについて慎重な見方を示しており、現時点では過度に期待すべき施策ではありません。</p>
+        <p>一方で、Claude CodeやPerplexity、OpenAIの開発者ドキュメントでは、llms.txtがドキュメント一覧の案内用ファイルとして使われています。つまり、llms.txtには一定の使い道があります。ただし、それは「一般的な企業サイトのAI検索対策として必須」という意味ではありません。</p>
+        <h2>llms.txtとは</h2>
+        <p>llms.txtとは、LLMやAIエージェントに向けて、Webサイトの概要や重要ページを伝えるためのMarkdown形式のテキストファイルです。</p>
+        <p>一般的には、Webサイトのルートディレクトリに設置します。</p>
+        <p>例：</p>
+        <pre><code>https://example.com/llms.txt</code></pre>
+        <p>llms.txtには、サイト名、サービスの概要、重要なページへのリンク、補足情報などを記載します。AIに対して「このサイトでは何を扱っているのか」「どのページを見れば重要情報がわかるのか」を伝える案内板のようなものです。</p>
+        <p>llms.txtの提案元は、このファイルを「LLMが推論時にWebサイトを使いやすくするための情報提供ファイル」と位置づけています。背景には、LLMがWebサイト全体をそのまま理解するにはHTML、ナビゲーション、広告、JavaScript、コンテキスト長などの制約があるという問題があります。</p>
+        <blockquote>
+          <p>A proposal to standardise on using an <code>/llms.txt</code> file to provide information to help LLMs use a website at inference time.</p>
+          <p class="quote-source">出典：<a href="https://llmstxt.org/" target="_blank" rel="noopener">llms-txt｜The /llms.txt file</a></p>
+        </blockquote>
+        <p>訳すと、「推論時にLLMがWebサイトを使いやすくするため、<code>/llms.txt</code>ファイルで情報を提供する標準化案」という意味です。</p>
+        <h3>llms.txtはrobots.txtのAI版ではない</h3>
+        <p>llms.txtは、robots.txtのAI版として語られることがあります。しかし、この表現はやや不正確です。</p>
+        <p>robots.txtは、クローラーに対してアクセスしてよい場所・避けてほしい場所を伝えるためのファイルです。一方、llms.txtはアクセス制御ではなく、LLMにサイトの重要情報を伝えるための<mark><strong>案内ファイル</strong></mark>です。</p>
+        <p>つまり、役割が違います。</p>
+        <table>
+          <tr>
+            <th>ファイル</th>
+            <th>主な目的</th>
+            <th>役割</th>
+          </tr>
+          <tr>
+            <td>robots.txt</td>
+            <td>クロール制御</td>
+            <td>クローラーにアクセス可否を伝える</td>
+          </tr>
+          <tr>
+            <td>sitemap.xml</td>
+            <td>URL一覧の通知</td>
+            <td>検索エンジンにページ一覧を伝える</td>
+          </tr>
+          <tr>
+            <td>llms.txt</td>
+            <td>重要情報の案内</td>
+            <td>LLMにサイトの概要や重要ページを伝える</td>
+          </tr>
+        </table>
+        <p>AIクローラーをブロックしたい場合は、llms.txtではなくrobots.txtを使います。OpenAIも、OAI-SearchBotやGPTBotの扱いはrobots.txtで管理できるとしています。</p>
+        <p class="post-ref">参考：<a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener">OpenAI｜Overview of OpenAI Crawlers</a></p>
+        <figure>
+          <img src="images/blog-llms-txt/infographic-file-roles.jpg" alt="robots.txt、sitemap.xml、llms.txtの役割の違いを比較した図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>robots.txt、sitemap.xml、llms.txtの役割の違い</figcaption>
+        </figure>
+        <h2>llms.txtはAI検索対策として重要なのか</h2>
+        <p>結論から言えば、llms.txtは現時点で<a href="blog-chatgpt-company-name.html">AI検索対策</a>の中心に置くべき施策ではありません。</p>
+        <p>設置してもよいファイルではあります。しかし、GoogleのAI OverviewやAI Modeに表示されるための必須条件ではなく、ChatGPTやClaudeに引用されることを保証するものでもありません。</p>
+        <p>特に一般的な企業サイト、サービスサイト、オウンドメディアでは、llms.txtよりも優先すべきことがあります。それは、AIが引用しやすい本文、サービス情報、FAQ、比較情報、会社情報、事例を整えることです。</p>
+        <h3>GoogleはAI機能に特別なAI用ファイルは不要としている</h3>
+        <p>Googleは、AI OverviewsやAI Modeに表示されるための追加要件はないとしています。Google検索に表示でき、スニペット表示の対象になれるページであれば、AI機能においても<mark><strong>特別な技術要件はありません</strong></mark>。</p>
+        <p>Googleは次のように明記しています。</p>
+        <blockquote>
+          <p>You don&#x27;t need to create new machine readable files, AI text files, or markup to appear in these features.</p>
+          <p class="quote-source">出典：<a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google Search Central｜AI features and your website</a></p>
+        </blockquote>
+        <p>訳すと、「これらの機能に表示されるために、新しい機械可読ファイル、AIテキストファイル、マークアップを作成する必要はない」という意味です。</p>
+        <p>この一文は、llms.txtの必要性を考えるうえで非常に重要です。Google向けのAI検索対策として、llms.txtを必須施策のように扱うのは無理があります。</p>
+        <h3>GoogleのJohn Mueller氏もllms.txtに慎重な見方を示している</h3>
+        <p>GoogleのJohn Mueller氏は、llms.txtについて「keywords meta tag」に近いものとして見ています。</p>
+        <p>かつてのkeywords meta tagは、サイト運営者が「このページはこのキーワードに関係する」と自己申告するためのメタタグでした。しかし、検索エンジン側はサイト運営者の自己申告だけを信頼できません。本文そのものを見れば内容を判断できるため、keywords meta tagは検索順位にほぼ意味を持たなくなりました。</p>
+        <p>llms.txtにも似た問題があります。サイト運営者が「このサイトはこういう内容です」とファイルに書いても、AIや検索エンジン側は最終的に<mark><strong>本文を確認する必要</strong></mark>があります。</p>
+        <p>John Mueller氏は、llms.txtについて次のように述べています。</p>
+        <blockquote>
+          <p>none of the AI services have said they’re using LLMs.TXT</p>
+          <p class="quote-source">出典：<a href="https://www.searchenginejournal.com/google-says-llms-txt-comparable-to-keywords-meta-tag/544804/" target="_blank" rel="noopener">Search Engine Journal｜Google Says LLMs.Txt Comparable To Keywords Meta Tag</a></p>
+        </blockquote>
+        <p>また、llms.txtを次のように表現しています。</p>
+        <blockquote>
+          <p>comparable to the keywords meta tag</p>
+          <p class="quote-source">出典：<a href="https://www.searchenginejournal.com/google-says-llms-txt-comparable-to-keywords-meta-tag/544804/" target="_blank" rel="noopener">Search Engine Journal｜Google Says LLMs.Txt Comparable To Keywords Meta Tag</a></p>
+        </blockquote>
+        <p>この発言からも、llms.txtをAI検索対策の決定打として扱うべきではないことがわかります。</p>
+        <h3>Google関連サイトにllms.txtがあっても、Google検索の推奨とは限らない</h3>
+        <p>Google関連の開発者向けページにllms.txtが存在することを根拠に、「Googleもllms.txtを推奨しているのでは？」と考える人もいます。</p>
+        <p>ただし、John Mueller氏は、Google関連サイトにllms.txtがあることがGoogleの推奨なのかという質問に対して、明確に否定しています。</p>
+        <blockquote>
+          <p>to be direct, no.</p>
+          <p class="quote-source">出典：<a href="https://bsky.app/profile/johnmu.com/post/3mctq34tsjs2f" target="_blank" rel="noopener">Bluesky｜John Mueller氏の投稿</a></p>
+        </blockquote>
+        <p>Google関連サイトにllms.txtが存在することと、Google検索がllms.txtを<mark><strong>評価・引用判断に使うことは別問題</strong></mark>です。</p>
+        <h2>Claude・OpenAI・Perplexityはllms.txtをどう扱っているのか</h2>
+        <p>llms.txtはGoogle向けの必須施策ではありません。とはいえ、主要なAI関連サービスがまったく触れていないわけでもありません。</p>
+        <p>ここで大事なのは、「llms.txtを置けばAI検索で引用される」という話と、「開発者ドキュメントの索引用にllms.txtを置いている」という話を分けることです。</p>
+        <figure>
+          <img src="images/blog-llms-txt/infographic-ai-service-position.jpg" alt="Google、Claude、OpenAI、Perplexityにおけるllms.txtの位置づけを整理した図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>主要AI関連サービスにおけるllms.txtの位置づけ</figcaption>
+        </figure>
+        <h3>Claude Codeはドキュメント索引用にllms.txtを使っている</h3>
+        <p>Claude Codeのドキュメントには、ドキュメント全体の索引としてllms.txtへの導線があります。</p>
+        <p>Claude Codeのページには、次の案内があります。</p>
+        <blockquote>
+          <p>Use this file to discover all available pages before exploring further.</p>
+          <p class="quote-source">出典：<a href="https://code.claude.com/docs/ja/sub-agents" target="_blank" rel="noopener">Claude Code Docs｜カスタムサブエージェントの作成</a></p>
+        </blockquote>
+        <p>訳すと、「さらに探索する前に、このファイルを使って利用可能なすべてのページを見つける」という意味です。</p>
+        <p>この記述から、Claude Codeのような開発者向けドキュメントでは、llms.txtが<mark><strong>ドキュメント探索の入口</strong></mark>として機能していることがわかります。</p>
+        <p>ただし、これは「Claudeが一般サイトのllms.txtをAI回答の引用判断に使う」と同義ではありません。Claude Codeのドキュメント案内として有効な使い方がある、という理解が正確です。</p>
+        <h3>OpenAIの開発者ドキュメントにもllms.txtは存在する</h3>
+        <p>OpenAIの開発者向けドキュメントにも、llms.txtがあります。</p>
+        <p>OpenAIのllms.txtには、APIドキュメント、Actions、Agents SDK、Bots、各種ガイドなどへのリンクがまとめられています。開発者やAIエージェントがドキュメントを探しやすくするための<mark><strong>インデックス</strong></mark>として機能します。</p>
+        <p>ただし、OpenAIが一般サイト運営者に対して「AI検索対策としてllms.txtを設置すべき」と明言しているわけではありません。</p>
+        <p>OpenAIがサイト運営者向けに明示しているのは、OAI-SearchBot、GPTBot、ChatGPT-Userなどのクローラー・ユーザーエージェントの役割です。ChatGPT Searchへの表示を管理する場合は、llms.txtではなくOAI-SearchBotやrobots.txtの扱いが重要になります。</p>
+        <p class="post-ref">参考：<a href="https://developers.openai.com/api/docs/llms.txt" target="_blank" rel="noopener">OpenAI｜OpenAI API docs llms.txt</a></p>
+        <p class="post-ref">参考：<a href="https://developers.openai.com/api/docs/bots" target="_blank" rel="noopener">OpenAI｜Overview of OpenAI Crawlers</a></p>
+        <h3>Perplexityもドキュメント索引用にllms.txtを案内している</h3>
+        <p>Perplexityの開発者向けドキュメントにも、llms.txtへの案内があります。</p>
+        <p>Perplexityは、完全なドキュメントインデックスとしてllms.txtを取得し、利用可能なページを見つけるよう案内しています。</p>
+        <blockquote>
+          <p>Fetch the complete documentation index at: https://docs.perplexity.ai/llms.txt</p>
+          <p class="quote-source">出典：<a href="https://docs.perplexity.ai/docs/getting-started/overview" target="_blank" rel="noopener">Perplexity Docs｜Overview</a></p>
+        </blockquote>
+        <p>Perplexityでも、llms.txtは開発者ドキュメントの<mark><strong>探索用インデックス</strong></mark>として使われています。</p>
+        <p>ここでも、一般企業サイトのAI検索対策として必須という意味ではありません。ドキュメント量が多く、AIエージェントに参照してほしいページが明確なサイトでは、llms.txtが役立つ可能性があります。</p>
+        <h2>llms.txtを設置するメリット</h2>
+        <p>llms.txtは過度に期待すべき施策ではありません。ただし、設置する意味がまったくないわけでもありません。</p>
+        <p>低コストで作れるため、サイトの情報整理やAIエージェント向けの案内ファイルとして使うなら検討できます。</p>
+        <h3>重要ページを一か所にまとめられる</h3>
+        <p>llms.txtを作ると、AIに見てほしいページを一か所にまとめられます。</p>
+        <p>たとえば、次のようなページです。</p>
+        <ul>
+          <li>サービス概要</li>
+          <li>料金ページ</li>
+          <li>導入事例</li>
+          <li>FAQ</li>
+          <li>会社情報</li>
+          <li>代表者プロフィール</li>
+          <li>問い合わせページ</li>
+          <li>技術ドキュメント</li>
+          <li>APIリファレンス</li>
+          <li>比較記事</li>
+          <li>独自調査記事</li>
+        </ul>
+        <p>AIやエージェントがサイトを探索する際に、<mark><strong>重要ページの手がかり</strong></mark>を渡せる点はメリットです。</p>
+        <p>特にBtoBサイトでは、サービスページ、料金ページ、事例、FAQが別々の階層に散らばっていることがあります。llms.txtに主要ページを整理しておくと、AIエージェントが「まずどこを見るべきか」を判断しやすくなります。</p>
+        <h3>技術ドキュメントやヘルプセンターと相性がよい</h3>
+        <p>llms.txtが特に向いているのは、<mark><strong>技術ドキュメントやヘルプセンター</strong></mark>です。</p>
+        <p>APIドキュメント、SDK、CLIツール、開発者向けガイド、FAQ、ナレッジベースなどは、ページ数が多くなりがちです。人間でも目的のページを探しにくくなるため、AIエージェントにとっても索引があると便利です。</p>
+        <p>Claude Code、OpenAI、Perplexityの開発者ドキュメントでllms.txtが使われているのも、この文脈で理解すると自然です。</p>
+        <p>逆に、数ページだけの小さなサイトでは、このメリットはあまり大きくありません。llms.txtはページ数が多いサイトほど、情報の入口を整理する役割が出やすいと考えるとわかりやすいです。</p>
+        <h3>設置コストが低い</h3>
+        <p>llms.txtはMarkdown形式のテキストファイルです。高度な実装は必要ありません。</p>
+        <ul>
+          <li>テキストファイルで作れる</li>
+          <li>Markdownで書ける</li>
+          <li>ドメイン直下に置くだけでよい</li>
+          <li>WordPressでも手動設置できる</li>
+          <li>既存ページのリンク集として作れる</li>
+        </ul>
+        <p><mark><strong>作業コストは低い</strong></mark>です。そのため、時間をかけすぎない範囲であれば、設置しても問題ありません。</p>
+        <p>ただし、設置コストが低いことと、成果への影響が大きいことは別です。</p>
+        <p>実務では、最初から完璧なllms.txtを作る必要はありません。まずは重要ページだけを10〜20URLほど選び、説明文を短く添える程度から始めると、運用の負担を抑えられます。</p>
+        <h2>llms.txtのデメリット・注意点</h2>
+        <p>llms.txtには注意点もあります。特に、AI検索対策として過度に期待すると、優先順位を間違えます。</p>
+        <h3>AI引用が増える保証はない</h3>
+        <p>llms.txtを設置しても、<mark><strong>AIに引用されるとは限りません</strong></mark>。</p>
+        <p>GoogleはAI機能に出るための特別なAIテキストファイルは不要としています。John Mueller氏も、AIサービスがllms.txtを使っているとは言っていないと述べています。</p>
+        <p>そのため、「llms.txtを作ればAIに引用される」「AI検索で上位に出る」といった訴求は危険です。</p>
+        <p>もしAIからの引用を増やしたいなら、llms.txtだけを見るのではなく、引用される本文そのものを整える必要があります。AIが答えに使いやすい定義文、比較表、FAQ、根拠のある説明がページ内にあるかを先に確認しましょう。</p>
+        <h3>古い情報を載せると誤解の原因になる</h3>
+        <p>llms.txtは、サイトの重要情報をまとめるファイルです。内容が古くなると、AIにもユーザーにも<mark><strong>誤解を与える可能性</strong></mark>があります。</p>
+        <p>たとえば、次の情報は更新漏れに注意が必要です。</p>
+        <ul>
+          <li>料金</li>
+          <li>サービス内容</li>
+          <li>対応エリア</li>
+          <li>導入事例</li>
+          <li>キャンペーン</li>
+          <li>問い合わせ先</li>
+          <li>終了したサービス</li>
+          <li>古い比較記事</li>
+        </ul>
+        <p>作るなら、定期的な更新もセットで考える必要があります。</p>
+        <p>特に料金や対応範囲は、ユーザーの判断に直結します。古い料金ページや終了したサービスをllms.txtに残すと、AIが誤った候補として案内する可能性があるため、公開後のメンテナンス担当も決めておくと安心です。</p>
+        <h3>robots.txtの代わりにはならない</h3>
+        <p>AIクローラーのアクセスを制御したい場合、llms.txtでは対応できません。</p>
+        <p>ChatGPT Searchへの表示、学習用クローラーの扱い、ClaudeBotのアクセス制御などを考える場合は、各社のクローラー仕様とrobots.txtを確認する必要があります。</p>
+        <p>llms.txtは<mark><strong>「案内」であり、「制御」ではありません</strong></mark>。</p>
+        <p>たとえば「検索には出したいが、学習利用は避けたい」といった判断をする場合、llms.txtではなくrobots.txt側でユーザーエージェントごとに扱いを分ける必要があります。目的が案内なのか、制御なのかを分けて考えることが大切です。</p>
+        <h2>llms.txtの書き方</h2>
+        <p>llms.txtは、Markdown形式で作成します。</p>
+        <p>基本的には、サイト名、概要、補足説明、重要ページへのリンクを順番に書きます。複雑な記法は不要です。</p>
+        <h3>基本構成</h3>
+        <p>llms.txtの提案仕様では、次のような構成が想定されています。</p>
+        <ul>
+          <li>H1でサイト名やプロジェクト名を書く</li>
+          <li>blockquoteで短い概要を書く</li>
+          <li>必要に応じて補足説明を書く</li>
+          <li>H2ごとにページリストをまとめる</li>
+          <li>リンクはMarkdown形式で書く</li>
+          <li>優先度が低いページはOptionalに入れる</li>
+        </ul>
+        <p class="post-ref">参考：<a href="https://llmstxt.org/" target="_blank" rel="noopener">llms-txt｜The /llms.txt file</a></p>
+        <p>企業サイトで使う場合は、仕様を細かく追いかけすぎるよりも、「AIに最初に読ませたいページ一覧」を作る感覚で始めるとわかりやすいです。ページ名だけでなく、<mark><strong>そのページに何が書かれているかを1文で添える</strong></mark>と、案内ファイルとして使いやすくなります。</p>
+        <h3>基本テンプレート</h3>
+        <p>企業サイトで使うなら、<mark><strong>次のような形で十分</strong></mark>です。</p>
+        <pre><code># サイト名・サービス名
+
+&gt; このサイトが提供しているサービス、対象者、主な価値を1〜2文で説明します。
+
+このサイトでは、サービス内容、料金、導入事例、FAQ、会社情報を提供しています。AIやユーザーがサービスの内容を理解する際は、以下のページを優先して参照してください。
+
+## 重要ページ
+
+- [サービス概要](https://example.com/service): サービス内容、対象者、特徴をまとめたページ
+- [料金プラン](https://example.com/price): 料金、契約期間、支払い方法をまとめたページ
+- [導入事例](https://example.com/case): 支援事例や成果をまとめたページ
+- [よくある質問](https://example.com/faq): 契約前によくある疑問と回答をまとめたページ
+
+## 会社情報
+
+- [会社概要](https://example.com/company): 運営会社、所在地、代表者、事業内容
+- [代表者プロフィール](https://example.com/profile): 代表者の経歴、専門領域、実績
+- [お問い合わせ](https://example.com/contact): 相談・見積もり依頼用の窓口
+
+## 関連コンテンツ
+
+- [比較記事一覧](https://example.com/blog/comparison): サービス選定や比較に関する記事
+- [導入ガイド](https://example.com/guide): 初めて利用する方向けのガイド
+
+## Optional
+
+- [ブログ一覧](https://example.com/blog): 関連記事の一覧
+- [お知らせ](https://example.com/news): 最新情報や更新情報</code></pre>
+        <h3>企業サイトで入れるべきページ</h3>
+        <p>企業サイトやサービスサイトでllms.txtを作るなら、次のページを優先します。</p>
+        <ul>
+          <li>トップページ</li>
+          <li>サービスページ</li>
+          <li>料金ページ</li>
+          <li>事例ページ</li>
+          <li>FAQ</li>
+          <li>会社概要</li>
+          <li>代表者プロフィール</li>
+          <li>問い合わせページ</li>
+          <li>比較記事</li>
+          <li>選び方記事</li>
+          <li>独自調査記事</li>
+          <li>実績や受賞歴のページ</li>
+        </ul>
+        <p>AIに参照してほしいのは、<mark><strong>会社やサービスの理解に直結するページ</strong></mark>です。タグページや薄いお知らせページを大量に入れる必要はありません。</p>
+        <p>選ぶ基準は「そのページを見れば、会社やサービスの判断材料が増えるか」です。見込み客が比較検討するときに見るページ、AIが回答の根拠にしやすいページ、一次情報として信頼できるページを優先しましょう。</p>
+        <h3>入れなくてもよいページ</h3>
+        <p>次のようなページは、llms.txtに入れる優先度が低いです。</p>
+        <ul>
+          <li>タグページ</li>
+          <li>カテゴリーページ</li>
+          <li>内容の薄いお知らせ</li>
+          <li>古いキャンペーンページ</li>
+          <li>重複に近い記事</li>
+          <li>終了したサービスページ</li>
+          <li>AIに参照されても意味が薄いページ</li>
+        </ul>
+        <p>llms.txtはサイトマップではありません。すべてのURLを詰め込むより、AIに見てほしい<mark><strong>重要ページを絞る</strong></mark>ほうが自然です。</p>
+        <p>URLを増やしすぎると、どのページが本当に重要なのかが逆に伝わりにくくなります。カテゴリーページやタグページを大量に入れるより、代表的な記事やサービス理解に直結するページに絞ったほうが、llms.txtの役割は明確になります。</p>
+        <figure>
+          <img src="images/blog-llms-txt/infographic-page-selection.jpg" alt="llms.txtに入れるページと入れなくてよいページの選び方を整理した図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>llms.txtに入れるページと入れなくてよいページの考え方</figcaption>
+        </figure>
+        <h2>llms.txtの設置方法</h2>
+        <p>llms.txtは、作成したファイルをWebサイトのルートディレクトリに設置します。</p>
+        <pre><code>https://example.com/llms.txt</code></pre>
+        <p>サブディレクトリではなく、基本はドメイン直下に置きます。ファイル名は <code>llms.txt</code> にします。</p>
+        <h3>設置時の確認項目</h3>
+        <p>設置後は、次の点を確認します。</p>
+        <ul>
+          <li>ブラウザでアクセスできるか</li>
+          <li>文字化けしていないか</li>
+          <li>Markdownの記法が崩れていないか</li>
+          <li>リンク切れがないか</li>
+          <li>古い料金やサービス内容が残っていないか</li>
+          <li>重要ページが漏れていないか</li>
+          <li>Optionalに優先度の低いページを分けているか</li>
+        </ul>
+        <p><mark><strong>作って終わりではなく</strong></mark>、サービス変更やページ追加に合わせて更新することが大切です。</p>
+        <p>確認するときは、社内の人間だけでなく、初めてサイトを見る人の視点で見直すのがおすすめです。リンク先のページ名と説明文がずれていないか、古いURLに飛ばないか、スマートフォンでも内容を確認できるかまで見ておくと安心です。</p>
+        <h3>更新タイミング</h3>
+        <p>次のタイミングで更新します。</p>
+        <ul>
+          <li>料金を変更したとき</li>
+          <li>サービス内容を変更したとき</li>
+          <li>新しい導入事例を追加したとき</li>
+          <li>FAQを大きく更新したとき</li>
+          <li>会社情報を変更したとき</li>
+          <li>重要な比較記事やガイド記事を追加したとき</li>
+        </ul>
+        <p>llms.txtは、更新されないまま放置されると価値が下がります。重要ページをまとめるファイルだからこそ、<mark><strong>古い情報を残さない運用</strong></mark>が必要です。</p>
+        <p>更新頻度はサイトによりますが、BtoBサイトなら四半期に1回、またはサービスページや料金ページを変更したタイミングで見直すと現実的です。ブログ記事を追加するたびに毎回更新する必要はありませんが、柱になる記事を追加したときは反映を検討しましょう。</p>
+        <figure>
+          <img src="images/blog-llms-txt/infographic-maintenance-flow.jpg" alt="llms.txtを作成、設置、確認、更新する運用フローの図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>llms.txtの設置後に確認・更新する流れ</figcaption>
+        </figure>
+        <h2>llms.txtを作るべきサイト・作らなくてもよいサイト</h2>
+        <p>llms.txtは、すべてのサイトで優先的に作るべきものではありません。</p>
+        <p>サイトの種類によって、向き不向きがあります。</p>
+        <h3>作る価値があるサイト</h3>
+        <p>次のようなサイトでは、llms.txtを作る価値があります。</p>
+        <ul>
+          <li>APIドキュメントがあるサイト</li>
+          <li>SaaSやITツールの公式サイト</li>
+          <li>技術ブログ</li>
+          <li>開発者向けドキュメント</li>
+          <li>ヘルプセンター</li>
+          <li>ナレッジベース</li>
+          <li>FAQが多いサイト</li>
+          <li>仕様書や使い方ガイドが多いサイト</li>
+          <li>事例、料金、比較記事が充実しているBtoBサイト</li>
+        </ul>
+        <p>ページ数が多く、AIエージェントに参照してほしいページが明確なサイトでは、llms.txtが<mark><strong>案内役</strong></mark>になります。</p>
+        <p>目安として、重要ページが多く、ユーザーが情報を探すのに迷いやすいサイトほど相性がよいです。たとえば、機能ページ、料金ページ、導入事例、FAQ、技術資料が分かれているサイトでは、llms.txtで入口を整理する意味があります。</p>
+        <h3>優先度が低いサイト</h3>
+        <p>次のようなサイトでは、llms.txtの優先度は高くありません。</p>
+        <ul>
+          <li>ページ数が少ないコーポレートサイト</li>
+          <li>サービス情報がトップページにまとまっているサイト</li>
+          <li>コンテンツ量が少ないサイト</li>
+          <li>AIに引用されるような情報資産が少ないサイト</li>
+          <li>更新頻度が低いサイト</li>
+          <li>料金や事例、FAQが整っていないサイト</li>
+        </ul>
+        <p>この場合、llms.txtを作る前に、<mark><strong>サービスページやFAQ、事例、比較記事を整える</strong></mark>ほうが効果的です。</p>
+        <p>たとえば、5ページ程度の小さなコーポレートサイトで、サービス内容もトップページにしか書かれていない場合、llms.txtを作っても案内できる情報が限られます。先に「誰向けに何を提供しているのか」を本文で明確にするほうが優先です。</p>
+        <h2>AIに引用されるために本当に重要なこと</h2>
+        <p>llms.txtは補助的なファイルです。</p>
+        <p>AI検索対策で本当に重要なのは、llms.txtそのものではありません。AIが回答に使いたくなる情報を、サイト内に用意できているかどうかです。</p>
+        <p>Googleも、AI機能に表示されるための考え方として、従来のSEOの基本を重視しています。たとえば、クロールを許可すること、内部リンクでコンテンツを見つけやすくすること、重要情報をテキストで用意すること、構造化データとページ本文を一致させることなどです。</p>
+        <p class="post-ref">参考：<a href="https://developers.google.com/search/docs/appearance/ai-features" target="_blank" rel="noopener">Google Search Central｜AI features and your website</a></p>
+        <figure>
+          <img src="images/blog-llms-txt/infographic-content-first-roadmap.jpg" alt="本文整備、内部リンク、構造化データ、llms.txtの順でAI検索対策を進める図解" width="1600" height="900" loading="lazy" decoding="async">
+          <figcaption>AI検索対策は本文整備を先に行い、llms.txtは最後に足す</figcaption>
+        </figure>
+        <h3>llms.txtよりも本文の情報設計が重要</h3>
+        <p>AIは、llms.txtだけを見て回答するわけではありません。</p>
+        <p>最終的には、サイト内の本文、見出し構造、内部リンク、会社情報、サービス内容、FAQ、比較情報、事例、外部からの評価などをもとに回答を作ります。</p>
+        <p>llms.txtに重要ページを並べても、その先の<mark><strong>本文が弱ければ引用される理由は生まれません</strong></mark>。</p>
+        <p>たとえば、次のような状態ではAIに選ばれにくくなります。</p>
+        <ul>
+          <li>サービスの強みが曖昧</li>
+          <li>料金が不明確</li>
+          <li>実績や事例が少ない</li>
+          <li>FAQが薄い</li>
+          <li>比較軸がない</li>
+          <li>誰向けのサービスか曖昧</li>
+          <li>会社情報が弱い</li>
+          <li>根拠となる一次情報がない</li>
+          <li>古い情報が放置されている</li>
+        </ul>
+        <p>逆に、本文が整っていれば、llms.txtがなくてもAIに参照される可能性はあります。</p>
+        <h3>AIに引用されやすいコンテンツの条件</h3>
+        <p>AIに引用されやすいコンテンツには、いくつかの共通点があります。</p>
+        <ul>
+          <li>質問に対する答えが明確</li>
+          <li>比較軸が整理されている</li>
+          <li>料金やプランがわかりやすい</li>
+          <li>実績や事例が具体的</li>
+          <li>会社情報が明確</li>
+          <li>FAQが充実している</li>
+          <li>一次情報がある</li>
+          <li>主張に根拠がある</li>
+          <li>専門性が伝わる</li>
+          <li>古い情報が更新されている</li>
+          <li>AIがそのまま要約しやすい構造になっている</li>
+        </ul>
+        <p>AIは、曖昧な宣伝文句よりも、<mark><strong>具体的で整理された情報</strong></mark>を扱いやすい傾向があります。</p>
+        <p>たとえば、「高品質なサービスを提供しています」だけでは弱いです。対応領域、料金、納期、実績、得意業種、支援範囲、他社との違いが明確なページのほうが、AIにとってもユーザーにとっても使いやすい情報になります。</p>
+        <h3>llms.txtは補助、主役はコンテンツ</h3>
+        <p>llms.txtは、AIに対する案内板にはなります。</p>
+        <p>しかし、案内した先にあるページが弱ければ、AIに引用される理由はありません。</p>
+        <p>AI検索対策で優先すべきなのは、llms.txtを作ることではなく、サービスページ、比較記事、FAQ、事例記事、会社情報をAIが理解しやすい形に作り直すことです。</p>
+        <p>llms.txtは<mark><strong>最後に足す補助施策</strong></mark>です。最初にやるべきなのは、AIが引用したくなる情報資産をサイト内に増やすことです。</p>
+        <p>順番としては、まず本文を整え、次に内部リンクや構造化データを確認し、最後にllms.txtで重要ページを案内する流れが自然です。案内板だけを立てても、案内先のページが弱ければ成果にはつながりにくくなります。</p>
+        <h2>LLMO対策では、まずコンテンツ設計から始めるべき</h2>
+        <p>llms.txt、robots.txt、sitemap.xml、構造化データは、どれも重要な補助要素です。</p>
+        <p>ただし、AI検索対策は技術ファイルだけでは完結しません。</p>
+        <p>AIが回答に使うのは、最終的にはサイト上の情報です。どの質問でAIに出たいのか、どの競合と比較されるのか、どのページを引用してほしいのか。その設計がないままllms.txtだけ作っても、成果にはつながりにくくなります。</p>
+        <h3>AI検索対策で先に決めるべきこと</h3>
+        <p><a href="blog-llmo-taisaku.html">LLMO対策</a>では、先に次の点を決める必要があります。</p>
+        <ul>
+          <li>どの質問でAIに出たいのか</li>
+          <li>どのサービス名やカテゴリ名で想起されたいのか</li>
+          <li>どの競合と比較されるのか</li>
+          <li>どのページを引用してほしいのか</li>
+          <li>AIが回答に使いやすい根拠はあるか</li>
+          <li><a href="blog-llmo-cost.html">料金</a>、事例、FAQ、会社情報は足りているか</li>
+          <li>サービスの強みが明文化されているか</li>
+          <li>第三者情報や外部評価はあるか</li>
+        </ul>
+        <p>この設計がない状態でllms.txtだけ作っても、AI検索対策としては弱いです。</p>
+        <p>特に重要なのは、<mark><strong>狙う質問を先に決めること</strong></mark>です。「LLMO対策とは？」で出たいのか、「大阪のLLMO対策会社」で出たいのか、「ChatGPTに会社名を出す方法」で出たいのかによって、必要なページも、llms.txtに載せるべきURLも変わります。</p>
+        <h3>LLMOコンテンツ制作で対応すべきこと</h3>
+        <p><a href="/#flow">LLMOコンテンツ制作</a>では、次のような作業が重要になります。</p>
+        <ul>
+          <li>ChatGPT、Claude、Geminiでの競合表示調査</li>
+          <li>AIに聞かれる質問の洗い出し</li>
+          <li>AIに引用されやすい記事構成の作成</li>
+          <li>サービスページの改善</li>
+          <li>FAQの拡充</li>
+          <li>比較記事、選び方記事の制作</li>
+          <li>導入事例や実績ページの整備</li>
+          <li>会社情報、代表者情報の明確化</li>
+          <li>llms.txtに載せるべき重要ページの選定</li>
+        </ul>
+        <p>llms.txtは、この一連の施策の<mark><strong>最後に加える補助ファイル</strong></mark>として考えると扱いやすくなります。</p>
+        <p>つまり、llms.txtは単独で成果を出すファイルではなく、コンテンツ設計の結果を整理して見せるファイルです。サービスページ、FAQ、比較記事、事例ページが整ってから作るほうが、載せるべきURLも明確になります。</p>
+        <h3>まずはAIにどう見られているかを確認する</h3>
+        <p>llms.txtを作る前に、まず確認すべきことがあります。</p>
+        <p>それは、<mark><strong>自社や自社サービスがAIにどう見られているか</strong></mark>です。</p>
+        <ul>
+          <li>ChatGPTに名前が出るのか</li>
+          <li>Claudeに名前が出るのか</li>
+          <li>Geminiに名前が出るのか</li>
+          <li>競合だけが表示されていないか</li>
+          <li>古い情報で回答されていないか</li>
+          <li>強みが正しく伝わっているか</li>
+          <li>引用されるページがあるか</li>
+          <li>比較記事やFAQが不足していないか</li>
+        </ul>
+        <p>現状を確認すれば、llms.txtを作るべきか、それより先にコンテンツを増やすべきかが見えてきます。</p>
+        <p>株式会社AIMAのLLMOコンテンツ制作では、ChatGPT・Claude・Geminiでの競合表示状況を確認したうえで、AIに引用されやすい記事構成、FAQ、比較記事、サービスページ改善まで設計します。</p>
+        <p>AI検索対策で重要なのは、流行しているファイルを置くことではありません。AIが回答に使える情報を、サイト内にどれだけ正確に用意できているかです。</p>
+        <h2>まとめ</h2>
+        <p>llms.txtは、LLMやAIエージェントに向けて、Webサイトの概要や重要ページを伝えるためのMarkdown形式のテキストファイルです。</p>
+        <p>開発者向けドキュメントやヘルプセンターのように、ページ数が多く、AIに参照してほしいページが明確なサイトでは、案内用ファイルとして役立つ可能性があります。Claude Code、OpenAI、Perplexityの開発者ドキュメントでも、llms.txtはドキュメント探索用のインデックスとして使われています。</p>
+        <p>一方で、GoogleはAI OverviewsやAI Modeに表示されるために、特別なAIテキストファイルは不要としています。John Mueller氏も、llms.txtについて慎重な見方を示しています。</p>
+        <p>そのため、llms.txtは「作ってもよいが、無理して作る必要はない」施策です。</p>
+        <p>AI検索対策で優先すべきなのは、llms.txtではありません。サービスページ、FAQ、比較記事、事例、会社情報、一次情報を整え、AIが引用しやすいコンテンツを作ることです。</p>
+        <p>llms.txtは補助です。主役はコンテンツです。</p>
+
+      </div>
+
+      <!-- 記事下CTA -->
+      <div class="post-cta">
+        <div class="post-cta-title">LLMOのご相談はお気軽に</div>
+        <div class="post-cta-text">月額5万円で、AIに引用される仕組みをつくります。</div>
+        <a href="/#contact" class="post-cta-btn">まずは相談する</a>
+      </div>
+
+      <section class="newsletter-inline" aria-label="メルマガ登録導線">
+        <div class="newsletter-card">
+          <div class="newsletter-eyebrow">Newsletter</div>
+          <div class="newsletter-title">LLMO内製化マガジン</div>
+          <p class="newsletter-text">まだ自分たちで進めたい方向けに、LLMOの設計・運用・改善のヒントを短く届けます。ブログ更新だけでなく、現場で詰まりやすい論点も配信します。</p>
+          <form class="newsletter-form" aria-label="LLMO内製化マガジン登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-inline">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-inline-email">メールアドレス</label>
+              <input type="email" id="newsletter-inline-email" name="email" class="newsletter-input" placeholder="メールアドレスを入力" required>
+              <button type="submit" class="newsletter-submit">無料で登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。メール内のリンクを押すと購読が完了します。いつでも配信停止できます。</p>
+          </form>
+        </div>
+      </section>
+
+      <!-- 前後の記事リンク -->
+                  <div class="post-nav">
+        <a href="blog-chatgpt-company-name.html">
+          <span class="post-nav-label">&larr; 前の記事</span>
+          ChatGPTに会社名を出すには？自社名がAI回答に表示される仕組みと対策を解説を見る
+        </a>
+        <a href="blog-aio-seo-chigai.html" style="text-align: right;">
+          <span class="post-nav-label">次の記事 &rarr;</span>
+          AIOとSEOの違いとは？AI検索時代に必要な対策をわかりやすく解説を見る
+        </a>
+      </div>
+
+      <section class="post-related" aria-labelledby="post-related-title">
+        <div class="post-related-header">
+          <div class="post-related-label">Related Articles</div>
+          <h2 class="post-related-title" id="post-related-title">関連記事</h2>
+          <p class="post-related-text">llms.txtの位置づけを押さえたあとに、LLMO対策全体やAIに引用される情報設計まで整理したい方向けの記事です。</p>
+        </div>
+        <div class="post-related-grid">
+          <article class="post-related-card">
+            <a href="blog-llmo-taisaku.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とは？SEOとの違いと実践方法を徹底解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">基礎知識</div>
+                <div class="post-related-card-title">LLMO対策とは？SEOとの違いと実践方法を徹底解説</div>
+                <p class="post-related-card-text">llms.txtだけでなく、AIに引用されるための全体像を整理できます。</p>
+                <div class="post-related-date">2026.04.01</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-chatgpt-company-name.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-chatgpt-company-name/eyecatch.jpg" alt="ChatGPTに会社名を出すには？自社名がAI回答に表示される仕組みと対策を解説のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">ChatGPT</div>
+                <div class="post-related-card-title">ChatGPTに会社名を出すには？自社名がAI回答に表示される仕組みと対策を解説</div>
+                <p class="post-related-card-text">ChatGPTに自社名を認識されやすくする考え方を具体的に確認できます。</p>
+                <div class="post-related-date">2026.05.15</div>
+              </div>
+            </a>
+          </article>
+          <article class="post-related-card">
+            <a href="blog-llmo-cost.html" class="post-related-card-link">
+              <div class="post-related-thumb">
+                <img src="images/blog-llmo-cost/eyecatch.jpg" alt="LLMO対策の費用相場はいくら？診断・記事制作・月額コンサルの料金を比較のサムネイル" width="1600" height="900" loading="lazy" decoding="async">
+              </div>
+              <div class="post-related-body">
+                <div class="post-related-tag">費用</div>
+                <div class="post-related-card-title">LLMO対策の費用相場はいくら？診断・記事制作・月額コンサルの料金を比較</div>
+                <p class="post-related-card-text">llms.txt以外に必要なコンテンツ整備の費用感を確認できます。</p>
+                <div class="post-related-date">2026.05.12</div>
+              </div>
+            </a>
+          </article>
+        </div>
+        <p class="post-related-more"><a href="blog.html">ブログ一覧から他の記事も見る</a></p>
+      </section>
+    </div>
+
+    <aside class="post-sidebar" aria-label="サイドバー目次">
+      <div class="post-sidebar-stack">
+        <div class="post-sidebar-inner">
+          <div class="post-sidebar-label">CONTENTS</div>
+          <nav class="post-sidebar-toc" aria-label="サイドバー目次"></nav>
+        </div>
+        <section class="newsletter-card newsletter-sidebar-card" aria-label="メルマガ登録">
+          <div class="newsletter-eyebrow">NEWSLETTER</div>
+          <div class="newsletter-sidebar-title">LLMO内製化マガジン</div>
+          <p class="newsletter-sidebar-text">まずは自分たちで進めたい方向けに、設計・運用・改善のヒントを短く配信します。</p>
+          <form class="newsletter-form" aria-label="サイドバーのメルマガ登録フォーム">
+            <input type="hidden" name="formType" value="newsletter">
+            <input type="hidden" name="source" value="blog-article-sidebar">
+            <div class="newsletter-form-row">
+              <label class="sr-only" for="newsletter-sidebar-email">メールアドレス</label>
+              <input type="email" id="newsletter-sidebar-email" name="email" class="newsletter-input" placeholder="メールアドレス" required>
+              <button type="submit" class="newsletter-submit">登録する</button>
+            </div>
+            <p class="newsletter-note">登録後に確認メールを送ります。</p>
+          </form>
+        </section>
+      </div>
+    </aside>
+  </div>
+
+</article>
+
+<!-- FOOTER -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+
+<script>
+  (function () {
+    const postBody = document.querySelector('.post-body');
+    const tocNav = document.querySelector('.post-toc-nav');
+    const tocDetails = document.querySelector('.post-toc');
+    const sidebarNav = document.querySelector('.post-sidebar-toc');
+    const sidebar = document.querySelector('.post-sidebar');
+    if (!postBody) return;
+
+    const headings = Array.from(postBody.querySelectorAll('h2, h3'));
+    if (!headings.length) {
+      if (tocDetails) tocDetails.hidden = true;
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    headings.forEach((heading, index) => {
+      if (!heading.id) {
+        heading.id = 'section-' + String(index + 1).padStart(2, '0');
+      }
+    });
+
+    if (tocNav && tocDetails) {
+      const rootList = document.createElement('ol');
+      rootList.className = 'post-toc-list';
+      let currentGroup = null;
+
+      headings.forEach((heading) => {
+        const item = document.createElement('li');
+        item.className = 'post-toc-item';
+
+        const link = document.createElement('a');
+        link.className = 'post-toc-link';
+        link.href = '#' + heading.id;
+        link.textContent = heading.textContent.trim();
+        item.appendChild(link);
+
+        if (heading.tagName === 'H2') {
+          const sublist = document.createElement('ol');
+          sublist.className = 'post-toc-sublist';
+          item.appendChild(sublist);
+          rootList.appendChild(item);
+          currentGroup = sublist;
+          return;
+        }
+
+        if (currentGroup) {
+          currentGroup.appendChild(item);
+        } else {
+          rootList.appendChild(item);
+        }
+      });
+
+      rootList.querySelectorAll('.post-toc-sublist').forEach((sublist) => {
+        if (!sublist.children.length) {
+          sublist.remove();
+        }
+      });
+
+      tocNav.appendChild(rootList);
+    }
+
+    const sidebarHeadings = headings.filter((heading) => heading.tagName === 'H2');
+    if (!sidebarNav || !sidebar || !sidebarHeadings.length) {
+      if (sidebar) sidebar.hidden = true;
+      return;
+    }
+
+    const sidebarList = document.createElement('ol');
+    sidebarList.className = 'post-sidebar-list';
+
+    sidebarHeadings.forEach((heading) => {
+      const item = document.createElement('li');
+      item.className = 'post-sidebar-item';
+
+      const link = document.createElement('a');
+      link.className = 'post-sidebar-link';
+      link.href = '#' + heading.id;
+      link.textContent = heading.textContent.trim();
+      item.appendChild(link);
+      sidebarList.appendChild(item);
+    });
+
+    sidebarNav.appendChild(sidebarList);
+
+    const sidebarLinks = Array.from(sidebarNav.querySelectorAll('.post-sidebar-link'));
+    const setActiveLink = (id) => {
+      sidebarLinks.forEach((link) => {
+        link.classList.toggle('is-active', link.getAttribute('href') === '#' + id);
+      });
+    };
+
+    const updateSidebarActive = () => {
+      const revealOffset = 160;
+      const shouldShowSidebar = window.scrollY + revealOffset >= sidebarHeadings[0].offsetTop;
+      sidebar.classList.toggle('is-visible', shouldShowSidebar);
+
+      const scrollPoint = window.scrollY + 180;
+      let current = sidebarHeadings[0];
+      sidebarHeadings.forEach((heading) => {
+        if (heading.offsetTop <= scrollPoint) {
+          current = heading;
+        }
+      });
+      setActiveLink(current.id);
+    };
+
+    window.addEventListener('scroll', updateSidebarActive, { passive: true });
+    window.addEventListener('resize', updateSidebarActive);
+    updateSidebarActive();
+
+    sidebarLinks.forEach((link) => {
+      link.addEventListener('click', () => {
+        const id = link.getAttribute('href').slice(1);
+        setActiveLink(id);
+      });
+    });
+  }());
+</script>
+<script src="js/main.js?v=3"></script>
+<script src="js/media-header.js"></script>
+
+</body>
+</html>
