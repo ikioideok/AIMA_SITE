@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>クリニックのLLMO対策とは？AI検索で選ばれる医院サイトの作り方を解説｜AIMA ブログ</title>
-<meta name="description" content="クリニックのLLMO対策とは、ChatGPTやGoogle AI OverviewsなどのAI検索で、自院の情報を正しく理解・引用されるための情報設計です。医療広告ガイドラインに配慮しながら、医院情報、医師紹介、診療案内、FAQ、地域情報を整える方法を解説します。">
+<title>クリニックのLLMO対策｜選ばれる医院サイトの作り方｜AIMA</title>
+<meta name="description" content="クリニックのLLMO対策を初心者向けに解説。診療情報、医師情報、地域情報を整え、AI検索で患者から選ばれる医院サイトを作る方法を紹介します。">
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="googlebot" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="水間 雄紀">
@@ -127,8 +127,9 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&family=Noto+Sans+JP:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css?v=54">
 <link rel="stylesheet" href="css/blog-media.css">
 <style>
@@ -782,7 +783,7 @@
         </a>
       </p>
       <div class="media-publication-info">
-        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-description">LLMO・AIOの基礎と実践知を届ける専門メディア</p>
         <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
       </div>
       <form class="media-search" action="/blog.html" method="get" role="search">
@@ -802,10 +803,31 @@
   <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
     <div class="media-nav-inner">
       <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
-      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
-      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
-      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
-      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+      <div class="media-nav-group" data-filter-group="knowledge">
+        <a class="media-nav-link" href="/blog.html?filter=knowledge#all-posts" data-filter="knowledge">基礎・ノウハウ<span class="material-symbols-rounded media-nav-caret" aria-hidden="true">expand_more</span></a>
+        <div class="media-subnav" aria-label="基礎・ノウハウの子カテゴリ">
+          <a class="media-subnav-link" href="/blog.html?filter=knowledge-basic#all-posts" data-filter="knowledge-basic">基礎知識</a>
+          <a class="media-subnav-link" href="/blog.html?filter=knowledge-howto#all-posts" data-filter="knowledge-howto">やり方・実践</a>
+          <a class="media-subnav-link" href="/blog.html?filter=knowledge-cost#all-posts" data-filter="knowledge-cost">費用・効果</a>
+        </div>
+      </div>
+      <div class="media-nav-group" data-filter-group="comparison">
+        <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">比較・選び方<span class="material-symbols-rounded media-nav-caret" aria-hidden="true">expand_more</span></a>
+        <div class="media-subnav" aria-label="比較・選び方の子カテゴリ">
+          <a class="media-subnav-link" href="/blog.html?filter=comparison-company#all-posts" data-filter="comparison-company">対策会社比較</a>
+          <a class="media-subnav-link" href="/blog.html?filter=comparison-industry#all-posts" data-filter="comparison-industry">業種別</a>
+          <a class="media-subnav-link" href="/blog.html?filter=comparison-area#all-posts" data-filter="comparison-area">地域別</a>
+        </div>
+      </div>
+      <div class="media-nav-group" data-filter-group="analysis">
+        <a class="media-nav-link" href="/blog.html?filter=analysis#all-posts" data-filter="analysis">調査・分析<span class="material-symbols-rounded media-nav-caret" aria-hidden="true">expand_more</span></a>
+        <div class="media-subnav" aria-label="調査・分析の子カテゴリ">
+          <a class="media-subnav-link" href="/blog.html?filter=analysis-measurement#all-posts" data-filter="analysis-measurement">KPI・効果測定</a>
+          <a class="media-subnav-link" href="/blog.html?filter=analysis-monitoring#all-posts" data-filter="analysis-monitoring">モニタリング</a>
+          <a class="media-subnav-link" href="/blog.html?filter=analysis-tools#all-posts" data-filter="analysis-tools">調査・ツール</a>
+        </div>
+      </div>
+      <a class="media-nav-link" href="/blog.html?filter=cases#all-posts" data-filter="cases">事例</a>
     </div>
   </nav>
 </header>

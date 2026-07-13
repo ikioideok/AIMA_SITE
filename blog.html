@@ -628,9 +628,10 @@
   ]
 }
 </script>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&amp;family=DM+Sans:ital,wght@0,400;0,500;0,700;0,800;1,400&amp;display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0" rel="stylesheet">
-<link rel="stylesheet" href="css/blog-media.css?v=3">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,500,0,0&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/blog-media.css?v=4">
 </head>
 <body class="blog-redesigned">
 <!-- Google Tag Manager (noscript) -->
@@ -646,7 +647,7 @@
         </a>
       </p>
       <div class="media-publication-info">
-        <p class="media-description">LLMO・AIOの最新動向と実践知を届ける専門メディア</p>
+        <p class="media-description">LLMO・AIOの基礎と実践知を届ける専門メディア</p>
         <p class="media-operator">運営：<a href="https://ai-and-marketing.jp/">株式会社AIMA</a></p>
       </div>
       <form class="media-search" action="/blog.html" method="get" role="search">
@@ -666,10 +667,31 @@
   <nav class="media-category-nav" id="nav" aria-label="記事カテゴリ">
     <div class="media-nav-inner">
       <a class="media-nav-link" href="/blog.html#all-posts" data-filter="all">全記事</a>
-      <a class="media-nav-link" href="/blog.html?filter=area#all-posts" data-filter="area">エリア比較</a>
-      <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">会社比較</a>
-      <a class="media-nav-link" href="/blog.html?filter=btob#all-posts" data-filter="btob">BtoB</a>
-      <a class="media-nav-link" href="/blog.html?filter=basic#all-posts" data-filter="basic">基礎知識</a>
+      <div class="media-nav-group" data-filter-group="knowledge">
+        <a class="media-nav-link" href="/blog.html?filter=knowledge#all-posts" data-filter="knowledge">基礎・ノウハウ<span class="material-symbols-rounded media-nav-caret" aria-hidden="true">expand_more</span></a>
+        <div class="media-subnav" aria-label="基礎・ノウハウの子カテゴリ">
+          <a class="media-subnav-link" href="/blog.html?filter=knowledge-basic#all-posts" data-filter="knowledge-basic">基礎知識</a>
+          <a class="media-subnav-link" href="/blog.html?filter=knowledge-howto#all-posts" data-filter="knowledge-howto">やり方・実践</a>
+          <a class="media-subnav-link" href="/blog.html?filter=knowledge-cost#all-posts" data-filter="knowledge-cost">費用・効果</a>
+        </div>
+      </div>
+      <div class="media-nav-group" data-filter-group="comparison">
+        <a class="media-nav-link" href="/blog.html?filter=comparison#all-posts" data-filter="comparison">比較・選び方<span class="material-symbols-rounded media-nav-caret" aria-hidden="true">expand_more</span></a>
+        <div class="media-subnav" aria-label="比較・選び方の子カテゴリ">
+          <a class="media-subnav-link" href="/blog.html?filter=comparison-company#all-posts" data-filter="comparison-company">対策会社比較</a>
+          <a class="media-subnav-link" href="/blog.html?filter=comparison-industry#all-posts" data-filter="comparison-industry">業種別</a>
+          <a class="media-subnav-link" href="/blog.html?filter=comparison-area#all-posts" data-filter="comparison-area">地域別</a>
+        </div>
+      </div>
+      <div class="media-nav-group" data-filter-group="analysis">
+        <a class="media-nav-link" href="/blog.html?filter=analysis#all-posts" data-filter="analysis">調査・分析<span class="material-symbols-rounded media-nav-caret" aria-hidden="true">expand_more</span></a>
+        <div class="media-subnav" aria-label="調査・分析の子カテゴリ">
+          <a class="media-subnav-link" href="/blog.html?filter=analysis-measurement#all-posts" data-filter="analysis-measurement">KPI・効果測定</a>
+          <a class="media-subnav-link" href="/blog.html?filter=analysis-monitoring#all-posts" data-filter="analysis-monitoring">モニタリング</a>
+          <a class="media-subnav-link" href="/blog.html?filter=analysis-tools#all-posts" data-filter="analysis-tools">調査・ツール</a>
+        </div>
+      </div>
+      <a class="media-nav-link" href="/blog.html?filter=cases#all-posts" data-filter="cases">事例</a>
     </div>
   </nav>
 </header>
@@ -736,7 +758,7 @@
         <span class="archive-count" id="blog-result-count" aria-live="polite">89件</span>
       </div>
       <div class="article-grid">
-            <article class="blog-card js-blog-card" data-title="AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略" data-category="basic" data-date="2026.07.01">
+            <article class="blog-card js-blog-card" data-title="AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略" data-category="knowledge knowledge-howto" data-date="2026.07.01">
               <a href="blog-ai-search-zero-click.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-zero-click/eyecatch.jpg" alt="AI検索時代のゼロクリック対策｜PVが減ってもCVを増やすLLMO戦略のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -747,7 +769,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索の誤情報対策｜ChatGPTに間違った会社情報を出された時の直し方" data-category="basic" data-date="2026.06.30">
+            <article class="blog-card js-blog-card" data-title="AI検索の誤情報対策｜ChatGPTに間違った会社情報を出された時の直し方" data-category="knowledge knowledge-howto" data-date="2026.06.30">
               <a href="blog-ai-search-misinformation.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-misinformation/eyecatch.jpg" alt="AI検索の誤情報対策｜ChatGPTに間違った会社情報を出された時の直し方のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -758,7 +780,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索の競合分析とは？ChatGPT・Geminiで自社が出ない理由を調べる方法" data-category="basic" data-date="2026.06.29">
+            <article class="blog-card js-blog-card" data-title="AI検索の競合分析とは？ChatGPT・Geminiで自社が出ない理由を調べる方法" data-category="analysis analysis-tools" data-date="2026.06.29">
               <a href="blog-ai-search-competitor-analysis.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-competitor-analysis/eyecatch.jpg" alt="AI検索の競合分析とは？ChatGPT・Geminiで自社が出ない理由を調べる方法のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -769,7 +791,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本" data-category="basic" data-date="2026.06.28">
+            <article class="blog-card js-blog-card" data-title="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本" data-category="analysis analysis-measurement" data-date="2026.06.28">
               <a href="blog-ai-search-traffic-measurement.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-traffic-measurement/eyecatch.jpg" alt="AI検索からの流入を計測する方法｜GA4・GSC・LLMOモニタリングの基本のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -780,7 +802,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計" data-category="basic" data-date="2026.06.27">
+            <article class="blog-card js-blog-card" data-title="LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計" data-category="knowledge knowledge-howto" data-date="2026.06.27">
               <a href="blog-llmo-knowledge-base.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-knowledge-base/eyecatch.jpg" alt="LLMOに効くナレッジベースの作り方｜AIが理解しやすい会社情報設計のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -791,7 +813,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMOに構造化データは必要？AIに伝わるSchema・FAQ実装の基本" data-category="basic" data-date="2026.06.25">
+            <article class="blog-card js-blog-card" data-title="LLMOに構造化データは必要？AIに伝わるSchema・FAQ実装の基本" data-category="knowledge knowledge-howto" data-date="2026.06.25">
               <a href="blog-llmo-structured-data.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-structured-data/eyecatch.jpg" alt="LLMOに構造化データは必要？AIに伝わるSchema・FAQ実装の基本のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -802,7 +824,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMOモニタリングとは？表出率・引用率・推奨率の見方と運用方法" data-category="basic" data-date="2026.06.24">
+            <article class="blog-card js-blog-card" data-title="LLMOモニタリングとは？表出率・引用率・推奨率の見方と運用方法" data-category="analysis analysis-monitoring" data-date="2026.06.24">
               <a href="blog-llmo-monitoring.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-monitoring/eyecatch.jpg" alt="LLMOモニタリングとは？表出率・引用率・推奨率の見方と運用方法のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -813,7 +835,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="生成AIに引用されるには？AIが参照しやすい記事・会社情報の作り方" data-category="basic" data-date="2026.06.23">
+            <article class="blog-card js-blog-card" data-title="生成AIに引用されるには？AIが参照しやすい記事・会社情報の作り方" data-category="knowledge knowledge-howto" data-date="2026.06.23">
               <a href="blog-generative-ai-citation.html">
                 <div class="blog-thumb">
                   <img src="images/blog-generative-ai-citation/eyecatch.jpg" alt="生成AIに引用されるには？AIが参照しやすい記事・会社情報の作り方のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -824,7 +846,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="ChatGPTに引用されるには？LLMOで整えるべき情報設計と外部評価" data-category="basic" data-date="2026.06.22">
+            <article class="blog-card js-blog-card" data-title="ChatGPTに引用されるには？LLMOで整えるべき情報設計と外部評価" data-category="knowledge knowledge-howto" data-date="2026.06.22">
               <a href="blog-chatgpt-citation.html">
                 <div class="blog-thumb">
                   <img src="images/blog-chatgpt-citation/eyecatch.jpg" alt="ChatGPTに引用されるには？LLMOで整えるべき情報設計と外部評価のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -835,7 +857,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索最適化のやり方｜LLMOで最初に直すべき7つの項目" data-category="basic" data-date="2026.06.22">
+            <article class="blog-card js-blog-card" data-title="AI検索最適化のやり方｜LLMOで最初に直すべき7つの項目" data-category="knowledge knowledge-howto" data-date="2026.06.22">
               <a href="blog-ai-search-optimization-howto.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-optimization-howto/eyecatch.jpg" alt="AI検索最適化のやり方｜LLMOで最初に直すべき7つの項目のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -846,7 +868,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AIO対策のやり方｜AI Overviewに引用されやすい記事構成と実装" data-category="basic" data-date="2026.06.21">
+            <article class="blog-card js-blog-card" data-title="AIO対策のやり方｜AI Overviewに引用されやすい記事構成と実装" data-category="knowledge knowledge-howto" data-date="2026.06.21">
               <a href="blog-aio-taisaku-howto.html">
                 <div class="blog-thumb">
                   <img src="images/blog-aio-taisaku-howto/eyecatch.jpg" alt="AIO対策のやり方｜AI Overviewに引用されやすい記事構成と実装のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -857,7 +879,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="SEO会社に依頼中でもGEO対策は追加できる？役割分担と見直し方を解説" data-category="basic" data-date="2026.06.17">
+            <article class="blog-card js-blog-card" data-title="SEO会社に依頼中でもGEO対策は追加できる？役割分担と見直し方を解説" data-category="knowledge knowledge-howto" data-date="2026.06.17">
               <a href="blog-seo-company-geo-support.html">
                 <div class="blog-thumb">
                   <img src="images/blog-seo-company-geo-support/eyecatch.jpg" alt="SEO会社に依頼中でもGEO対策は追加できる？役割分担と見直し方を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -868,7 +890,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMO診断とは？AI検索に弱いページを見つけるチェック項目を解説" data-category="basic" data-date="2026.06.16">
+            <article class="blog-card js-blog-card" data-title="LLMO診断とは？AI検索に弱いページを見つけるチェック項目を解説" data-category="analysis analysis-tools" data-date="2026.06.16">
               <a href="blog-llmo-diagnosis-checklist.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-diagnosis-checklist/eyecatch.jpg" alt="LLMO診断とは？AI検索に弱いページを見つけるチェック項目を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -879,7 +901,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索に強い企業サイト設計とは？引用されやすい構成と見直し手順" data-category="basic" data-date="2026.06.15">
+            <article class="blog-card js-blog-card" data-title="AI検索に強い企業サイト設計とは？引用されやすい構成と見直し手順" data-category="knowledge knowledge-howto" data-date="2026.06.15">
               <a href="blog-ai-search-corporate-site-design.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-corporate-site-design/eyecatch.jpg" alt="AI検索に強い企業サイト設計とは？引用されやすい構成と見直し手順のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -890,7 +912,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AIO対策の費用相場はいくら？診断・記事制作・月額支援の料金を解説" data-category="basic" data-date="2026.06.14">
+            <article class="blog-card js-blog-card" data-title="AIO対策の費用相場はいくら？診断・記事制作・月額支援の料金を解説" data-category="knowledge knowledge-cost" data-date="2026.06.14">
               <a href="blog-aio-cost.html">
                 <div class="blog-thumb">
                   <img src="images/blog-aio-cost/eyecatch.jpg" alt="AIO対策の費用相場はいくら？診断・記事制作・月額支援の料金を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -901,7 +923,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI引用チェックツールおすすめ30選｜AI回答引用モニタリングサービス比較" data-category="comparison" data-date="2026.06.11">
+            <article class="blog-card js-blog-card" data-title="AI引用チェックツールおすすめ30選｜AI回答引用モニタリングサービス比較" data-category="analysis analysis-tools" data-date="2026.06.11">
               <a href="blog-ai-citation-monitoring-tools.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-citation-monitoring-tools/eyecatch.jpg" alt="AI引用チェックツールおすすめ30選｜AI回答引用モニタリングサービス比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -912,7 +934,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="GEO対策コンサルの費用対効果とは？相場と失敗しない判断基準を解説" data-category="basic" data-date="2026.06.06">
+            <article class="blog-card js-blog-card" data-title="GEO対策コンサルの費用対効果とは？相場と失敗しない判断基準を解説" data-category="knowledge knowledge-cost" data-date="2026.06.06">
               <a href="blog-geo-consulting-roi.html">
                 <div class="blog-thumb">
                   <img src="images/blog-geo-consulting-roi/eyecatch.jpg" alt="GEO対策コンサルの費用対効果とは？相場と失敗しない判断基準を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -923,7 +945,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="中小企業におすすめのLLMO対策会社7選｜低予算で始める選び方と費用" data-category="comparison" data-date="2026.06.02">
+            <article class="blog-card js-blog-card" data-title="中小企業におすすめのLLMO対策会社7選｜低予算で始める選び方と費用" data-category="comparison comparison-company" data-date="2026.06.02">
               <a href="blog-chusho-kigyo-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-chusho-kigyo-llmo-kaisha/eyecatch.jpg" alt="中小企業におすすめのLLMO対策会社7選｜低予算で始める選び方と費用のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -934,7 +956,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索で問い合わせを増やすには？AIに選ばれる会社になるための実践策" data-category="basic" data-date="2026.05.28">
+            <article class="blog-card js-blog-card" data-title="AI検索で問い合わせを増やすには？AIに選ばれる会社になるための実践策" data-category="knowledge knowledge-howto" data-date="2026.05.28">
               <a href="blog-ai-search-toiawase-fuyasu.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-toiawase-fuyasu/eyecatch.jpg" alt="AI検索で問い合わせを増やすには？AIに選ばれる会社になるための実践策のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -945,7 +967,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法" data-category="basic" data-date="2026.05.28">
+            <article class="blog-card js-blog-card" data-title="LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法" data-category="analysis analysis-measurement" data-date="2026.05.28">
               <a href="blog-llmo-kpi.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-kpi/eyecatch.jpg" alt="LLMOのKPIとは？AI検索時代に追うべき指標と効果測定の方法のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -956,7 +978,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索のROIとは？投資対効果を測る指標と改善方法を解説" data-category="basic" data-date="2026.05.27">
+            <article class="blog-card js-blog-card" data-title="AI検索のROIとは？投資対効果を測る指標と改善方法を解説" data-category="analysis analysis-measurement" data-date="2026.05.27">
               <a href="blog-ai-search-roi.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-roi/eyecatch.jpg" alt="AI検索のROIとは？投資対効果を測る指標と改善方法を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -967,7 +989,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説" data-category="basic" data-date="2026.05.27">
+            <article class="blog-card js-blog-card" data-title="製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説" data-category="comparison comparison-industry" data-date="2026.05.27">
               <a href="blog-manufacturing-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-manufacturing-llmo-taisaku/eyecatch.jpg" alt="製造業のLLMO対策とは？AI検索で製品・技術・事例を引用されるための情報設計を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -978,7 +1000,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説" data-category="basic" data-date="2026.05.26">
+            <article class="blog-card js-blog-card" data-title="SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説" data-category="comparison comparison-industry" data-date="2026.05.26">
               <a href="blog-saas-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-saas-llmo-taisaku/eyecatch.jpg" alt="SaaSのLLMO対策とは？AI検索で比較候補に入るための具体策を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -989,7 +1011,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="採用のLLMO対策とは？AI検索時代に候補者から選ばれる採用サイトの作り方" data-category="basic" data-date="2026.05.26">
+            <article class="blog-card js-blog-card" data-title="採用のLLMO対策とは？AI検索時代に候補者から選ばれる採用サイトの作り方" data-category="comparison comparison-industry" data-date="2026.05.26">
               <a href="blog-saiyo-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-saiyo-llmo-taisaku/eyecatch.jpg" alt="採用のLLMO対策とは？AI検索時代に候補者から選ばれる採用サイトの作り方のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1000,7 +1022,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="不動産会社のLLMO対策とは？AI検索時代に地域で選ばれるための情報設計を解説" data-category="basic" data-date="2026.05.25">
+            <article class="blog-card js-blog-card" data-title="不動産会社のLLMO対策とは？AI検索時代に地域で選ばれるための情報設計を解説" data-category="comparison comparison-industry" data-date="2026.05.25">
               <a href="blog-fudousan-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-fudousan-llmo-taisaku/eyecatch.jpg" alt="不動産会社のLLMO対策とは？AI検索時代に地域で選ばれるための情報設計を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1011,7 +1033,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI Overviews表示調査とは？自社キーワードでAI回答が出るか確認する方法" data-category="basic" data-date="2026.05.24">
+            <article class="blog-card js-blog-card" data-title="AI Overviews表示調査とは？自社キーワードでAI回答が出るか確認する方法" data-category="analysis analysis-tools" data-date="2026.05.24">
               <a href="blog-ai-overviews-hyouji-chousa.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-overviews-hyouji-chousa/eyecatch.jpg" alt="AI Overviews表示調査とは？自社キーワードでAI回答が出るか確認する方法のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1022,7 +1044,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="ChatGPTの引用率調査とは？自社サイトがAI回答に引用される割合を調べる方法" data-category="basic" data-date="2026.05.23">
+            <article class="blog-card js-blog-card" data-title="ChatGPTの引用率調査とは？自社サイトがAI回答に引用される割合を調べる方法" data-category="analysis analysis-tools" data-date="2026.05.23">
               <a href="blog-chatgpt-inyouritsu-chousa.html">
                 <div class="blog-thumb">
                   <img src="images/blog-chatgpt-inyouritsu-chousa/eyecatch.jpg" alt="ChatGPTの引用率調査とは？自社サイトがAI回答に引用される割合を調べる方法のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1033,7 +1055,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="ECサイトのAI検索対策とは？商品をAIに見つけてもらうための改善方法を解説" data-category="basic" data-date="2026.05.21">
+            <article class="blog-card js-blog-card" data-title="ECサイトのAI検索対策とは？商品をAIに見つけてもらうための改善方法を解説" data-category="comparison comparison-industry" data-date="2026.05.21">
               <a href="blog-ec-site-ai-search.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ec-site-ai-search/eyecatch.jpg" alt="ECサイトのAI検索対策とは？商品をAIに見つけてもらうための改善方法を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1044,7 +1066,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="クリニックのLLMO対策とは？AI検索で選ばれる医院サイトの作り方を解説" data-category="basic" data-date="2026.05.20">
+            <article class="blog-card js-blog-card" data-title="クリニックのLLMO対策とは？AI検索で選ばれる医院サイトの作り方を解説" data-category="comparison comparison-industry" data-date="2026.05.20">
               <a href="blog-clinic-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-clinic-llmo-taisaku/eyecatch.jpg" alt="クリニックのLLMO対策とは？AI検索で選ばれる医院サイトの作り方を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1055,7 +1077,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="士業のLLMO対策とは？AI検索で選ばれる事務所サイトの作り方を解説" data-category="basic" data-date="2026.05.19">
+            <article class="blog-card js-blog-card" data-title="士業のLLMO対策とは？AI検索で選ばれる事務所サイトの作り方を解説" data-category="comparison comparison-industry" data-date="2026.05.19">
               <a href="blog-shigyo-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-shigyo-llmo-taisaku/eyecatch.jpg" alt="士業のLLMO対策とは？AI検索で選ばれる事務所サイトの作り方を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1066,7 +1088,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="生成AIマーケティングの活用事例10選｜企業の成功例と中小企業での始め方を解説" data-category="basic" data-date="2026.05.17">
+            <article class="blog-card js-blog-card" data-title="生成AIマーケティングの活用事例10選｜企業の成功例と中小企業での始め方を解説" data-category="cases" data-date="2026.05.17">
               <a href="blog-generative-ai-marketing-cases.html">
                 <div class="blog-thumb">
                   <img src="images/blog-generative-ai-marketing-cases/eyecatch.jpg" alt="生成AIマーケティングの活用事例10選｜企業の成功例と中小企業での始め方を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1077,7 +1099,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AI検索対策とは？SEOとの違いと始め方をわかりやすく解説" data-category="basic" data-date="2026.05.17">
+            <article class="blog-card js-blog-card" data-title="AI検索対策とは？SEOとの違いと始め方をわかりやすく解説" data-category="knowledge knowledge-basic" data-date="2026.05.17">
               <a href="blog-ai-search-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ai-search-taisaku/eyecatch.jpg" alt="AI検索対策とは？SEOとの違いと始め方をわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1088,7 +1110,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AIOとSEOの違いとは？AI検索時代に必要な対策をわかりやすく解説" data-category="basic" data-date="2026.05.16">
+            <article class="blog-card js-blog-card" data-title="AIOとSEOの違いとは？AI検索時代に必要な対策をわかりやすく解説" data-category="knowledge knowledge-basic" data-date="2026.05.16">
               <a href="blog-aio-seo-chigai.html">
                 <div class="blog-thumb">
                   <img src="images/blog-aio-seo-chigai/eyecatch.jpg" alt="AIOとSEOの違いとは？AI検索時代に必要な対策をわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1099,7 +1121,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説" data-category="basic" data-date="2026.05.15">
+            <article class="blog-card js-blog-card" data-title="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説" data-category="knowledge knowledge-basic" data-date="2026.05.15">
               <a href="blog-llms-txt.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llms-txt/eyecatch.jpg" alt="llms.txtとは？書き方・必要性・GoogleやClaudeの見解をわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1110,7 +1132,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="ChatGPTに会社名を出すには？自社名がAI回答に表示される仕組みと対策を解説" data-category="basic" data-date="2026.05.15">
+            <article class="blog-card js-blog-card" data-title="ChatGPTに会社名を出すには？自社名がAI回答に表示される仕組みと対策を解説" data-category="knowledge knowledge-howto" data-date="2026.05.15">
               <a href="blog-chatgpt-company-name.html">
                 <div class="blog-thumb">
                   <img src="images/blog-chatgpt-company-name/eyecatch.jpg" alt="ChatGPTに会社名を出すには？自社名がAI回答に表示される仕組みと対策を解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1121,7 +1143,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="GEO対策会社おすすめ10選｜中小企業・低予算・SEO会社併用で選ぶなら？" data-category="comparison" data-date="2026.05.14">
+            <article class="blog-card js-blog-card" data-title="GEO対策会社おすすめ10選｜中小企業・低予算・SEO会社併用で選ぶなら？" data-category="comparison comparison-company" data-date="2026.05.14">
               <a href="blog-geo-taisaku-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-geo-taisaku-kaisha/eyecatch.jpg" alt="GEO対策会社おすすめ10選｜中小企業・低予算・SEO会社併用で選ぶなら？のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1132,7 +1154,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="AIO・AI検索対策会社おすすめ11選｜料金・実績・AI引用診断で比較" data-category="comparison" data-date="2026.05.13">
+            <article class="blog-card js-blog-card" data-title="AIO・AI検索対策会社おすすめ11選｜料金・実績・AI引用診断で比較" data-category="comparison comparison-company" data-date="2026.05.13">
               <a href="blog-aio-taisaku-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-aio-taisaku-kaisha/eyecatch.jpg" alt="AIO・AI検索対策会社おすすめ11選｜料金・実績・AI引用診断で比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1143,7 +1165,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMO対策の費用相場はいくら？診断・記事制作・月額コンサルの料金を比較" data-category="basic" data-date="2026.05.12">
+            <article class="blog-card js-blog-card" data-title="LLMO対策の費用相場はいくら？診断・記事制作・月額コンサルの料金を比較" data-category="knowledge knowledge-cost" data-date="2026.05.12">
               <a href="blog-llmo-cost.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-cost/eyecatch.jpg" alt="LLMO対策の費用相場はいくら？診断・記事制作・月額コンサルの料金を比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1154,7 +1176,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="中小企業こそLLMO対策を始めるべき理由4選！AI検索で選ばれる会社になる方法" data-category="basic" data-date="2026.05.11">
+            <article class="blog-card js-blog-card" data-title="中小企業こそLLMO対策を始めるべき理由4選！AI検索で選ばれる会社になる方法" data-category="knowledge knowledge-basic" data-date="2026.05.11">
               <a href="blog-chusho-kigyo-llmo.html">
                 <div class="blog-thumb">
                   <img src="images/blog-chusho-kigyo-llmo/eyecatch.webp" alt="中小企業こそLLMO対策を始めるべき理由4選！AI検索で選ばれる会社になる方法のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1165,7 +1187,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="沖縄県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.09">
+            <article class="blog-card js-blog-card" data-title="沖縄県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.09">
               <a href="blog-okinawa-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-okinawa-llmo-kaisha/eyecatch.webp" alt="沖縄県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1176,7 +1198,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="鹿児島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.09">
+            <article class="blog-card js-blog-card" data-title="鹿児島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.09">
               <a href="blog-kagoshima-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kagoshima-llmo-kaisha/eyecatch.webp" alt="鹿児島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1187,7 +1209,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="宮崎県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.09">
+            <article class="blog-card js-blog-card" data-title="宮崎県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.09">
               <a href="blog-miyazaki-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-miyazaki-llmo-kaisha/eyecatch.webp" alt="宮崎県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1198,7 +1220,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="大分県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.08">
+            <article class="blog-card js-blog-card" data-title="大分県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.08">
               <a href="blog-oita-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-oita-llmo-kaisha/eyecatch.webp" alt="大分県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1209,7 +1231,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="熊本県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.08">
+            <article class="blog-card js-blog-card" data-title="熊本県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.08">
               <a href="blog-kumamoto-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kumamoto-llmo-kaisha/eyecatch.webp" alt="熊本県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1220,7 +1242,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="長崎県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.08">
+            <article class="blog-card js-blog-card" data-title="長崎県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.08">
               <a href="blog-nagasaki-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-nagasaki-llmo-kaisha/eyecatch.webp" alt="長崎県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1231,7 +1253,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="佐賀県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.07">
+            <article class="blog-card js-blog-card" data-title="佐賀県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.07">
               <a href="blog-saga-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-saga-llmo-kaisha/eyecatch.webp" alt="佐賀県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1242,7 +1264,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="高知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.07">
+            <article class="blog-card js-blog-card" data-title="高知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.07">
               <a href="blog-kochi-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kochi-llmo-kaisha/eyecatch.webp" alt="高知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1253,7 +1275,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="愛媛県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.07">
+            <article class="blog-card js-blog-card" data-title="愛媛県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.07">
               <a href="blog-ehime-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ehime-llmo-kaisha/eyecatch.webp" alt="愛媛県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1264,7 +1286,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="香川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.06">
+            <article class="blog-card js-blog-card" data-title="香川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.06">
               <a href="blog-kagawa-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kagawa-llmo-kaisha/eyecatch.webp" alt="香川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1275,7 +1297,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="徳島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.06">
+            <article class="blog-card js-blog-card" data-title="徳島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.06">
               <a href="blog-tokushima-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-tokushima-llmo-kaisha/eyecatch.webp" alt="徳島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1286,7 +1308,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="山口県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.05">
+            <article class="blog-card js-blog-card" data-title="山口県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.05">
               <a href="blog-yamaguchi-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-yamaguchi-llmo-kaisha/eyecatch.webp" alt="山口県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1297,7 +1319,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="広島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.05">
+            <article class="blog-card js-blog-card" data-title="広島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.05">
               <a href="blog-hiroshima-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-hiroshima-llmo-kaisha/eyecatch.webp" alt="広島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1308,7 +1330,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="岡山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.03">
+            <article class="blog-card js-blog-card" data-title="岡山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.03">
               <a href="blog-okayama-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-okayama-llmo-kaisha/eyecatch.webp" alt="岡山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1319,7 +1341,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="島根県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.02">
+            <article class="blog-card js-blog-card" data-title="島根県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.02">
               <a href="blog-shimane-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-shimane-llmo-kaisha/eyecatch.webp" alt="島根県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1330,7 +1352,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="鳥取県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.02">
+            <article class="blog-card js-blog-card" data-title="鳥取県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.02">
               <a href="blog-tottori-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-tottori-llmo-kaisha/eyecatch.webp" alt="鳥取県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1341,7 +1363,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="和歌山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.01">
+            <article class="blog-card js-blog-card" data-title="和歌山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.01">
               <a href="blog-wakayama-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-wakayama-llmo-kaisha/eyecatch.webp" alt="和歌山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1352,7 +1374,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="奈良県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.01">
+            <article class="blog-card js-blog-card" data-title="奈良県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.01">
               <a href="blog-nara-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-nara-llmo-kaisha/eyecatch.webp" alt="奈良県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1363,7 +1385,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="兵庫県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.01">
+            <article class="blog-card js-blog-card" data-title="兵庫県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.01">
               <a href="blog-hyogo-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-hyogo-llmo-kaisha/eyecatch.webp" alt="兵庫県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1374,7 +1396,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="京都府でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.01">
+            <article class="blog-card js-blog-card" data-title="京都府でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.01">
               <a href="blog-kyoto-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kyoto-llmo-kaisha/eyecatch.webp" alt="京都府でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1385,7 +1407,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="滋賀県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.01">
+            <article class="blog-card js-blog-card" data-title="滋賀県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.01">
               <a href="blog-shiga-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-shiga-llmo-kaisha/eyecatch.webp" alt="滋賀県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1396,7 +1418,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="三重県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.05.01">
+            <article class="blog-card js-blog-card" data-title="三重県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.05.01">
               <a href="blog-mie-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-mie-llmo-kaisha/eyecatch.webp" alt="三重県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1407,7 +1429,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="静岡県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.30">
+            <article class="blog-card js-blog-card" data-title="静岡県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.30">
               <a href="blog-shizuoka-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-shizuoka-llmo-kaisha/eyecatch.webp" alt="静岡県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1418,7 +1440,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="岐阜県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.30">
+            <article class="blog-card js-blog-card" data-title="岐阜県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.30">
               <a href="blog-gifu-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-gifu-llmo-kaisha/eyecatch.webp" alt="岐阜県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1429,7 +1451,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="長野県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.30">
+            <article class="blog-card js-blog-card" data-title="長野県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.30">
               <a href="blog-nagano-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-nagano-llmo-kaisha/eyecatch.webp" alt="長野県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1440,7 +1462,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="山梨県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.30">
+            <article class="blog-card js-blog-card" data-title="山梨県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.30">
               <a href="blog-yamanashi-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-yamanashi-llmo-kaisha/eyecatch.webp" alt="山梨県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1451,7 +1473,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="福井県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.29">
+            <article class="blog-card js-blog-card" data-title="福井県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.29">
               <a href="blog-fukui-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-fukui-llmo-kaisha/eyecatch.webp" alt="福井県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1462,7 +1484,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="石川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.28">
+            <article class="blog-card js-blog-card" data-title="石川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.28">
               <a href="blog-ishikawa-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ishikawa-llmo-kaisha/eyecatch.webp" alt="石川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1473,7 +1495,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="富山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.28">
+            <article class="blog-card js-blog-card" data-title="富山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.28">
               <a href="blog-toyama-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-toyama-llmo-kaisha/eyecatch.webp" alt="富山県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1484,7 +1506,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="新潟県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.25">
+            <article class="blog-card js-blog-card" data-title="新潟県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.25">
               <a href="blog-niigata-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-niigata-llmo-kaisha/eyecatch.webp" alt="新潟県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1495,7 +1517,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="千葉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.25">
+            <article class="blog-card js-blog-card" data-title="千葉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.25">
               <a href="blog-chiba-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-chiba-llmo-kaisha/eyecatch.webp" alt="千葉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1506,7 +1528,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="埼玉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.25">
+            <article class="blog-card js-blog-card" data-title="埼玉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.25">
               <a href="blog-saitama-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-saitama-llmo-kaisha/eyecatch.webp" alt="埼玉県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1517,7 +1539,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="群馬県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="群馬県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-gunma-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-gunma-llmo-kaisha/eyecatch.webp" alt="群馬県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1528,7 +1550,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-tochigi-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-tochigi-llmo-kaisha/eyecatch.webp" alt="栃木県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1539,7 +1561,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-ibaraki-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-ibaraki-llmo-kaisha/eyecatch.webp" alt="茨城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1550,7 +1572,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-fukushima-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-fukushima-llmo-kaisha/eyecatch.webp" alt="福島県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1561,7 +1583,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-yamagata-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-yamagata-llmo-kaisha/eyecatch.webp" alt="山形県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1572,7 +1594,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-akita-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-akita-llmo-kaisha/eyecatch.webp" alt="秋田県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1583,7 +1605,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-miyagi-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-miyagi-llmo-kaisha/eyecatch.webp" alt="宮城県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1594,7 +1616,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.24">
+            <article class="blog-card js-blog-card" data-title="岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.24">
               <a href="blog-iwate-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-iwate-llmo-kaisha/eyecatch.webp" alt="岩手県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1605,7 +1627,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.23">
+            <article class="blog-card js-blog-card" data-title="青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.23">
               <a href="blog-aomori-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-aomori-llmo-kaisha/eyecatch.webp" alt="青森県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1616,7 +1638,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.23">
+            <article class="blog-card js-blog-card" data-title="北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.23">
               <a href="blog-hokkaido-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-hokkaido-llmo-kaisha/eyecatch.webp" alt="北海道でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1627,7 +1649,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.20">
+            <article class="blog-card js-blog-card" data-title="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.20">
               <a href="blog-kanagawa-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kanagawa-llmo-kaisha/eyecatch.webp" alt="神奈川県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1638,7 +1660,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="area" data-date="2026.04.19">
+            <article class="blog-card js-blog-card" data-title="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説" data-category="comparison comparison-area" data-date="2026.04.19">
               <a href="blog-aichi-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-aichi-llmo-kaisha/eyecatch.webp" alt="愛知県でおすすめのLLMO会社10選｜費用相場と選び方もわかりやすく解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1649,7 +1671,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="福岡のLLMO対策会社10選｜費用相場と失敗しない選び方を比較" data-category="area" data-date="2026.04.15">
+            <article class="blog-card js-blog-card" data-title="福岡のLLMO対策会社10選｜費用相場と失敗しない選び方を比較" data-category="comparison comparison-area" data-date="2026.04.15">
               <a href="blog-fukuoka-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-fukuoka-llmo-kaisha/eyecatch.webp" alt="福岡のLLMO対策会社10選｜費用相場と失敗しない選び方を比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1660,7 +1682,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="東京のLLMO対策会社10選｜BtoB実績・費用・法人向け支援を比較" data-category="area" data-date="2026.04.14">
+            <article class="blog-card js-blog-card" data-title="東京のLLMO対策会社10選｜BtoB実績・費用・法人向け支援を比較" data-category="comparison comparison-area" data-date="2026.04.14">
               <a href="blog-tokyo-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-tokyo-llmo-kaisha/eyecatch.webp" alt="東京のLLMO対策会社10選｜BtoB実績・費用・法人向け支援を比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1671,7 +1693,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="BtoB企業向けLLMO対策会社10選｜法人向け支援・費用・選び方を比較" data-category="btob" data-date="2026.04.13">
+            <article class="blog-card js-blog-card" data-title="BtoB企業向けLLMO対策会社10選｜法人向け支援・費用・選び方を比較" data-category="comparison comparison-industry" data-date="2026.04.13">
               <a href="blog-btob-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-btob-llmo-kaisha/eyecatch.webp" alt="BtoB企業向けLLMO対策会社10選｜法人向け支援・費用・選び方を比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1682,7 +1704,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="大阪のLLMO・AIO対策会社10選｜費用相場と失敗しない選び方を比較" data-category="area" data-date="2026.04.12">
+            <article class="blog-card js-blog-card" data-title="大阪のLLMO・AIO対策会社10選｜費用相場と失敗しない選び方を比較" data-category="comparison comparison-area" data-date="2026.04.12">
               <a href="blog-osaka-llmo-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-osaka-llmo-kaisha/eyecatch.webp" alt="大阪のLLMO・AIO対策会社10選｜費用相場と失敗しない選び方を比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1693,7 +1715,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="【2026年最新】LLMO対策会社おすすめ10選｜料金・実績・選び方を比較" data-category="comparison" data-date="2026.04.09">
+            <article class="blog-card js-blog-card" data-title="【2026年最新】LLMO対策会社おすすめ10選｜料金・実績・選び方を比較" data-category="comparison comparison-company" data-date="2026.04.09">
               <a href="blog-kakuyasu-llmo-taisaku-kaisha.html">
                 <div class="blog-thumb">
                   <img src="images/blog-kakuyasu-llmo-taisaku-kaisha/eyecatch.jpg" alt="【2026年最新】LLMO対策会社おすすめ10選｜料金・実績・選び方を比較のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1704,7 +1726,7 @@
                 </div>
               </a>
             </article>
-            <article class="blog-card js-blog-card" data-title="LLMO対策とは？SEOとの違いと実践方法を徹底解説" data-category="basic" data-date="2026.04.01">
+            <article class="blog-card js-blog-card" data-title="LLMO対策とは？SEOとの違いと実践方法を徹底解説" data-category="knowledge knowledge-basic" data-date="2026.04.01">
               <a href="blog-llmo-taisaku.html">
                 <div class="blog-thumb">
                   <img src="images/blog-llmo-taisaku/eyecatch.jpg" alt="LLMO対策とは？SEOとの違いと実践方法を徹底解説のサムネイル" width="1600" height="900" decoding="async" loading="lazy">
@@ -1779,6 +1801,7 @@
     const searchForm = document.querySelector('.media-search');
     const searchInput = document.getElementById('blog-search');
     const filterLinks = Array.from(document.querySelectorAll('#nav [data-filter]'));
+    const filterGroups = Array.from(document.querySelectorAll('#nav [data-filter-group]'));
     const resultCount = document.getElementById('blog-result-count');
     const emptyMessage = document.querySelector('.js-blog-empty');
     const loadMoreButton = document.getElementById('blog-load-more');
@@ -1845,6 +1868,12 @@
         } else {
           link.removeAttribute('aria-current');
         }
+      });
+
+      filterGroups.forEach(function(group) {
+        const groupName = group.dataset.filterGroup || '';
+        const isGroupActive = activeFilter === groupName || activeFilter.indexOf(groupName + '-') === 0;
+        group.classList.toggle('is-active', isGroupActive);
       });
     }
 

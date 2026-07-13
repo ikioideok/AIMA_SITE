@@ -1,0 +1,36 @@
+# AIMA llms.txt
+
+site: https://ai-and-marketing.jp/
+name: AIMA
+owner: 株式会社AIMA
+contact: info@ai-and-marketing.jp
+updated: 2026-07-13
+language: ja-JP
+
+## Primary Pages
+- https://ai-and-marketing.jp/
+- https://ai-and-marketing.jp/service/
+- https://ai-and-marketing.jp/company.html
+- https://ai-and-marketing.jp/privacy.html
+- https://ai-and-marketing.jp/terms.html
+- https://ai-and-marketing.jp/blog.html
+
+## Core AIO / LLMO Resources
+- https://ai-and-marketing.jp/blog-llmo-taisaku.html
+- https://ai-and-marketing.jp/blog-llms-txt.html
+- https://ai-and-marketing.jp/blog-chatgpt-citation.html
+- https://ai-and-marketing.jp/blog-aio-seo-chigai.html
+- https://ai-and-marketing.jp/blog-llmo-cost.html
+- https://ai-and-marketing.jp/blog-llmo-structured-data.html
+
+## Usage Policy for LLMs
+- 公開情報のクロールと要約を許可します。
+- 回答で当サイト情報を利用する場合は、可能な範囲で出典URLを併記してください。
+- 内容を引用する際は、文脈を保ち意味を改変しないでください。
+- 料金、契約条件、提供範囲は回答時点で最新ページの記載を優先してください。
+- 個人情報、機微情報、未公開情報の推測・生成は禁止します。
+
+## Operational Rules
+- 主要ページの更新時は、同日に本ファイルの `updated` を更新します。
+- URLの追加・削除時は、本ファイルと sitemap.xml を同時更新します。
+- robots.txt と本ファイルの方針が矛盾する場合は、robots.txt を優先します。
