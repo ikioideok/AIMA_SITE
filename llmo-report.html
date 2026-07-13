@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>LLMO診断 個別レポート｜株式会社AIMA</title>
+<meta name="description" content="AIMAの無料LLMO診断で発行された個別レポートです。">
+<link rel="icon" href="images/favicon.ico" sizes="any">
+<link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=DM+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=54">
+<!-- SITE_SHELL_HEAD_START -->
+<link rel="stylesheet" href="/css/site-shell.css?v=1">
+<!-- SITE_SHELL_HEAD_END -->
+<link rel="stylesheet" href="css/shindan-report.css?v=1">
+</head>
+<body>
+<div class="report-grain" aria-hidden="true"></div>
+
+<!-- SITE_HEADER_START -->
+<header class="corporate-header">
+  <div class="corporate-header-inner">
+    <a href="/" class="corporate-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+    <nav class="corporate-nav" id="corporate-nav" aria-label="メインメニュー">
+      <a href="https://ai-and-marketing.jp/service/" data-site-route="service">サービス</a>
+      <a href="/#case">実績</a>
+      <a href="/#pricing">料金</a>
+      <a href="/blog.html" data-site-route="blog">ブログ</a>
+      <a href="/company.html" data-site-route="company">会社概要</a>
+      <a href="/llmo-shindan.html" class="corporate-btn corporate-btn-diagnosis">無料診断<span aria-hidden="true">→</span></a>
+      <a href="/#contact" class="corporate-btn corporate-btn-contact">相談する<span aria-hidden="true">→</span></a>
+    </nav>
+    <button class="corporate-menu-toggle" id="corporate-menu-toggle" type="button" aria-label="メニューを開く" aria-controls="corporate-nav" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<script src="/js/site-shell.js?v=1"></script>
+<!-- SITE_HEADER_END -->
+
+<main class="report-page">
+  <section class="report-loading" id="report-loading" aria-live="polite">
+    <span class="report-loading-label">Loading Report</span>
+    <h1>個別レポートを読み込んでいます</h1>
+    <div class="report-loading-bar" aria-hidden="true"><span></span></div>
+  </section>
+
+  <section class="report-error" id="report-error" hidden>
+    <span class="report-eyebrow">LLMO Diagnosis Report</span>
+    <h1>レポートを表示できませんでした</h1>
+    <p id="report-error-message">URLが正しいかご確認ください。</p>
+    <a href="/llmo-shindan.html" class="report-primary-btn">もう一度診断する</a>
+  </section>
+
+  <div id="report-content" hidden>
+    <section class="report-hero">
+      <img class="report-hero-signature" src="images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819">
+      <div class="report-container report-hero-inner">
+        <span class="report-eyebrow">LLMO Diagnosis Report</span>
+        <p class="report-private-label">リンクを知っている人だけが見られる個別レポート</p>
+        <h1>AI引用準備度<br>診断レポート</h1>
+        <div class="report-site-meta">
+          <strong id="report-site-name"></strong>
+          <a id="report-site-url" href="#" target="_blank" rel="nofollow noopener"></a>
+          <span id="report-checked-at"></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="report-summary-section">
+      <div class="report-container report-summary-grid">
+        <article class="report-score-card">
+          <span class="report-card-label">AI引用準備度スコア</span>
+          <div class="report-score"><strong id="report-score">--</strong><span>/ 100</span></div>
+          <p class="report-score-message" id="report-score-message"></p>
+          <p class="report-score-note">この点数は実際のAI回答への掲載回数ではなく、AIが内容を理解・引用しやすいサイトの土台を表します。</p>
+        </article>
+
+        <article class="report-actions-card">
+          <span class="report-card-label">このレポートを保存・共有</span>
+          <h2>URLを保存して、あとから見返せます</h2>
+          <p>メールアドレスは、このページやURLには表示されません。</p>
+          <button type="button" class="report-copy-btn" id="report-copy-btn">レポートURLをコピー</button>
+          <button type="button" class="report-share-btn" id="report-share-btn" hidden>共有する</button>
+          <span class="report-copy-status" id="report-copy-status" aria-live="polite"></span>
+        </article>
+      </div>
+    </section>
+
+    <section class="report-section report-breakdown-section">
+      <div class="report-container">
+        <span class="report-eyebrow">Score Breakdown</span>
+        <h2 class="report-section-title">6分野の点数内訳</h2>
+        <p class="report-section-lead">トップページの公開情報を、15項目に分けて確認しています。</p>
+        <div class="report-breakdown-grid" id="report-breakdown"></div>
+      </div>
+    </section>
+
+    <section class="report-section report-highlights-section">
+      <div class="report-container report-highlights-grid">
+        <article class="report-highlight-card report-strengths-card">
+          <span class="report-card-kicker">Good Points</span>
+          <h2>良かった点</h2>
+          <ol id="report-strengths"></ol>
+        </article>
+        <article class="report-highlight-card report-improvements-card">
+          <span class="report-card-kicker">Priority Actions</span>
+          <h2>まず直す3項目</h2>
+          <ol id="report-improvements"></ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="report-section report-checks-section">
+      <div class="report-container">
+        <span class="report-eyebrow">All Checks</span>
+        <h2 class="report-section-title">15項目の詳しい判定</h2>
+        <div class="report-checks-list" id="report-checks"></div>
+      </div>
+    </section>
+
+    <section class="report-cta-section">
+      <div class="report-container report-cta-inner">
+        <span class="report-eyebrow">Next Step</span>
+        <h2>改善方法まで相談したい方へ</h2>
+        <p>AIMAでは、診断結果をもとにサイトの改善順と具体的な対応方法をご案内します。</p>
+        <div class="report-cta-buttons">
+          <a href="/llmo-shindan.html" class="report-secondary-btn">別のサイトを診断する</a>
+          <a href="/#contact" class="report-primary-btn">AIMAに相談する</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- SITE_FOOTER_START -->
+<footer class="corporate-footer">
+  <img class="corporate-footer-signature" src="/images/index-redesign-v6-hero/aima-signature-yellow.jpg" alt="" aria-hidden="true" width="1920" height="819" loading="lazy" decoding="async">
+  <div class="corporate-footer-inner">
+    <div>
+      <a href="/" class="corporate-footer-logo"><img src="/images/index-redesign-v6-logo/aima-wordmark.png" alt="AIMA" width="1122" height="317"></a>
+      <p class="corporate-footer-address">株式会社AIMA<br>大阪府大阪市北区梅田一丁目2番2号<br>大阪駅前第2ビル2階5-6号室</p>
+    </div>
+    <div class="corporate-footer-columns">
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Service</span>
+        <a href="https://ai-and-marketing.jp/service/">AIO（LLMO・GEO）対策</a>
+        <a href="/llmo-shindan.html">無料AIO診断</a>
+        <a href="/chusho-kigyo-aio-llmo.html">中小企業のAIO（LLMO・GEO）</a>
+        <a href="/ec-aio-llmo.html">ECのAIO（LLMO・GEO）</a>
+        <a href="/saiyo-aio-llmo.html">採用のAIO（LLMO・GEO）</a>
+        <a href="/btob-aio-llmo.html">BtoBのAIO（LLMO・GEO）</a>
+        <a href="/blog.html">ブログ</a>
+      </div>
+      <div class="corporate-footer-column">
+        <span class="corporate-footer-title">Company</span>
+        <a href="/company.html">会社概要</a>
+        <a href="/privacy.html">プライバシーポリシー</a>
+        <a href="/#contact">お問い合わせ</a>
+      </div>
+    </div>
+  </div>
+  <div class="corporate-footer-bottom">© 2026 AIMA Inc. — Osaka, AIO / AI Optimization</div>
+</footer>
+<!-- SITE_FOOTER_END -->
+
+<script src="js/main.js?v=3"></script>
+<script src="js/shindan-report.js?v=1"></script>
+</body>
+</html>
